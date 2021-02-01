@@ -447,156 +447,178 @@
 
 /area/lonestar
 	name = "lonestar"
-	icon_state = "baron"
-	requires_power = 0   //for testing only
+	icon_state = "west"
 
 /area/lonestar/asteroid					// -- TLE
 	name = "\improper Lonestar"
-	icon_state = "brown"
-	requires_power = 0
+	icon_state = "west"
 	sound_env = ASTEROID
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/lonestar/asteroid/cave				// -- TLE
 	name = "\improper Lonestar - Cave"
 	icon_state = "cave"
-	requires_power = 0
 	sound_env = ASTEROID
 
 /area/lonestar/hallway/
 	name = "\improper DO NOT USE"
 	icon_state = "yellow"
+	holomap_color = HOLOMAP_AREACOLOR_DORMS
 
-//Deck One/Basement Two (Z-1)
-
-/area/lonestar/hallway/primary/basement_two/shaft_one
-	name = "\improper Elevator Shaft - Bottom"
-	icon_state = "yellow"
-
-/area/lonestar/hallway/primary/basement_two/one
-	name = "\improper B-2 Hallway One"
-	icon_state = "hall_1"
-
-/area/lonestar/hallway/primary/basement_two/two
-	name = "\improper B-2 Hallway Two"
-	icon_state = "hall_2"
-
-/area/lonestar/hallway/primary/basement_two/three
-	name = "\improper B-2 Hallway Three"
-	icon_state = "hall_3"
-
-/area/lonestar/hallway/primary/basement_two/four
-	name = "\improper B-2 Hallway Four"
-	icon_state = "hall_4"
-
-/area/lonestar/hallway/primary/basement_two/five
-	name = "\improper B-2 Hallway Five"
-	icon_state = "hall_5"
-
-/area/lonestar/hallway/primary/basement_two/airlock
-	name = "\improper B-2 Airlock"
+/area/lonestar/airlock
+	name = "airlocks"
 	icon_state = "purple"
+	flags = RAD_SHIELDED
+	sound_env = TUNNEL_ENCLOSED
 
-/area/lonestar/hallway/primary/basement_two/shaft_two
-	name = "\improper Elevator Hidden Elevator"
+/area/lonestar/maintenance
+	name = "maintenance"
+	icon_state = "green"
+	flags = RAD_SHIELDED
+	sound_env = TUNNEL_ENCLOSED
+	turf_initializer = new /datum/turf_initializer/maintenance()
+	ambience = AMBIENCE_MAINTENANCE
+
+//First Floor (Z-1)//////////
+
+/area/lonestar/hallway/primary/floor_one/elevatoralpha
+	name = "\improper Elevator Alpha - Bottom"
 	icon_state = "yellow"
 
-//lonestar: powerstation//
+/area/lonestar/hallway/primary/floor_one/elevatorbeta
+	name = "\improper Elevator Beta - Bottom"
+	icon_state = "yellow"
 
-/area/lonestar/powerstation
-	name = "\improper Powerstation"
+/area/lonestar/hallway/primary/floor_one/one
+	name = "\improper F-1 Yonder Hallway"
+	icon_state = "yellow"
+
+/area/lonestar/hallway/primary/floor_one/two
+	name = "\improper F-1 Central Hallway"
+	icon_state = "yellow"
+
+/area/lonestar/hallway/primary/floor_one/three
+	name = "\improper F-1 Thataways Hallway"
+	icon_state = "yellow"
+
+/area/lonestar/hallway/primary/floor_one/four
+	name = "\improper F-1 Shaller Hallway"
+	icon_state = "yellow"
+
+/area/lonestar/maintenance/first/
+	name = "\improper first floor"
+
+/area/lonestar/maintenance/first/elevatoralpha
+	name = "\improper FFEA Maintenance Hall"
+
+/area/lonestar/maintenance/first/yonder_maint
+	name = "\improper FFY Maintenance Hall"
+
+/area/lonestar/maintenance/first/central_maint
+	name = "\improper FFC Maintenance Hall"
+
+//lonestar: engineering//
+
+/area/lonestar/engineering
+	name = "\improper Engineering"
 	icon_state = "engineering"
 	ambience = AMBIENCE_ENGINEERING
-
-/area/lonestar/powerstation/foreman_office
-	name = "\improper Powerstation - Foreman's Office"
-	icon_state = "head_quarters"
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
-/area/lonestar/powerstation/atmos
+/area/lonestar/engineering/engine_entry
+	name = "\improper Engineering E-Lock"
+	icon_state = "engine"
+
+/area/lonestar/engineering/foreman_office
+	name = "\improper Foreman's Office"
+	icon_state = "head_quarters"
+
+/area/lonestar/engineering/atmos
  	name = "\improper Atmospherics"
  	icon_state = "atmos"
  	sound_env = LARGE_ENCLOSED
 
-/area/lonestar/powerstation/atmos/monitoring
+/area/lonestar/engineering/atmos/monitoring
 	name = "\improper Atmospherics Monitoring Room"
 	icon_state = "atmos_monitoring"
 	sound_env = STANDARD_STATION
 
-/area/engineering/atmos/storage
+/area/lonestar/engineering/atmos/storage
 	name = "\improper Atmospherics Storage"
 	icon_state = "atmos_storage"
 	sound_env = SMALL_ENCLOSED
 
-/area/lonestar/powerstation/drone_fabrication
-	name = "\improper Lonestar Drone Fabrication"
-	icon_state = "drone_fab"
-	sound_env = SMALL_ENCLOSED
-
-/area/lonestar/powerstation/engine_smes
+/area/lonestar/engineering/engine_smes
 	name = "\improper Powerstation SMES"
 	icon_state = "engine_smes"
 	sound_env = SMALL_ENCLOSED
 
-/area/lonestar/powerstation/boiler_room
-	name = "\improper Boiler Room"
+/area/lonestar/engineering/engine_room
+	name = "\improper Engine Room"
 	icon_state = "engine"
 	sound_env = LARGE_ENCLOSED
 	forbid_events = TRUE
 
-/area/lonestar/powerstation/boiler_airlock
-	name = "\improper Boiler Room Airlock"
-	icon_state = "engine"
-
-/area/lonestar/powerstation/power_monitoring
+/area/lonestar/engineering/power_monitoring
 	name = "\improper Power Monitoring Room"
 	icon_state = "engine_monitoring"
 
-/area/lonestar/powerstation/boiler_waste
-	name = "\improper Boiler Waste Handling"
-	icon_state = "engine_waste"
-
-/area/lonestar/powerstation/foyer
+/area/lonestar/engineering/foyer
 	name = "\improper Engineering Foyer"
 	icon_state = "engineering_foyer"
 
-/area/lonestar/powerstation/storage
+/area/lonestar/engineering/engineer_hallway
+	name = "\improper Engineering Hallway"
+	icon_state = "engineering"
+
+/area/lonestar/engineering/storage
 	name = "\improper Engineer Storage"
 	icon_state = "engineering_storage"
 
-/area/lonestar/powerstation/break_room
+/area/lonestar/engineering/break_room
 	name = "\improper Engineer Break Room"
 	icon_state = "engineering_break"
-	sound_env = MEDIUM_SOFTFLOOR
 
-/area/lonestar/powerstation/engineer_eva
+/area/lonestar/engineering/engineer_eva
 	name = "\improper Engineer EVA"
 	icon_state = "engine_eva"
 
-/area/lonestar/powerstation/locker_room
+/area/lonestar/engineering/locker_room
 	name = "\improper Engineer Locker Room"
 	icon_state = "engineering_locker"
 
-/area/lonestar/powerstation/workshop
+/area/lonestar/engineering/workshop
 	name = "\improper Engineer Workshop"
 	icon_state = "engineering_workshop"
 
-/area/lonestar/powerstation/general_supply
+/area/lonestar/engineering/general_supply
 	name = "\improper Powerstation Supply"
 	icon_state = "engineering_supply"
 
-/area/lonestar/powerstation/engineer_restroom
+/area/lonestar/engineering/engineer_restroom
 	name = "\improper Engineer Restroom"
 	icon_state = "toilet"
 	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
-/area/lonestar/powerstation/atmos_hallway
-	name = "\improper Atmospherics Hallway"
+/area/lonestar/engineering/coldaccess
+	name = "\improper Cold Loop Accessway"
+	flags = RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
 
-/area/lonestar/powerstation/engineer_hallway
-	name = "\improper Engineering Hallway"
-	icon_state = "engineering_aft_hallway"
+/area/lonestar/engineering/atmos_hallway
+	name = "\improper Atmos Maint Hallway"
+	flags = RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
+
+/area/lonestar/airlock/coldloop
+	name = "\improper Cold Loop Airlock"
+
+/area/lonestar/maintenance/engineering/primary
+	name = "Primary Engineering Maintenance"
+
+/area/lonestar/maintenance/engineering/two
+	name = "Secondary Engineering Maintenance"
 
 //lonestar: pestcontrol//
 
@@ -605,36 +627,16 @@
 	icon_state = "pest_control"
 	ambience = AMBIENCE_ENGINEERING
 
-/area/lonestar/pestcontrol/infestation_spec
-	name = "\improper Powerstation - Infestation Specialist's Office"
-	icon_state = "head_quarters"
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/lonestar/pestcontrol/pest_control_airlock
-	name = "\improper Pest Control Airlock"
+/area/lonestar/pestcontrol/pest_entrylock
+	name = "\improper Pest Control E-Lock"
 	icon_state = "pest_control"
 
-/area/lonestar/pestcontrol/cell_monitoring
-	name = "\improper Captive Pest Monitoring Room"
+/area/lonestar/pestcontrol/pest_control_maint
+	name = "\improper Pest Control Maintenance"
 	icon_state = "pest_control"
 
-/area/lonestar/pestcontrol/cell/A
-	name = "Pest Cell A"
-	icon_state = "pest_control"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/pestcontrol/cell/B
-	name = "Pest Cell B"
-	icon_state = "pest_control"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/pestcontrol/cell/C
-	name = "Pest Cell C"
-	icon_state = "pest_control"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/pestcontrol/cell/D
-	name = "Pest Cell D"
+/area/lonestar/pestcontrol/cells
+	name = "Pest Holding"
 	icon_state = "pest_control"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
@@ -655,23 +657,14 @@
 	icon_state = "pest_control"
 	sound_env = MEDIUM_SOFTFLOOR
 
-/area/lonestar/pestcontrol/exterminator_eva
-	name = "\improper Exterminator EVA"
-	icon_state = "pest_control"
-
-/area/lonestar/pestcontrol/locker_room
-	name = "\improper Exterminator Locker Room"
-	icon_state = "pest_control"
-
-/area/lonestar/pestcontrol/workshop
-	name = "\improper Pest Control Workshop"
-	icon_state = "pest_control"
-
 /area/lonestar/pestcontrol/exterminator_restroom
 	name = "\improper Exterminator Restroom"
 	icon_state = "toilet"
 	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
+
+/area/lonestar/maintenance/pest
+	name = "\improper Pest Control Maintenance"
 
 //lonestar: garbage collection//
 
@@ -679,11 +672,15 @@
 	name = "\improper Custodial Closet"
 	icon_state = "janitor"
 	flags = RAD_SHIELDED
+	holomap_color = HOLOMAP_AREACOLOR_DORMS
 
 /area/lonestar/janitor/office
 	name = "\improper Custodial Office"
 	icon_state = "janitor"
 	flags = RAD_SHIELDED
+
+/area/lonestar/maintenance/janitor
+	name = "\improper Custodial Maintenance"
 
 /area/lonestar/janitor/collection
 	name = "Waste Collection"
@@ -697,19 +694,31 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT //If trash items got this far, they can be safely deleted.
 	flags = RAD_SHIELDED
 
+/area/lonestar/airlock/disposals
+	name = "\improper Disposals Airlock"
+
 //lonestar: shady bar//
 
 /area/lonestar/bar
 	name = "\improper Bar"
 	icon_state = "bar"
+	holomap_color = HOLOMAP_AREACOLOR_DORMS
 //	sound_env = LARGE_SOFTFLOOR
 
 /area/lonestar/bar/bar_manager
 	name = "\improper Bar - Manager's Office"
 	icon_state = "head_quarters"
 
-/area/lonestar/bar/floor
-	name = "\improper Floor"
+/area/lonestar/bar/storage
+	name = "\improper Bartender Storage"
+	icon_state = "bar"
+
+/area/lonestar/bar/foyer
+	name = "\improper Bar Foyer"
+	icon_state = "bar"
+
+/area/lonestar/bar/hall
+	name = "\improper Bar Hall"
 	icon_state = "bar"
 
 /area/lonestar/bar/kitchen
@@ -725,196 +734,425 @@
 	icon_state = "bar"
 	flags = RAD_SHIELDED
 
-//Deck Two/Basement One (Z-2)
+/area/lonestar/maintenance/bar
+	name = "\improper Bar Maintenance"
 
-/area/lonestar/hallway/primary/basement_one/shaft_one
-	name = "\improper Elevator Shaft - Middle"
+/area/lonestar/airlock/barlock
+	name = "\improper Bar Airlock"
+
+//Deck Two/Second Floor (Z-2)
+
+/area/lonestar/hallway/primary/floor_two/elevatoralpha
+	name = "\improper Elevator Alpha - Middle"
 	icon_state = "yellow"
 
-/area/lonestar/hallway/primary/basement_one/commons
-	name = "\improper B-1 Hallway commons"
+/area/lonestar/hallway/primary/floor_two/elevatorbeta
+	name = "\improper Elevator Beta - Middle"
 	icon_state = "yellow"
 
-/area/lonestar/hallway/primary/basement_one/one
-	name = "\improper B-1 Hallway One"
-	icon_state = "hall_1"
+/area/lonestar/hallway/primary/floor_two/shuttlebay
+	name = "\improper Shuttle Waiting Room"
+	icon_state = "quart"
 
-/area/lonestar/hallway/primary/basement_one/two
-	name = "\improper B-1 Hallway Two"
-	icon_state = "hall_2"
+/area/lonestar/hallway/primary/floor_two/shuttle_elock
+	name = "\improper Shuttle E-Lock"
+	icon_state = "quart"
 
-/area/lonestar/hallway/primary/basement_one/three
-	name = "\improper B-1 Hallway Three"
-	icon_state = "hall_3"
+/area/lonestar/hallway/primary/floor_two/one
+	name = "\improper F-2 Yonder Hallway"
+	icon_state = "yellow"
 
-/area/lonestar/hallway/primary/basement_one/four
-	name = "\improper B-1 Hallway Four"
-	icon_state = "hall_4"
+/area/lonestar/hallway/primary/floor_two/two
+	name = "\improper F-2 Thataways Hallway"
+	icon_state = "yellow"
 
-/area/lonestar/hallway/primary/basement_one/five
-	name = "\improper B-1 Hallway Five"
-	icon_state = "hall_5"
+/area/lonestar/hallway/primary/floor_two/three
+	name = "\improper F-2 Trooper Hallway"
+	icon_state = "yellow"
 
-/area/lonestar/hallway/primary/basement_one/six
-	name = "\improper B-1 Hallway Six"
-	icon_state = "hall_6"
+/area/lonestar/maintenance/second/
+	name = "\improper second floor"
 
-/area/lonestar/hallway/primary/basement_one/seven
-	name = "\improper B-1 Hallway Seven"
-	icon_state = "hall_7"
+/area/lonestar/maintenance/second/elevatoralpha
+	name = "\improper SFEA Maintenance Hall"
 
-/area/lonestar/hallway/primary/basement_one/eight
-	name = "\improper B-1 Hallway Eight"
-	icon_state = "hall_8"
-
-/area/lonestar/hallway/primary/basement_one/airlock
-	name = "\improper B-1 Airlock"
-	icon_state = "purple"
+/area/lonestar/maintenance/second/elevatorbeta
+	name = "\improper SFEB Maintenance Hall"
 
 //lonestar: cargo//
 
-/area/lonestar/quartermaster
-	name = "\improper Quartermasters"
+/area/lonestar/cargobay
+	name = "\improper Cargo Bae"
 	icon_state = "quart"
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
-/area/lonestar/quartermaster/qm
+/area/lonestar/cargobay/quartermaster
 	name = "\improper Cargo - Quartermaster's Office"
 	icon_state = "quart"
 
-/area/lonestar/quartermaster/office
+/area/lonestar/cargobay/reception
 	name = "\improper Cargo Office"
 	icon_state = "quartoffice"
 
-/area/lonestar/quartermaster/storage
+/area/lonestar/cargobay/hall
+	name = "\improper Cargo Bay Hallway"
+	icon_state = "quart"
+
+/area/lonestar/cargobay/storage
 	name = "\improper Cargo Bay Storage"
 	icon_state = "quartstorage"
 	sound_env = LARGE_ENCLOSED
 
-/area/lonestar/quartermaster/foyer
+/area/lonestar/cargobay/foyer
 	name = "\improper Cargo Bay Foyer"
-	icon_state = "quartstorage"
-
-/area/lonestar/quartermaster/warehouse
-	name = "\improper Cargo Warehouse"
-	icon_state = "quartstorage"
-
-/area/lonestar/quartermaster/shaft_two
-	name = "\improper Elevator Cargo Elevator"
-	icon_state = "yellow"
-
-/area/lonestar/quartermaster/delivery
-	name = "\improper Cargo - Delivery Office"
 	icon_state = "quart"
-//	flags = AREA_FLAG_IS_NOT_PERSISTENT //So trash doesn't pile up too hard.
 
-/area/lonestar/quartermaster/dock
+/area/lonestar/cargobay/entrylock
+	name = "\improper Cargo E-Lock"
+	icon_state = "quart"
+
+/area/lonestar/cargobay/staff
+	name = "\improper Cargo Staff Office"
+	icon_state = "quartstorage"
+
+/area/lonestar/cargobay/dock
 	name = "\improper Cargo Dock"
-	icon_state = "blueold"
+	icon_state = "quart"
+	sound_env = LARGE_ENCLOSED
 
-/area/lonestar/quartermaster/bathrooms
-	name = "\improper Cargo toilet"
+/area/lonestar/cargobay/shdock
+	name = "\improper Shuttle Bay"
+	icon_state = "quart"
+	sound_env = LARGE_ENCLOSED
+
+/area/lonestar/cargobay/bathrooms
+	name = "\improper Cargo Lockers"
 	icon_state = "toilet"
+
+/area/lonestar/maintenance/cargo
+	name = "\improper Cargo Bay Maintenance"
 
 //lonestar:medbay//
 
-/area/lonestar/clinic/
-	name = "\improper Clinic"
+/area/lonestar/medbay
+	name = "\improper dr. yeehaw"
 	icon_state = "medbay"
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
-/area/lonestar/clinic/smo
+/area/lonestar/medbay/smo
 	name = "\improper Medbay - SMO's Office"
 	icon_state = "CMO"
 
-/area/lonestar/clinic/medbay
-	name = "\improper Medbay"
-	icon_state = "medbay"
-//	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/clinic/office_hallway
-	name = "\improper Medbay"
+/area/lonestar/medbay/lobby
+	name = "\improper Medbay Lobby"
 	icon_state = "medbay"
 
-/area/lonestar/clinic/biostorage
-	name = "\improper Secondary Storage"
-	icon_state = "medbay2"
-	music = 'sound/ambience/signal.ogg'
-
-/area/lonestar/clinic/reception
-	name = "\improper Medbay Reception"
+/area/lonestar/medbay/entrylock
+	name = "\improper Medbay E-Lock"
 	icon_state = "medbay"
-	music = 'sound/ambience/signal.ogg'
 
-/area/lonestar/clinic/medbay_emt_bay
-	name = "\improper Medical EMT Bay"
-	icon_state = "medbay_emt_bay"
-	music = 'sound/ambience/signal.ogg'
+/area/lonestar/medbay/walkup
+	name = "\improper Medical Walk Up"
+	icon_state = "medbay"
 
-/area/lonestar/clinic/medbay_primary_storage
-	name = "\improper Medbay Primary Storage"
-	icon_state = "medbay_primary_storage"
-	music = 'sound/ambience/signal.ogg'
+/area/lonestar/medbay/ward
+	name = "\improper Medical Ward"
+	icon_state = "medbay"
+//	flags = AREA_FLAG_IS_NOT_PERSISTENT //LETS SEE WHAT HAPPENS //dp
 
-/area/lonestar/clinic/medical_restroom
-	name = "\improper Medbay Restroom"
+/area/lonestar/medbay/cryoward
+	name = "\improper Cryo Ward"
+	icon_state = "medbay"
+//	flags = AREA_FLAG_IS_NOT_PERSISTENT //LETS SEE WHAT HAPPENS //dp
+
+/area/lonestar/medbay/chem
+	name = "\improper Chemistry"
+	icon_state = "medbay"
+//	flags = AREA_FLAG_IS_NOT_PERSISTENT //LETS SEE WHAT HAPPENS //dp
+
+/area/lonestar/medbay/storage
+	name = "\improper Storage"
+	icon_state = "medbay"
+
+/area/lonestar/medbay/reception
+	name = "\improper Medbay Reception Desk"
+	icon_state = "medbay"
+
+/area/lonestar/medbay/bathroom
+	name = "\improper Med Bay Lockers"
 	icon_state = "medbay_restroom"
 
-/area/lonestar/clinic/ward
-	name = "\improper Recovery Ward"
-	icon_state = "patients"
+/area/lonestar/medbay/cloning
+	name = "\improper Patient Cloning"
+	icon_state = "medbay"
 
-/area/lonestar/clinic/patient_a
-	name = "\improper Patient A"
-	icon_state = "medbay_patient_room_a"
+/area/lonestar/medbay/briefing
+	name = "\improper Meeting Hall"
+	icon_state = "medbay"
 
-/area/lonestar/clinic/patient_b
-	name = "\improper Patient B"
-	icon_state = "medbay_patient_room_b"
+/area/lonestar/medbay/virology
+	name = "\improper Pathogen Lab"
+	icon_state = "medbay"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
-/area/lonestar/clinic/patient_c
-	name = "\improper Patient C"
-	icon_state = "medbay_patient_room_c"
-
-/area/lonestar/clinic/clinicstore
-	name = "\improper Secure Storage"
-	icon_state = "CMO"
-
-/area/lonestar/clinic/morgue
-	name = "\improper Morgue"
-	icon_state = "morgue"
-
-/area/lonestar/clinic/chemistry
-	name = "\improper Chemistry"
-	icon_state = "chem"
-
-/area/lonestar/clinic/surgery
-	name = "\improper Operating Theatre 1"
+/area/lonestar/medbay/surgery
+	name = "\improper Surgical and Autopsy"
 	icon_state = "surgery"
 //	flags = AREA_FLAG_IS_NOT_PERSISTENT //This WOULD become a filth pit
 //lets see what happens //pizza
 
-/area/lonestar/clinic/surgery2
-	name = "\improper Operating Theatre 2"
-	icon_state = "surgery"
+/area/lonestar/medbay/clerical
+	name = "\improper space jesus"
+	icon_state = "chapel"
+
+/area/lonestar/medbay/clerical/worshiphall
+	name = "\improper Public Worship Space"
+
+/area/lonestar/medbay/clerical/worshipentry
+	name = "\improper Worship E-Lock"
+
+/area/lonestar/medbay/clerical/office
+	name = "\improper Clerical Office"
+
+/area/lonestar/medbay/clerical/morgue
+	name = "\improper Morgue"
+	icon_state = "morgue"
+
+/area/lonestar/medbay/troopers
+	name = "\improper space gi joes"
+	icon_state = "Tactical"
+
+/area/lonestar/medbay/troopers/ops
+	name = "\improper Operations Center"
+	icon_state = "Tactical"
+
+/area/lonestar/medbay/troopers/troopshuttle
+	name = "\improper Operations Shuttle Bay"
+	icon_state = "Tactical"
+
+/area/lonestar/medbay/troopers/barracks
+	name = "\improper Operations Barracks"
+	icon_state = "Tactical"
+
+/area/lonestar/medbay/troopers/bathroom
+	name = "\improper Trooper Bathroom"
+	icon_state = "toilet"
+
+/area/lonestar/maintenance/medbay
+	name = "\improper Medical Bay Maintenance"
+
+/area/lonestar/maintenance/clerical
+	name = "\improper Clerical Maintenance"
+
+/area/lonestar/maintenance/operations
+	name = "\improper Operations Maintenance"
+
+/area/lonestar/airlock/opslock
+	name = "\improper Operations Airlock"
+
+//lonestar: rental units//
+
+/area/lonestar/rentals
+	name = "\improper Rental Units"
+	icon_state = "blue2"
+	flags = RAD_SHIELDED
+//	forbid_events = TRUE
+
+/area/lonestar/rentals/alpha
+	name = "\improper Rental A"
+
+/area/lonestar/rentals/beta
+	name = "\improper Rental B"
+
+/area/lonestar/rentals/theta
+	name = "\improper Rental T"
+
+/area/lonestar/maintenance/rental/alpha
+	name = "\improper A Rental Maintenance"
+
+/area/lonestar/maintenance/rental/beta
+	name = "\improper B Rental Maintenance"
+
+/area/lonestar/maintenance/rental/theta
+	name = "\improper T Rental Maintenance"
+
+//lonestar:other//
+
+
+//Deck Three/Main Level F-3 (Z-3)
+
+/area/lonestar/hallway/primary/floor_three/elevatoralpha
+	name = "\improper Elevator Alpha - Top"
+	icon_state = "yellow"
+
+/area/lonestar/hallway/primary/floor_three/elevatorbeta
+	name = "\improper Elevator Beta - Top"
+	icon_state = "yellow"
+
+/area/lonestar/hallway/primary/floor_three/one
+	name = "\improper F-3 Deep Yonder Hallway"
+	icon_state = "yellow"
+
+/area/lonestar/hallway/primary/floor_three/two
+	name = "\improper F-3 Deep Thataways Hallway"
+	icon_state = "yellow"
+
+/area/lonestar/hallway/primary/floor_three/three
+	name = "\improper F-3 Yonder Hallway Hallway"
+	icon_state = "yellow"
+
+/area/lonestar/hallway/primary/floor_three/four
+	name = "\improper F-3 Thataways Hallway"
+	icon_state = "yellow"
+
+/area/lonestar/hallway/primary/floor_three/five
+	name = "\improper F-3 Shallow Yonder Hallway"
+	icon_state = "yellow"
+
+/area/lonestar/hallway/primary/floor_three/six
+	name = "\improper F-3 Shallow Thataways Hallway"
+	icon_state = "yellow"
+
+/area/lonestar/hallway/primary/floor_three/seven
+	name = "\improper F-3 Central Hallway"
+	icon_state = "yellow"
+
+/area/lonestar/maintenance/third/elevatoralpha
+	name = "\improper SFEA Maintenance Hall"
+
+/area/lonestar/maintenance/third/elevatorbeta
+	name = "\improper SFEB Maintenance Hall"
+
+/area/lonestar/airlock/floor_three/airlocka
+	name = "\improper F-3 Airlock Bank A"
+	icon_state = "purple"
+
+/area/lonestar/airlock/floor_three/airlockb
+	name = "\improper F-3 Airlock Bank B"
+	icon_state = "purple"
+
+/area/lonestar/airlock/floor_three/airlockc
+	name = "\improper F-3 Airlock Bank C"
+	icon_state = "purple"
+
+/area/lonestar/airlock/floor_three/airlockd
+	name = "\improper F-3 Airlock Bank D"
+	icon_state = "purple"
+
+/area/lonestar/airlock/floor_three/airlocke
+	name = "\improper F-3 Airlock Bank E"
+	icon_state = "purple"
+
+/area/lonestar/maintenance/third/
+	name = "\improper third floor"
+
+/area/lonestar/maintenance/third/elevatoralpha
+	name = "\improper TFEA Maintenance Hall"
+
+/area/lonestar/maintenance/third/elevatorbeta
+	name = "\improper TFEB Maintenance Hall"
+
+//lonestar: administrative offices//
+
+/area/lonestar/command/
+	name = "\improper Baron"
+	icon_state = "head_quarters"
+
+/area/lonestar/command/frontdesk
+	name = "\improper Civic Office"
+	icon_state = "head_quarters"
+
+/area/lonestar/command/entrylocktwo
+	name = "\improper Command E-Lock One"
+	icon_state = "head_quarters"
+
+/area/lonestar/command/entrylockone
+	name = "\improper Command E-Lock Two"
+	icon_state = "head_quarters"
+
+/area/lonestar/command/centerhallway
+	name = "\improper Administrative Hallway"
+	icon_state = "head_quarters"
+
+/area/lonestar/command/officehallway
+	name = "\improper Office Hallway"
+	icon_state = "head_quarters"
+
+/area/lonestar/command/commandhallway
+	name = "\improper Command Hallway"
+	icon_state = "head_quarters"
+
+/area/lonestar/command/baronhallway
+	name = "\improper Baron's Hallway"
+	icon_state = "head_quarters"
+
+/area/lonestar/command/meeting_room
+	name = "\improper Heads of Staff Meeting Room"
+	icon_state = "head_quarters"
+	music = null
+	sound_env = MEDIUM_SOFTFLOOR
+
+/area/lonestar/command/baron
+	name = "\improper Command - Baron's Office"
+	icon_state = "head_quarters"
 //	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
+/area/lonestar/command/exebathroom
+	name = "\improper Administrtion - Executive Bathroom"
+	icon_state = "toilet"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
-/area/lonestar/clinic/surgery_hallway
-	name = "\improper Surgery Hallway"
-	icon_state = "surgery_hallway"
+/area/lonestar/command/jrexebathroom
+	name = "\improper Administrtion - Bathroom"
+	icon_state = "toilet"
+//	flags = AREA_FLAG_IS_NOT_PERSISTENT
+
+/area/lonestar/command/situation
+	name = "\improper Administration - Situation Room"
+	icon_state = "head_quarters"
+//	flags = AREA_FLAG_IS_NOT_PERSISTENT
+
+/area/lonestar/command/itoffices
+	name = "\improper Administration - IT Office"
+	icon_state = "head_quarters"
+//	flags = AREA_FLAG_IS_NOT_PERSISTENT
+
+/area/lonestar/command/itstorage
+	name = "\improper Administration - IT Storage"
+	icon_state = "head_quarters"
+//	flags = AREA_FLAG_IS_NOT_PERSISTENT
+
+/area/lonestar/airlock/server
+	name = "\improper Server Airlock"
+
+/area/lonestar/command/server
+	name = "\improper Server Room"
+	icon_state = "server"
+
+/area/lonestar/maintenance/command
+	name = "\improper Command Maintenance"
 
 //lonestar: sheriffs office//
 
 /area/lonestar/sheriff/
-	name = "\improper Security Office"
+	name = "\improper Seck's Office"
 	icon_state = "security"
 
-/area/lonestar/sheriff/lobby
-	name = "\improper Security Lobby"
+/area/lonestar/sheriff/hos
+	name = "\improper Sheriff's Office"
+	icon_state = "sec_hos"
+
+/area/lonestar/sheriff/deputies
+	name = "\improper Locker Room"
 	icon_state = "security"
 
-/area/lonestar/sheriff/jail
-	name = "\improper Security - Jail"
-	icon_state = "brig"
+/area/lonestar/sheriff/frontdesk
+	name = "\improper Security Desk"
+	icon_state = "security"
+
+/area/lonestar/sheriff/briefing
+	name = "\improper Security Briefing"
+	icon_state = "security"
 
 /*
 /area/security/brig/prison_break()
@@ -926,419 +1164,225 @@
 	..()
 */
 
-/area/lonestar/sheriff/hearing_room
-	name = "\improper Security - Briefing Room"
-	icon_state = "brig"
-
-/area/lonestar/sheriff/evidence_storage
-	name = "\improper Security - Evidence Storage"
-	icon_state = "evidence_storage"
-
-/area/lonestar/sheriff/hallway
-	name = "\improper Security - Hallway"
+/area/lonestar/sheriff/hearings
+	name = "\improper Court Room"
 	icon_state = "security"
 
-//lonestar: cryo//
+/area/lonestar/sheriff/forensics
+	name = "\improper Forensics Lab"
+	icon_state = "evidence_storage"
 
-/area/lonestar/cryo
+/area/lonestar/sheriff/interogation
+	name = "\improper Interogation Room"
+	icon_state = "security"
+
+/area/lonestar/sheriff/jail
+	name = "\improper Holding Cell"
+	icon_state = "security"
+
+/area/lonestar/sheriff/dephallway
+	name = "\improper Deputy's Hallway"
+	icon_state = "security"
+
+/area/lonestar/sheriff/sechallway
+	name = "\improper Security Hallway"
+	icon_state = "security"
+
+/area/lonestar/sheriff/bathroom
+	name = "\improper Lawman's Johns"
+	icon_state = "toilet"
+
+/area/lonestar/maintenance/security
+	name = "\improper Security Maintenance"
+
+//lonestar: civillian//
+
+/area/lonestar/civillian
+	name = "\improper civies"
+	icon_state = "crew_quarters"
+	holomap_color = HOLOMAP_AREACOLOR_DORMS
+
+/area/lonestar/civillian/cafe
+	name = "\improper cafe"
+	icon_state = "cafeteria"
+
+/area/lonestar/civillian/cafe/eatery
+	name = "\improper Diner Seating"
+	icon_state = "cafeteria"
+
+/area/lonestar/civillian/cafe/kitchen
+	name = "\improper Kitchen"
+
+/area/lonestar/civillian/cafe/freezer
+	name = "\improper Freezer"
+
+/area/lonestar/civillian/cafe/entrylock
+	name = "\improper Diner E-Lock"
+
+/area/lonestar/civillian/cafe/hallway
+	name = "\improper Diner Hallway"
+
+/area/lonestar/civillian/cafe/storage
+	name = "\improper Chef Storage"
+
+/area/lonestar/civillian/cafe/bathroom
+	name = "\improper Diner Restroom"
+	flags = RAD_SHIELDED
+
+/area/lonestar/civillian/cafe/chargeroom
+	name = "\improper Diner Charge Room"
+	flags = RAD_SHIELDED
+
+/area/lonestar/maintenance/diner
+	name = "\improper Diner Maintenance"
+
+/area/lonestar/airlock/dinlock
+	name = "\improper Diner Airlock"
+
+/area/lonestar/civillian/cryogenic
 	name = "\improper Cryogenic Storage"
-	icon_state = "Sleep"
-
-/area/lonestar/cryo/control
-	name = "\improper Cryogenic Control"
-	icon_state = "Sleep"
-
-//lonestar: business plots//
-
-/area/lonestar/corporate
-	name = "\improper Corporate"
-	icon_state = "purple"
-	flags = RAD_SHIELDED
-	ambience = AMBIENCE_GENERIC
-	forbid_events = TRUE
-
-/area/lonestar/corporate/one //XenoBones
-	name = "\improper Corporate Plot One"
-	icon_state = "purple"
-
-/area/lonestar/corporate/two //SolGate
-	name = "\improper Corporate Plot Two"
-	icon_state = "purple"
-
-/area/lonestar/corporate/three //Magic Cat
-	name = "\improper Corporate Plot Three"
-	icon_state = "purple"
-
-/area/lonestar/corporate/four //Rocket Fellers
-	name = "\improper Corporate Plot Four"
-	icon_state = "purple"
-
-/area/lonestar/corporate/five // U.O.I.E.A.
-	name = "\improper Corporate Plot Five"
-	icon_state = "purple"
-
-//lonestar:storage units//
+	icon_state = "sleep"
 
-/area/lonestar/storage_units
-	name = "\improper Storage Units"
-	icon_state = "purple"
-	flags = RAD_SHIELDED
-	ambience = SMALL_ENCLOSED
-	forbid_events = TRUE
-
-/area/lonestar/storage_units/alpha_one
-	name = "\improper Storage A1"
-	icon_state = "purple"
+/area/lonestar/civillian/commons
+	name = "\improper commons"
 
-/area/lonestar/storage_units/alpha_two
-	name = "\improper Storage A2"
-	icon_state = "purple"
+/area/lonestar/civillian/commons/area
+	name = "\improper Civil Area"
 
-/area/lonestar/storage_units/alpha_three
-	name = "\improper Storage A3"
-	icon_state = "purple"
+/area/lonestar/civillian/commons/office
+	name = "\improper Community Office"
 
-/area/lonestar/storage_units/alpha_four
-	name = "\improper Storage A4"
-	icon_state = "purple"
+/area/lonestar/civillian/commons/bathroom
+	name = "\improper Public Bathroom"
 
-/area/lonestar/storage_units/alpha_five
-	name = "\improper Storage A5"
-	icon_state = "purple"
+/area/lonestar/civillian/range
+	name = "\improper Shooting Range"
 
-/area/lonestar/storage_units/bravo_one
-	name = "\improper Storage B1"
-	icon_state = "purple"
+/area/lonestar/civillian/range/office
+	name = "\improper Gunsmithy Office"
 
-/area/lonestar/storage_units/bravo_two
-	name = "\improper Storage B2"
-	icon_state = "purple"
+/area/lonestar/civillian/range/entrylock
+	name = "\improper Shooting Range E-Lock"
 
-/area/lonestar/storage_units/bravo_three
-	name = "\improper Storage B3"
-	icon_state = "purple"
+/area/lonestar/civillian/range/shooting
+	name = "\improper Shooting Range"
 
-/area/lonestar/storage_units/bravo_four
-	name = "\improper Storage B4"
-	icon_state = "purple"
+/area/lonestar/civillian/range/hallway
+	name = "\improper Range Hallway"
 
-/area/lonestar/storage_units/bravo_five
-	name = "\improper Storage B5"
-	icon_state = "purple"
+/area/lonestar/civillian/range/backhall
+	name = "\improper Range Back Hallway"
 
-/area/lonestar/storage_units/charlie_one
-	name = "\improper Storage C1"
-	icon_state = "purple"
+/area/lonestar/maintenance/civillian
+	name = "\improper General Maintenance"
 
-/area/lonestar/storage_units/charlie_two
-	name = "\improper Storage C2"
-	icon_state = "purple"
 
-/area/lonestar/storage_units/charlie_three
-	name = "\improper Storage C3"
-	icon_state = "purple"
+//lonestar: garage//
 
-/area/lonestar/storage_units/charlie_four
-	name = "\improper Storage C4"
-	icon_state = "purple"
+/area/lonestar/garage
+	name = "\improper el Garage"
+	icon_state = "research"
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
-/area/lonestar/storage_units/charlie_five
-	name = "\improper Storage C5"
-	icon_state = "purple"
+/area/lonestar/garage/head_mechanic
+	name = "\improper Garage - Head Mechanic's Office"
+	icon_state = "head_quarters"
 
-/area/lonestar/storage_units/delta_one
-	name = "\improper Storage D1"
-	icon_state = "purple"
+/area/lonestar/garage/foyer
+	name = "\improper Garage Foyer"
 
-/area/lonestar/storage_units/delta_two
-	name = "\improper Storage D2"
-	icon_state = "purple"
+/area/lonestar/garage/frontdesk
+	name = "\improper Garage Front Desk"
 
-/area/lonestar/storage_units/delta_three
-	name = "\improper Storage D3"
-	icon_state = "purple"
+/area/lonestar/garage/entrylock1
+	name = "\improper Garage E-Lock"
 
-/area/lonestar/storage_units/delta_four
-	name = "\improper Storage D4"
-	icon_state = "purple"
+/area/lonestar/garage/entrylock2
+	name = "\improper Mechbay Lockdown"
 
-/area/lonestar/storage_units/delta_five
-	name = "\improper Storage D5"
-	icon_state = "purple"
+/area/lonestar/garage/surgical
+	name = "\improper Garage Prosthetics Lab"
 
-/area/lonestar/storage_units/echo_one
-	name = "\improper Storage E1"
-	icon_state = "purple"
+/area/lonestar/garage/bathrooms
+	name = "\improper Garage Restrooms"
+	icon_state = "research_restroom"
 
-/area/lonestar/storage_units/echo_two
-	name = "\improper Storage E2"
-	icon_state = "purple"
+/area/lonestar/garage/storage
+	name = "\improper Electronics Storage"
 
-/area/lonestar/storage_units/echo_three
-	name = "\improper Storage E3"
-	icon_state = "purple"
+/area/lonestar/garage/dronefab
+	name = "\improper Garage Computer Lab"
 
-/area/lonestar/storage_units/echo_four
-	name = "\improper Storage E4"
-	icon_state = "purple"
+/area/lonestar/garage/eva_lab
+	name = "\improper EVA Lab"
 
-/area/lonestar/storage_units/echo_five
-	name = "\improper Storage E5"
-	icon_state = "purple"
+/area/lonestar/garage/workshop
+	name = "\improper Garage Workshop"
 
-//lonestar:other//
+/area/lonestar/garage/hallway
+	name = "\improper Garage Hallway"
 
-/area/lonestar/chapel
-	name = "Chapel"
-	icon_state = "chapel"
-	ambience = AMBIENCE_CHAPEL
+/area/lonestar/maintenance/garage
+	name = "\improper Garage Maintenance"
 
-/area/lonestar/chapel/main
-	name = "\improper Chapel"
-	icon_state = "chapel"
-
-/area/lonestar/chapel/shrine
-	name = "\improper Shrine"
-	icon_state = "chapel"
-
-/area/lonestar/chapel/cloister
-	name = "\improper Inner Cloister"
-	icon_state = "chapel"
-
-/area/lonestar/chapel/office_one
-	name = "\improper First Chapel Office"
-	icon_state = "chapeloffice"
-
-/area/lonestar/chapel/office_two
-	name = "\improper Second Chapel Office"
-	icon_state = "chapeloffice"
-
-/area/lonestar/chapel/chapel_morgue
-	name = "\improper Chapel Tomb"
-	icon_state = "chapel_morgue"
-
-//Deck Three/Main Level F-1 (Z-3)
-
-/area/lonestar/hallway/primary/floor_one/shaft_one
-	name = "\improper Elevator Shaft - Middle"
-	icon_state = "yellow"
-
-/area/lonestar/hallway/primary/floor_one/one
-	name = "\improper F-1 Hallway One"
-	icon_state = "hall_1"
-
-/area/lonestar/hallway/primary/floor_one/two
-	name = "\improper F-1 Hallway Two"
-	icon_state = "hall_2"
-
-/area/lonestar/hallway/primary/floor_one/three
-	name = "\improper F-1 Hallway Three"
-	icon_state = "hall_3"
-
-/area/lonestar/hallway/primary/floor_one/four
-	name = "\improper F-1 Hallway Four"
-	icon_state = "hall_4"
-
-/area/lonestar/hallway/primary/floor_one/five
-	name = "\improper F-1 Hallway Five"
-	icon_state = "hall_5"
-
-/area/lonestar/hallway/primary/floor_one/six
-	name = "\improper F-1 Hallway Six"
-	icon_state = "hall_6"
-
-/area/lonestar/hallway/primary/floor_one/seven
-	name = "\improper F-1 Hallway Seven"
-	icon_state = "hall_7"
-
-/area/lonestar/hallway/primary/floor_one/eight
-	name = "\improper F-1 Hallway Eight"
-	icon_state = "hall_8"
-
-/area/lonestar/hallway/primary/floor_one/airlock_one
-	name = "\improper F-1 Airlock Bank 1"
-	icon_state = "purple"
-
-/area/lonestar/hallway/primary/floor_one/airlock_two
-	name = "\improper F-1 Airlock Bank 2"
-	icon_state = "purple"
-
-/area/lonestar/hallway/primary/floor_one/airlock_three
-	name = "\improper F-1 Airlock Bank 3"
-	icon_state = "purple"
-
-/area/lonestar/hallway/primary/floor_one/airlock_four
-	name = "\improper F-1 Eastern Airlock"
-	icon_state = "purple"
-
-//lonestar: administrative offices//
-
-/area/lonestar/administration/
-	name = "\improper Administration"
-	icon_state = "baron"
-	music = "signal"
-
-/area/lonestar/administration/lobby
-	name = "\improper Administration"
-	icon_state = "baron"
-
-/area/lonestar/administration/front_desk
-	name = "\improper Bridge"
-	icon_state = "baron"
-
-/area/lonestar/administration/hallway
-	name = "\improper Office Hallway"
-	icon_state = "baron"
-
-/area/lonestar/administration/meeting_room
-	name = "\improper Heads of Staff Meeting Room"
-	icon_state = "baron"
-	music = null
-	sound_env = MEDIUM_SOFTFLOOR
-
-/area/lonestar/administration/offices
-	name = "\improper Administration - Offices"
-	icon_state = "baron"
-//	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/administration/offices/steward
-	name = "\improper Administration - Steward's Office"
-	icon_state = "baron"
-//	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/administration/offices/armory
-	name = "\improper Administration - Baron's Armory"
-	icon_state = "baron"
-//	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/administration/executive_bathroom
-	name = "\improper Administrtion - Executive Office"
-	icon_state = "restrooms"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/administration/jrexecutive_bathroom
-	name = "\improper Administrtion - Junior Executive Office"
-	icon_state = "restrooms"
-//	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/administration/offices/secretary
-	name = "\improper Administration - Secretary Offices"
-	icon_state = "baron"
-//	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/administration/offices/aux_offices
-	name = "\improper Administration - Auxiliary Offices"
-	icon_state = "baron"
-//	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/administration/server
-	name = "\improper Server Room"
-	icon_state = "server"
 
 //lonestar: ranch//
 
 /area/lonestar/ranch
-	name = "\improper the Ranch"
+	name = "\improper le Ranch"
 	icon_state = "research"
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/lonestar/ranch/overseer
 	name = "\improper Ranch - Overseer's Office"
 	icon_state = "head_quarters"
 
-/area/lonestar/ranch/ranch_foyer
+/area/lonestar/ranch/foyer
 	name = "\improper Research Foyer"
-	icon_state = "research_foyer"
 
-/area/lonestar/ranch/hallway1
-	name = "\improper Ranch Main Hallway"
-	icon_state = "research"
+/area/lonestar/ranch/entrylock
+	name = "\improper Ranch E-Lock"
 
-/area/lonestar/ranch/hallway2
-	name = "\improper Ranch Secondary Hallway"
-	icon_state = "research"
+/area/lonestar/ranch/entrylock2
+	name = "\improper Ranch Gate Lockdown"
 
-/area/lonestar/ranch/barn_airlock
-	name = "\improper Barn Door"
-	icon_state = "research"
+/area/lonestar/ranch/frontdesk
+	name = "\improper Ranch Reception"
 
-/area/lonestar/ranch/ranch_restroom
-	name = "\improper Research Restroom"
+/area/lonestar/ranch/hallway
+	name = "\improper Ranch Hallway"
+
+/area/lonestar/ranch/crops
+	name = "\improper Ranch Crops"
+
+/area/lonestar/ranch/bathroom
+	name = "\improper Ranch Toilets"
 	icon_state = "research_restroom"
 
-/area/lonestar/ranch/ranch_storage
-	name = "\improper Research Storage"
-	icon_state = "research_storage"
+/area/lonestar/ranch/storage
+	name = "\improper Ranch Storage"
 
 /area/lonestar/ranch/barn
 	name = "\improper Barn Lab"
-	icon_state = "xeno_lab"
 
-/area/lonestar/ranch/barn/holding
+/area/lonestar/ranch/barnholding
 	name = "\improper Barn Stalls"
-	icon_state = "xeno_lab"
 
 /area/lonestar/ranch/crop_control
-	name = "\improper Crop Crontrol"
-	icon_state = "xeno_f_lab"
+	name = "\improper Crop Isolation"
 
-/area/lonestar/ranch/genetics
-	name = "\improper Genetics Lab"
-	icon_state = "genetics"
+/area/lonestar/ranch/shower
+	name = "\improper Ranch Sanitization"
 
 /area/lonestar/ranch/virology
-	name = "\improper Virology"
+	name = "\improper Ranch Disease Lab"
 	icon_state = "virology"
 
-/area/lonestar/ranch/workshop
-	name = "\improper Workshop"
-	icon_state = "sci_workshop"
+/area/lonestar/maintenance/ranch
+	name = "\improper Ranch Maintenance"
 
-//lonestar: garage//
 
-/area/lonestar/garage
-	name = "\improper the Garage"
-	icon_state = "research"
-
-/area/lonestar/garage/head_mechanic
-	name = "\improper Ranch - Head Mechanic's Office"
-	icon_state = "head_quarters"
-
-/area/lonestar/garage/garage_foyer
-	name = "\improper Garage Foyer"
-	icon_state = "research_foyer"
-
-/area/lonestar/garage/garage_foyer_auxiliary
-	name = "\improper Garage Foyer Auxiliary"
-	icon_state = "research_foyer_aux"
-
-/area/lonestar/garage/medical
-	name = "\improper Robotics"
-	icon_state = "patients"
-
-/area/lonestar/garage/garage_restrooms
-	name = "\improper Garage Restrooms"
-	icon_state = "research_restroom"
-
-/area/lonestar/garage/garage_storage
-	name = "\improper Research Storage"
-	icon_state = "research_storage"
-
-/area/lonestar/garage/garagedocking
-	name = "\improper Research Dock"
-	icon_state = "research_dock"
-
-/area/lonestar/garage/workshop
-	name = "\improper Workshop"
-	icon_state = "sci_workshop"
-
-/area/lonestar/garage/repair_bay
-	name = "\improper Public Repairs"
-	icon_state = "sci_workshop"
-
-/area/lonestar/garage/chargebay
-	name = "\improper Mech Bay"
-	icon_state = "mechbay"
-
+/*
 //lonestar: the slammer//
 
 /area/lonestar/prison
@@ -1436,278 +1480,18 @@
 /area/lonestar/prison/cell_block/rec_room
 	name = "\improper Prisoner Rec Room"
 	icon_state = "green"
+*/
 
 //lonestar: arrivals docks//
 
-/area/lonestar/hallway/primary/floor_one/entry/
-	forbid_events = TRUE
 
-/area/lonestar/hallway/primary/floor_one/entry/hall_1
-	name = "\improper Shuttle Dock Hallway 1"
-	icon_state = "entry_1"
 
-/area/lonestar/hallway/primary/floor_one/entry/hall_2
-	name = "\improper Shuttle Dock Hallway 1"
-	icon_state = "entry_2"
+//lonestar:other maintenance tunnels//
 
-/area/lonestar/hallway/primary/floor_one/entry/hall_3
-	name = "\improper Shuttle Dock Hallway 1"
-	icon_state = "entry_3"
 
-/area/lonestar/hallway/primary/floor_one/entry/hall_4
-	name = "\improper Shuttle Dock Hallway 1"
-	icon_state = "entry_4"
-
-/area/lonestar/dockside
-	name = "\improper dockside"
-	icon_state= "blue"
-
-/area/lonestar/dockside/cafe
-	name = "\improper Cafe"
-	icon_state= "cafeteria"
-
-/area/lonestar/dockside/cafe_seating
-	name = "\improper Cafe Seating"
-	icon_state= "cafeteria"
-
-/area/lonestar/dockside/library
- 	name = "\improper Library"
- 	icon_state = "library"
-// 	sound_env = LARGE_SOFTFLOOR
-
-/area/lonestar/dockside/library_conference_room
- 	name = "\improper Library Conference Room"
- 	icon_state = "library_conference_room"
-
-/area/lonestar/dockside/library_study_hall
- 	name = "\improper Library Study Hall"
- 	icon_state = "library"
-
-/area/lonestar/dockside/librarian_office
- 	name = "\improper Librarian Office"
- 	icon_state = "library"
-
-/area/lonestar/dockside/toilet
-	name = "\improper Locker Toilets"
-	icon_state = "toilet"
-	sound_env = SMALL_ENCLOSED
-
-//lonestar: direction & leaderships//
-
-/area/lonestar/leadership
-	name = "\improper leadership"
-	icon_state = "head_quarters"
-
-/area/lonestar/leadership/baron
-	name = "\improper Administration - Baron's Office"
-	icon_state = "baron"
-
-/area/lonestar/leadership/sheriff
-	name = "\improper Security - Sheriff's Office"
-	icon_state = "law"
-
-/area/lonestar/leadership/cmo
-	name = "\improper Medbay - CMO's Office"
-	icon_state = "head_quarters"
-
-/area/lonestar/leadership/agricultural_director
-	name = "\improper Ranch - Agricultural Director's Office"
-	icon_state = "head_quarters"
-
-/area/lonestar/leadership/manufacturing_director
-	name = "\improper Garage - Manufacturing Director's Office"
-	icon_state = "head_quarters"
-
-
-/area/lonestar/leadership/maint_director
-	name = "\improper Engineering - Maintenance Director's Office"
-	icon_state = "head_quarters"
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/lonestar/leadership/freight_director
-	name = "\improper Cargo - Frieght Director's Office"
-	icon_state = "quart"
-
-/area/lonestar/leadership/bar_owner
-	name = "\improper Bar - Owner's Office"
-	icon_state = "head_quarters"
-
-//lonestar:maintenance tunnels//
-
-/area/lonestar/maintenance
-	name = "maintenance"
-	icon_state = "green"
-	flags = RAD_SHIELDED
-	sound_env = TUNNEL_ENCLOSED
-	turf_initializer = new /datum/turf_initializer/maintenance()
-	ambience = AMBIENCE_MAINTENANCE
-
-/area/lonestar/maintenance/corridor  //yeah dont use this please //pizza
-	name = "Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/b2nw
-	name = "North Western B-2 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/b2cn
-	name = "Northern Central B-2 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/b2ne
-	name = "North Eastern B-2 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/b2cw
-	name = "Western Central B-2 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/b2cc
-	name = "Central Core B-2 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/b2ce
-	name = "Eastern Central B-2 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/b2sw
-	name = "South Western B-2 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/b2cs
-	name = "Southern Central B-2 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/b2se
-	name = "South Eastern B-2 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/engineering
-	name = "Engineering Maintenance"
-	icon_state = "maint_engineering"
-
-/area/lonestar/maintenance/corridor/bar
-	name = "Bar Maintenance"
-	icon_state = "maint_bar"
-
-/area/lonestar/maintenance/corridor/bar_tunnel
-	name = "Bar Maintenance"
-	icon_state = "maint_bar"
-
-/area/lonestar/maintenance/corridor/b2_airlock
-	name = "Eastern B-2 Maintenance Airlock"
-	icon_state = "purple"
-////
-/area/lonestar/maintenance/corridor/b1nw
-	name = "North Western B-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/b1cn
-	name = "Northern Central B-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/b1ne
-	name = "North Eastern B-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/b1cw
-	name = "Western Central B-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/b1cc
-	name = "Central Core B-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/b1ce
-	name = "Eastern Central B-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/b1sw
-	name = "South Western B-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/b1cs
-	name = "Southern Central B-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/b1se
-	name = "South Eastern B-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/cargo
-	name = "Cargo Maintenance"
-	icon_state = "maint_cargo"
-
-/area/lonestar/maintenance/corridor/chapel
-	name = "Chapel Maintenance"
-	icon_state = "maint_chapel"
-
-/area/lonestar/maintenance/corridor/medbay
-	name = "Medbay Maintenance"
-	icon_state = "maint_medbay"
-////
-/area/lonestar/maintenance/corridor/f1nw
-	name = "North Western F-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/f1cn
-	name = "Northern Central F-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/f1ne
-	name = "North Eastern F-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/f1cw
-	name = "Western Central F-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/f1cc
-	name = "Central Core F-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/f1ce
-	name = "Eastern Central F-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/f1sw
-	name = "South Western F-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/f1cs
-	name = "Southern Central F-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/corridor/f1se
-	name = "South Eastern F-1 Maintenance Corridor"
-	icon_state = "maintstar"
-
-/area/lonestar/maintenance/ranch_maint
-	name = "Research Maintenance"
-	icon_state = "maint_research"
-
-/area/lonestar/maintenance/garage_maint
-	name = "Research Maintenance"
-	icon_state = "maint_research"
-
-/area/lonestar/maintenance/maintadministration
-	name = "Administration Offices Maintenance"
-	icon_state = "maintcentral"
-
-/area/lonestar/maintenance/arrivals
-	name = "Arrivals Maintenance"
-	icon_state = "maint_arrivals"
-
-/area/lonestar/maintenance/cafe_dock
-	name = "Cafeteria Dock Maintenance"
-	icon_state = "maint_cafe_dock"
-
-/area/lonestar/maintenance/library
-	name = "Library Maintenance"
-	icon_state = "maint_library"
 
 //lonestar:unused maintenance halls//
-
+/*
 /area/lonestar/maintenance/holodeck //at some point im sure some baron will ask for a holo deck /pizza
 	name = "Holodeck Maintenance"
 	icon_state = "maint_holodeck"
@@ -1715,10 +1499,10 @@
 /area/lonestar/maintenance/incinerator //i dont know what this is but we probably need one //pizza
 	name = "\improper Incinerator"
 	icon_state = "disposal"
-
+*/
 //lonestar: substations//
 // SUBSTATIONS (Subtype of maint, that should let them serve as shielded area during radstorm)
-
+/*
 /area/lonestar/maintenance/substation
 	name = "Substation"
 	icon_state = "substation"
@@ -1741,35 +1525,10 @@
 
 /area/lonestar/maintenance/substation/security // Security, Brig, Permabrig, etc.
 	name = "Prison Substation"
-
+*/
 //lonestar:secrets//
 
-/area/lonestar/hallway/collapsed/one
-	name = "\improper Pirate Hideout"
-	icon_state = "pirates"
-	flags = RAD_SHIELDED
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
-/area/lonestar/pirate_base
-	name = "\improper Pirate Hideout"
-	icon_state = "pirates"
-	flags = RAD_SHIELDED
-//	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/pirate_base/teleporter
-	name = "\improper Teleporter Room"
-	icon_state = "pirates"
-	flags = RAD_SHIELDED
-
-/area/lonestar/rad_base
-	name = "\improper Rad Room"
-	icon_state = "party"
-	flags = RAD_SHIELDED
-
-/area/lonestar/fightclub
-	name = "\improper Underground Fight Club"
-	icon_state = "red"
-	flags = RAD_SHIELDED
 
 ////Southern Crawss
 

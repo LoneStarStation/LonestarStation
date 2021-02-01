@@ -1,6 +1,6 @@
-var/const/NETWORK_THIRD_DECK   = "Floor Level 1"
-var/const/NETWORK_SECOND_DECK  = "Basement Level 1"
-var/const/NETWORK_FIRST_DECK   = "Basement Level 2"
+var/const/NETWORK_THIRD_DECK   = "Floor Level 3"
+var/const/NETWORK_SECOND_DECK  = "Floor Level 2"
+var/const/NETWORK_FIRST_DECK   = "Floor Level 1"
 var/const/NETWORK_SUPPLY       = "Supply"
 var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
 
@@ -44,20 +44,20 @@ var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
 	listening_level = Z_LEVEL_STATION_THREE
 	autolinkers = list("d3_relay")
 
-/obj/machinery/telecomms/relay/preset/lonestar/asteroid_belt
-	id = "Asteroid Belt Relay"
-	listening_level = Z_LEVEL_BELT
-	autolinkers = list("blt_relay")
+/obj/machinery/telecomms/relay/preset/lonestar/prison
+	id = "Prison Relay"
+	listening_level = Z_LEVEL_STATION_PRISON
+	autolinkers = list("lsp_relay")
 
 /obj/machinery/telecomms/relay/preset/lonestar/derelict
-	id = "Mysterious Ship Relay"
-	listening_level = Z_LEVEL_BELT_DERELICT
+	id = "Derelict Relay"
+	listening_level = Z_LEVEL_DERELICT_SHIP
 	autolinkers = list("shp_relay")
 
-/obj/machinery/telecomms/relay/preset/lonestar/other
-	id = "Other Relay"
-	listening_level = Z_LEVEL_BELT_OTHER
-	autolinkers = list("oth_relay")
+/obj/machinery/telecomms/relay/preset/lonestar/belt
+	id = "T-Coms Relay"
+	listening_level = Z_LEVEL_BELT_FAR
+	autolinkers = list("far_relay")
 
 /obj/machinery/telecomms/relay/preset/lonestar/transit
 	id = "Transit Relay"

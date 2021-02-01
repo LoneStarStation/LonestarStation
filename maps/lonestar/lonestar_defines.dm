@@ -5,11 +5,11 @@
 #define Z_LEVEL_STATION_THREE			3
 #define Z_LEVEL_EMPTY_SPACE				4
 #define Z_LEVEL_STATION_PRISON			5
-#define Z_LEVEL_ASTEROID_MINE			6
+#define Z_LEVEL_DERELICT_SHIP			6
 #define Z_LEVEL_MISC					7
 #define Z_LEVEL_CENTCOM					8
 #define Z_LEVEL_TRANSIT					9
-#define Z_LEVEL_DERELICT_SHIP			10
+#define Z_LEVEL_BELT_FAR				10
 
 /datum/map/lonestar_station
 	name = "Lonestar Station"
@@ -17,7 +17,8 @@
 	path = "lonestar_staion"
 
 	lobby_icon = 'icons/misc/title.dmi'
-	lobby_screens = list("mockingjay00") // New lobby screen if possible.
+	lobby_screens = list("mockingjay00") // lets get a rotation of our most famous cowboys if possible
+	//also it would be cool if the 'end game' of the station was to get your character's face plastered up there with the greats
 
 	holomap_smoosh = list(list(
 		Z_LEVEL_STATION_ONE,
@@ -36,14 +37,14 @@
 	starsys_name  = "Sol"
 	use_overmap = TRUE
 
-	shuttle_docked_message = "The scheduled shuttle to the %dock_name% has docked with the station at docks one and two. It will depart in approximately %ETD%."
-	shuttle_leaving_dock = "The Crew Transfer Shuttle has left the station. Estimate %ETA% until the shuttle docks at %dock_name%."
-	shuttle_called_message = "A crew transfer to %dock_name% has been scheduled. The shuttle has been called. Those leaving should proceed to docks one and two in approximately %ETA%."
+	shuttle_docked_message = "That there shuttle t'the %dock_name% has docked with the station at the followin' airlocks on the third floor: Dockin' Airlock One, Three, Five and Seven! That sucker's gonna leave in about  %ETD%."
+	shuttle_leaving_dock = "That there Transfer Shuttle's left the station! Reckon %ETA% til she lands at %dock_name%."
+	shuttle_called_message = "A  transfer to %dock_name% has been scheduled. The shuttle has been called. Any of y'all leaving should git t'the third floor in approximately %ETA%."
 	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
-	emergency_shuttle_docked_message = "The Emergency Shuttle has docked with the station at docks one and two. You have approximately %ETD% to board the Emergency Shuttle."
-	emergency_shuttle_leaving_dock = "The Emergency Shuttle has left the station. Estimate %ETA% until the shuttle docks at %dock_name%."
-	emergency_shuttle_called_message = "An emergency evacuation shuttle has been called. It will arrive at docks one and two in approximately %ETA%."
-	emergency_shuttle_recall_message = "The emergency shuttle has been recalled."
+	emergency_shuttle_docked_message = "The Emergency Shuttle has docked with the station at the followin' airlocks on the third floor: Dockin' Airlock One, Three, Five and Seven! Y'all have about %ETD% till it leaves the slowpokes behind."
+	emergency_shuttle_leaving_dock = "There she goes! Emergency Shuttle's has left the station. Reckon %ETA% til that puppy docks over at %dock_name%."
+	emergency_shuttle_called_message = "An Evacuation Order has been called. A shuttle will arrive on the third floor in about %ETA%."
+	emergency_shuttle_recall_message = "Cancel that evac order."
 
 	// Networks that will show up as options in the camera monitor program
 	station_networks = list(
@@ -97,48 +98,25 @@
 			Z_LEVEL_STATION_TWO,
 			Z_LEVEL_STATION_THREE,
 			Z_LEVEL_STATION_PRISON,
-			Z_LEVEL_ASTEROID_MINE
+			Z_LEVEL_DERELICT_SHIP
 		)
 
-// Commented out due to causing a lot of bugs. The base proc plus overmap achieves this functionality anyways.
-/*
-// Short range computers see only the six main levels, others can see the surrounding surface levels.
-/datum/map/southern_cross/get_map_levels(var/srcz, var/long_range = TRUE)
-	if (long_range && (srcz in map_levels))
-		return map_levels
-	else if (srcz == Z_LEVEL_TRANSIT && !long_range)
-		return list() // Nothing on these z-levels- sensors won't show, and GPSes won't see each other.
-	else if (srcz >= Z_LEVEL_STATION_ONE && srcz <= Z_LEVEL_STATION_THREE) // Station can see other decks.
-		return list(
-				Z_LEVEL_STATION_ONE,
-				Z_LEVEL_STATION_TWO,
-				Z_LEVEL_STATION_THREE,
-			)
-	else if(srcz in list(Z_LEVEL_SURFACE, Z_LEVEL_SURFACE_MINE, Z_LEVEL_SURFACE_WILD)) // Being on the surface lets you see other surface Zs.
-		return list(
-				Z_LEVEL_SURFACE,
-				Z_LEVEL_SURFACE_MINE,
-				Z_LEVEL_SURFACE_WILD
-			)
-	else
-		return list(srcz) //prevents runtimes when using CMC. any Z-level not defined above will be 'isolated' and only show to GPSes/CMCs on that same Z (e.g. CentCom).
-*/
 /datum/map/lonestar_station/perform_map_generation()
 	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.
 
 	// Cave submaps are first.
-	seed_submaps(list(Z_LEVEL_ASTEROID_MINE), 75, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
-	seed_submaps(list(Z_LEVEL_ASTEROID_MINE), 75, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
+	seed_submaps(list(Z_LEVEL_DERELICT_SHIP), 75, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
+	seed_submaps(list(Z_LEVEL_DERELICT_SHIP), 75, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
 	// Plains to make them less plain.
 	seed_submaps(list(Z_LEVEL_STATION_PRISON), 100, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Center area is WIP until map editing settles down.
 	// Wilderness is next.
-	seed_submaps(list(Z_LEVEL_DERELICT_SHIP), 75, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
-	seed_submaps(list(Z_LEVEL_DERELICT_SHIP), 75, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
+	seed_submaps(list(Z_LEVEL_BELT_FAR), 75, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
+	seed_submaps(list(Z_LEVEL_BELT_FAR), 75, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
 	// If Space submaps are made, add a line to make them here as well.
 
 	// Now for the tunnels.
-	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_ASTEROID_MINE, world.maxx, world.maxy) // Create the mining Z-level.
-	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_ASTEROID_MINE, 64, 64)         // Create the mining ore distribution map.
+	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_DERELICT_SHIP, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_DERELICT_SHIP, 64, 64)         // Create the mining ore distribution map.
 	// Todo: Forest generation.
 	return 1
 
@@ -148,10 +126,10 @@
 	random_color = TRUE
 
 // For making the 6-in-1 holomap, we calculate some offsets
-#define SOUTHERN_CROSS_MAP_SIZE 160 // Width and height of compiled in Southern Cross z levels.
-#define SOUTHERN_CROSS_HOLOMAP_CENTER_GUTTER 40 // 40px central gutter between columns
-#define SOUTHERN_CROSS_HOLOMAP_MARGIN_X ((HOLOMAP_ICON_SIZE - (2*SOUTHERN_CROSS_MAP_SIZE) - SOUTHERN_CROSS_HOLOMAP_CENTER_GUTTER) / 2) // 100
-#define SOUTHERN_CROSS_HOLOMAP_MARGIN_Y ((HOLOMAP_ICON_SIZE - (3*SOUTHERN_CROSS_MAP_SIZE)) / 2) // 60
+#define LONESTAR_STATION_MAP_SIZE 160 // Width and height of compiled in Sou- uhhh... lonestar z levels.
+#define LONESTAR_STATION_HOLOMAP_CENTER_GUTTER 40 // 40px central gutter between columns
+#define LONESTAR_STATION_HOLOMAP_MARGIN_X ((HOLOMAP_ICON_SIZE - (2*LONESTAR_STATION_MAP_SIZE) - LONESTAR_STATION_HOLOMAP_CENTER_GUTTER) / 2) // 100
+#define LONESTAR_STATION_HOLOMAP_MARGIN_Y ((HOLOMAP_ICON_SIZE - (3*LONESTAR_STATION_MAP_SIZE)) / 2) // 60
 
 /datum/map_z_level/lonestar_station/station
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES
@@ -188,21 +166,21 @@
 	flags = MAP_LEVEL_PLAYER
 	transit_chance = 76
 
-/datum/map_z_level/lonestar_station/prison
+/datum/map_z_level/lonestar_station/station_prison
 	z = Z_LEVEL_STATION_PRISON
 	name = "LSF The Slammer"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
 //	base_turf = /turf/simulated/floor/outdoors/rocks
 
-/datum/map_z_level/lonestar_station/asteroid_mine
-	z = Z_LEVEL_ASTEROID_MINE
-	name = "Asteroid Mines"
+/datum/map_z_level/lonestar_station/derelict_ship
+	z = Z_LEVEL_DERELICT_SHIP
+	name = "Mysterious Ship"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
 //	base_turf = /turf/simulated/floor/outdoors/rocks
 
-/datum/map_z_level/lonestar_station/derelict_ship
-	z = Z_LEVEL_DERELICT_SHIP
-	name = "Derelict Ship"
+/datum/map_z_level/lonestar_station/belt_far
+	z = Z_LEVEL_BELT_FAR
+	name = "Far Asteroid Belt"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 //	base_turf = /turf/simulated/floor/outdoors/rocks
 
@@ -221,7 +199,7 @@
 	z = Z_LEVEL_TRANSIT
 	name = "Transit"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT
-
+/*
 //Teleport to Mine
 
 /obj/effect/step_trigger/teleporter/mine/to_mining/New()
@@ -249,14 +227,14 @@
 	teleport_x = src.x
 	teleport_y = world.maxy - 1
 	teleport_z = Z_LEVEL_DERELICT_SHIP
-
+*/
 /datum/planet/prison
 	expected_z_levels = list(
 		Z_LEVEL_STATION_PRISON,
-		Z_LEVEL_ASTEROID_MINE,
-		Z_LEVEL_DERELICT_SHIP
+		Z_LEVEL_DERELICT_SHIP,
+		Z_LEVEL_BELT_FAR
 	)
-
+/*
 /obj/effect/step_trigger/teleporter/bridge/east_to_west/Initialize()
 	teleport_x = src.x - 4
 	teleport_y = src.y
@@ -317,7 +295,7 @@
 
 /obj/effect/map_effect/portal/master/side_b/ship_to_asteroid/hole
 	portal_id = "asteroid_ship-hole"
-
+*/
 //Suit Storage Units
 
 /obj/machinery/suit_cycler/exploration
