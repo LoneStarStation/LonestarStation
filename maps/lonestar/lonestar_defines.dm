@@ -11,7 +11,7 @@
 #define Z_LEVEL_TRANSIT					9
 #define Z_LEVEL_BELT_FAR				10
 
-/datum/map/lonestar_station
+/datum/map/lonestar
 	name = "Lonestar Station"
 	full_name = "Lonestar Station"
 	path = "lonestar_staion"
@@ -89,7 +89,7 @@
 	default_skybox = /datum/skybox_settings/lonestar_station
 
 	unit_test_exempt_areas = list(/area/ninja_dojo, /area/ninja_dojo/firstdeck, /area/ninja_dojo/arrivals_dock)
-	unit_test_exempt_from_atmos = list(/area/tcomm/chamber)
+	unit_test_exempt_from_atmos = list(/area/lonestar/command/server)
 
 	planet_datums_to_make = list(/datum/planet/prison)
 

@@ -9,13 +9,13 @@
 	docking_controller_tag = "supply_shuttle"
 	flags = SHUTTLE_FLAGS_PROCESS|SHUTTLE_FLAGS_SUPPLY
 
-/obj/effect/shuttle_landmark/lonestar/supply_offsite
+/obj/effect/shuttle_landmark/lonestar_station/supply_offsite
 	name = "LS Transit Center"
 	landmark_tag = "supply_offsite"
 	base_area = /area/centcom/command
 	base_turf = /turf/simulated/floor/plating
 
-/obj/effect/shuttle_landmark/lonestar/supply_station
+/obj/effect/shuttle_landmark/lonestar_station/supply_station
 	name = "LS Cargo Dock"
 	landmark_tag = "supply_station"
 	docking_controller = "cargo_bay"
@@ -35,14 +35,14 @@
 	landmark_station = "admin_station"
 	docking_controller_tag = "admin_shuttle"
 
-/obj/effect/shuttle_landmark/lonestar/admin_offsite
+/obj/effect/shuttle_landmark/lonestar_station/admin_offsite
 	name = "LS Transit Center"
 	landmark_tag = "admin_offsite"
 	docking_controller = "admin_shuttle_bay"
 	base_area = /area/centcom/command
 	base_turf = /turf/simulated/floor/plating
 
-/obj/effect/shuttle_landmark/lonestar/admin_station
+/obj/effect/shuttle_landmark/lonestar_station/admin_station
 	name = "LS Administration Dock"
 	landmark_tag = "admin_station"
 	docking_controller = "admin_shuttle_dock_airlock"
@@ -63,14 +63,14 @@
 	landmark_station = "transport1_station"
 	docking_controller_tag = "centcom_shuttle"
 
-/obj/effect/shuttle_landmark/southern_cross/transport1_offsite
+/obj/effect/shuttle_landmark/lonestar_station/transport1_offsite
 	name = "Centcom"
 	landmark_tag = "transport1_offsite"
 	docking_controller = "centcom_shuttle_bay"
 	base_area = /area/centcom/command
 	base_turf = /turf/simulated/floor/plating
 
-/obj/effect/shuttle_landmark/southern_cross/transport1_station
+/obj/effect/shuttle_landmark/lonestar_station/transport1_station
 	name = "UNDEFINED" //we're going to have to make this a breacher pod
 	landmark_tag = "transport1_station"
 	docking_controller = "centcom_shuttle_dock_airlock"
@@ -147,14 +147,14 @@
 	landmark_offsite = "merchant_offsite"
 	docking_controller_tag = "trade_shuttle"
 
-/obj/effect/shuttle_landmark/lonestar/merchant_offsite
+/obj/effect/shuttle_landmark/lonestar_station/merchant_offsite
 	name = "Lonstar Transit Center"
 	landmark_tag = "merchant_offsite"
 	docking_controller = "trade_shuttle_bay"
 	base_area = /area/space
 	base_turf = /turf/space
 
-/obj/effect/shuttle_landmark/lonestar/merchant_station
+/obj/effect/shuttle_landmark/lonestar_station/merchant_station
 	name = "SC Dock 1-E"
 	landmark_tag = "merchant_station"
 	docking_controller = "trade_shuttle_dock_airlock"
@@ -168,13 +168,13 @@
 	landmark_station = "arrivals_station"
 	docking_controller_tag = "arrivals_shuttle"
 
-/obj/effect/shuttle_landmark/lonestar/arrivals_offsite
+/obj/effect/shuttle_landmark/lonestar_station/arrivals_offsite
 	name = "Transit to Station"
 	landmark_tag = "arrivals_offsite"
 	base_area = /area/space
 	base_turf = /turf/space
 
-/obj/effect/shuttle_landmark/lonestar/arrivals_station
+/obj/effect/shuttle_landmark/lonestar_station/arrivals_station
 	name = "arrivals_dock"
 	landmark_tag = "arrivals_station"
 	docking_controller = "arrivals_dock"
@@ -192,19 +192,19 @@
 	docking_controller_tag = "escape_shuttle"
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
 
-/obj/effect/shuttle_landmark/southern_cross/escape/offsite
+/obj/effect/shuttle_landmark/lonestar_station/escape/offsite
 	name = "Centcom"
 	landmark_tag = "escape_offsite"
 	docking_controller = "centcom_dock"
 	base_area = /area/space
 	base_turf = /turf/space
 
-/obj/effect/shuttle_landmark/southern_cross/escape/station
+/obj/effect/shuttle_landmark/lonestar_station/escape/station
 	name = "Station Escape Dock"
 	landmark_tag = "escape_station"
 	docking_controller = "escape_dock"
 
-/obj/effect/shuttle_landmark/southern_cross/escape/transit
+/obj/effect/shuttle_landmark/lonestar_station/escape/transit
 	landmark_tag = "escape_transit"
 /*
 // Escape Pods - Save me from typing this eight billion times
@@ -220,7 +220,7 @@
 	landmark_transition = "escape_pod_"+ #NUMBER +"_transit"; \
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN; \
 } \
-/obj/effect/shuttle_landmark/southern_cross/escape_pod##NUMBER/station { \
+/obj/effect/shuttle_landmark/lonestar_station/escape_pod##NUMBER/station { \
 	name = "Station"; \
 	landmark_tag = "escape_pod_"+ #NUMBER +"_station"; \
 	docking_controller = "escape_pod_"+ #NUMBER +"_berth"; \
@@ -260,19 +260,19 @@ ESCAPE_POD(8)
 	docking_controller_tag = "cryostorage_shuttle"
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
 
-/obj/effect/shuttle_landmark/southern_cross/cryostorage_station
+/obj/effect/shuttle_landmark/lonestar_station/cryostorage_station
 	name = "Station Cryostorage Dock"
 	landmark_tag = "cryostorage_station"
 	docking_controller = "cryostorage_shuttle_berth"
 	base_area = /area/space
 	base_turf = /turf/simulated/floor/airless
 
-/obj/effect/shuttle_landmark/southern_cross/cryostorage_offsite
+/obj/effect/shuttle_landmark/lonestar_station/cryostorage_offsite
 	name = "Recovery"
 	landmark_tag = "cryostorage_offsite"
 	docking_controller = "cryostorage_shuttle_recovery"
 
-/obj/effect/shuttle_landmark/southern_cross/cryostorage_transit
+/obj/effect/shuttle_landmark/lonestar_station/cryostorage_transit
 	landmark_tag = "cryostorage_transit"
 	flags = SLANDMARK_FLAG_AUTOSET
 
@@ -288,19 +288,19 @@ ESCAPE_POD(8)
 	docking_controller_tag = "large_escape_pod_1"
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
 
-/obj/effect/shuttle_landmark/southern_cross/large_escape_pod1/station
+/obj/effect/shuttle_landmark/lonestar_station/large_escape_pod1/station
 	name = "Station"
 	landmark_tag = "large_escape_pod1_station"
 	docking_controller = "large_escape_pod_1_berth"
 	base_area = /area/maintenance/firstdeck/centralstarboard
 	base_turf = /turf/simulated/floor/airless
 
-/obj/effect/shuttle_landmark/southern_cross/large_escape_pod1/offsite
+/obj/effect/shuttle_landmark/lonestar_station/large_escape_pod1/offsite
 	name = "Recovery"
 	landmark_tag = "large_escape_pod1_offsite"
 	docking_controller = "large_escape_pod_1_recovery"
 
-/obj/effect/shuttle_landmark/southern_cross/large_escape_pod1/transit
+/obj/effect/shuttle_landmark/lonestar_station/large_escape_pod1/transit
 	landmark_tag = "large_escape_pod1_transit"
 	flags = SLANDMARK_FLAG_AUTOSET
 
@@ -316,19 +316,19 @@ ESCAPE_POD(8)
 	docking_controller_tag = "large_escape_pod_2"
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
 
-/obj/effect/shuttle_landmark/southern_cross/large_escape_pod2/station
+/obj/effect/shuttle_landmark/lonestar_station/large_escape_pod2/station
 	name = "Station"
 	landmark_tag = "large_escape_pod2_station"
 	docking_controller = "large_escape_pod_2_berth"
 	base_area = /area/maintenance/firstdeck/centralport
 	base_turf = /turf/simulated/floor/airless
 
-/obj/effect/shuttle_landmark/southern_cross/large_escape_pod2/offsite
+/obj/effect/shuttle_landmark/lonestar_station/large_escape_pod2/offsite
 	name = "Recovery"
 	landmark_tag = "large_escape_pod2_offsite"
 	docking_controller = "large_escape_pod_2_recovery"
 
-/obj/effect/shuttle_landmark/southern_cross/large_escape_pod2/transit
+/obj/effect/shuttle_landmark/lonestar_station/large_escape_pod2/transit
 	landmark_tag = "large_escape_pod2_transit"
 	flags = SLANDMARK_FLAG_AUTOSET
 */

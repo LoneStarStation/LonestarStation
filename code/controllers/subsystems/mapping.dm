@@ -23,7 +23,7 @@ SUBSYSTEM_DEF(mapping)
 	if(config.generate_map)
 		// Map-gen is still very specific to the map, however putting it here should ensure it loads in the correct order.
 		using_map.perform_map_generation()
-	
+
 	loadEngine()
 	// preloadShelterTemplates() // Re-enable this later once shelter capsules are ported upstream
 	// Mining generation probably should be here too
@@ -75,7 +75,7 @@ SUBSYSTEM_DEF(mapping)
 	chosen_type.load(T)
 
 // Commenting out lateload at the moment, this will need to be enabled once Polaris adds lateload maps (Expedition areas offmap)
-/*	
+/*
 /datum/controller/subsystem/mapping/proc/loadLateMaps()
 	var/list/deffo_load = using_map.lateload_z_levels
 	var/list/maybe_load = using_map.lateload_single_pick

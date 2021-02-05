@@ -449,6 +449,12 @@
 	id = access_syndicate
 	access_type = ACCESS_TYPE_SYNDICATE
 
+/var/const/access_trader = 160//General Beruang Trader Access
+/datum/access/trader
+	id = access_trader
+	access_type = ACCESS_TYPE_PRIVATE
+
+
 /*******
 * Misc *
 *******/
@@ -462,11 +468,6 @@
 /datum/access/crate_cash
 	id = access_crate_cash
 	access_type = ACCESS_TYPE_NONE
-
-/var/const/access_trader = 160//General Beruang Trader Access
-/datum/access/trader
-	id = access_trader
-	access_type = ACCESS_TYPE_PRIVATE
 
 /var/const/access_alien = 300 // For things like crashed ships.
 /datum/access/alien

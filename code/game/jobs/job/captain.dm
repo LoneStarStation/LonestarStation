@@ -5,7 +5,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 //////////////////////////////////
 
 /datum/job/captain
-	title = "Site Manager"
+	title = "Steward"
 	flag = CAPTAIN
 	departments = list(DEPARTMENT_COMMAND)
 	sorting_order = 3 // Above everyone.
@@ -14,7 +14,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "company officials and Corporate Regulations"
+	supervisors = "The Baron, the Governor and Lonestar Regulations"
 	selection_color = "#2F2F7F"
 	req_admin_notify = 1
 	access = list() 			//See get_access()
@@ -26,10 +26,10 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	ideal_character_age = 70 // Old geezer captains ftw
 
 	outfit_type = /decl/hierarchy/outfit/job/captain
-	job_description = "The Site Manager manages the other Command Staff, and through them the rest of the station. Though they have access to everything, \
-						they do not understand everything, and are expected to delegate tasks to the appropriate crew member. The Site Manager is expected to \
-						have an understanding of Standard Operating Procedure, and is subject to it, and legal action, in the same way as every other crew member."
-	alt_titles = list("Overseer"= /datum/alt_title/overseer)
+	job_description = "The Steward stands in for the Baron when he is not present, taking on their tasks for the station. They have access to everything, \
+						but they are expected to delegate tasks to the appropriate crew member if able. The Steward is expected to have a decent understanding \
+						of Lonestar Standard Operating Procedure, and is subject to it. Remember, you are an asset to Lonestar and can be replaced."
+	alt_titles = list("Proxy"= /datum/alt_title/proxy)
 
 /*
 /datum/job/captain/equip(var/mob/living/carbon/human/H)
@@ -43,8 +43,8 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 
 
 // Captain Alt Titles
-/datum/alt_title/overseer
-	title = "Overseer"
+/datum/alt_title/proxy
+	title = "Proxy"
 
 //////////////////////////////////
 //		Head of Personnel

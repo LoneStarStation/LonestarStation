@@ -401,46 +401,47 @@
 
 // Elevator areas.
 
-/area/turbolift/west_lonestar_one
+/area/turbolift/yonder_lonestar_one
 	name = "lift (first deck)"
-	lift_floor_label = "B-2"
-	lift_floor_name = "Basement Two"
-	lift_announce_str = "Arriving at Maintenance Level: Power Generation. Pest Control. Garbage Collection. Saloon."
+	lift_floor_label = "F-1"
+	lift_floor_name = "First Floor"
+	lift_announce_str = "Bottom Floor: Power Generation. Pest Control. Garbage Collection. Saloon."
 	base_turf = /turf/simulated/floor
 
-/area/turbolift/west_lonestar_two
+/area/turbolift/yonder_lonestar_two
 	name = "lift (second deck)"
-	lift_floor_label = "B-1"
-	lift_floor_name = "Basement One"
-	lift_announce_str = "Arriving at Crew Level: Cargobay. Medbay. Security. Cryogenic Storage."
+	lift_floor_label = "F-2"
+	lift_floor_name = "Second Floor"
+	lift_announce_str = "Middle Floor: Clerical Services. Medical Bay. Opperations Center. Cargo Bay."
 	base_turf = /turf/simulated/open
 
-/area/turbolift/west_lonestar_three
+/area/turbolift/yonder_lonestar_three
 	name = "lift (third deck)"
-	lift_floor_label = "F-1"
-	lift_floor_name = "Surface Level"
-	lift_announce_str = "Arriving at Command Deck: Administrative Offices. Ranch. Garage. Prisoner Lock-Up."
+	lift_floor_label = "F-3"
+	lift_floor_name = "Third Floor"
+	lift_announce_str = "Top Floor: Command Offices. Sheriff's Office. Civillian Services. Ranch. Garage."
 	base_turf = /turf/simulated/open
 
-/area/turbolift/cargo_lonestar_one
+/area/turbolift/thataways_lonestar_one
 	name = "lift (first deck)"
-	lift_floor_label = "N-A"
-	lift_floor_name = "Location"
-	lift_announce_str = "Arriving at Cargo Delivery."
-	base_turf = /turf/simulated/floor
-
-/area/turbolift/cargo_lonestar_two
-	name = "lift (second deck)"
-	lift_floor_label = "B-1"
-	lift_floor_name = "Cargo Operations"
-	lift_announce_str = "Arriving at Cargo."
-	base_turf = /turf/simulated/floor
-
-/area/turbolift/cargo_lonestar_three
-	name = "lift (third deck)"
 	lift_floor_label = "F-1"
-	lift_floor_name = "Aquisitions"
-	lift_announce_str = "Arriving at Prisoner Lock-Up."
+	lift_floor_name = "First Floor"
+	lift_announce_str = "Arriving at Bottom Floor: Power Generation. Pest Control. Garbage Collection. Saloon."
+	base_turf = /turf/simulated/floor
+
+/area/turbolift/thataways_lonestar_two
+	name = "lift (second deck)"
+	lift_floor_label = "F-2"
+	lift_floor_name = "Second Floor"
+	lift_announce_str = "Middle Floor: Clerical Services. Medical Bay. Opperations Center. Cargo Bay."
+	base_turf = /turf/simulated/open
+
+/area/turbolift/thataways_lonestar_three
+	name = "lift (third deck)"
+	lift_floor_label = "F-3"
+	lift_floor_name = "Third Floor"
+	lift_announce_str = "Top Floor: Command Offices. Sheriff's Office. Civillian Services. Ranch. Garage."
+	base_turf = /turf/simulated/open
 
 
 ////Lonestar Station
