@@ -147,7 +147,8 @@ var/world_topic_spam_protect_time = world.timeofday
 				"sec" = SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY),
 				"eng" = SSjob.get_job_titles_in_department(DEPARTMENT_ENGINEERING),
 				"med" = SSjob.get_job_titles_in_department(DEPARTMENT_MEDICAL),
-				"sci" = SSjob.get_job_titles_in_department(DEPARTMENT_RESEARCH),
+				"rch" = SSjob.get_job_titles_in_department(DEPARTMENT_RANCH),
+				"grg" = SSjob.get_job_titles_in_department(DEPARTMENT_GARAGE),
 				"car" = SSjob.get_job_titles_in_department(DEPARTMENT_CARGO),
 				"civ" = SSjob.get_job_titles_in_department(DEPARTMENT_CIVILIAN),
 				"bot" = SSjob.get_job_titles_in_department(DEPARTMENT_SYNTHETIC)
@@ -513,7 +514,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	features += config.abandon_allowed ? "respawn" : "no respawn"
 
 	features += config.persistence_disabled ? "persistence disabled" : "persistence enabled"
-	
+
 	features += config.persistence_ignore_mapload ? "persistence mapload disabled" : "persistence mapload enabled"
 
 	if (config && config.allow_vote_mode)

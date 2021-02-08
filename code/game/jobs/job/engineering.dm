@@ -11,7 +11,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Site Manager"
+	supervisors = "the Baron, Steward and Lonestar Regulation"
 	selection_color = "#7F6E2C"
 	req_admin_notify = 1
 	economic_modifier = 10
@@ -43,20 +43,23 @@
 	flag = ENGINEER
 	departments = list(DEPARTMENT_ENGINEERING)
 	department_flag = ENGSEC
+	sorting_order = 1
 	faction = "Station"
-	total_positions = 5
-	spawn_positions = 5
+	total_positions = 6
+	spawn_positions = 6
 	supervisors = "the Chief Engineer"
 	selection_color = "#5B4D20"
 	economic_modifier = 5
 	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_atmospherics)
 	minimal_access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction)
 	alt_titles = list("Maintenance Technician" = /datum/alt_title/maint_tech,
-						"Engine Technician" = /datum/alt_title/engine_tech, "Electrician" = /datum/alt_title/electrician)
+						"Engine Technician" = /datum/alt_title/engine_tech,
+						"Electrician" = /datum/alt_title/electrician,
+						"Atmospheric Technician" = /datum/alt_title/electrician)
 
 	minimal_player_age = 3
 
-	outfit_type = /decl/hierarchy/outfit/job/engineering/engineer
+	outfit_type = /decl/hierarchy/outfit/job/engineering/atmos
 	job_description = "An Engineer keeps the station running. They repair damages, keep the atmosphere stable, and ensure that power is being \
 						generated and distributed. On quiet shifts, they may be called upon to make cosmetic alterations to the station."
 
@@ -76,17 +79,22 @@
 	title_blurb = "An Electrician's primary duty is making sure power is properly distributed thoughout the station, utilizing solars, substations, and other \
 					methods to ensure every department has power in an emergency."
 
+/datum/alt_title/atmos
+	title = "Atmospheric Technician"
+	title_blurb = "An Atmospheric Technician is primarily concerned with keeping the station's atmosphere breathable. They are expected to have a good \
+						understanding of the pipes, vents, and scrubbers that move gasses around the station, and to be familiar with proper firefighting procedure."
+
 //////////////////////////////////
 //			Atmos Tech
 //////////////////////////////////
 /datum/job/atmos
-	title = "Atmospheric Technician"
+	title = "Pest Control"
 	flag = ATMOSTECH
 	departments = list(DEPARTMENT_ENGINEERING)
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 3
-	spawn_positions = 2
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "the Chief Engineer"
 	selection_color = "#5B4D20"
 	economic_modifier = 5
@@ -96,5 +104,5 @@
 	minimal_player_age = 3
 
 	outfit_type = /decl/hierarchy/outfit/job/engineering/atmos
-	job_description = "An Atmospheric Technician is primarily concerned with keeping the station's atmosphere breathable. They are expected to have a good \
-						understanding of the pipes, vents, and scrubbers that move gasses around the station, and to be familiar with proper firefighting procedure."
+	job_description = "Pest Control is given the task of keeping the many invasive organisms on the Lonestar asteroid in relative check. They can typically be \
+						found in the maintenance ways and caves around the facility. Remember that the Ranch sometimes enjoys exotic fauna to examine."

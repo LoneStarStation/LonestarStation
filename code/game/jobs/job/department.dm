@@ -23,23 +23,29 @@
 	name = DEPARTMENT_SECURITY
 	short_name = "Sec"
 	color = "#8E0000"
-	sorting_order = 6
+	sorting_order = 7
 
 /datum/department/engineering
 	name = DEPARTMENT_ENGINEERING
 	short_name = "Eng"
 	color = "#B27300"
-	sorting_order = 5
+	sorting_order = 6
 
 /datum/department/medical
 	name = DEPARTMENT_MEDICAL
 	short_name = "Med"
 	color = "#006600"
+	sorting_order = 5
+
+/datum/department/garage
+	name = DEPARTMENT_GARAGE
+	short_name = "Grg"
+	color = "#A65BA6"
 	sorting_order = 4
 
-/datum/department/research
-	name = DEPARTMENT_RESEARCH
-	short_name = "Sci"
+/datum/department/ranch
+	name = DEPARTMENT_RANCH
+	short_name = "Rch"
 	color = "#A65BA6"
 	sorting_order = 3
 

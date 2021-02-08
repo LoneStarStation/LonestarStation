@@ -10,7 +10,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/rifle
 	name = "rifle cabinet"
-	req_one_access = list(access_explorer,access_brig)
+	req_one_access = list(access_brig)
 
 	starts_with = list(
 		/obj/item/ammo_magazine/clip/c762/hunter = 9,
@@ -25,7 +25,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/phase
 	name = "explorer weapon cabinet"
-	req_one_access = list(access_explorer,access_brig)
+	req_one_access = list(access_brig)
 
 	starts_with = list(
 		/obj/item/weapon/gun/energy/phasegun = 2,
@@ -34,7 +34,7 @@
 		/obj/item/clothing/accessory/permit/gun/planetside)
 
 //Explorer Lockers
-
+/*
 /obj/structure/closet/secure_closet/explorer
 	name = "explorer locker"
 	req_access = list(access_explorer)
@@ -101,7 +101,7 @@
 		/obj/item/device/gps,
 		/obj/item/device/geiger,
 		/obj/item/bodybag/cryobag)
-
+*/
 //Pilot Locker
 
 /obj/structure/closet/secure_closet/pilot

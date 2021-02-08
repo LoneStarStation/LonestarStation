@@ -2,24 +2,27 @@
 /datum/job/chaplain
 	title = "Chaplain"
 	flag = CHAPLAIN
-	departments = list(DEPARTMENT_CIVILIAN)
+	departments = list(DEPARTMENT_MEDICAL)
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Head of Personnel"
-	selection_color = "#515151"
+	supervisors = "the Chief Medical Officer and whatever god(s) you recognize"
+	selection_color = "#013D3B"
 	access = list(access_morgue, access_chapel_office, access_crematorium, access_maint_tunnels)
 	minimal_access = list(access_chapel_office, access_crematorium)
 
 	outfit_type = /decl/hierarchy/outfit/job/chaplain
-	job_description = "The Chaplain ministers to the spiritual needs of the crew."
+	job_description = "The Chaplain ministers to the spiritual needs of the crew. It falls on them to perform mental wellness checks on the crew, and are \
+						expected to not let their personal religious leanings sway their judgements too much. The Chaplain should be respectful if they are\
+						asked to lead a service for a religion they do not belong to, as they are a civil servant to the people of Lonestar."
 	alt_titles = list("Counselor" = /datum/alt_title/counselor)
 
 // Chaplain Alt Titles
 /datum/alt_title/counselor
 	title = "Counselor"
-	title_blurb = "The Counselor attends to the emotional needs of the crew, without a specific medicinal or spiritual focus."
+	title_blurb = "The Counselor attends to the emotional needs of the crew, without a specific medicinal or spiritual focus. It falls on them to \
+					perform mental wellness checks on the crew, as well as lead religious ceremonies."
 
 /datum/job/chaplain/equip(var/mob/living/carbon/human/H, var/alt_title, var/ask_questions = TRUE)
 	. = ..()

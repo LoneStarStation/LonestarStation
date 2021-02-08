@@ -27,7 +27,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 
 	outfit_type = /decl/hierarchy/outfit/job/captain
 	job_description = "The Steward stands in for the Baron when he is not present, taking on their tasks for the station. They have access to everything, \
-						but they are expected to delegate tasks to the appropriate crew member if able. The Steward is expected to have a decent understanding \
+						but they are expected to delegate jobs to the appropriate crew member if able. The Steward is expected to have a decent understanding \
 						of Lonestar Standard Operating Procedure, and is subject to it. Remember, you are an asset to Lonestar and can be replaced."
 	alt_titles = list("Proxy"= /datum/alt_title/proxy)
 
@@ -53,13 +53,13 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	title = "Head of Personnel"
 	flag = HOP
 	departments = list(DEPARTMENT_COMMAND, DEPARTMENT_CIVILIAN, DEPARTMENT_CARGO)
-	sorting_order = 2 // Above the QM, below captain.
+	sorting_order = 2 // Above the IT, below captain.
 	departments_managed = list(DEPARTMENT_CIVILIAN, DEPARTMENT_CARGO)
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Site Manager"
+	supervisors = "The Steward, the Baron and Lonestar Regulations"
 	selection_color = "#1D1D4F"
 	req_admin_notify = 1
 	minimal_player_age = 10
@@ -90,6 +90,45 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 // HOP Alt Titles
 /datum/alt_title/cro
 	title = "Crew Resources Officer"
+
+//////////////////////////////////
+//		Information Technology Department
+//////////////////////////////////
+/datum/job/itdepartment
+	title = "IT Specialist"
+	flag = ITS
+	departments = list(DEPARTMENT_COMMAND, DEPARTMENT_CIVILIAN, DEPARTMENT_GARAGE, DEPARTMENT_RANCH)
+	sorting_order = 1 // Above secretary, below captain and HOP
+	departments_managed = list(DEPARTMENT_CIVILIAN, DEPARTMENT_RANCH, DEPARTMENT_GARAGE)
+	department_flag = CIVILIAN
+	faction = "Station"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "The Steward, the Baron and Lonestar Regulations"
+	selection_color = "#1D1D4F"
+	req_admin_notify = 1
+	minimal_player_age = 10
+	economic_modifier = 10
+
+	minimum_character_age = 20
+	ideal_character_age = 50
+
+//	outfit_type = /decl/hierarchy/outfit/job/itdepartment
+	job_description = "Have you tried turning it off and back on again?"
+
+	access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers,
+			            access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads,
+			            access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_construction, access_morgue,
+			            access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer,
+			            access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station,
+			            access_hop, access_RC_announce, access_keycard_auth, access_gateway)
+	minimal_access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers,
+			            access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads,
+			            access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_construction, access_morgue,
+			            access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer,
+			            access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station,
+			            access_hop, access_RC_announce, access_keycard_auth, access_gateway)
+
 
 //////////////////////////////////
 //		Command Secretary

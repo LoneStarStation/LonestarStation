@@ -384,6 +384,12 @@
 	desc = "Medical Equipment"
 	region = ACCESS_REGION_MEDBAY
 
+var/const/access_pilot = 67
+/datum/access/pilot
+	id = access_pilot
+	desc = "Pilot"
+	region = ACCESS_REGION_SUPPLY
+
 /******************
 * Central Command *
 ******************/

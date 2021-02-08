@@ -9,15 +9,16 @@ var/const/OFFICER			=(1<<4)//deputy
 var/const/CHIEF				=(1<<5)//yep
 var/const/ENGINEER			=(1<<6)//yeah
 var/const/ATMOSTECH			=(1<<7)//pestcontrol
-var/const/AI				=(1<<8)//uhhh maybe
-var/const/CYBORG			=(1<<9)//sure
+var/const/ITS				=(1<<8)//IT Specialist
+var/const/AI				=(1<<9)//remove?
+var/const/CYBORG			=(1<<10)//sure
 
 
 var/const/MEDSCI			=(1<<1)
 
-var/const/RD				=(1<<0)//needs two?
-var/const/SCIENTIST			=(1<<1)//
-var/const/CHEMIST			=(1<<2)//
+var/const/RANCH_HEAD		=(1<<0)//garage
+var/const/GARAGE_HEAD		=(1<<1)//greasemonky
+var/const/CHEMIST			=(1<<2)//lol
 var/const/CMO				=(1<<3)//LT. docs
 var/const/DOCTOR			=(1<<4)//SGT. docs
 var/const/GENETICIST		=(1<<5)//
@@ -31,11 +32,11 @@ var/const/PARAMEDIC			=(1<<10)//lonestar trooper
 var/const/CIVILIAN			=(1<<2)
 
 var/const/HOP				=(1<<0)
-var/const/BARTENDER			=(1<<1)
-var/const/BOTANIST			=(1<<2)
+var/const/BAR_MANAGER		=(1<<1)
+var/const/BARTENDER			=(1<<2)
 var/const/CHEF				=(1<<3)
 var/const/JANITOR			=(1<<4)
-var/const/LIBRARIAN			=(1<<5)
+var/const/LIBRARIAN			=(1<<5)//gunsmith?
 var/const/QUARTERMASTER		=(1<<6)
 var/const/CARGOTECH			=(1<<7)
 var/const/MINER				=(1<<8)
@@ -43,6 +44,7 @@ var/const/LAWYER			=(1<<9)//seems like an rp role
 var/const/CHAPLAIN			=(1<<10)//merge with psych
 var/const/ASSISTANT			=(1<<11)
 var/const/BRIDGE			=(1<<12)
+var/const/PILOT 			=(1<<13)
 
 /proc/guest_jobbans(var/job)
 	return ( (job in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SYNTHETIC)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY)) )

@@ -840,8 +840,8 @@
 	icon_state = "medbay"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
-/area/lonestar/medbay/smo
-	name = "\improper Medbay - SMO's Office"
+/area/lonestar/medbay/cmo
+	name = "\improper Medbay - CMOs Office"
 	icon_state = "CMO"
 
 /area/lonestar/medbay/lobby
@@ -866,8 +866,8 @@
 	icon_state = "medbay"
 //	flags = AREA_FLAG_IS_NOT_PERSISTENT //LETS SEE WHAT HAPPENS //dp
 
-/area/lonestar/medbay/chem
-	name = "\improper Chemistry"
+/area/lonestar/medbay/waiting
+	name = "\improper Waiting Area"
 	icon_state = "medbay"
 //	flags = AREA_FLAG_IS_NOT_PERSISTENT //LETS SEE WHAT HAPPENS //dp
 
@@ -876,7 +876,7 @@
 	icon_state = "medbay"
 
 /area/lonestar/medbay/reception
-	name = "\improper Medbay Reception Desk"
+	name = "\improper Medical Desk"
 	icon_state = "medbay"
 
 /area/lonestar/medbay/bathroom
@@ -1095,6 +1095,16 @@
 
 /area/lonestar/command/baron
 	name = "\improper Command - Baron's Office"
+	icon_state = "head_quarters"
+//	flags = AREA_FLAG_IS_NOT_PERSISTENT
+
+/area/lonestar/command/baron_armory
+	name = "\improper Command - Baron's Armory"
+	icon_state = "head_quarters"
+//	flags = AREA_FLAG_IS_NOT_PERSISTENT
+
+/area/lonestar/command/steward
+	name = "\improper Command - Steward Hall"
 	icon_state = "head_quarters"
 //	flags = AREA_FLAG_IS_NOT_PERSISTENT
 

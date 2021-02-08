@@ -79,7 +79,7 @@
 
 /datum/event2/meta/prison_break/xenobio
 	name = "prison break - xenobio"
-	departments = list(DEPARTMENT_RESEARCH, DEPARTMENT_SYNTHETIC)
+	departments = list(DEPARTMENT_RANCH, DEPARTMENT_SYNTHETIC)
 	chaos = 20 // This one is more likely to actually kill someone.
 	chaotic_threshold = EVENT_CHAOS_THRESHOLD_MEDIUM_IMPACT
 	event_type = /datum/event2/event/prison_break/xenobio

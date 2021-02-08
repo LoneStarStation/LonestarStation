@@ -94,8 +94,8 @@ var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
 	freq_listening = list(SUP_FREQ, SRV_FREQ, EXP_FREQ)
 
 /obj/machinery/telecomms/server/presets/service/lonestar
-	freq_listening = list(SRV_FREQ, EXP_FREQ)
-	autolinkers = list("service", "explorer")
+	freq_listening = list(SRV_FREQ)
+	autolinkers = list("service")
 
 /datum/map/lonestar/default_internal_channels()
 	return list(
@@ -112,5 +112,4 @@ var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
 		num2text(SCI_FREQ) = list(access_tox,access_robotics,access_xenobiology),
 		num2text(SUP_FREQ) = list(access_cargo),
 		num2text(SRV_FREQ) = list(access_janitor, access_hydroponics),
-		num2text(EXP_FREQ) = list(access_explorer)
 	)

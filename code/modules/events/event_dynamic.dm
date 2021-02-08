@@ -182,7 +182,6 @@ var/list/event_last_fired = list()
 	active_with_role["Engineer"] = 0
 	active_with_role["Medical"] = 0
 	active_with_role["Security"] = 0
-	active_with_role["Scientist"] = 0
 	active_with_role["AI"] = 0
 	active_with_role["Cyborg"] = 0
 	active_with_role["Janitor"] = 0
@@ -203,8 +202,6 @@ var/list/event_last_fired = list()
 					active_with_role["Security"]++
 				else if(istype(R.module, /obj/item/weapon/robot_module/robot/medical))
 					active_with_role["Medical"]++
-				else if(istype(R.module, /obj/item/weapon/robot_module/robot/research))
-					active_with_role["Scientist"]++
 
 		if(M.mind.assigned_role in SSjob.get_job_titles_in_department(DEPARTMENT_ENGINEERING))
 			active_with_role["Engineer"]++
@@ -214,9 +211,6 @@ var/list/event_last_fired = list()
 
 		if(M.mind.assigned_role in SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY))
 			active_with_role["Security"]++
-
-		if(M.mind.assigned_role in SSjob.get_job_titles_in_department(DEPARTMENT_RESEARCH))
-			active_with_role["Scientist"]++
 
 		if(M.mind.assigned_role == "AI")
 			active_with_role["AI"]++
