@@ -452,7 +452,7 @@
 
 /area/lonestar/asteroid					// -- TLE
 	name = "\improper Lonestar"
-	icon_state = "west"
+	icon_state = "darkred"
 	sound_env = ASTEROID
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
@@ -471,6 +471,7 @@
 	icon_state = "purple"
 	flags = RAD_SHIELDED
 	sound_env = TUNNEL_ENCLOSED
+	holomap_color = HOLOMAP_AREACOLOR_DORMS
 
 /area/lonestar/maintenance
 	name = "maintenance"
@@ -506,6 +507,10 @@
 	name = "\improper F-1 Shaller Hallway"
 	icon_state = "yellow"
 
+/area/lonestar/hallway/primary/floor_one/five
+	name = "\improper F-1 Deep Thataways Hallway"
+	icon_state = "yellow"
+
 /area/lonestar/maintenance/first/
 	name = "\improper first floor"
 
@@ -518,6 +523,9 @@
 /area/lonestar/maintenance/first/central_maint
 	name = "\improper FFC Maintenance Hall"
 
+/area/lonestar/maintenance/first/fishtanks
+	name = "\improper MCCCF Carp Storage"
+
 //lonestar: engineering//
 
 /area/lonestar/engineering
@@ -526,8 +534,8 @@
 	ambience = AMBIENCE_ENGINEERING
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
-/area/lonestar/engineering/engine_entry
-	name = "\improper Engineering E-Lock"
+/area/lonestar/engineering/access
+	name = "\improper Engineering Access"
 	icon_state = "engine"
 
 /area/lonestar/engineering/foreman_office
@@ -626,10 +634,10 @@
 /area/lonestar/pestcontrol
 	name = "\improper Pest Control"
 	icon_state = "pest_control"
-	ambience = AMBIENCE_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
-/area/lonestar/pestcontrol/pest_entrylock
-	name = "\improper Pest Control E-Lock"
+/area/lonestar/pestcontrol/access
+	name = "\improper Pest Control Access"
 	icon_state = "pest_control"
 
 /area/lonestar/pestcontrol/pest_control_maint
@@ -741,7 +749,134 @@
 /area/lonestar/airlock/barlock
 	name = "\improper Bar Airlock"
 
-//Deck Two/Second Floor (Z-2)
+//lonestar: old civ areas
+
+/area/lonestar/maintenance/gym
+	name = "\improper Old and Busted Gym"
+
+/area/lonestar/maintenance/gym/workout
+	name = "\improper Old Gym"
+
+/area/lonestar/maintenance/gym/ring
+	name = "\improper Gym Boxing Ring"
+
+/area/lonestar/maintenance/gym/showers
+	name = "\improper Shower Room"
+
+/area/lonestar/maintenance/gym/changing
+	name = "\improper Changing Rooms"
+
+/area/lonestar/maintenance/oldrange
+	name = "\improper Old shootin range"
+
+/area/lonestar/maintenance/oldrange/lobby
+	name = "\improper Lower Range Lobby"
+
+/area/lonestar/maintenance/oldrange/office
+	name = "\improper Lower Range Office"
+
+/area/lonestar/maintenance/oldrange/range
+	name = "\improper Lower Range"
+
+/area/lonestar/maintenance/civilianold
+	name = "\improper Old Civ Maintenance"
+
+//lonestar: destroyed xeno archeology
+
+/area/lonestar/maintenance/arch
+	name = "\improper what happened here"
+
+/area/lonestar/maintenance/arch/head
+	name = "\improper Head Researchers Office"
+
+/area/lonestar/maintenance/arch/access
+	name = "\improper Archeology Access"
+
+/area/lonestar/maintenance/arch/lobby
+	name = "\improper Archeology Lobby"
+
+/area/lonestar/maintenance/arch/gift
+	name = "\improper Archeology Gift Shop"
+
+/area/lonestar/maintenance/arch/hall
+	name = "\improper Scientist Hallway"
+
+/area/lonestar/maintenance/arch/breakroom
+	name = "\improper Scientist Breakroom"
+
+/area/lonestar/maintenance/arch/toilet
+	name = "\improper Scientist Bathroom"
+
+/area/lonestar/maintenance/arch/containment
+	name = "\improper Anomalous Object Storage"
+
+/area/lonestar/maintenance/arch/lab
+	name = "\improper Science Lab"
+
+/area/lonestar/maintenance/arch/labstorage
+	name = "\improper Lab Storage"
+
+/area/lonestar/maintenance/arch/prep
+	name = "\improper Scientist Prep Room"
+
+/area/lonestar/maintenance/arch/observation
+	name = "\improper Object Observation Chamber"
+
+/area/lonestar/maintenance/arch/backdoor
+	name = "\improper Digsite Access"
+
+/area/lonestar/maintenance/arch/storage
+	name = "\improper Artifact Holding"
+
+/area/lonestar/maintenance/arch/maint
+	name = "\improper Archeology Maintenance"
+
+//lonestar: old atmospherics
+
+/area/lonestar/maintenance/oldmos
+	name = "\improper Old and Busted Atmos"
+
+/area/lonestar/maintenance/oldmos/hall
+	name = "\improper Old Atmos Hall"
+
+/area/lonestar/maintenance/oldmos/control
+	name = "\improper Old Atmos Control Room"
+
+/area/lonestar/maintenance/oldmos/exit
+	name = "\improper Atmos Exit"
+
+//lonestar: old station
+
+/area/lonestar/maintenance/oldstar
+	name = "\improper Old Neo Vima Station"
+
+/area/lonestar/maintenance/oldstar/command
+	name = "\improper Control Room"
+
+/area/lonestar/maintenance/oldstar/cargo_bay
+	name = "\improper Cargo Bay"
+
+/area/lonestar/maintenance/oldstar/med_bay
+	name = "\improper Medical Station"
+
+/area/lonestar/maintenance/oldstar/kitchen
+	name = "\improper Kitchen"
+
+/area/lonestar/maintenance/oldstar/hallway
+	name = "\improper Hallway One"
+
+/area/lonestar/maintenance/oldstar/maintenance
+	name = "\improper Maintenance One"
+
+//lonestar: squatters
+
+/area/lonestar/maintenance/squat
+	name = "\improper Squatters"
+
+/area/lonestar/maintenance/squat/deckone
+	name = "\improper Power Box"
+
+//Deck Two/F-2 (Z-2)
 
 /area/lonestar/hallway/primary/floor_two/elevatoralpha
 	name = "\improper Elevator Alpha - Middle"
@@ -755,8 +890,8 @@
 	name = "\improper Shuttle Waiting Room"
 	icon_state = "quart"
 
-/area/lonestar/hallway/primary/floor_two/shuttle_elock
-	name = "\improper Shuttle E-Lock"
+/area/lonestar/hallway/primary/floor_two/access
+	name = "\improper Shuttles Access"
 	icon_state = "quart"
 
 /area/lonestar/hallway/primary/floor_two/one
@@ -808,8 +943,8 @@
 	name = "\improper Cargo Bay Foyer"
 	icon_state = "quart"
 
-/area/lonestar/cargobay/entrylock
-	name = "\improper Cargo E-Lock"
+/area/lonestar/cargobay/access
+	name = "\improper Cargo Access"
 	icon_state = "quart"
 
 /area/lonestar/cargobay/staff
@@ -833,6 +968,13 @@
 /area/lonestar/maintenance/cargo
 	name = "\improper Cargo Bay Maintenance"
 
+/area/lonestar/maintenance/qm
+	name = "\improper Secondary Cargo Maintenance"
+
+/area/lonestar/airlock/cargolock
+	name = "\improper Cargo Airlock"
+
+
 //lonestar:medbay//
 
 /area/lonestar/medbay
@@ -848,8 +990,8 @@
 	name = "\improper Medbay Lobby"
 	icon_state = "medbay"
 
-/area/lonestar/medbay/entrylock
-	name = "\improper Medbay E-Lock"
+/area/lonestar/medbay/access
+	name = "\improper Medbay Access"
 	icon_state = "medbay"
 
 /area/lonestar/medbay/walkup
@@ -909,8 +1051,8 @@
 /area/lonestar/medbay/clerical/worshiphall
 	name = "\improper Public Worship Space"
 
-/area/lonestar/medbay/clerical/worshipentry
-	name = "\improper Worship E-Lock"
+/area/lonestar/medbay/clerical/access
+	name = "\improper Worship Center Access"
 
 /area/lonestar/medbay/clerical/office
 	name = "\improper Clerical Office"
@@ -969,18 +1111,32 @@
 	name = "\improper Rental T"
 
 /area/lonestar/maintenance/rental/alpha
-	name = "\improper A Rental Maintenance"
+	name = "\improper A Rental Maintenance Hall"
 
 /area/lonestar/maintenance/rental/beta
-	name = "\improper B Rental Maintenance"
+	name = "\improper B Rental Maintenance Hall"
 
 /area/lonestar/maintenance/rental/theta
-	name = "\improper T Rental Maintenance"
+	name = "\improper T Rental Maintenance Hall"
 
-//lonestar:other//
+/area/lonestar/maintenance/rental/maint
+	name = "\improper Master Rental Maintenance"
 
+//lonestar: deck two maint areas
 
-//Deck Three/Main Level F-3 (Z-3)
+/area/lonestar/maintenance/water
+	name = "\improper Hydro Control"
+
+/area/lonestar/maintenance/second/redundant
+	name = "\improper Redundant Storage"
+
+/area/lonestar/maintenance/second/bypass1
+	name = "\improper D2 Maintenance Bypass 1"
+
+/area/lonestar/maintenance/second/bypass2
+	name = "\improper D2  Maintenance Bypass 2"
+
+//Deck Three/F-3 (Z-3)
 
 /area/lonestar/hallway/primary/floor_three/elevatoralpha
 	name = "\improper Elevator Alpha - Top"
@@ -1058,17 +1214,18 @@
 /area/lonestar/command/
 	name = "\improper Baron"
 	icon_state = "head_quarters"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 /area/lonestar/command/frontdesk
 	name = "\improper Civic Office"
 	icon_state = "head_quarters"
 
-/area/lonestar/command/entrylocktwo
-	name = "\improper Command E-Lock One"
+/area/lonestar/command/commandaccess
+	name = "\improper Command Access"
 	icon_state = "head_quarters"
 
-/area/lonestar/command/entrylockone
-	name = "\improper Command E-Lock Two"
+/area/lonestar/command/baronaccess
+	name = "\improper Baron Access"
 	icon_state = "head_quarters"
 
 /area/lonestar/command/centerhallway
@@ -1148,6 +1305,7 @@
 /area/lonestar/sheriff/
 	name = "\improper Seck's Office"
 	icon_state = "security"
+	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 
 /area/lonestar/sheriff/hos
 	name = "\improper Sheriff's Office"
@@ -1206,6 +1364,9 @@
 /area/lonestar/maintenance/security
 	name = "\improper Security Maintenance"
 
+/area/lonestar/maintenance/third/bypass
+	name = "\improper D3 Maintenance Bypass"
+
 //lonestar: civillian//
 
 /area/lonestar/civillian
@@ -1227,8 +1388,8 @@
 /area/lonestar/civillian/cafe/freezer
 	name = "\improper Freezer"
 
-/area/lonestar/civillian/cafe/entrylock
-	name = "\improper Diner E-Lock"
+/area/lonestar/civillian/cafe/access
+	name = "\improper Diner Access"
 
 /area/lonestar/civillian/cafe/hallway
 	name = "\improper Diner Hallway"
@@ -1272,8 +1433,8 @@
 /area/lonestar/civillian/range/office
 	name = "\improper Gunsmithy Office"
 
-/area/lonestar/civillian/range/entrylock
-	name = "\improper Shooting Range E-Lock"
+/area/lonestar/civillian/range/access
+	name = "\improper Shooting Range Access"
 
 /area/lonestar/civillian/range/shooting
 	name = "\improper Shooting Range"
@@ -1305,11 +1466,11 @@
 /area/lonestar/garage/frontdesk
 	name = "\improper Garage Front Desk"
 
-/area/lonestar/garage/entrylock1
-	name = "\improper Garage E-Lock"
+/area/lonestar/garage/access
+	name = "\improper Garage Access"
 
-/area/lonestar/garage/entrylock2
-	name = "\improper Mechbay Lockdown"
+/area/lonestar/garage/access2
+	name = "\improper Garage Door"
 
 /area/lonestar/garage/surgical
 	name = "\improper Garage Prosthetics Lab"
@@ -1351,11 +1512,11 @@
 /area/lonestar/ranch/foyer
 	name = "\improper Research Foyer"
 
-/area/lonestar/ranch/entrylock
-	name = "\improper Ranch E-Lock"
+/area/lonestar/ranch/access
+	name = "\improper Ranch Access"
 
-/area/lonestar/ranch/entrylock2
-	name = "\improper Ranch Gate Lockdown"
+/area/lonestar/ranch/access2
+	name = "\improper Ranch Gate"
 
 /area/lonestar/ranch/frontdesk
 	name = "\improper Ranch Reception"
@@ -2457,11 +2618,11 @@ area/crew_quarters/heads/sc/hop/quarters
 
 /area/ninja_dojo/seconddeck
 	name = "north of second deck"
-	icon_state = "north"
+	icon_state = "south"
 
 /area/ninja_dojo/thirddeck
 	name = "west of third deck"
-	icon_state = "west"
+	icon_state = "south"
 
 /area/ninja_dojo/mining
 	name = "mining site"
@@ -2493,7 +2654,12 @@ area/crew_quarters/heads/sc/hop/quarters
 	base_turf = /turf/simulated/sky/moving/south
 
 /area/ninja_dojo/arrivals_dock
-	name = "\improper docked with Southern Cross"
+	name = "\improper docked with Neo Vima"
+	icon_state = "shuttle"
+	dynamic_lighting = 0
+
+/area/ninja_dojo/cavern
+	name = "\improper Second Deck hidden cavern"
 	icon_state = "shuttle"
 	dynamic_lighting = 0
 

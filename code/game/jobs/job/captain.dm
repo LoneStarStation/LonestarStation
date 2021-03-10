@@ -50,7 +50,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 //		Head of Personnel
 //////////////////////////////////
 /datum/job/hop
-	title = "Head of Personnel"
+	title = "Facility Manager"
 	flag = HOP
 	departments = list(DEPARTMENT_COMMAND, DEPARTMENT_CIVILIAN, DEPARTMENT_CARGO)
 	sorting_order = 2 // Above the IT, below captain.
@@ -69,7 +69,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	ideal_character_age = 50
 
 	outfit_type = /decl/hierarchy/outfit/job/hop
-	job_description = "The Head of Personnel manages the Service department, the Exploration team, and most other civilians. They also \
+	job_description = "The Faciliyt Manager manages the Service department, the Exploration team, and most other civilians. They also \
 						manage the Supply department, through the Quartermaster. In addition, the Head of Personnel oversees the personal accounts \
 						of the crew, including their money and access. If necessary, the Head of Personnel is first in line to assume Acting Command."
 	alt_titles = list("Crew Resources Officer" = /datum/alt_title/cro)

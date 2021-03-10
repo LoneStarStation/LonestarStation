@@ -110,9 +110,9 @@
 				prob(10);/obj/effect/decal/remains/posi
 				)
 
-/obj/random_multi/single_item/captains_spare_id
+/obj/random_multi/single_item/barons_spare_id
 	name = "Multi Point - Captain's Spare"
-	id = "Captain's spare id"
+	id = "Baron's spare id"
 	item_path = /obj/item/weapon/card/id/gold/captain/spare
 
 /obj/random_multi/single_item/hand_tele

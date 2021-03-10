@@ -25,7 +25,7 @@
 		Z_LEVEL_STATION_TWO,
 		Z_LEVEL_STATION_THREE))
 
-	zlevel_datum_type = /datum/map_z_level/lonestar_station
+	zlevel_datum_type = /datum/map_z_level/lonestar
 
 	station_name  = "LSF Neo Vima"
 	station_short = "Lonestar Station"
@@ -86,7 +86,7 @@
 	use_overmap = 			TRUE
 	overmap_size = 			20
 	overmap_event_areas = 	6
-	default_skybox = /datum/skybox_settings/lonestar_station
+	default_skybox = /datum/skybox_settings/lonestar
 
 	unit_test_exempt_areas = list(/area/ninja_dojo, /area/ninja_dojo/firstdeck, /area/ninja_dojo/arrivals_dock)
 	unit_test_exempt_from_atmos = list(/area/lonestar/command/server)
@@ -101,7 +101,7 @@
 			Z_LEVEL_DERELICT_SHIP
 		)
 
-/datum/map/lonestar_station/perform_map_generation()
+/datum/map/lonestar/perform_map_generation()
 	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.
 
 	// Cave submaps are first.
@@ -121,7 +121,7 @@
 	return 1
 
 // Skybox Settings
-/datum/skybox_settings/lonestar_station
+/datum/skybox_settings/lonestar
 	icon_state = "dyable"
 	random_color = TRUE
 
@@ -131,12 +131,12 @@
 #define LONESTAR_STATION_HOLOMAP_MARGIN_X ((HOLOMAP_ICON_SIZE - (2*LONESTAR_STATION_MAP_SIZE) - LONESTAR_STATION_HOLOMAP_CENTER_GUTTER) / 2) // 100
 #define LONESTAR_STATION_HOLOMAP_MARGIN_Y ((HOLOMAP_ICON_SIZE - (3*LONESTAR_STATION_MAP_SIZE)) / 2) // 60
 
-/datum/map_z_level/lonestar_station/station
+/datum/map_z_level/lonestar/station
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES
 	holomap_legend_x = 220
 	holomap_legend_y = 160
 
-/datum/map_z_level/lonestar_station/station/station_one
+/datum/map_z_level/lonestar/station/station_one
 	z = Z_LEVEL_STATION_ONE
 	name = "Deck 1"
 	base_turf = /turf/space
@@ -144,7 +144,7 @@
 	holomap_offset_x = LONESTAR_STATION_HOLOMAP_MARGIN_X - 40
 	holomap_offset_y = LONESTAR_STATION_HOLOMAP_MARGIN_Y + LONESTAR_STATION_MAP_SIZE*0
 
-/datum/map_z_level/lonestar_station/station/station_two
+/datum/map_z_level/lonestar/station/station_two
 	z = Z_LEVEL_STATION_TWO
 	name = "Deck 2"
 	base_turf = /turf/simulated/open
@@ -152,7 +152,7 @@
 	holomap_offset_x = LONESTAR_STATION_HOLOMAP_MARGIN_X - 40
 	holomap_offset_y = LONESTAR_STATION_HOLOMAP_MARGIN_Y + LONESTAR_STATION_MAP_SIZE*1
 
-/datum/map_z_level/lonestar_station/station/station_three
+/datum/map_z_level/lonestar/station/station_three
 	z = Z_LEVEL_STATION_THREE
 	name = "Deck 3"
 	base_turf = /turf/simulated/open
@@ -160,42 +160,42 @@
 	holomap_offset_x = HOLOMAP_ICON_SIZE - LONESTAR_STATION_HOLOMAP_MARGIN_X - LONESTAR_STATION_MAP_SIZE - 40
 	holomap_offset_y = LONESTAR_STATION_HOLOMAP_MARGIN_Y + LONESTAR_STATION_MAP_SIZE*1
 
-/datum/map_z_level/lonestar_station/empty_space
+/datum/map_z_level/lonestar/empty_space
 	z = Z_LEVEL_EMPTY_SPACE
 	name = "Empty"
 	flags = MAP_LEVEL_PLAYER
 	transit_chance = 76
 
-/datum/map_z_level/lonestar_station/station_prison
+/datum/map_z_level/lonestar/station_prison
 	z = Z_LEVEL_STATION_PRISON
 	name = "LSF The Slammer"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
 //	base_turf = /turf/simulated/floor/outdoors/rocks
 
-/datum/map_z_level/lonestar_station/derelict_ship
+/datum/map_z_level/lonestar/derelict_ship
 	z = Z_LEVEL_DERELICT_SHIP
 	name = "Mysterious Ship"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
 //	base_turf = /turf/simulated/floor/outdoors/rocks
 
-/datum/map_z_level/lonestar_station/belt_far
+/datum/map_z_level/lonestar/belt_far
 	z = Z_LEVEL_BELT_FAR
 	name = "Far Asteroid Belt"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 //	base_turf = /turf/simulated/floor/outdoors/rocks
 
-/datum/map_z_level/lonestar_station/misc
+/datum/map_z_level/lonestar/misc
 	z = Z_LEVEL_MISC
 	name = "Misc"
 	flags = MAP_LEVEL_PLAYER
 	transit_chance = 6
 
-/datum/map_z_level/lonestar_station/centcom
+/datum/map_z_level/lonestar/centcom
 	z = Z_LEVEL_CENTCOM
 	name = "Centcom"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT
 
-/datum/map_z_level/lonestar_station/transit
+/datum/map_z_level/lonestar/transit
 	z = Z_LEVEL_TRANSIT
 	name = "Transit"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT

@@ -236,6 +236,18 @@
 /turf/simulated/shuttle/wall/voidcraft/green
 	stripe_color = "#00FF00"
 
+/turf/simulated/shuttle/wall/voidcraft/black
+	stripe_color = "#000000"
+
+/turf/simulated/shuttle/wall/voidcraft/purple
+	stripe_color = "#FF00FF"
+
+/turf/simulated/shuttle/wall/voidcraft/teal
+	stripe_color = "#FFFF00"
+
+/turf/simulated/shuttle/wall/voidcraft/yellow
+	stripe_color = "#00FFFF"
+
 /turf/simulated/shuttle/wall/voidcraft/Initialize()
 	. = ..()
 	update_icon()

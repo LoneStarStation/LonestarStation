@@ -1,5 +1,5 @@
-/obj/structure/closet/secure_closet/captains
-	name = "site manager's locker"
+/obj/structure/closet/secure_closet/barons
+	name = "Baron's locker"
 	req_access = list(access_captain)
 	closet_appearance = /decl/closet_appearance/secure_closet/command
 
@@ -11,7 +11,24 @@
 		/obj/item/weapon/storage/lockbox/medal,
 		/obj/item/device/radio/headset/heads/captain,
 		/obj/item/device/radio/headset/heads/captain/alt,
-		/obj/item/weapon/gun/energy/gun,
+		/obj/item/weapon/gun/projectile/revolver/mateba,
+		/obj/item/weapon/melee/telebaton,
+		/obj/item/device/flash,
+		/obj/item/weapon/storage/box/ids)
+
+/obj/structure/closet/secure_closet/stewards
+	name = "steward's locker"
+	req_access = list(access_captain)
+	closet_appearance = /decl/closet_appearance/secure_closet/command
+
+	starts_with = list(
+		/obj/item/weapon/storage/backpack/dufflebag/captain,
+		/obj/item/clothing/head/helmet,
+		/obj/item/clothing/suit/storage/vest,
+		/obj/item/weapon/cartridge/captain,
+		/obj/item/device/radio/headset/heads/captain,
+		/obj/item/device/radio/headset/heads/captain/alt,
+		/obj/item/weapon/gun/projectile/deagle,
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/device/flash,
 		/obj/item/weapon/storage/box/ids)
@@ -29,7 +46,7 @@
 		/obj/item/device/radio/headset/heads/hop,
 		/obj/item/device/radio/headset/heads/hop/alt,
 		/obj/item/weapon/storage/box/ids = 2,
-		/obj/item/weapon/gun/energy/gun,
+		/obj/item/weapon/gun/projectile/pistol,
 		/obj/item/weapon/gun/projectile/sec/flash,
 		/obj/item/device/flash)
 
@@ -90,7 +107,7 @@
 		/obj/item/weapon/storage/belt/security,
 		/obj/item/device/flash,
 		/obj/item/weapon/melee/baton/loaded,
-		/obj/item/weapon/gun/magnetic/railgun/heater/pistol/hos,
+		/obj/item/weapon/gun/projectile/revolver/webley/auto,
 		/obj/item/weapon/rcd_ammo/large,
 		/obj/item/weapon/cell/device/weapon,
 		/obj/item/clothing/accessory/holster/waist,
@@ -137,7 +154,7 @@
 		/obj/item/weapon/storage/belt/security,
 		/obj/item/weapon/reagent_containers/spray/pepper,
 		/obj/item/weapon/melee/baton/loaded,
-		/obj/item/weapon/gun/energy/gun,
+		/obj/item/weapon/gun/projectile/revolver/webley/auto,
 		/obj/item/weapon/cell/device/weapon,
 		/obj/item/weapon/storage/box/holobadge,
 		/obj/item/clothing/head/beret/sec/corporate/warden,
