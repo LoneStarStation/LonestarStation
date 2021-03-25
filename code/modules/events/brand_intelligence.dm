@@ -42,13 +42,13 @@
 			infectedMachine.shoot_inventory = 1
 
 			if(ISMULTIPLE(activeFor, 12))
-				originMachine.speak(pick("Try our aggressive new marketing strategies!", \
-										 "You should buy products to feed your lifestyle obsession!", \
-										 "Consume!", \
-										 "Your money can buy happiness!", \
-										 "Engage direct marketing!", \
-										 "Advertising is legalized lying! But don't let that put you off our great deals!", \
-										 "You don't want to buy anything? Yeah, well I didn't want to buy your mom either."))
+				originMachine.speak(pick("Yeehaw!!!", \
+										 "Tarnation!", \
+										 "Reach for the sky!", \
+										 "Draw!", \
+										 "Y'all're jus' yeller!", \
+										 "There's a snake in my boot!", \
+										 "Let's settle this at ten paces!"))
 
 /datum/event/brand_intelligence/end()
 	for(var/obj/machinery/vending/infectedMachine in infectedVendingMachines)

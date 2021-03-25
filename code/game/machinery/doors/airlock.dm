@@ -387,6 +387,11 @@
 	department_open_powered = 'sound/machines/door/eng1o.ogg'
 	department_close_powered = 'sound/machines/door/eng1c.ogg'
 
+/obj/machinery/door/airlock/wood
+	name = "Wood Airlock"
+	icon = 'icons/obj/doors/Doorwood.dmi'
+	mineral = "wood"
+
 /obj/machinery/door/airlock/gold
 	name = "Gold Airlock"
 	icon = 'icons/obj/doors/Doorgold.dmi'

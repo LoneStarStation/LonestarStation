@@ -1,12 +1,12 @@
-#define LOC_KITCHEN 0
+#define LOC_DINER 0
 #define LOC_ATMOS 1
 #define LOC_CHAPEL 2
-#define LOC_LIBRARY 3
-#define LOC_HYDRO 4
-#define LOC_VAULT 5
-#define LOC_CONSTR 6
-#define LOC_TECH 7
-#define LOC_GARDEN 8
+#define LOC_COMMONS 3
+#define LOC_BAR 4
+#define LOC_ARMORY 5
+#define LOC_SHBAY 6
+#define LOC_GARAGE 7
+#define LOC_RANCH 8
 
 #define VERM_MICE 0
 #define VERM_LIZARDS 1
@@ -26,33 +26,33 @@
 	var/list/turf/simulated/floor/turfs = list()
 	var/spawn_area_type
 	switch(location)
-		if(LOC_KITCHEN)
-			spawn_area_type = /area/crew_quarters/kitchen
-			locstring = "the kitchen"
+		if(LOC_DINER)
+			spawn_area_type = /area/lonestar/civillian/cafe/eatery
+			locstring = "the diner"
 		if(LOC_ATMOS)
-			spawn_area_type = /area/engineering/atmos
+			spawn_area_type = /area/lonestar/engineering/atmos
 			locstring = "atmospherics"
 		if(LOC_CHAPEL)
-			spawn_area_type = /area/chapel/main
+			spawn_area_type = /area/lonestar/medbay/clerical/worshiphall
 			locstring = "the chapel"
-		if(LOC_LIBRARY)
-			spawn_area_type = /area/library
-			locstring = "the library"
-		if(LOC_HYDRO)
-			spawn_area_type = /area/hydroponics
-			locstring = "hydroponics"
-		if(LOC_VAULT)
+		if(LOC_COMMONS)
+			spawn_area_type = /area/lonestar/civillian/commons
+			locstring = "the common area"
+		if(LOC_BAR)
+			spawn_area_type = /area/lonestar/bar
+			locstring = "the bar"
+		if(LOC_ARMORY)
 			spawn_area_type = /area/security/nuke_storage
-			locstring = "the vault"
-		if(LOC_CONSTR)
-			spawn_area_type = /area/construction
-			locstring = "the construction area"
-		if(LOC_TECH)
-			spawn_area_type = /area/storage/tech
-			locstring = "technical storage"
-		if(LOC_GARDEN)
-			spawn_area_type = /area/hydroponics/garden
-			locstring = "the public garden"
+			locstring = "the Baron's armory"
+		if(LOC_SHBAY)
+			spawn_area_type = /area/lonestar/cargobay/shdock
+			locstring = "the hangar bay"
+		if(LOC_GARAGE)
+			spawn_area_type = /area/lonestar/garage/workshop
+			locstring = "the garage"
+		if(LOC_RANCH)
+			spawn_area_type = /area/lonestar/ranch/crops
+			locstring = "the ranch"
 
 	for(var/areapath in typesof(spawn_area_type))
 		var/area/A = locate(areapath)
@@ -95,14 +95,15 @@
 /datum/event/infestation/announce()
 	command_announcement.Announce("Bioscans indicate that [vermstring] have been breeding in [locstring]. Clear them out, before this starts to affect productivity.", "Vermin infestation")
 
-#undef LOC_KITCHEN
+#undef LOC_DINER
 #undef LOC_ATMOS
 #undef LOC_CHAPEL
-#undef LOC_LIBRARY
-#undef LOC_HYDRO
-#undef LOC_VAULT
-#undef LOC_TECH
-#undef LOC_GARDEN
+#undef LOC_COMMONS
+#undef LOC_BAR
+#undef LOC_ARMORY
+#undef LOC_SHBAY
+#undef LOC_GARAGE
+#undef LOC_RANCH
 
 #undef VERM_MICE
 #undef VERM_LIZARDS

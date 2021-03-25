@@ -46,7 +46,7 @@
 
 			var/sender
 			var/message
-			switch(pick(1,2,3,4,5,6,7))
+			switch(pick(1,2,3,4,5,6,7,8,9))
 				if(1)
 					sender = pick("MaxBet","MaxBet Online Casino","There is no better time to register","I'm excited for you to join us")
 					message = pick("Triple deposits are waiting for you at MaxBet Online when you register to play with us.",\
@@ -54,14 +54,14 @@
 					"Once you are a player with MaxBet, you will also receive lucrative weekly and monthly promotions.",\
 					"You will be able to enjoy over 450 top-flight casino games at MaxBet.")
 				if(2)
-					sender = pick(300;"QuickDatingSystem",200;"Find your russian bride",50;"Tajaran beauties are waiting",50;"Find your secret skrell crush",50;"Beautiful unathi brides")
+					sender = pick(300;"Lonesingles Dating",200;"Find your Martian bride",50;"Tajaran beauties are waiting",50;"Find your secret skrell crush",50;"Beautiful unathi brides")
 					message = pick("Your profile caught my attention and I wanted to write and say hello (QuickDating).",\
 					"If you will write to me on my email [pick(first_names_female)]@[pick(last_names)].[pick("ru","ck","tj","ur","nt")] I shall necessarily send you a photo (QuickDating).",\
 					"I want that we write each other and I hope, that you will like my profile and you will answer me (QuickDating).",\
-					"You have (1) new message!",\
-					"You have (2) new profile views!")
+					"You have (13) new messages!",\
+					"You have (13) new profile views!")
 				if(3)
-					sender = pick("Galactic Payments Association","Better Business Bureau","[using_map.starsys_name] E-Payments","NAnoTransen Finance Deparmtent","Luxury Replicas")
+					sender = pick("Galactic Payments Association","Better Business Bureau","[using_map.starsys_name] E-Payments","Lone Star Finance Deparmtent","Luxury Replicas")
 					message = pick("Luxury watches for Blowout sale prices!",\
 					"Watches, Jewelry & Accessories, Bags & Wallets !",\
 					"Deposit 100$ and get 300$ totally free!",\
@@ -75,14 +75,14 @@
 					"After seven years of research, Dr Acuilar and his team came up with this simple breakthrough male enhancement formula.",\
 					"Men of all species report AMAZING increases in length, width and stamina.")
 				if(5)
-					sender = pick("Dr","Crown prince","King Regent","Professor","Captain")
-					sender += " " + pick("Robert","Alfred","Josephat","Kingsley","Sehi","Zbahi")
-					sender += " " + pick("Mugawe","Nkem","Gbatokwia","Nchekwube","Ndim","Ndubisi")
-					message = pick("YOUR FUND HAS BEEN MOVED TO [pick("Salusa","Segunda","Cepheus","Andromeda","Gruis","Corona","Aquila","ARES","Asellus")] DEVELOPMENTARY BANK FOR ONWARD REMITTANCE.",\
-					"We are happy to inform you that due to the delay, we have been instructed to IMMEDIATELY deposit all funds into your account",\
-					"Dear fund beneficiary, We have please to inform you that overdue funds payment has finally been approved and released for payment",\
-					"Due to my lack of agents I require an off-world financial account to immediately deposit the sum of 1 POINT FIVE MILLION credits.",\
-					"Greetings sir, I regretfully to inform you that as I lay dying here due to my lack ofheirs I have chosen you to recieve the full sum of my lifetime savings of 1.5 billion credits")
+					sender = pick("Dr","Crown prince","General","Professor","Baron")
+					sender += " " + pick("Robert","Alfred","Josephat","Kingsley","Seth","Russ")
+					sender += " " + pick("Bobby","Alfonso","Boscovitch","Yancy","Vega","Danvers")
+					message = pick("YOUR FUNDS HAVE BEEN MOVED TO [pick("Salusa","Segunda","Cepheus","Andromeda","Gruis","Corona","Aquila","ARES","Asellus")] DEVELOPMENTARY BANK FOR ONWARD REMITTANCE.",\
+					"We are happy to inform you that due to Solar political conditions, we have an excellent investment event for only the most qualified!",\
+					"Dear fund beneficiary, We have please to inform you that overdue funds payment has finally been approved and released for payment.",\
+					"Due to my lack of agents I require an off-world financial account to immediately deposit the sum of FIVE HUNDRED THOUSAND credits.",\
+					"Greetings sir, I regretfully to inform you that as I lay dying, due to my lack of heirs I have chosen you to recieve the full sum of my lifetime savings of 13 million credits")
 				if(6)
 					sender = pick("[using_map.company_name] Morale Divison","Feeling Lonely?","Bored?","www.wetskrell.nt")
 					message = pick("The [using_map.company_name] Morale Division wishes to provide you with quality entertainment sites.",\
@@ -91,10 +91,27 @@
 					"Simply enter your [using_map.company_name] Bank account system number and pin. With three easy steps this service could be yours!")
 				if(7)
 					sender = pick("You have won free tickets!","Click here to claim your prize!","You are the 1000th vistor!","You are our lucky grand prize winner!")
-					message = pick("You have won tickets to the newest ACTION JAXSON MOVIE!",\
-					"You have won tickets to the newest crime drama DETECTIVE MYSTERY IN THE CLAMITY CAPER!",\
-					"You have won tickets to the newest romantic comedy 16 RULES OF LOVE!",\
-					"You have won tickets to the newest thriller THE CULT OF THE SLEEPING ONE!")
+					message = pick("You have won tickets to the newest movie: TEN PACES, SIX FEET!",\
+					"You have won tickets to a luxury cruise on the beautiful PRINCESS OF TAJARA!",\
+					"You have won tickets to the newest romantic musical 13 RULES OF THE BELT!",\
+					"You have won backstage tickets to watch production of the newest thriller, HIPPIES!",\
+					"Please respond to this survey!")
+
+				if(8)
+					sender = pick("You are my only hope!","No one else can help!","I didn't know who else to ask...","We need you!")
+					message = pick("The Star Princess is in danger! We've hidden the genecode of our strongest warrior in your bank's account number! Please, time is short!",\
+					"Our people have been captured by galactic slavers, we have no choice but to pay the ransom!",\
+					"We've picked up a signal from Jersey Station! Will you fund the mission?",\
+					"The only thing you need to know is not to trust anyone.",\
+					"Please respond to this survey!")
+
+				if(9)
+					sender = pick("This is Cat Facts!","Hello, it is me!","Over 9000 Facts about Cats!","Nine lives worth of Facts!")
+					message = pick("Did you know: Cats were worshiped as gods by ancient Solarian cultures! This has been Cat Facts!",\
+					"Did you know: Cats have an extra organ that allows them to taste scents on the air! This has been Cat Facts!",\
+					"Did you know: A green cat was born in Denmark in 1995. This has been Cat Facts!",\
+					"Did you know: Abraham Lincoln was a crazy cat president, with four cats! This has been Cat Facts!",\
+					"Did you know: Cats Cats dream, just like people do! This has been Cat Facts!")
 
 			if (useMS.send_pda_message("[P.owner]", sender, message))	//Message been filtered by spam filter.
 				return
