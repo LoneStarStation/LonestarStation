@@ -4,12 +4,12 @@
 #define Z_LEVEL_STATION_TWO				2
 #define Z_LEVEL_STATION_THREE			3
 #define Z_LEVEL_EMPTY_SPACE				4
-#define Z_LEVEL_STATION_PRISON			5
-#define Z_LEVEL_DERELICT_SHIP			6
+#define Z_LEVEL_SLAMMER					5
+#define Z_LEVEL_DERELICTS				6
 #define Z_LEVEL_MISC					7
 #define Z_LEVEL_CENTCOM					8
 #define Z_LEVEL_TRANSIT					9
-#define Z_LEVEL_BELT_FAR				10
+#define Z_LEVEL_BELT					10
 
 /datum/map/lonestar
 	name = "Lonestar Station"
@@ -97,26 +97,28 @@
 			Z_LEVEL_STATION_ONE,
 			Z_LEVEL_STATION_TWO,
 			Z_LEVEL_STATION_THREE,
-			Z_LEVEL_STATION_PRISON,
-			Z_LEVEL_DERELICT_SHIP
+			Z_LEVEL_SLAMMER,
+			Z_LEVEL_DERELICTS,
+			Z_LEVEL_BELT
 		)
 
 /datum/map/lonestar/perform_map_generation()
 	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.
 
 	// Cave submaps are first.
-	seed_submaps(list(Z_LEVEL_DERELICT_SHIP), 75, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
-	seed_submaps(list(Z_LEVEL_DERELICT_SHIP), 75, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
-	// Plains to make them less plain.
-	seed_submaps(list(Z_LEVEL_STATION_PRISON), 100, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Center area is WIP until map editing settles down.
+	seed_submaps(list(Z_LEVEL_DERELICTS), 75, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
+	seed_submaps(list(Z_LEVEL_DERELICTS), 75, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
+	// Slammer caves to make them more interesting.
+	seed_submaps(list(Z_LEVEL_SLAMMER), 100, /area/lonestar/away/slammer/normal, /datum/map_template/space/slammer)
+	seed_submaps(list(Z_LEVEL_SLAMMER), 100, /area/lonestar/away/slammer/deep, /datum/map_template/space/slammer)
 	// Wilderness is next.
-	seed_submaps(list(Z_LEVEL_BELT_FAR), 75, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
-	seed_submaps(list(Z_LEVEL_BELT_FAR), 75, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
+	seed_submaps(list(Z_LEVEL_BELT), 75, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
+	seed_submaps(list(Z_LEVEL_BELT), 75, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
 	// If Space submaps are made, add a line to make them here as well.
 
 	// Now for the tunnels.
-	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_DERELICT_SHIP, world.maxx, world.maxy) // Create the mining Z-level.
-	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_DERELICT_SHIP, 64, 64)         // Create the mining ore distribution map.
+	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_SLAMMER, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_SLAMMER, 64, 64)   									 // Create the mining ore distribution map.
 	// Todo: Forest generation.
 	return 1
 
@@ -167,20 +169,20 @@
 	transit_chance = 76
 
 /datum/map_z_level/lonestar/station_prison
-	z = Z_LEVEL_STATION_PRISON
+	z = Z_LEVEL_SLAMMER
 	name = "LSF The Slammer"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
-//	base_turf = /turf/simulated/floor/outdoors/rocks
+	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_z_level/lonestar/derelict_ship
-	z = Z_LEVEL_DERELICT_SHIP
+	z = Z_LEVEL_DERELICTS
 	name = "Mysterious Ship"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
 //	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_z_level/lonestar/belt_far
-	z = Z_LEVEL_BELT_FAR
-	name = "Far Asteroid Belt"
+	z = Z_LEVEL_BELT
+	name = "LSF Carlstop" //pending better name
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 //	base_turf = /turf/simulated/floor/outdoors/rocks
 
@@ -206,13 +208,13 @@
 	..()
 	teleport_x = src.x
 	teleport_y = 2
-	teleport_z = Z_LEVEL_ASTEROID_MINE
+	teleport_z = Z_LEVEL_BELT
 
 /obj/effect/step_trigger/teleporter/mine/from_mining/New()
 	..()
 	teleport_x = src.x
 	teleport_y = world.maxy - 1
-	teleport_z = Z_LEVEL_STATION_PRISON
+	teleport_z = Z_LEVEL_SLAMMER
 
 //Teleport to derelict
 
@@ -220,19 +222,19 @@
 	..()
 	teleport_x = src.x
 	teleport_y = 2
-	teleport_z = Z_LEVEL_DERELICT_SHIP
+	teleport_z = Z_LEVEL_DERELICTS
 
 /obj/effect/step_trigger/teleporter/wild/from_wild/New()
 	..()
 	teleport_x = src.x
 	teleport_y = world.maxy - 1
-	teleport_z = Z_LEVEL_DERELICT_SHIP
+	teleport_z = Z_LEVEL_DERELICTS
 */
 /datum/planet/prison
 	expected_z_levels = list(
-		Z_LEVEL_STATION_PRISON,
-		Z_LEVEL_DERELICT_SHIP,
-		Z_LEVEL_BELT_FAR
+		Z_LEVEL_SLAMMER,
+		Z_LEVEL_DERELICTS,
+		Z_LEVEL_BELT
 	)
 /*
 /obj/effect/step_trigger/teleporter/bridge/east_to_west/Initialize()

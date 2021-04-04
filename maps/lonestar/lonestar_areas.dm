@@ -1,111 +1,97 @@
-//Planetside
+////Lonestar Station
 
-/area/surface
-	name = "The Surface (Don't Use)"
-	flags = RAD_SHIELDED
-
-/area/surface/center
-	name = "Center"
-	icon_state = "center"
-
-/area/surface/north
-	name = "Outpost"
-	icon_state = "north"
-
-/area/surface/south
-	name = "Lake"
-	icon_state = "south"
-
-/area/surface/east
-	name = "Shoreline"
-	icon_state = "east"
-
-/area/surface/west
-	name = "Snowfields"
+/area/lonestar
+	name = "lonestar"
 	icon_state = "west"
 
-/area/surface/northeast
-	name = "Depths"
-	icon_state = "northeast"
+//// Away Areas
 
-/area/surface/northwest
-	name = "Mountains"
-	icon_state = "northwest"
+/area/lonestar/away
+	name = "Away Areas (Don't Use)"
 
-/area/surface/southwest
-	name = "Glowing Forest"
-	icon_state = "southwest"
+//// LSF the Slammer
 
-/area/surface/southeast
-	name = "Southern Shoreline"
-	icon_state = "southeast"
-
-/area/surface/outside
+/area/lonestar/away/slammer
 	ambience = AMBIENCE_SIF
 	always_unpowered = TRUE
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 // The area near the outpost, so POIs don't show up right next to the outpost.
-/area/surface/outside/plains/outpost
-	name = "Outpost Perimeter"
+/area/lonestar/away/slammer/perimeter
+	name = "Slammer Perimeter"
 	icon_state = "green"
 
-// Rest of the 'plains' Z-level, for POIs.
-/area/surface/outside/plains/normal
-	name = "Plains"
-	icon_state = "yellow"
-
-// So POIs don't get embedded in rock.
-/area/surface/outside/plains/mountains
-	name = "Mountains"
-	icon_state = "darkred"
-
 // Paths get their own area so POIs don't overwrite pathways.
-/area/surface/outside/path
+/area/lonestar/away/slammer/cavern
 	name = "Pathway"
 	icon_state = "purple"
 
-/area/surface/outside/path/plains
-
-/area/surface/outside/wilderness/normal
-	name = "Wilderness"
+// Rest of the 'plains' Z-level, for POIs.
+/area/lonestar/away/slammer/normal
+	name = "Slammer Caves"
 	icon_state = "yellow"
 
-/area/surface/outside/wilderness/deep
-	name = "Deep Wilderness"
+/area/lonestar/away/slammer/deep
+	name = "Deep Slammer Caves"
 	icon_state = "red"
 
 // So POIs don't get embedded in rock.
-/area/surface/outside/wilderness/mountains
-	name = "Mountains"
+/area/lonestar/away/slammer/border
+	name = "Border"
 	icon_state = "darkred"
 
-/area/surface/outside/path/wilderness
+//lonestar: prison
 
-// Water
-/area/surface/outside/ocean
-	name = "Sea"
-	icon_state = "bluenew"
+/area/lonestar/away/slammer/prison
+	name = "\improper El Prison"
+	icon_state = "brig"
+	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 
-/area/surface/outside/river
-	name = "River"
-	icon_state = "bluenew"
+/area/lonestar/away/slammer/prison/warden
+	name = "\improper Warden's Office"
+	icon_state = "head_quarters"
 
-/area/surface/outside/river/faxalven
-	name = "Faxälven River"
+/area/lonestar/away/slammer/prison/bathroom
+	name = "\improper Bathroom"
+	icon_state = "toilet"
 
-/area/surface/outside/river/indalsalven
-	name = "Indalsälven River"
+/area/lonestar/away/slammer/prison/infirmary
+	name = "\improper Infirmary"
+	icon_state = "medbay"
 
-/area/surface/outside/river/svartan
-	name = "Svartån River"
+/area/lonestar/away/slammer/prison/hangarbay
+ 	name = "\improper Hangar Bay"
+ 	sound_env = LARGE_ENCLOSED
 
-/area/surface/outside/lake/romsele
-	name = "Romsele Lake"
-	icon_state = "blue2"
+/area/lonestar/away/slammer/prison/breakroom
+	name = "\improper Prison Commodities"
 
+/area/lonestar/away/slammer/prison/cellblock
+ 	name = "\improper Cell Block"
+ 	sound_env = LARGE_ENCLOSED
 
+/area/lonestar/away/slammer/prison/outstorage
+	name = "\improper Outgoing Storage"
 
+/area/lonestar/away/slammer/prison/toolstorage
+	name = "\improper Tool Storage"
+
+/area/lonestar/airlock/slammersolars
+	name = "\improper Solars Airlock"
+
+/area/lonestar/airlock/slammerprisoner
+	name = "\improper Prisoner Airlock"
+
+/area/lonestar/maintenance/prison
+	name = "Primary Prison Maintenance"
+
+/area/lonestar/maintenance/solaraccess
+	name = "Secondary Solar Access"
+
+/area/lonestar/away/slammer/solarpanels
+	name = "Slammer Solar Panels"
+
+//end LS
 /area/surface/cave
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
 	always_unpowered = TRUE
@@ -130,7 +116,13 @@
 	name = "Depths"
 	icon_state = "unexplored_deep"
 
+/area/surface/outside/wilderness/normal
+	name = "bepis"
+	icon_state = "dark"
 
+/area/surface/outside/wilderness/deep
+	name = "sipeb"
+	icon_state = "dark"
 
 //Surface Outposts
 
@@ -445,10 +437,6 @@
 
 
 ////Lonestar Station
-
-/area/lonestar
-	name = "lonestar"
-	icon_state = "west"
 
 /area/lonestar/asteroid					// -- TLE
 	name = "\improper Lonestar"
