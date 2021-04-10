@@ -26,7 +26,7 @@
 	name = "Pathway"
 	icon_state = "purple"
 
-// Rest of the 'plains' Z-level, for POIs.
+// Rest of the 'Slammer' Z-level, for POIs.
 /area/lonestar/away/slammer/normal
 	name = "Slammer Caves"
 	icon_state = "yellow"

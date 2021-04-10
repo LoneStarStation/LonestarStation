@@ -44,13 +44,13 @@
 #endif
 */
 
-// The 'Slammer' is one of the mining z-levels, and has a lot of caves.
+// The 'Slammer' is one of the two mining z-levels, and has a lot of caves.
 // POIs here spawn in two different sections, the top half and bottom half of the map.
 // The top half should be fairly tame, with perhaps a few enviromental hazards.
 // The bottom half is when things start getting dangerous, but the loot gets better.
 
 /datum/map_template/space/slammer
-	name = "Mountain Content"
+	name = "Slammer Content"
 	desc = "Don't dig too deep!"
 
 // 'Normal' templates get used on the bottom half, and should be safer.
