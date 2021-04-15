@@ -12,8 +12,7 @@
 //// LSF the Slammer
 
 /area/lonestar/away/slammer
-	ambience = AMBIENCE_SIF
-	always_unpowered = TRUE
+	ambience = AMBIENCE_SPACE
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 // The area near the outpost, so POIs don't show up right next to the outpost.
@@ -64,7 +63,7 @@
  	sound_env = LARGE_ENCLOSED
 
 /area/lonestar/away/slammer/prison/breakroom
-	name = "\improper Prison Commodities"
+	name = "\improper Prison Lounge"
 
 /area/lonestar/away/slammer/prison/cellblock
  	name = "\improper Cell Block"
@@ -91,281 +90,133 @@
 /area/lonestar/away/slammer/solarpanels
 	name = "Slammer Solar Panels"
 
-//end LS
-/area/surface/cave
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
-	always_unpowered = TRUE
+////LSF Carl's Corner II
 
-/area/surface/cave
+/area/lonestar/away/carls
+	ambience = AMBIENCE_SPACE
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
-// The bottom half that connects to the outpost and is safer.
-/area/surface/cave/explored/normal
-	name = "Tunnels"
-	icon_state = "explored"
+// The area near Carl's Corner, so POIs don't show up right next to the outpost.
+/area/lonestar/away/carls/perimeter
+	name = "Corner Perimeter"
+	icon_state = "green"
 
-/area/surface/cave/unexplored/normal
-	name = "Tunnels"
-	icon_state = "unexplored"
+/area/lonestar/away/yard/perimeter
+	name = "Wrecking Yard Perimeter"
+	icon_state = "green"
 
-// The top half of the map that is more dangerous.
-/area/surface/cave/explored/deep
-	name = "Depths"
-	icon_state = "explored_deep"
+// Rest of the 'Slammer' Z-level, for POIs.
+/area/lonestar/away/roids
+	name = "them roids"
+	icon_state = "yellow"
 
-/area/surface/cave/unexplored/deep
-	name = "Depths"
-	icon_state = "unexplored_deep"
+/area/lonestar/away/roids/close
+	name = "Close Mining Asteroids"
+	icon_state = "purple"
 
-/area/surface/outside/wilderness/normal
-	name = "bepis"
+
+/area/lonestar/away/roids/far
+	name = "Far Mining Asteroids"
 	icon_state = "dark"
 
-/area/surface/outside/wilderness/deep
-	name = "sipeb"
-	icon_state = "dark"
+/area/lonestar/away/yard/wrecking
+	name = "Lonestar Wrecking Yard"
+	icon_state = "purple"
 
-//Surface Outposts
+// So POIs don't get embedded in rock.
+/area/lonestar/away/roids/border
+	name = "Border"
+	icon_state = "darkred"
 
-/area/surface/outpost
-	ambience = AMBIENCE_GENERIC
+/area/lonestar/away/yard/border
+	name = "Border"
+	icon_state = "darkred"
 
-//Wilderness Shuttle Shelter
+//lonestar: mining station
 
-/area/surface/outpost/shelter
-	name = "Wilderness Shelter"
+/area/lonestar/away/carls/corner
+	name = "\improper Carl's Corner"
+	icon_state = "yellow"
 
-// Main mining outpost
-/area/surface/outpost/mining_main
-	name = "North Mining Outpost"
-	icon_state = "outpost_mine_main"
-
-/area/surface/outpost/mining_main/exterior
-	name = "North Mining Outpost Exterior"
-	icon_state = "outpost_mine_main"
-
-/area/surface/outpost/mining_main/crew_area
-	name = "North Mining Crew Area"
-
-/area/surface/outpost/mining_main/firstaid
-	name = "North Mining First-Aid Station"
-
-/area/surface/outpost/mining_main/storage
-	name = "North Mining Gear Storage"
-
-/area/surface/outpost/mining_main/mech_bay
-	name = "North Mining Mech Bay"
-
-/area/surface/outpost/mining_main/gen_room
-	name = "North Mining Generator Room"
-	icon_state = "substation"
-
-/area/surface/outpost/mining_main/emergencystorage
-	name = "\improper North Mining Emergency Storage"
-	icon_state = "emergencystorage"
-	sound_env = SMALL_ENCLOSED
-
-/area/surface/outpost/mining_main/refinery
-	name = "North Mining Refinery"
-
-/area/surface/outpost/mining_main/restroom
-	name = "North Mining Restroom"
-	sound_env = SMALL_ENCLOSED
-
-/area/surface/outpost/mining_main/cave
-	name = "North Mining Outpost Cave"
-	icon_state = "outpost_mine_main"
-
-//Research Surface Outpost
-
-/area/surface/outpost/research
-	icon_state = "outpost_research"
-
-/area/surface/outpost/research/xenoresearch
-	name = "\improper Xenoresearch"
-
-/area/surface/outpost/research/xenoresearch/smes
-	name = "\improper Xenoresearch SMES Maintenance"
-	icon_state = "substation"
-	sound_env = SMALL_ENCLOSED
-
-/area/surface/outpost/research/xenoresearch/emergencystorage
-	name = "\improper Xenoresearch Emergency Storage"
-	icon_state = "emergencystorage"
-	sound_env = SMALL_ENCLOSED
-
-/area/surface/outpost/research/xenoresearch/restroom
-	name = "\improper Xenoresearch Restroom"
-	icon_state = "research_restroom"
-	sound_env = SMALL_ENCLOSED
-
-/area/surface/outpost/research/xenoresearch/xenobiology
-	name = "\improper Xenobiology Lab"
-	icon_state = "xeno_lab"
-
-/area/surface/outpost/research/xenoresearch/xenoflora
-	name = "\improper Xenoflora Lab"
-	icon_state = "xeno_f_lab"
-
-/area/surface/outpost/research/xenoresearch/xenoflora_storage
-	name = "\improper Xenoflora Storage"
-	icon_state = "xeno_f_store"
-
-/area/surface/outpost/research/xenoresearch/medical
-	name = "Xenoresearch First-Aid Station"
-
-/area/surface/outpost/research/xenoarcheology
-	name = "\improper Xenoarcheology"
-
-/area/surface/outpost/research/xenoarcheology/medical
-	name = "Xenoarcheology First-Aid Station"
-
-/area/surface/outpost/research/xenoarcheology/smes
-	name = "\improper Xenoarcheology SMES Maintenance"
-	icon_state = "substation"
-	sound_env = SMALL_ENCLOSED
-
-/area/surface/outpost/research/xenoarcheology/emergencystorage
-	name = "\improper Xenoarcheology Emergency Storage"
-	icon_state = "emergencystorage"
-	sound_env = SMALL_ENCLOSED
-
-/area/surface/outpost/research/xenoarcheology/restroom
-	name = "\improper Xenoarcheology Restroom"
-	icon_state = "research_restroom"
-	sound_env = SMALL_ENCLOSED
-
-/area/surface/outpost/research/xenoarcheology/analysis
-	name = "Xenoarcheology Sample Analysis"
-
-/area/surface/outpost/research/xenoarcheology/anomaly
-	name = "Xenoarcheology Anomalous Materials Lab"
-
-/area/surface/outpost/research/xenoarcheology/isolation_a
-	name = "Xenoarcheology Isolation A"
-
-/area/surface/outpost/research/xenoarcheology/isolation_b
-	name = "Xenoarcheology Isolation B"
-
-/area/surface/outpost/research/xenoarcheology/isolation_c
-	name = "Xenoarcheology Isolation C"
-
-/area/surface/outpost/research/xenoarcheology/lounge
-	name = "Xenoarcheology Research Lounge"
-
-/area/surface/outpost/research/xenoarcheology/longtermstorage
-	name = "Xenoarcheology Long-Term Anomalous Storage"
-
-/area/surface/outpost/research/xenoarcheology/exp_prep
-	name = "Xenoarcheology Expedition Preperation"
-
-//Main Outpost
-
-/area/surface/outpost/main
-	name = "\improper Main Outpost"
-	icon_state = "Sleep"
-
-/area/surface/outpost/main/gen_room
-	name = "\improper Main Outpost SMES"
-	icon_state = "substation"
-	ambience = AMBIENCE_ENGINEERING
-
-/area/surface/outpost/main/gen_room/smes
-	name = "\improper Main Outpost Dorm SMES"
-	icon_state = "substation"
-
-/area/surface/outpost/main/pool
-	name = "\improper Main Outpost Pool"
-	icon_state = "pool"
-
-/area/surface/outpost/main/restroom
-	name = "\improper Main Outpost Restroom"
+/area/lonestar/away/carls/corner/bathroom
+	name = "\improper Corner Bathroom"
 	icon_state = "toilet"
-	sound_env = SMALL_ENCLOSED
 
-/area/surface/outpost/main/gym
-	name = "\improper Main Outpost Gym"
+/area/lonestar/away/carls/corner/lounge
+	name = "\improper Corner Lounge"
 
-/area/surface/outpost/main/garage
-	name = "\improper Main Outpost Garage"
-	icon_state = "storage"
+/area/lonestar/away/carls/corner/uh
+	name = "\improper Corner Room"
 
-/area/surface/outpost/main/crew_quarters
-	name = "\improper Main Outpost Crew Quarters"
-	sound_env = MEDIUM_SOFTFLOOR
+/area/lonestar/away/carls/corner/mining
+	name = "\improper Corner Mining Office"
 
-/area/surface/outpost/main/telecomms
-	name = "\improper Main Outpost Telecommunications"
-	music = "signal"
+/area/lonestar/away/carls/corner/hangarbay
+ 	name = "\improper Corner Hangar Bay"
+ 	sound_env = LARGE_ENCLOSED
 
-/area/surface/outpost/main/teleporter
-	name = "\improper Main Outpost Teleporter"
-	icon_state = "teleporter"
+/area/lonestar/away/carls/corner/hall
+	name = "\improper Hallways"
 
-/area/surface/outpost/main/first_aid
-	name = "\improper Main Outpost First-Aid Station"
-	icon_state = "medbay2"
+/area/lonestar/away/carls/corner/hall/center
+	name = "\improper Central Hallway"
 
-/area/surface/outpost/main/security
-	name = "\improper Main Outpost Security Station"
-	icon_state = "checkpoint1"
+/area/lonestar/away/carls/corner/hall/yonder
+	name = "\improper Yonder Hallway"
 
-/area/surface/outpost/main/gateway
-	name = "\improper Main Outpost Gateway"
-	icon_state = "teleporter"
-	music = "signal"
+/area/lonestar/away/carls/corner/hall/thataways
+	name = "\improper Thataways Hallway"
 
-/area/surface/outpost/main/corridor
-	name = "\improper Main Outpost Corridor"
+/area/lonestar/away/carls/corner/hall/yardaccess
+	name = "\improper Yard Access"
 
-/area/surface/outpost/main/bar
-	name = "\improper Main Outpost Bar"
-	icon_state = "bar"
+/area/lonestar/away/carls/corner/hall/dockingaccess
+	name = "\improper Docking Accessway"
 
-/area/surface/outpost/main/dorms
-	name = "\improper Main Outpost Dorms"
+/area/lonestar/away/carls/corner/hall/yonderport
+	name = "\improper Yonder Corner Ship Ports"
 
-/area/surface/outpost/main/construction_area
-	name = "\improper Main Outpost Construction Area"
-	icon_state = "construction"
+/area/lonestar/away/carls/corner/hall/thatawaysport
+	name = "\improper Thataways Corner Ship Ports"
 
-/area/surface/outpost/wall
-	name = "The Wall"
-	icon_state = "red"
-	requires_power = FALSE
-	ambience = AMBIENCE_HIGHSEC
+/area/lonestar/away/carls/corner/hall/farports
+	name = "\improper Far Corner Ship Ports"
 
-/area/surface/outpost/wall/checkpoint
-	name = "Checkpoint"
-	ambience = AMBIENCE_HIGHSEC
+/area/lonestar/airlock/carlsolars
+	name = "\improper Solars Airlock"
 
-//Mining Station
+/area/lonestar/maintenance/carlstorage
+	name = "Corner Storage"
 
-/area/outpost/mining_station
-	icon_state = "outpost_mine_main"
-	name = "Mining Station"
+/area/lonestar/maintenance/carlsolars
+	name = "\improper Carl's Solar Panel Maintenance"
 
-/area/outpost/mining_station/dorms
-	name = "Mining Station Dormitory"
+/area/lonestar/away/carls/solarpanels
+	name = "Corner Solar Panels"
 
-/area/outpost/mining_station/storage
-	name = "Mining Station Gear Storage"
+	////
 
-/area/outpost/mining_station/gen_station
-	name = "Mining Station Generator Room"
-	icon_state = "substation"
+/area/lonestar/away/yard/corner_access
+	name = "\improper Corner Access"
+	icon_state = "yellow"
 
-/area/outpost/mining_station/crew_area
-	name = "Mining Station Crew Area"
+/area/lonestar/away/yard/storage_a
+	name = "Wrecking Storage Alpha"
+	icon_state = "yellow"
 
-/area/outpost/mining_station/refinery
-	name = "Mining Station Refinery"
+/area/lonestar/away/yard/storage_b
+	name = "Wrecking Storage Beta"
+	icon_state = "yellow"
 
-/area/outpost/mining_station/telecomms
-	name = "Main Station Telecommunications"
-	sound_env = SMALL_ENCLOSED
+/area/lonestar/away/yard/foyer
+	name = "Wrecking Yard Foyer"
+	icon_state = "yellow"
 
-/area/outpost/mining_station/dock
-	name = "Mining Station Dock"
+/area/lonestar/away/yard/airlock
+	name = "Wrecking Yard Airlock"
+	icon_state = "yellow"
+
+	////
 
 //Turbolift
 

@@ -47,17 +47,20 @@
 // POIs here spawn in two different sections, the top half and bottom half of the map.
 // The bottom half should be fairly tame, with perhaps a few enviromental hazards.
 // The top half is when things start getting dangerous, but the loot gets better.
+*/
 
-/datum/map_template/surface/mountains
-	name = "Mountain Content"
-	desc = "Don't dig too deep!"
 
-// 'Normal' templates get used on the bottom half, and should be safer.
-/datum/map_template/surface/mountains/normal
+/datum/map_template/space/roids
+	name = "Roids Content"
+	desc = "get you some!"
 
-// 'Deep' templates get used on the top half, and should be more dangerous and rewarding.
-/datum/map_template/surface/mountains/deep
+// 'Close' templates get used on the bottom half, and should be safer.
+/datum/map_template/space/roids/close
 
+// 'Far' templates get used on the top half, and should be more dangerous and rewarding.
+/datum/map_template/space/roids/far
+
+/*
 // To be added: Templates for cave exploration when they are made.
 
 /****************

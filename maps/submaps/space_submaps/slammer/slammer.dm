@@ -54,10 +54,10 @@
 	desc = "Don't dig too deep!"
 
 // 'Normal' templates get used on the bottom half, and should be safer.
-/datum/map_template/space/cave/slammer/normal
+/datum/map_template/space/slammer/normal
 
 // 'Deep' templates get used on the top half, and should be more dangerous and rewarding.
-/datum/map_template/space/cave/slammer/deep
+/datum/map_template/space/slammer/deep
 
 // To be added: Templates for cave exploration when they are made.
 

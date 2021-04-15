@@ -106,14 +106,13 @@
 	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.
 
 	// Cave submaps are first.
-	seed_submaps(list(Z_LEVEL_DERELICTS), 75, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
-	seed_submaps(list(Z_LEVEL_DERELICTS), 75, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
+	seed_submaps(list(Z_LEVEL_DERELICTS), 100, /area/lonestar/away/yard/wrecking, /datum/map_template/space/derelicts)
 	// Slammer caves to make them more interesting.
-	seed_submaps(list(Z_LEVEL_SLAMMER), 100, /area/lonestar/away/slammer/normal, /datum/map_template/space/slammer)
-	seed_submaps(list(Z_LEVEL_SLAMMER), 100, /area/lonestar/away/slammer/deep, /datum/map_template/space/slammer)
+	seed_submaps(list(Z_LEVEL_SLAMMER), 75, /area/lonestar/away/slammer/normal, /datum/map_template/space/slammer/normal)
+	seed_submaps(list(Z_LEVEL_SLAMMER), 75, /area/lonestar/away/slammer/deep, /datum/map_template/space/slammer/deep)
 	// Wilderness is next.
-	seed_submaps(list(Z_LEVEL_BELT), 75, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
-	seed_submaps(list(Z_LEVEL_BELT), 75, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
+	seed_submaps(list(Z_LEVEL_BELT), 75, /area/lonestar/away/roids/close, /datum/map_template/space/roids/close)
+	seed_submaps(list(Z_LEVEL_BELT), 75, /area/lonestar/away/roids/far, /datum/map_template/space/roids/far)
 	// If Space submaps are made, add a line to make them here as well.
 
 	// Now for the tunnels.
@@ -176,13 +175,13 @@
 
 /datum/map_z_level/lonestar/derelict_ship
 	z = Z_LEVEL_DERELICTS
-	name = "Mysterious Ship"
+	name = "Wrecking Yard"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
 //	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_z_level/lonestar/belt_far
 	z = Z_LEVEL_BELT
-	name = "LSF Carlstop" //pending better name
+	name = "LSF Carl's Corner" //pending better name
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 //	base_turf = /turf/simulated/floor/outdoors/rocks
 
