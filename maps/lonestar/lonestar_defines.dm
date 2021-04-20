@@ -42,7 +42,7 @@
 	shuttle_called_message = "A  transfer to %dock_name% has been scheduled. The shuttle has been called. Any of y'all leaving should git t'the third floor in approximately %ETA%."
 	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
 	emergency_shuttle_docked_message = "The Emergency Shuttle has docked with the station at the followin' airlocks on the third floor: Dockin' Airlock One, Three, Five and Seven! Y'all have about %ETD% till it leaves the slowpokes behind."
-	emergency_shuttle_leaving_dock = "There she goes! Emergency Shuttle's has left the station. Reckon %ETA% til that puppy docks over at %dock_name%."
+	emergency_shuttle_leaving_dock = "There she goes! Emergency Shuttle's left the station. Reckon %ETA% til that puppy docks over at %dock_name%."
 	emergency_shuttle_called_message = "An Evacuation Order has been called. A shuttle will arrive on the third floor in about %ETA%."
 	emergency_shuttle_recall_message = "Cancel that evac order."
 
@@ -105,7 +105,7 @@
 /datum/map/lonestar/perform_map_generation()
 	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.
 
-	// Cave submaps are first.
+	// Wrecking Yard submaps are first.
 	seed_submaps(list(Z_LEVEL_DERELICTS), 100, /area/lonestar/away/yard/wrecking, /datum/map_template/space/derelicts)
 	// Slammer caves to make them more interesting.
 	seed_submaps(list(Z_LEVEL_SLAMMER), 75, /area/lonestar/away/slammer/normal, /datum/map_template/space/slammer/normal)
@@ -167,19 +167,19 @@
 	flags = MAP_LEVEL_PLAYER
 	transit_chance = 76
 
-/datum/map_z_level/lonestar/station_prison
+/datum/map_z_level/lonestar/slammer
 	z = Z_LEVEL_SLAMMER
 	name = "LSF The Slammer"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
-/datum/map_z_level/lonestar/derelict_ship
+/datum/map_z_level/lonestar/derelicts
 	z = Z_LEVEL_DERELICTS
 	name = "Wrecking Yard"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
 //	base_turf = /turf/simulated/floor/outdoors/rocks
 
-/datum/map_z_level/lonestar/belt_far
+/datum/map_z_level/lonestar/belt
 	z = Z_LEVEL_BELT
 	name = "LSF Carl's Corner" //pending better name
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
@@ -200,42 +200,43 @@
 	z = Z_LEVEL_TRANSIT
 	name = "Transit"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT
-/*
-//Teleport to Mine
 
-/obj/effect/step_trigger/teleporter/mine/to_mining/New()
+//Teleport from Slammer to Wrecking Yard
+
+/obj/effect/step_trigger/teleporter/yard/to_yard/New()
 	..()
 	teleport_x = src.x
 	teleport_y = 2
-	teleport_z = Z_LEVEL_BELT
+	teleport_z = Z_LEVEL_DERELICTS
 
-/obj/effect/step_trigger/teleporter/mine/from_mining/New()
+/obj/effect/step_trigger/teleporter/yard/from_yard/New()
 	..()
 	teleport_x = src.x
 	teleport_y = world.maxy - 1
 	teleport_z = Z_LEVEL_SLAMMER
 
-//Teleport to derelict
+//Teleport from Wrecking Yard to Carl's Corner
 
-/obj/effect/step_trigger/teleporter/wild/to_wild/New()
+/obj/effect/step_trigger/teleporter/rim/to_rim/New()
 	..()
 	teleport_x = src.x
 	teleport_y = 2
-	teleport_z = Z_LEVEL_DERELICTS
+	teleport_z = Z_LEVEL_BELT
 
-/obj/effect/step_trigger/teleporter/wild/from_wild/New()
+/obj/effect/step_trigger/teleporter/rim/from_rim/New()
 	..()
 	teleport_x = src.x
 	teleport_y = world.maxy - 1
 	teleport_z = Z_LEVEL_DERELICTS
-*/
+
+
 /datum/planet/prison
 	expected_z_levels = list(
 		Z_LEVEL_SLAMMER,
 		Z_LEVEL_DERELICTS,
 		Z_LEVEL_BELT
 	)
-/*
+
 /obj/effect/step_trigger/teleporter/bridge/east_to_west/Initialize()
 	teleport_x = src.x - 4
 	teleport_y = src.y
@@ -272,31 +273,31 @@
 	teleport_z = src.z
 	return ..()
 
-/obj/effect/map_effect/portal/master/side_a/prison_to_asteroid
-	portal_id = "prison_asteroid-normal"
+/obj/effect/map_effect/portal/master/side_a/slammer_to_yard
+	portal_id = "slammer_yard-normal"
 
-/obj/effect/map_effect/portal/master/side_b/asteroid_to_prison
-	portal_id = "prison_asteroid-normal"
+/obj/effect/map_effect/portal/master/side_b/yard_to_slammer
+	portal_id = "slammer_yard-normal"
 
-/obj/effect/map_effect/portal/master/side_a/prison_to_asteroid/hole
-	portal_id = "prison_asteroid-hole"
+/obj/effect/map_effect/portal/master/side_a/slammer_to_yard/cliff
+	portal_id = "slammer_yard-cliff"
 
-/obj/effect/map_effect/portal/master/side_b/asteroid_to_prison/hole
-	portal_id = "prison_asteroid-hole"
+/obj/effect/map_effect/portal/master/side_b/yard_to_slammer/cliff
+	portal_id = "slammer_yard-cliff"
 
 
-/obj/effect/map_effect/portal/master/side_a/asteroid_to_ship
-	portal_id = "asteroid_ship-normal"
+/obj/effect/map_effect/portal/master/side_a/yard_to_rim
+	portal_id = "yard_rim-normal"
 
-/obj/effect/map_effect/portal/master/side_b/ship_to_asteroid
-	portal_id = "asteroid_ship-normal"
+/obj/effect/map_effect/portal/master/side_b/rim_to_yard
+	portal_id = "yard_rim-normal"
 
-/obj/effect/map_effect/portal/master/side_a/asteroid_to_ship/hole
-	portal_id = "asteroid_ship-hole"
+/obj/effect/map_effect/portal/master/side_a/yard_to_rim/cliff
+	portal_id = "yard_rim-cliff"
 
-/obj/effect/map_effect/portal/master/side_b/ship_to_asteroid/hole
-	portal_id = "asteroid_ship-hole"
-*/
+/obj/effect/map_effect/portal/master/side_b/rim_to_yard/cliff
+	portal_id = "yard_rim-cliff"
+
 //Suit Storage Units
 
 /obj/machinery/suit_cycler/pilot

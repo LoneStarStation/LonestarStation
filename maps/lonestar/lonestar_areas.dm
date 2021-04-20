@@ -114,13 +114,28 @@
 	name = "Close Mining Asteroids"
 	icon_state = "purple"
 
-
 /area/lonestar/away/roids/far
 	name = "Far Mining Asteroids"
 	icon_state = "dark"
 
+/area/lonestar/away/roids/cliff
+	name = "\improper Cliff Edge"
+	icon_state = "yellow"
+
+/area/lonestar/away/roids/path
+	name = "\improper Cliff Edge"
+	icon_state = "purple"
+
 /area/lonestar/away/yard/wrecking
 	name = "Lonestar Wrecking Yard"
+	icon_state = "purple"
+
+/area/lonestar/away/yard/asteroid
+	name = "Cliff Pathway"
+	icon_state = "yellow"
+
+/area/lonestar/away/yard/cliff
+	name = "Cliff Pathway"
 	icon_state = "purple"
 
 // So POIs don't get embedded in rock.
