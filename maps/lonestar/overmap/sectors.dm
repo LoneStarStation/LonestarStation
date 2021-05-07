@@ -10,9 +10,9 @@
 	extra_z_levels = list(Z_LEVEL_TRANSIT) // Hopefully temporary, so arrivals announcements work.
 
 // prison facility
-/obj/effect/overmap/visitable/lonestar_station/the_slammer
-	name = "Lonestar_Prison"
-	map_z = list(Z_LEVEL_SLAMMER, Z_LEVEL_DERELICTS, Z_LEVEL_BELT)
+/obj/effect/overmap/visitable/lonestar_station/mining_areas
+	name = "Lonestar_Mining"
+	map_z = list(Z_LEVEL_MINING_PRISON, Z_LEVEL_MINING_SALVAGE, Z_LEVEL_MINING_ROIDS)
 	in_space = 1
 	start_x  = 10
 	start_y  = 10

@@ -52,7 +52,7 @@
 
 /obj/structure/closet/secure_closet/engineering_welding
 	name = "welding supplies"
-	req_access = list(access_construction)
+	req_access = list(access_engine)
 	closet_appearance = /decl/closet_appearance/secure_closet/engineering/welding
 
 	starts_with = list(

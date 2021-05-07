@@ -31,63 +31,63 @@
 	)
 
 /datum/shuttle_destination/heist/orbit
-	name = "Orbit of Sif"
+	name = "Orbit near Lonestar"
 	my_landmark = "skipjack_orbit"
 	preferred_interim_tag = "skipjack_transit"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/heist/outside_SC_1d = 30 SECONDS,
-		/datum/shuttle_destination/heist/outside_SC_2d = 30 SECONDS,
-		/datum/shuttle_destination/heist/outside_SC_3d = 30 SECONDS,
-		/datum/shuttle_destination/heist/sky = 30 SECONDS,
+		/datum/shuttle_destination/heist/outside_LS_1d = 30 SECONDS,
+		/datum/shuttle_destination/heist/outside_LS_2d = 30 SECONDS,
+		/datum/shuttle_destination/heist/outside_LS_3d = 30 SECONDS,
+		/datum/shuttle_destination/heist/carls = 30 SECONDS
 	)
 
-/datum/shuttle_destination/heist/outside_SC_1d
-	name = "NLS Southern Cross - Aft of First Deck"
+/datum/shuttle_destination/heist/outside_LS_1d
+	name = "LSF Neo Vima - Off First Deck"
 	my_landmark = "skipjack_firstdeck"
 	preferred_interim_tag = "skipjack_transit"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/heist/outside_SC_2d = 0,
-		/datum/shuttle_destination/heist/outside_SC_3d = 0,
-		/datum/shuttle_destination/heist/docked_SC = 0
+		/datum/shuttle_destination/heist/outside_LS_2d = 0,
+		/datum/shuttle_destination/heist/outside_LS_3d = 0,
+		/datum/shuttle_destination/heist/docked_LS = 0
 	)
 
-/datum/shuttle_destination/heist/outside_SC_2d
-	name = "NLS Southern Cross - Fore of Second Deck"
+/datum/shuttle_destination/heist/outside_LS_2d
+	name = "LSF Neo Vima - Off Second Deck"
 	my_landmark = "skipjack_seconddeck"
 	preferred_interim_tag = "skipjack_transit"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/heist/outside_SC_1d = 0,
-		/datum/shuttle_destination/heist/outside_SC_3d = 0,
-		/datum/shuttle_destination/heist/docked_SC = 0
+		/datum/shuttle_destination/heist/outside_LS_1d = 0,
+		/datum/shuttle_destination/heist/outside_LS_3d = 0,
+		/datum/shuttle_destination/heist/docked_LS = 0
 	)
 
-/datum/shuttle_destination/heist/outside_SC_3d
-	name = "NLS Southern Cross - Starboard of Third Deck"
+/datum/shuttle_destination/heist/outside_LS_3d
+	name = "LSF Neo Vima - Off Third Deck"
 	my_landmark = "skipjack_thirddeck"
 	preferred_interim_tag = "skipjack_transit"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/heist/outside_SC_1d = 0,
-		/datum/shuttle_destination/heist/outside_SC_2d = 0,
-		/datum/shuttle_destination/heist/docked_SC = 0
+		/datum/shuttle_destination/heist/outside_LS_1d = 0,
+		/datum/shuttle_destination/heist/outside_LS_2d = 0,
+		/datum/shuttle_destination/heist/docked_LS = 0
 	)
 
 
-/datum/shuttle_destination/heist/docked_SC
-	name = "NLS Southern Cross - Arrivals Docking Port"
+/datum/shuttle_destination/heist/docked_LS
+	name = "LSF Neo Vima - Abbandoned Docking Port"
 	my_landmark = "skipjack_arrivals_dock"
 	preferred_interim_tag = "skipjack_transit"
 
 //	dock_target = "skipjack_shuttle_dock_airlock"
 	announcer = "Southern Cross Docking Computer"
 
-/datum/shuttle_destination/heist/docked_SC/get_arrival_message()
+/datum/shuttle_destination/heist/docked_LS/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Arrivals Dock."
 
-/datum/shuttle_destination/heist/docked_SC/get_departure_message()
+/datum/shuttle_destination/heist/docked_LS/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed the Arrivals Dock."
 
 /datum/shuttle_destination/heist/sky
@@ -95,11 +95,8 @@
 	my_landmark = "skipjack_sky"
 	preferred_interim_tag = "skipjack_sky_transit"
 
-	routes_to_make = list(
-		/datum/shuttle_destination/heist/planet = 15 SECONDS
-	)
 
-/datum/shuttle_destination/heist/planet
-	name = "Sif Surface"
-	my_landmark = "skipjack_planet"
-	preferred_interim_tag = "skipjack_sky_transit"
+/datum/shuttle_destination/heist/carls
+	name = "Near Carl's Corner"
+	my_landmark = "skipjack_carls"
+	preferred_interim_tag = "skipjack_transit"

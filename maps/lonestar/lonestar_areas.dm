@@ -89,6 +89,10 @@
 
 /area/lonestar/away/slammer/solarpanels
 	name = "Slammer Solar Panels"
+	requires_power = 1
+	always_unpowered = 1
+	dynamic_lighting = 0
+	ambience = AMBIENCE_SPACE
 
 ////LSF Carl's Corner II
 
@@ -502,6 +506,7 @@
 	name = "Pest Holding"
 	icon_state = "pest_control"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	requires_power = 0
 
 /area/lonestar/pestcontrol/foyer
 	name = "\improper Pest Control Foyer"
@@ -981,6 +986,11 @@
 /area/lonestar/maintenance/water
 	name = "\improper Hydro Control"
 
+/area/lonestar/water_tank				// -- TLE
+	name = "\improper Lonestar - Water Tank"
+	icon_state = "blue"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+
 /area/lonestar/maintenance/second/redundant
 	name = "\improper Redundant Storage"
 
@@ -1153,6 +1163,9 @@
 
 /area/lonestar/maintenance/command
 	name = "\improper Command Maintenance"
+
+/area/lonestar/airlock/baronslock
+	name = "\improper Baron's Escapelock"
 
 //lonestar: sheriffs office//
 
@@ -1408,105 +1421,6 @@
 	name = "\improper Ranch Maintenance"
 
 
-/*
-//lonestar: the slammer//
-
-/area/lonestar/prison
-	name = "\improper Prison Station"
-	icon_state = "brig"
-	ambience = AMBIENCE_HIGHSEC
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/prison/mining
-	name = "\improper Prisoner Tools"
-	icon_state = "brig"
-	ambience = AMBIENCE_HIGHSEC
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/prison/warehouse
-	name = "\improper Prison Warehouse"
-	icon_state = "brig"
-	ambience = AMBIENCE_HIGHSEC
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/prison/cargo_station
-	name = "\improper Cargo Office"
-	icon_state = "quart"
-	ambience = AMBIENCE_HIGHSEC
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/prison/shaft_two
-	name = "\improper Elevator Prison Elevator"
-	icon_state = "yellow"
-
-/area/lonestar/prison/arrival_airlock
-	name = "\improper Prison Station Airlock"
-	icon_state = "green"
-
-/area/lonestar/prison/mining_airlock1
-	name = "\improper Prison Station Airlock"
-	icon_state = "green"
-
-/area/lonestar/prison/mining_airlock2
-	name = "\improper Prison Station Airlock"
-	icon_state = "green"
-
-/area/lonestar/prison/control
-	name = "\improper Prison Security Checkpoint"
-	icon_state = "security"
-
-/area/lonestar/prison/guard_breakroom
-	name = "\improper Prison Breakroom"
-	icon_state = "green"
-
-/area/lonestar/prison/closet
-	name = "\improper Prison Supply Closet"
-	icon_state = "dk_yellow"
-
-/area/lonestar/prison/hallway/
-	name = "\improper Prison Hallway"
-	icon_state = "yellow"
-
-/area/lonestar/prison/warden_office
-	name = "\improper Prison Morgue"
-	icon_state = "Warden"
-
-/area/lonestar/prison/morgue
-	name = "\improper Prison Morgue"
-	icon_state = "morgue"
-
-/area/lonestar/prison/medical
-	name = "\improper Prison Medbay"
-	icon_state = "medbay"
-
-/area/lonestar/prison/cell_block
-	name = "Prison General Population"
-	icon_state = "brig"
-
-/area/lonestar/prison/cell_block/A
-	name = "Prison Cell Block A"
-	icon_state = "brig"
-
-/area/lonestar/prison/cell_block/B
-	name = "Prison Cell Block B"
-	icon_state = "brig"
-
-/area/lonestar/prison/cell_block/C
-	name = "Prison Cell Block C"
-	icon_state = "brig"
-
-/area/lonestar/prison/cell_block/D
-	name = "Prison Cell Block D"
-	icon_state = "brig"
-
-/area/lonestar/prison/cell_block/E
-	name = "Prison Cell Block E"
-	icon_state = "brig"
-
-/area/lonestar/prison/cell_block/rec_room
-	name = "\improper Prisoner Rec Room"
-	icon_state = "green"
-*/
 
 //lonestar: arrivals docks//
 
@@ -2145,58 +2059,59 @@ area/crew_quarters/heads/sc/hop/quarters
 
 // Shuttles
 
-//NT response shuttle
+//Ranger Base
 
 /area/shuttle/response_ship
-	name = "\improper Response Team Ship"
+	name = "\improper Ranger Strike Cruiser"
 	icon_state = "centcom"
 	requires_power = 0
 	flags = RAD_SHIELDED
 	ambience = AMBIENCE_HIGHSEC
+	base_turf = /turf/space
 
 /area/shuttle/response_ship/start
 	name = "\improper Response Team Base"
 	icon_state = "shuttlered"
-	base_turf = /turf/unsimulated/floor/
+	base_turf = /turf/space
 
 /area/shuttle/response_ship/firstdeck
-	name = "north-west of first deck"
+	name = "off first deck"
 	icon_state = "northwest"
 
 /area/shuttle/response_ship/seconddeck
-	name = "south-east of second deck"
+	name = "off second deck"
 	icon_state = "southeast"
 
 /area/shuttle/response_ship/thirddeck
-	name = "north-east of third deck"
+	name = "off third deck"
 	icon_state = "northeast"
 
-/area/shuttle/response_ship/planet
-	name = "planetside outpost"
+/area/shuttle/response_ship/prison
+	name = "the Slammer"
 	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor/outdoors/dirt/sif/planetuse
+	base_turf = /turf/space
 
-/area/shuttle/response_ship/mining
-	name = "mining site"
+/area/shuttle/response_ship/carls
+	name = "\improper Carl's Corner"
 	icon_state = "shuttlered"
 	base_turf = /turf/space
 
 /area/shuttle/response_ship/arrivals_dock
-	name = "\improper docked with Southern Cross"
+	name = "\improper docked with Neo Vima"
 	icon_state = "shuttle"
 
 /area/shuttle/response_ship/orbit
-	name = "in orbit of Sif"
+	name = "in orbit around Lonestar"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/space
 
 /area/shuttle/response_ship/sky
-	name = "hovering over skies of sif"
+	name = "hovering in the skies"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/simulated/sky/west
 
 /area/shuttle/response_ship/sky_transit
-	name = "in flight over sif"
+	name = "in flight"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/sky/moving/west
 
@@ -2217,23 +2132,26 @@ area/crew_quarters/heads/sc/hop/quarters
 /area/shuttle/shuttle1/start
 	name = "Shuttle One"
 	icon_state = "shuttlered"
+	base_turf = /turf/simulated/floor/plating
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
 /area/shuttle/shuttle1/arrivals_dock
-	name = "\improper docked with Southern Cross"
+	name = "\improper docked with Lonestar Station"
 	icon_state = "shuttle"
 
 /area/shuttle/shuttle1/seconddeck
 	name = "south of second deck"
 	icon_state = "south"
 
-/area/shuttle/shuttle1/mining
-	name = "wilderness site"
+/area/shuttle/shuttle1/roids
+	name = "\improper Carl's Corner"
 	icon_state = "shuttlered"
+	base_turf = /turf/simulated/floor/plating
 
-/area/shuttle/shuttle1/planet
-	name = "planetside outpost"
+/area/shuttle/shuttle1/prison
+	name = "The Slammer"
 	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor/plating/sif/planetuse
+	base_turf = /turf/simulated/floor/plating
 
 /area/shuttle/shuttle1/transit
 	name = "transit"
@@ -2241,17 +2159,17 @@ area/crew_quarters/heads/sc/hop/quarters
 	base_turf = /turf/space/transit/north
 
 /area/shuttle/shuttle1/orbit
-	name = "in orbit of Sif"
+	name = "in orbit of Lonestar Station"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/space
 
 /area/shuttle/shuttle1/sky
-	name = "hovering over skies of sif"
+	name = "hovering in the skies"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/simulated/sky
 
 /area/shuttle/shuttle1/sky_transit
-	name = "in flight over sif"
+	name = "in flight"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/sky/moving
 
@@ -2264,24 +2182,27 @@ area/crew_quarters/heads/sc/hop/quarters
 	dynamic_lighting = 1
 	flags = RAD_SHIELDED
 
+
 /area/shuttle/shuttle2/start
 	name = "Shuttle Two"
 	icon_state = "shuttlered"
+	base_turf = /turf/simulated/floor/plating
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/shuttle/shuttle2/arrivals_dock
-	name = "\improper docked with Southern Cross"
+	name = "\improper docked with Lonestar Station"
 	icon_state = "shuttle"
 
 /area/shuttle/shuttle2/seconddeck
 	name = "south of second deck"
 	icon_state = "south"
 
-/area/shuttle/shuttle2/mining
-	name = "wilderness site"
+/area/shuttle/shuttle2/roids
+	name = "\improper Carl's Corner"
 	icon_state = "shuttlered"
 
-/area/shuttle/shuttle2/planet
-	name = "planetside outpost"
+/area/shuttle/shuttle2/prison
+	name = "The Slammer"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/floor/plating/sif/planetuse
 
@@ -2291,17 +2212,17 @@ area/crew_quarters/heads/sc/hop/quarters
 	base_turf = /turf/space/transit/north
 
 /area/shuttle/shuttle2/orbit
-	name = "in orbit of Sif"
+	name = "in orbit of Lonestar Station"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/space
 
 /area/shuttle/shuttle2/sky
-	name = "hovering over skies of sif"
+	name = "hovering in the skies"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/simulated/sky
 
 /area/shuttle/shuttle2/sky_transit
-	name = "in flight over sif"
+	name = "in flight"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/sky/moving
 
@@ -2347,26 +2268,26 @@ area/crew_quarters/heads/sc/hop/quarters
 	icon_state = "shuttlered"
 
 /area/syndicate_station/firstdeck
-	name = "north-west of first deck"
+	name = "off first deck"
 	icon_state = "northwest"
 
 /area/syndicate_station/seconddeck
-	name = "north-east of second deck"
+	name = "off second deck"
 	icon_state = "northeast"
 
 /area/syndicate_station/thirddeck
-	name = "south-east of third deck"
+	name = "off third deck"
 	icon_state = "southeast"
 
 /area/syndicate_station/mining
 	name = "mining site"
 	icon_state = "shuttlered"
 
-/area/syndicate_station/planet
-	name = "planetside"
+/area/syndicate_station/carls
+	name = "\improper Carl's Corner"
 	dynamic_lighting = 1
 	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	base_turf = /turf/space
 
 /area/syndicate_station/transit
 	name = " transit"
@@ -2374,29 +2295,29 @@ area/crew_quarters/heads/sc/hop/quarters
 	base_turf = /turf/space/transit/east
 
 /area/syndicate_station/orbit
-	name = "in orbit of Sif"
+	name = "in orbit around Lonestar"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/space
 
 /area/syndicate_station/sky
-	name = "hovering over skies of sif"
+	name = "hovering in the skies"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/simulated/sky/west
 
 /area/syndicate_station/sky_transit
-	name = "in flight over sif"
+	name = "in flight"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/sky/moving/west
 
-/area/syndicate_station/arrivals_dock
-	name = "\improper docked with Southern Cross"
+/area/syndicate_station/lonestar
+	name = "\improper docked with Neo Vima"
 	dynamic_lighting = 0
 	icon_state = "shuttle"
 
 //Skipjack
 
 /area/skipjack_station
-	name = "Raider Outpost"
+	name = "Bandit Outpost"
 	icon_state = "yellow"
 	requires_power = 0
 	dynamic_lighting = 0
@@ -2409,44 +2330,44 @@ area/crew_quarters/heads/sc/hop/quarters
 	base_turf = /turf/space/transit/north
 
 /area/skipjack_station/firstdeck
-	name = "north of first deck"
+	name = "off first deck"
 	icon_state = "northwest"
 
 /area/skipjack_station/seconddeck
-	name = "west of second deck"
+	name = "off second deck"
 	icon_state = "west"
 
 /area/skipjack_station/thirddeck
-	name = "east of third deck"
+	name = "off third deck"
 	icon_state = "east"
 
 /area/skipjack_station/mining
 	name = "mining site"
 	icon_state = "shuttlered"
 
-/area/skipjack_station/planet
-	name = "planet"
+/area/skipjack_station/carls
+	name = "\improper near Carl's Corner"
 	icon_state = "shuttlered"
-	dynamic_lighting = 1
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	dynamic_lighting = 0
+	base_turf = /turf/space
 
 /area/skipjack_station/orbit
-	name = "in orbit of Sif"
+	name = "in orbit near Lonestar"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/space
 
 /area/skipjack_station/sky
-	name = "hovering over skies of sif"
+	name = "hovering in the skies"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/simulated/sky/north
 
 /area/skipjack_station/sky_transit
-	name = "in flight over sif"
+	name = "in flight"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/sky/moving/north
 
-/area/skipjack_station/arrivals_dock
-	name = "\improper docked with Southern Cross"
+/area/skipjack_station/old_station
+	name = "\improper docked with Old Neo Vima"
 	icon_state = "shuttle"
 
 // Ninja areas
@@ -2467,25 +2388,24 @@ area/crew_quarters/heads/sc/hop/quarters
 	base_turf = /turf/simulated/floor/plating
 
 /area/ninja_dojo/firstdeck
-	name = "south of first deck"
+	name = "off first deck"
 	icon_state = "south"
 
 /area/ninja_dojo/seconddeck
-	name = "north of second deck"
+	name = "off second deck"
 	icon_state = "south"
 
 /area/ninja_dojo/thirddeck
-	name = "west of third deck"
+	name = "off third deck"
 	icon_state = "south"
 
-/area/ninja_dojo/mining
-	name = "mining site"
+/area/ninja_dojo/carls
+	name = "carls corner"
 	icon_state = "shuttlered"
 
-/area/ninja_dojo/planet
-	name = "planet outposts"
+/area/ninja_dojo/slammer
+	name = "the slammer"
 	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
 
 /area/ninja_dojo/transit
 	name = "transit"
@@ -2493,29 +2413,28 @@ area/crew_quarters/heads/sc/hop/quarters
 	base_turf = /turf/space/transit/north
 
 /area/ninja_dojo/orbit
-	name = "in orbit of Sif"
+	name = "in orbit of Lonestar Station"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/space
 
 /area/ninja_dojo/sky
-	name = "hovering over skies of sif"
+	name = "hovering in the skies"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/simulated/sky/south
 
 /area/ninja_dojo/sky_transit
-	name = "in flight over sif"
+	name = "in flight"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/sky/moving/south
 
 /area/ninja_dojo/arrivals_dock
 	name = "\improper docked with Neo Vima"
 	icon_state = "shuttle"
-	dynamic_lighting = 0
 
 /area/ninja_dojo/cavern
 	name = "\improper Second Deck hidden cavern"
 	icon_state = "shuttle"
-	dynamic_lighting = 0
+	base_turf = /turf/simulated/floor/plating
 
 //Trade Ship
 

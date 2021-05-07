@@ -622,7 +622,7 @@
 /obj/machinery/suit_cycler/engineering
 	name = "Engineering suit cycler"
 	model_text = "Engineering"
-	req_access = list(access_construction)
+	req_access = list(access_engine)
 	departments = list("Engineering","Atmospherics","HAZMAT","Construction","No Change")
 
 /obj/machinery/suit_cycler/mining
@@ -674,12 +674,12 @@
 	name = "Vintage Pilot suit cycler"
 	model_text = "Vintage Pilot"
 	departments = list("Vintage Pilot (Bubble Helm)","Vintage Pilot (Closed Helm)","No Change")
-	
+
 /obj/machinery/suit_cycler/vintage/medsci
 	name = "Vintage MedSci suit cycler"
 	model_text = "Vintage MedSci"
 	departments = list("Vintage Medical (Bubble Helm)","Vintage Medical (Closed Helm)","Vintage Research (Bubble Helm)","Vintage Research (Closed Helm)","No Change")
-	
+
 /obj/machinery/suit_cycler/vintage/rugged
 	name = "Vintage Ruggedized suit cycler"
 	model_text = "Vintage Ruggedized"
@@ -1148,7 +1148,7 @@
 			parent_helmet = /obj/item/clothing/head/helmet/space/void/refurb/mercenary
 			parent_suit = /obj/item/clothing/suit/space/void/refurb/mercenary
 		//BEGIN: Space for additional downstream variants
-		
+
 		//END: downstream variant space
 	if(target_species)
 		//Only run these checks if they have a sprite sheet defined, otherwise they use human's anyways, and there is almost definitely a sprite.
@@ -1159,9 +1159,9 @@
 			var/suit_check = ((suit!=null && (initial(parent_suit.icon_state) in icon_states(suit.sprite_sheets_obj[target_species],1))) || suit==null)
 			var/suit_helmet_check = ((suit!=null && suit.helmet!=null && (initial(parent_helmet.icon_state) in icon_states(suit.helmet.sprite_sheets_obj[target_species],1))) || suit==null || suit.helmet==null)
 			if(helmet_check && suit_check && suit_helmet_check)
-				if(helmet) 
+				if(helmet)
 					helmet.refit_for_species(target_species)
-				if(suit) 
+				if(suit)
 					suit.refit_for_species(target_species)
 					if(suit.helmet)
 						suit.helmet.refit_for_species(target_species)
@@ -1170,9 +1170,9 @@
 				T.visible_message("[bicon(src)]<span class='warning'>Unable to apply specified cosmetics with specified species. Please try again with a different species or cosmetic option selected.</span>")
 				return
 		else
-			if(helmet) 
+			if(helmet)
 				helmet.refit_for_species(target_species)
-			if(suit) 
+			if(suit)
 				suit.refit_for_species(target_species)
 				if(suit.helmet)
 					suit.helmet.refit_for_species(target_species)
@@ -1193,9 +1193,9 @@
 		suit.desc = initial(parent_suit.desc)
 		suit.icon_state = initial(parent_suit.icon_state)
 		suit.item_state = initial(parent_suit.item_state)
-		suit.item_state_slots = S.item_state_slots		
+		suit.item_state_slots = S.item_state_slots
 		qdel(S)
-		
+
 		//can't believe I forgot to fix this- now helmets will properly cycle if they're attached to a suit -KK
 		if(suit.helmet && target_department != "No Change")
 			var/obj/item/clothing/AH = new parent_helmet

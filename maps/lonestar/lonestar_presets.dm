@@ -46,17 +46,17 @@ var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
 
 /obj/machinery/telecomms/relay/preset/lonestar/prison
 	id = "Prison Relay"
-	listening_level = Z_LEVEL_SLAMMER
+	listening_level = Z_LEVEL_MINING_PRISON
 	autolinkers = list("lsp_relay")
 
 /obj/machinery/telecomms/relay/preset/lonestar/derelict
 	id = "Derelict Relay"
-	listening_level = Z_LEVEL_DERELICTS
+	listening_level = Z_LEVEL_MINING_SALVAGE
 	autolinkers = list("shp_relay")
 
 /obj/machinery/telecomms/relay/preset/lonestar/belt
-	id = "T-Coms Relay"
-	listening_level = Z_LEVEL_BELT
+	id = "Carls Relay"
+	listening_level = Z_LEVEL_MINING_ROIDS
 	autolinkers = list("far_relay")
 
 /obj/machinery/telecomms/relay/preset/lonestar/transit

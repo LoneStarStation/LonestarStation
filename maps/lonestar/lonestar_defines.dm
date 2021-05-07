@@ -4,12 +4,12 @@
 #define Z_LEVEL_STATION_TWO				2
 #define Z_LEVEL_STATION_THREE			3
 #define Z_LEVEL_EMPTY_SPACE				4
-#define Z_LEVEL_SLAMMER					5
-#define Z_LEVEL_DERELICTS				6
+#define Z_LEVEL_MINING_PRISON			5
+#define Z_LEVEL_MINING_SALVAGE			6
 #define Z_LEVEL_MISC					7
 #define Z_LEVEL_CENTCOM					8
 #define Z_LEVEL_TRANSIT					9
-#define Z_LEVEL_BELT					10
+#define Z_LEVEL_MINING_ROIDS			10
 
 /datum/map/lonestar
 	name = "Lonestar Station"
@@ -91,33 +91,33 @@
 	unit_test_exempt_areas = list(/area/ninja_dojo, /area/ninja_dojo/firstdeck, /area/ninja_dojo/arrivals_dock)
 	unit_test_exempt_from_atmos = list(/area/lonestar/command/server)
 
-	planet_datums_to_make = list(/datum/planet/prison)
+	planet_datums_to_make = list(/datum/planet/mining)
 
 	map_levels = list(
 			Z_LEVEL_STATION_ONE,
 			Z_LEVEL_STATION_TWO,
 			Z_LEVEL_STATION_THREE,
-			Z_LEVEL_SLAMMER,
-			Z_LEVEL_DERELICTS,
-			Z_LEVEL_BELT
+			Z_LEVEL_MINING_PRISON,
+			Z_LEVEL_MINING_SALVAGE,
+			Z_LEVEL_MINING_ROIDS
 		)
 
 /datum/map/lonestar/perform_map_generation()
 	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.
 
 	// Wrecking Yard submaps are first.
-	seed_submaps(list(Z_LEVEL_DERELICTS), 100, /area/lonestar/away/yard/wrecking, /datum/map_template/space/derelicts)
+	seed_submaps(list(Z_LEVEL_MINING_SALVAGE), 100, /area/lonestar/away/yard/wrecking, /datum/map_template/space/derelicts)
 	// Slammer caves to make them more interesting.
-	seed_submaps(list(Z_LEVEL_SLAMMER), 75, /area/lonestar/away/slammer/normal, /datum/map_template/space/slammer/normal)
-	seed_submaps(list(Z_LEVEL_SLAMMER), 75, /area/lonestar/away/slammer/deep, /datum/map_template/space/slammer/deep)
+	seed_submaps(list(Z_LEVEL_MINING_PRISON), 75, /area/lonestar/away/slammer/normal, /datum/map_template/space/slammer/normal)
+	seed_submaps(list(Z_LEVEL_MINING_PRISON), 75, /area/lonestar/away/slammer/deep, /datum/map_template/space/slammer/deep)
 	// Wilderness is next.
-	seed_submaps(list(Z_LEVEL_BELT), 75, /area/lonestar/away/roids/close, /datum/map_template/space/roids/close)
-	seed_submaps(list(Z_LEVEL_BELT), 75, /area/lonestar/away/roids/far, /datum/map_template/space/roids/far)
+	seed_submaps(list(Z_LEVEL_MINING_ROIDS), 75, /area/lonestar/away/roids/close, /datum/map_template/space/roids/close)
+	seed_submaps(list(Z_LEVEL_MINING_ROIDS), 75, /area/lonestar/away/roids/far, /datum/map_template/space/roids/far)
 	// If Space submaps are made, add a line to make them here as well.
 
 	// Now for the tunnels.
-	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_SLAMMER, world.maxx, world.maxy) // Create the mining Z-level.
-	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_SLAMMER, 64, 64)   									 // Create the mining ore distribution map.
+	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_MINING_PRISON, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_MINING_PRISON, 64, 64)   								 // Create the mining ore distribution map.
 	// Todo: Forest generation.
 	return 1
 
@@ -168,22 +168,22 @@
 	transit_chance = 76
 
 /datum/map_z_level/lonestar/slammer
-	z = Z_LEVEL_SLAMMER
+	z = Z_LEVEL_MINING_PRISON
 	name = "LSF The Slammer"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_z_level/lonestar/derelicts
-	z = Z_LEVEL_DERELICTS
-	name = "Wrecking Yard"
+	z = Z_LEVEL_MINING_SALVAGE
+	name = "Carls Wrecking Yard"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
-//	base_turf = /turf/simulated/floor/outdoors/rocks
+	base_turf = /turf/space
 
 /datum/map_z_level/lonestar/belt
-	z = Z_LEVEL_BELT
-	name = "LSF Carl's Corner" //pending better name
+	z = Z_LEVEL_MINING_ROIDS
+	name = "LSF Carls Corner II"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
-//	base_turf = /turf/simulated/floor/outdoors/rocks
+	base_turf = /turf/space
 
 /datum/map_z_level/lonestar/misc
 	z = Z_LEVEL_MISC
@@ -207,13 +207,13 @@
 	..()
 	teleport_x = src.x
 	teleport_y = 2
-	teleport_z = Z_LEVEL_DERELICTS
+	teleport_z = Z_LEVEL_MINING_SALVAGE
 
 /obj/effect/step_trigger/teleporter/yard/from_yard/New()
 	..()
 	teleport_x = src.x
 	teleport_y = world.maxy - 1
-	teleport_z = Z_LEVEL_SLAMMER
+	teleport_z = Z_LEVEL_MINING_PRISON
 
 //Teleport from Wrecking Yard to Carl's Corner
 
@@ -221,20 +221,20 @@
 	..()
 	teleport_x = src.x
 	teleport_y = 2
-	teleport_z = Z_LEVEL_BELT
+	teleport_z = Z_LEVEL_MINING_ROIDS
 
 /obj/effect/step_trigger/teleporter/rim/from_rim/New()
 	..()
 	teleport_x = src.x
 	teleport_y = world.maxy - 1
-	teleport_z = Z_LEVEL_DERELICTS
+	teleport_z = Z_LEVEL_MINING_SALVAGE
 
 
-/datum/planet/prison
+/datum/planet/mining
 	expected_z_levels = list(
-		Z_LEVEL_SLAMMER,
-		Z_LEVEL_DERELICTS,
-		Z_LEVEL_BELT
+		Z_LEVEL_MINING_PRISON,
+		Z_LEVEL_MINING_SALVAGE,
+		Z_LEVEL_MINING_ROIDS
 	)
 
 /obj/effect/step_trigger/teleporter/bridge/east_to_west/Initialize()

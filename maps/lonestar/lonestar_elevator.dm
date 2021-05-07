@@ -25,6 +25,7 @@
 	lift_size_y = 5
 
 	areas_to_use = list(
+		/area/turbolift/thataways_lonestar_one,
 		/area/turbolift/thataways_lonestar_two,
 		/area/turbolift/thataways_lonestar_three
 		)

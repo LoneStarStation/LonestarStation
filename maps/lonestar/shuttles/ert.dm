@@ -36,7 +36,7 @@
 	current_location = "response_ship_start"
 	docking_controller_tag = "response_shuttle"
 	web_master_type = /datum/shuttle_web_master/ert
-	flight_time_modifier = 0.5	// High speed low drag etc
+	flight_time_modifier = 3	// could be a bit faster...
 
 /datum/shuttle_web_master/ert
 	destination_class = /datum/shuttle_destination/ert
@@ -52,64 +52,65 @@
 	)
 
 /datum/shuttle_destination/ert/orbit
-	name = "Orbit of Sif"
+	name = "Orbit Over Lonestar"
 	my_landmark = "response_ship_orbit"
 	preferred_interim_tag = "response_ship_transit"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/ert/outside_SC_1d = 30 SECONDS,
-		/datum/shuttle_destination/ert/outside_SC_2d = 30 SECONDS,
-		/datum/shuttle_destination/ert/outside_SC_3d = 30 SECONDS,
-		/datum/shuttle_destination/ert/sky = 30 SECONDS
+		/datum/shuttle_destination/ert/outside_LS_1d = 30 SECONDS,
+		/datum/shuttle_destination/ert/outside_LS_2d = 30 SECONDS,
+		/datum/shuttle_destination/ert/outside_LS_3d = 30 SECONDS,
+		/datum/shuttle_destination/ert/root = 1 MINUTE
 	)
 
-/datum/shuttle_destination/ert/outside_SC_1d
-	name = "NLS Southern Cross - Fore Port of First Deck"
+/datum/shuttle_destination/ert/outside_LS_1d
+	name = "LSF Neo Vima - Off First Deck"
 	my_landmark = "response_ship_firstdeck"
 	preferred_interim_tag = "response_ship_transit"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/ert/outside_SC_2d = 0,
-		/datum/shuttle_destination/ert/outside_SC_3d = 0,
-		/datum/shuttle_destination/ert/docked_SC = 0
+		/datum/shuttle_destination/ert/outside_LS_2d = 0,
+		/datum/shuttle_destination/ert/outside_LS_3d = 0,
+		/datum/shuttle_destination/ert/docked_LS = 0
 	)
 
 
-/datum/shuttle_destination/ert/outside_SC_2d
-	name = "NLS Southern Cross - Aft Starboard of Second Deck"
+/datum/shuttle_destination/ert/outside_LS_2d
+	name = "LSF Neo Vima - Off Second Deck"
 	my_landmark = "response_ship_seconddeck"
 	preferred_interim_tag = "response_ship_transit"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/ert/outside_SC_1d = 0,
-		/datum/shuttle_destination/ert/outside_SC_3d = 0,
-		/datum/shuttle_destination/ert/docked_SC = 0
+		/datum/shuttle_destination/ert/outside_LS_1d = 0,
+		/datum/shuttle_destination/ert/outside_LS_3d = 0,
+		/datum/shuttle_destination/ert/docked_LS = 0
 	)
 
-/datum/shuttle_destination/ert/outside_SC_3d
-	name = "NLS Southern Cross - Aft Starboard of Third Deck"
+/datum/shuttle_destination/ert/outside_LS_3d
+	name = "LSF Neo Vima - Off Third Deck"
 	my_landmark = "response_ship_thirddeck"
 	preferred_interim_tag = "response_ship_transit"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/ert/outside_SC_1d = 0,
-		/datum/shuttle_destination/ert/outside_SC_2d = 0,
-		/datum/shuttle_destination/ert/docked_SC = 0
+		/datum/shuttle_destination/ert/outside_LS_1d = 0,
+		/datum/shuttle_destination/ert/outside_LS_2d = 0,
+		/datum/shuttle_destination/ert/docked_LS = 0
 	)
 
-/datum/shuttle_destination/ert/docked_SC
-	name = "NLS Southern Cross - Arrivals Docking Port"
+/datum/shuttle_destination/ert/docked_LS
+	name = "LS Dock 5-C"
 	my_landmark = "response_ship_arrivals_dock"
 	preferred_interim_tag = "response_ship_transit"
 
-	announcer = "Southern Cross Docking Computer"
+	announcer = "Lonestar Station Docking Computer"
 
-/datum/shuttle_destination/ert/docked_SC/get_arrival_message()
+/datum/shuttle_destination/ert/docked_LS/get_arrival_message()
 	return "Attention, the Emergency Response Team's shuttle has arrived to the Arrivals Dock."
 
-/datum/shuttle_destination/ert/docked_SC/get_departure_message()
+/datum/shuttle_destination/ert/docked_LS/get_departure_message()
 	return "Attention, the Emergency Response Team's shuttle has departed the Arrivals Dock."
 
+/*
 /datum/shuttle_destination/ert/sky
 	name = "Skies of Sif"
 	my_landmark = "response_ship_sky"
@@ -123,3 +124,4 @@
 	name = "Sif Surface"
 	my_landmark = "response_ship_planet"
 	preferred_interim_tag = "response_ship_sky_transit"
+*/
