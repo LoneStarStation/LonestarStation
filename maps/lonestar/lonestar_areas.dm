@@ -1,379 +1,241 @@
-//Planetside
+////Lonestar Station
 
-/area/surface
-	name = "The Surface (Don't Use)"
-	flags = RAD_SHIELDED
-
-/area/surface/center
-	name = "Center"
-	icon_state = "center"
-
-/area/surface/north
-	name = "Outpost"
-	icon_state = "north"
-
-/area/surface/south
-	name = "Lake"
-	icon_state = "south"
-
-/area/surface/east
-	name = "Shoreline"
-	icon_state = "east"
-
-/area/surface/west
-	name = "Snowfields"
+/area/lonestar
+	name = "lonestar"
 	icon_state = "west"
 
-/area/surface/northeast
-	name = "Depths"
-	icon_state = "northeast"
+//// Away Areas
 
-/area/surface/northwest
-	name = "Mountains"
-	icon_state = "northwest"
+/area/lonestar/away
+	name = "Away Areas (Don't Use)"
 
-/area/surface/southwest
-	name = "Glowing Forest"
-	icon_state = "southwest"
+//// LSF the Slammer
 
-/area/surface/southeast
-	name = "Southern Shoreline"
-	icon_state = "southeast"
-
-/area/surface/outside
-	ambience = AMBIENCE_SIF
-	always_unpowered = TRUE
+/area/lonestar/away/slammer
+	ambience = AMBIENCE_SPACE
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 // The area near the outpost, so POIs don't show up right next to the outpost.
-/area/surface/outside/plains/outpost
-	name = "Outpost Perimeter"
+/area/lonestar/away/slammer/perimeter
+	name = "Slammer Perimeter"
 	icon_state = "green"
 
-// Rest of the 'plains' Z-level, for POIs.
-/area/surface/outside/plains/normal
-	name = "Plains"
-	icon_state = "yellow"
-
-// So POIs don't get embedded in rock.
-/area/surface/outside/plains/mountains
-	name = "Mountains"
-	icon_state = "darkred"
-
 // Paths get their own area so POIs don't overwrite pathways.
-/area/surface/outside/path
+/area/lonestar/away/slammer/cavern
 	name = "Pathway"
 	icon_state = "purple"
 
-/area/surface/outside/path/plains
-
-/area/surface/outside/wilderness/normal
-	name = "Wilderness"
+// Rest of the 'Slammer' Z-level, for POIs.
+/area/lonestar/away/slammer/normal
+	name = "Slammer Caves"
 	icon_state = "yellow"
 
-/area/surface/outside/wilderness/deep
-	name = "Deep Wilderness"
+/area/lonestar/away/slammer/deep
+	name = "Deep Slammer Caves"
 	icon_state = "red"
 
 // So POIs don't get embedded in rock.
-/area/surface/outside/wilderness/mountains
-	name = "Mountains"
+/area/lonestar/away/slammer/border
+	name = "Border"
 	icon_state = "darkred"
 
-/area/surface/outside/path/wilderness
+//lonestar: prison
 
-// Water
-/area/surface/outside/ocean
-	name = "Sea"
-	icon_state = "bluenew"
+/area/lonestar/away/slammer/prison
+	name = "\improper El Prison"
+	icon_state = "brig"
+	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 
-/area/surface/outside/river
-	name = "River"
-	icon_state = "bluenew"
+/area/lonestar/away/slammer/prison/warden
+	name = "\improper Warden's Office"
+	icon_state = "head_quarters"
 
-/area/surface/outside/river/faxalven
-	name = "Faxälven River"
-
-/area/surface/outside/river/indalsalven
-	name = "Indalsälven River"
-
-/area/surface/outside/river/svartan
-	name = "Svartån River"
-
-/area/surface/outside/lake/romsele
-	name = "Romsele Lake"
-	icon_state = "blue2"
-
-
-
-/area/surface/cave
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
-	always_unpowered = TRUE
-
-/area/surface/cave
-
-// The bottom half that connects to the outpost and is safer.
-/area/surface/cave/explored/normal
-	name = "Tunnels"
-	icon_state = "explored"
-
-/area/surface/cave/unexplored/normal
-	name = "Tunnels"
-	icon_state = "unexplored"
-
-// The top half of the map that is more dangerous.
-/area/surface/cave/explored/deep
-	name = "Depths"
-	icon_state = "explored_deep"
-
-/area/surface/cave/unexplored/deep
-	name = "Depths"
-	icon_state = "unexplored_deep"
-
-
-
-//Surface Outposts
-
-/area/surface/outpost
-	ambience = AMBIENCE_GENERIC
-
-//Wilderness Shuttle Shelter
-
-/area/surface/outpost/shelter
-	name = "Wilderness Shelter"
-
-// Main mining outpost
-/area/surface/outpost/mining_main
-	name = "North Mining Outpost"
-	icon_state = "outpost_mine_main"
-
-/area/surface/outpost/mining_main/exterior
-	name = "North Mining Outpost Exterior"
-	icon_state = "outpost_mine_main"
-
-/area/surface/outpost/mining_main/crew_area
-	name = "North Mining Crew Area"
-
-/area/surface/outpost/mining_main/firstaid
-	name = "North Mining First-Aid Station"
-
-/area/surface/outpost/mining_main/storage
-	name = "North Mining Gear Storage"
-
-/area/surface/outpost/mining_main/mech_bay
-	name = "North Mining Mech Bay"
-
-/area/surface/outpost/mining_main/gen_room
-	name = "North Mining Generator Room"
-	icon_state = "substation"
-
-/area/surface/outpost/mining_main/emergencystorage
-	name = "\improper North Mining Emergency Storage"
-	icon_state = "emergencystorage"
-	sound_env = SMALL_ENCLOSED
-
-/area/surface/outpost/mining_main/refinery
-	name = "North Mining Refinery"
-
-/area/surface/outpost/mining_main/restroom
-	name = "North Mining Restroom"
-	sound_env = SMALL_ENCLOSED
-
-/area/surface/outpost/mining_main/cave
-	name = "North Mining Outpost Cave"
-	icon_state = "outpost_mine_main"
-
-//Research Surface Outpost
-
-/area/surface/outpost/research
-	icon_state = "outpost_research"
-
-/area/surface/outpost/research/xenoresearch
-	name = "\improper Xenoresearch"
-
-/area/surface/outpost/research/xenoresearch/smes
-	name = "\improper Xenoresearch SMES Maintenance"
-	icon_state = "substation"
-	sound_env = SMALL_ENCLOSED
-
-/area/surface/outpost/research/xenoresearch/emergencystorage
-	name = "\improper Xenoresearch Emergency Storage"
-	icon_state = "emergencystorage"
-	sound_env = SMALL_ENCLOSED
-
-/area/surface/outpost/research/xenoresearch/restroom
-	name = "\improper Xenoresearch Restroom"
-	icon_state = "research_restroom"
-	sound_env = SMALL_ENCLOSED
-
-/area/surface/outpost/research/xenoresearch/xenobiology
-	name = "\improper Xenobiology Lab"
-	icon_state = "xeno_lab"
-
-/area/surface/outpost/research/xenoresearch/xenoflora
-	name = "\improper Xenoflora Lab"
-	icon_state = "xeno_f_lab"
-
-/area/surface/outpost/research/xenoresearch/xenoflora_storage
-	name = "\improper Xenoflora Storage"
-	icon_state = "xeno_f_store"
-
-/area/surface/outpost/research/xenoresearch/medical
-	name = "Xenoresearch First-Aid Station"
-
-/area/surface/outpost/research/xenoarcheology
-	name = "\improper Xenoarcheology"
-
-/area/surface/outpost/research/xenoarcheology/medical
-	name = "Xenoarcheology First-Aid Station"
-
-/area/surface/outpost/research/xenoarcheology/smes
-	name = "\improper Xenoarcheology SMES Maintenance"
-	icon_state = "substation"
-	sound_env = SMALL_ENCLOSED
-
-/area/surface/outpost/research/xenoarcheology/emergencystorage
-	name = "\improper Xenoarcheology Emergency Storage"
-	icon_state = "emergencystorage"
-	sound_env = SMALL_ENCLOSED
-
-/area/surface/outpost/research/xenoarcheology/restroom
-	name = "\improper Xenoarcheology Restroom"
-	icon_state = "research_restroom"
-	sound_env = SMALL_ENCLOSED
-
-/area/surface/outpost/research/xenoarcheology/analysis
-	name = "Xenoarcheology Sample Analysis"
-
-/area/surface/outpost/research/xenoarcheology/anomaly
-	name = "Xenoarcheology Anomalous Materials Lab"
-
-/area/surface/outpost/research/xenoarcheology/isolation_a
-	name = "Xenoarcheology Isolation A"
-
-/area/surface/outpost/research/xenoarcheology/isolation_b
-	name = "Xenoarcheology Isolation B"
-
-/area/surface/outpost/research/xenoarcheology/isolation_c
-	name = "Xenoarcheology Isolation C"
-
-/area/surface/outpost/research/xenoarcheology/lounge
-	name = "Xenoarcheology Research Lounge"
-
-/area/surface/outpost/research/xenoarcheology/longtermstorage
-	name = "Xenoarcheology Long-Term Anomalous Storage"
-
-/area/surface/outpost/research/xenoarcheology/exp_prep
-	name = "Xenoarcheology Expedition Preperation"
-
-//Main Outpost
-
-/area/surface/outpost/main
-	name = "\improper Main Outpost"
-	icon_state = "Sleep"
-
-/area/surface/outpost/main/gen_room
-	name = "\improper Main Outpost SMES"
-	icon_state = "substation"
-	ambience = AMBIENCE_ENGINEERING
-
-/area/surface/outpost/main/gen_room/smes
-	name = "\improper Main Outpost Dorm SMES"
-	icon_state = "substation"
-
-/area/surface/outpost/main/pool
-	name = "\improper Main Outpost Pool"
-	icon_state = "pool"
-
-/area/surface/outpost/main/restroom
-	name = "\improper Main Outpost Restroom"
+/area/lonestar/away/slammer/prison/bathroom
+	name = "\improper Bathroom"
 	icon_state = "toilet"
-	sound_env = SMALL_ENCLOSED
 
-/area/surface/outpost/main/gym
-	name = "\improper Main Outpost Gym"
+/area/lonestar/away/slammer/prison/infirmary
+	name = "\improper Infirmary"
+	icon_state = "medbay"
 
-/area/surface/outpost/main/garage
-	name = "\improper Main Outpost Garage"
-	icon_state = "storage"
+/area/lonestar/away/slammer/prison/hangarbay
+ 	name = "\improper Hangar Bay"
+ 	sound_env = LARGE_ENCLOSED
 
-/area/surface/outpost/main/crew_quarters
-	name = "\improper Main Outpost Crew Quarters"
-	sound_env = MEDIUM_SOFTFLOOR
+/area/lonestar/away/slammer/prison/breakroom
+	name = "\improper Prison Lounge"
 
-/area/surface/outpost/main/telecomms
-	name = "\improper Main Outpost Telecommunications"
-	music = "signal"
+/area/lonestar/away/slammer/prison/cellblock
+ 	name = "\improper Cell Block"
+ 	sound_env = LARGE_ENCLOSED
 
-/area/surface/outpost/main/teleporter
-	name = "\improper Main Outpost Teleporter"
-	icon_state = "teleporter"
+/area/lonestar/away/slammer/prison/outstorage
+	name = "\improper Outgoing Storage"
 
-/area/surface/outpost/main/first_aid
-	name = "\improper Main Outpost First-Aid Station"
-	icon_state = "medbay2"
+/area/lonestar/away/slammer/prison/toolstorage
+	name = "\improper Tool Storage"
 
-/area/surface/outpost/main/security
-	name = "\improper Main Outpost Security Station"
-	icon_state = "checkpoint1"
+/area/lonestar/airlock/slammersolars
+	name = "\improper Solars Airlock"
 
-/area/surface/outpost/main/gateway
-	name = "\improper Main Outpost Gateway"
-	icon_state = "teleporter"
-	music = "signal"
+/area/lonestar/airlock/slammerprisoner
+	name = "\improper Prisoner Airlock"
 
-/area/surface/outpost/main/corridor
-	name = "\improper Main Outpost Corridor"
+/area/lonestar/maintenance/prison
+	name = "Primary Prison Maintenance"
 
-/area/surface/outpost/main/bar
-	name = "\improper Main Outpost Bar"
-	icon_state = "bar"
+/area/lonestar/maintenance/solaraccess
+	name = "Secondary Solar Access"
 
-/area/surface/outpost/main/dorms
-	name = "\improper Main Outpost Dorms"
+/area/lonestar/away/slammer/solarpanels
+	name = "Slammer Solar Panels"
+	requires_power = 1
+	always_unpowered = 1
+	dynamic_lighting = 0
+	ambience = AMBIENCE_SPACE
 
-/area/surface/outpost/main/construction_area
-	name = "\improper Main Outpost Construction Area"
-	icon_state = "construction"
+////LSF Carl's Corner II
 
-/area/surface/outpost/wall
-	name = "The Wall"
-	icon_state = "red"
-	requires_power = FALSE
-	ambience = AMBIENCE_HIGHSEC
+/area/lonestar/away/carls
+	ambience = AMBIENCE_SPACE
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
-/area/surface/outpost/wall/checkpoint
-	name = "Checkpoint"
-	ambience = AMBIENCE_HIGHSEC
+// The area near Carl's Corner, so POIs don't show up right next to the outpost.
+/area/lonestar/away/carls/perimeter
+	name = "Corner Perimeter"
+	icon_state = "green"
 
-//Mining Station
+/area/lonestar/away/yard/perimeter
+	name = "Wrecking Yard Perimeter"
+	icon_state = "green"
 
-/area/outpost/mining_station
-	icon_state = "outpost_mine_main"
-	name = "Mining Station"
+// Rest of the 'Slammer' Z-level, for POIs.
+/area/lonestar/away/roids
+	name = "them roids"
+	icon_state = "yellow"
 
-/area/outpost/mining_station/dorms
-	name = "Mining Station Dormitory"
+/area/lonestar/away/roids/close
+	name = "Close Mining Asteroids"
+	icon_state = "purple"
 
-/area/outpost/mining_station/storage
-	name = "Mining Station Gear Storage"
+/area/lonestar/away/roids/far
+	name = "Far Mining Asteroids"
+	icon_state = "dark"
 
-/area/outpost/mining_station/gen_station
-	name = "Mining Station Generator Room"
-	icon_state = "substation"
+/area/lonestar/away/roids/cliff
+	name = "\improper Cliff Edge"
+	icon_state = "yellow"
 
-/area/outpost/mining_station/crew_area
-	name = "Mining Station Crew Area"
+/area/lonestar/away/roids/path
+	name = "\improper Cliff Edge"
+	icon_state = "purple"
 
-/area/outpost/mining_station/refinery
-	name = "Mining Station Refinery"
+/area/lonestar/away/yard/wrecking
+	name = "Lonestar Wrecking Yard"
+	icon_state = "purple"
 
-/area/outpost/mining_station/telecomms
-	name = "Main Station Telecommunications"
-	sound_env = SMALL_ENCLOSED
+/area/lonestar/away/yard/asteroid
+	name = "Cliff Pathway"
+	icon_state = "yellow"
 
-/area/outpost/mining_station/dock
-	name = "Mining Station Dock"
+/area/lonestar/away/yard/cliff
+	name = "Cliff Pathway"
+	icon_state = "purple"
+
+// So POIs don't get embedded in rock.
+/area/lonestar/away/roids/border
+	name = "Border"
+	icon_state = "darkred"
+
+/area/lonestar/away/yard/border
+	name = "Border"
+	icon_state = "darkred"
+
+//lonestar: mining station
+
+/area/lonestar/away/carls/corner
+	name = "\improper Carl's Corner"
+	icon_state = "yellow"
+
+/area/lonestar/away/carls/corner/bathroom
+	name = "\improper Corner Bathroom"
+	icon_state = "toilet"
+
+/area/lonestar/away/carls/corner/lounge
+	name = "\improper Corner Lounge"
+
+/area/lonestar/away/carls/corner/uh
+	name = "\improper Corner Room"
+
+/area/lonestar/away/carls/corner/mining
+	name = "\improper Corner Mining Office"
+
+/area/lonestar/away/carls/corner/hangarbay
+ 	name = "\improper Corner Hangar Bay"
+ 	sound_env = LARGE_ENCLOSED
+
+/area/lonestar/away/carls/corner/hall
+	name = "\improper Hallways"
+
+/area/lonestar/away/carls/corner/hall/center
+	name = "\improper Central Hallway"
+
+/area/lonestar/away/carls/corner/hall/yonder
+	name = "\improper Yonder Hallway"
+
+/area/lonestar/away/carls/corner/hall/thataways
+	name = "\improper Thataways Hallway"
+
+/area/lonestar/away/carls/corner/hall/yardaccess
+	name = "\improper Yard Access"
+
+/area/lonestar/away/carls/corner/hall/dockingaccess
+	name = "\improper Docking Accessway"
+
+/area/lonestar/away/carls/corner/hall/yonderport
+	name = "\improper Yonder Corner Ship Ports"
+
+/area/lonestar/away/carls/corner/hall/thatawaysport
+	name = "\improper Thataways Corner Ship Ports"
+
+/area/lonestar/away/carls/corner/hall/farports
+	name = "\improper Far Corner Ship Ports"
+
+/area/lonestar/airlock/carlsolars
+	name = "\improper Solars Airlock"
+
+/area/lonestar/maintenance/carlstorage
+	name = "Corner Storage"
+
+/area/lonestar/maintenance/carlsolars
+	name = "\improper Carl's Solar Panel Maintenance"
+
+/area/lonestar/away/carls/solarpanels
+	name = "Corner Solar Panels"
+
+	////
+
+/area/lonestar/away/yard/corner_access
+	name = "\improper Corner Access"
+	icon_state = "yellow"
+
+/area/lonestar/away/yard/storage_a
+	name = "Wrecking Storage Alpha"
+	icon_state = "yellow"
+
+/area/lonestar/away/yard/storage_b
+	name = "Wrecking Storage Beta"
+	icon_state = "yellow"
+
+/area/lonestar/away/yard/foyer
+	name = "Wrecking Yard Foyer"
+	icon_state = "yellow"
+
+/area/lonestar/away/yard/airlock
+	name = "Wrecking Yard Airlock"
+	icon_state = "yellow"
+
+	////
 
 //Turbolift
 
@@ -445,10 +307,6 @@
 
 
 ////Lonestar Station
-
-/area/lonestar
-	name = "lonestar"
-	icon_state = "west"
 
 /area/lonestar/asteroid					// -- TLE
 	name = "\improper Lonestar"
@@ -648,6 +506,7 @@
 	name = "Pest Holding"
 	icon_state = "pest_control"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	requires_power = 0
 
 /area/lonestar/pestcontrol/foyer
 	name = "\improper Pest Control Foyer"
@@ -1127,6 +986,11 @@
 /area/lonestar/maintenance/water
 	name = "\improper Hydro Control"
 
+/area/lonestar/water_tank				// -- TLE
+	name = "\improper Lonestar - Water Tank"
+	icon_state = "blue"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+
 /area/lonestar/maintenance/second/redundant
 	name = "\improper Redundant Storage"
 
@@ -1299,6 +1163,9 @@
 
 /area/lonestar/maintenance/command
 	name = "\improper Command Maintenance"
+
+/area/lonestar/airlock/baronslock
+	name = "\improper Baron's Escapelock"
 
 //lonestar: sheriffs office//
 
@@ -1554,105 +1421,6 @@
 	name = "\improper Ranch Maintenance"
 
 
-/*
-//lonestar: the slammer//
-
-/area/lonestar/prison
-	name = "\improper Prison Station"
-	icon_state = "brig"
-	ambience = AMBIENCE_HIGHSEC
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/prison/mining
-	name = "\improper Prisoner Tools"
-	icon_state = "brig"
-	ambience = AMBIENCE_HIGHSEC
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/prison/warehouse
-	name = "\improper Prison Warehouse"
-	icon_state = "brig"
-	ambience = AMBIENCE_HIGHSEC
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/prison/cargo_station
-	name = "\improper Cargo Office"
-	icon_state = "quart"
-	ambience = AMBIENCE_HIGHSEC
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/lonestar/prison/shaft_two
-	name = "\improper Elevator Prison Elevator"
-	icon_state = "yellow"
-
-/area/lonestar/prison/arrival_airlock
-	name = "\improper Prison Station Airlock"
-	icon_state = "green"
-
-/area/lonestar/prison/mining_airlock1
-	name = "\improper Prison Station Airlock"
-	icon_state = "green"
-
-/area/lonestar/prison/mining_airlock2
-	name = "\improper Prison Station Airlock"
-	icon_state = "green"
-
-/area/lonestar/prison/control
-	name = "\improper Prison Security Checkpoint"
-	icon_state = "security"
-
-/area/lonestar/prison/guard_breakroom
-	name = "\improper Prison Breakroom"
-	icon_state = "green"
-
-/area/lonestar/prison/closet
-	name = "\improper Prison Supply Closet"
-	icon_state = "dk_yellow"
-
-/area/lonestar/prison/hallway/
-	name = "\improper Prison Hallway"
-	icon_state = "yellow"
-
-/area/lonestar/prison/warden_office
-	name = "\improper Prison Morgue"
-	icon_state = "Warden"
-
-/area/lonestar/prison/morgue
-	name = "\improper Prison Morgue"
-	icon_state = "morgue"
-
-/area/lonestar/prison/medical
-	name = "\improper Prison Medbay"
-	icon_state = "medbay"
-
-/area/lonestar/prison/cell_block
-	name = "Prison General Population"
-	icon_state = "brig"
-
-/area/lonestar/prison/cell_block/A
-	name = "Prison Cell Block A"
-	icon_state = "brig"
-
-/area/lonestar/prison/cell_block/B
-	name = "Prison Cell Block B"
-	icon_state = "brig"
-
-/area/lonestar/prison/cell_block/C
-	name = "Prison Cell Block C"
-	icon_state = "brig"
-
-/area/lonestar/prison/cell_block/D
-	name = "Prison Cell Block D"
-	icon_state = "brig"
-
-/area/lonestar/prison/cell_block/E
-	name = "Prison Cell Block E"
-	icon_state = "brig"
-
-/area/lonestar/prison/cell_block/rec_room
-	name = "\improper Prisoner Rec Room"
-	icon_state = "green"
-*/
 
 //lonestar: arrivals docks//
 
@@ -2291,58 +2059,59 @@ area/crew_quarters/heads/sc/hop/quarters
 
 // Shuttles
 
-//NT response shuttle
+//Ranger Base
 
 /area/shuttle/response_ship
-	name = "\improper Response Team Ship"
+	name = "\improper Ranger Strike Cruiser"
 	icon_state = "centcom"
 	requires_power = 0
 	flags = RAD_SHIELDED
 	ambience = AMBIENCE_HIGHSEC
+	base_turf = /turf/space
 
 /area/shuttle/response_ship/start
 	name = "\improper Response Team Base"
 	icon_state = "shuttlered"
-	base_turf = /turf/unsimulated/floor/
+	base_turf = /turf/space
 
 /area/shuttle/response_ship/firstdeck
-	name = "north-west of first deck"
+	name = "off first deck"
 	icon_state = "northwest"
 
 /area/shuttle/response_ship/seconddeck
-	name = "south-east of second deck"
+	name = "off second deck"
 	icon_state = "southeast"
 
 /area/shuttle/response_ship/thirddeck
-	name = "north-east of third deck"
+	name = "off third deck"
 	icon_state = "northeast"
 
-/area/shuttle/response_ship/planet
-	name = "planetside outpost"
+/area/shuttle/response_ship/prison
+	name = "the Slammer"
 	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor/outdoors/dirt/sif/planetuse
+	base_turf = /turf/space
 
-/area/shuttle/response_ship/mining
-	name = "mining site"
+/area/shuttle/response_ship/carls
+	name = "\improper Carl's Corner"
 	icon_state = "shuttlered"
 	base_turf = /turf/space
 
 /area/shuttle/response_ship/arrivals_dock
-	name = "\improper docked with Southern Cross"
+	name = "\improper docked with Neo Vima"
 	icon_state = "shuttle"
 
 /area/shuttle/response_ship/orbit
-	name = "in orbit of Sif"
+	name = "in orbit around Lonestar"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/space
 
 /area/shuttle/response_ship/sky
-	name = "hovering over skies of sif"
+	name = "hovering in the skies"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/simulated/sky/west
 
 /area/shuttle/response_ship/sky_transit
-	name = "in flight over sif"
+	name = "in flight"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/sky/moving/west
 
@@ -2363,23 +2132,26 @@ area/crew_quarters/heads/sc/hop/quarters
 /area/shuttle/shuttle1/start
 	name = "Shuttle One"
 	icon_state = "shuttlered"
+	base_turf = /turf/simulated/floor/plating
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
 /area/shuttle/shuttle1/arrivals_dock
-	name = "\improper docked with Southern Cross"
+	name = "\improper docked with Lonestar Station"
 	icon_state = "shuttle"
 
 /area/shuttle/shuttle1/seconddeck
 	name = "south of second deck"
 	icon_state = "south"
 
-/area/shuttle/shuttle1/mining
-	name = "wilderness site"
+/area/shuttle/shuttle1/roids
+	name = "\improper Carl's Corner"
 	icon_state = "shuttlered"
+	base_turf = /turf/simulated/floor/plating
 
-/area/shuttle/shuttle1/planet
-	name = "planetside outpost"
+/area/shuttle/shuttle1/prison
+	name = "The Slammer"
 	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor/plating/sif/planetuse
+	base_turf = /turf/simulated/floor/plating
 
 /area/shuttle/shuttle1/transit
 	name = "transit"
@@ -2387,17 +2159,17 @@ area/crew_quarters/heads/sc/hop/quarters
 	base_turf = /turf/space/transit/north
 
 /area/shuttle/shuttle1/orbit
-	name = "in orbit of Sif"
+	name = "in orbit of Lonestar Station"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/space
 
 /area/shuttle/shuttle1/sky
-	name = "hovering over skies of sif"
+	name = "hovering in the skies"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/simulated/sky
 
 /area/shuttle/shuttle1/sky_transit
-	name = "in flight over sif"
+	name = "in flight"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/sky/moving
 
@@ -2410,24 +2182,27 @@ area/crew_quarters/heads/sc/hop/quarters
 	dynamic_lighting = 1
 	flags = RAD_SHIELDED
 
+
 /area/shuttle/shuttle2/start
 	name = "Shuttle Two"
 	icon_state = "shuttlered"
+	base_turf = /turf/simulated/floor/plating
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/shuttle/shuttle2/arrivals_dock
-	name = "\improper docked with Southern Cross"
+	name = "\improper docked with Lonestar Station"
 	icon_state = "shuttle"
 
 /area/shuttle/shuttle2/seconddeck
 	name = "south of second deck"
 	icon_state = "south"
 
-/area/shuttle/shuttle2/mining
-	name = "wilderness site"
+/area/shuttle/shuttle2/roids
+	name = "\improper Carl's Corner"
 	icon_state = "shuttlered"
 
-/area/shuttle/shuttle2/planet
-	name = "planetside outpost"
+/area/shuttle/shuttle2/prison
+	name = "The Slammer"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/floor/plating/sif/planetuse
 
@@ -2437,17 +2212,17 @@ area/crew_quarters/heads/sc/hop/quarters
 	base_turf = /turf/space/transit/north
 
 /area/shuttle/shuttle2/orbit
-	name = "in orbit of Sif"
+	name = "in orbit of Lonestar Station"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/space
 
 /area/shuttle/shuttle2/sky
-	name = "hovering over skies of sif"
+	name = "hovering in the skies"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/simulated/sky
 
 /area/shuttle/shuttle2/sky_transit
-	name = "in flight over sif"
+	name = "in flight"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/sky/moving
 
@@ -2493,26 +2268,26 @@ area/crew_quarters/heads/sc/hop/quarters
 	icon_state = "shuttlered"
 
 /area/syndicate_station/firstdeck
-	name = "north-west of first deck"
+	name = "off first deck"
 	icon_state = "northwest"
 
 /area/syndicate_station/seconddeck
-	name = "north-east of second deck"
+	name = "off second deck"
 	icon_state = "northeast"
 
 /area/syndicate_station/thirddeck
-	name = "south-east of third deck"
+	name = "off third deck"
 	icon_state = "southeast"
 
 /area/syndicate_station/mining
 	name = "mining site"
 	icon_state = "shuttlered"
 
-/area/syndicate_station/planet
-	name = "planetside"
+/area/syndicate_station/carls
+	name = "\improper Carl's Corner"
 	dynamic_lighting = 1
 	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	base_turf = /turf/space
 
 /area/syndicate_station/transit
 	name = " transit"
@@ -2520,29 +2295,29 @@ area/crew_quarters/heads/sc/hop/quarters
 	base_turf = /turf/space/transit/east
 
 /area/syndicate_station/orbit
-	name = "in orbit of Sif"
+	name = "in orbit around Lonestar"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/space
 
 /area/syndicate_station/sky
-	name = "hovering over skies of sif"
+	name = "hovering in the skies"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/simulated/sky/west
 
 /area/syndicate_station/sky_transit
-	name = "in flight over sif"
+	name = "in flight"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/sky/moving/west
 
-/area/syndicate_station/arrivals_dock
-	name = "\improper docked with Southern Cross"
+/area/syndicate_station/lonestar
+	name = "\improper docked with Neo Vima"
 	dynamic_lighting = 0
 	icon_state = "shuttle"
 
 //Skipjack
 
 /area/skipjack_station
-	name = "Raider Outpost"
+	name = "Bandit Outpost"
 	icon_state = "yellow"
 	requires_power = 0
 	dynamic_lighting = 0
@@ -2555,44 +2330,44 @@ area/crew_quarters/heads/sc/hop/quarters
 	base_turf = /turf/space/transit/north
 
 /area/skipjack_station/firstdeck
-	name = "north of first deck"
+	name = "off first deck"
 	icon_state = "northwest"
 
 /area/skipjack_station/seconddeck
-	name = "west of second deck"
+	name = "off second deck"
 	icon_state = "west"
 
 /area/skipjack_station/thirddeck
-	name = "east of third deck"
+	name = "off third deck"
 	icon_state = "east"
 
 /area/skipjack_station/mining
 	name = "mining site"
 	icon_state = "shuttlered"
 
-/area/skipjack_station/planet
-	name = "planet"
+/area/skipjack_station/carls
+	name = "\improper near Carl's Corner"
 	icon_state = "shuttlered"
-	dynamic_lighting = 1
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	dynamic_lighting = 0
+	base_turf = /turf/space
 
 /area/skipjack_station/orbit
-	name = "in orbit of Sif"
+	name = "in orbit near Lonestar"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/space
 
 /area/skipjack_station/sky
-	name = "hovering over skies of sif"
+	name = "hovering in the skies"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/simulated/sky/north
 
 /area/skipjack_station/sky_transit
-	name = "in flight over sif"
+	name = "in flight"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/sky/moving/north
 
-/area/skipjack_station/arrivals_dock
-	name = "\improper docked with Southern Cross"
+/area/skipjack_station/old_station
+	name = "\improper docked with Old Neo Vima"
 	icon_state = "shuttle"
 
 // Ninja areas
@@ -2613,25 +2388,24 @@ area/crew_quarters/heads/sc/hop/quarters
 	base_turf = /turf/simulated/floor/plating
 
 /area/ninja_dojo/firstdeck
-	name = "south of first deck"
+	name = "off first deck"
 	icon_state = "south"
 
 /area/ninja_dojo/seconddeck
-	name = "north of second deck"
+	name = "off second deck"
 	icon_state = "south"
 
 /area/ninja_dojo/thirddeck
-	name = "west of third deck"
+	name = "off third deck"
 	icon_state = "south"
 
-/area/ninja_dojo/mining
-	name = "mining site"
+/area/ninja_dojo/carls
+	name = "carls corner"
 	icon_state = "shuttlered"
 
-/area/ninja_dojo/planet
-	name = "planet outposts"
+/area/ninja_dojo/slammer
+	name = "the slammer"
 	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
 
 /area/ninja_dojo/transit
 	name = "transit"
@@ -2639,29 +2413,28 @@ area/crew_quarters/heads/sc/hop/quarters
 	base_turf = /turf/space/transit/north
 
 /area/ninja_dojo/orbit
-	name = "in orbit of Sif"
+	name = "in orbit of Lonestar Station"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/space
 
 /area/ninja_dojo/sky
-	name = "hovering over skies of sif"
+	name = "hovering in the skies"
 	icon_state = "shuttlegrn"
 	base_turf = /turf/simulated/sky/south
 
 /area/ninja_dojo/sky_transit
-	name = "in flight over sif"
+	name = "in flight"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/sky/moving/south
 
 /area/ninja_dojo/arrivals_dock
 	name = "\improper docked with Neo Vima"
 	icon_state = "shuttle"
-	dynamic_lighting = 0
 
 /area/ninja_dojo/cavern
 	name = "\improper Second Deck hidden cavern"
 	icon_state = "shuttle"
-	dynamic_lighting = 0
+	base_turf = /turf/simulated/floor/plating
 
 //Trade Ship
 

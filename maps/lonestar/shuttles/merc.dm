@@ -62,51 +62,52 @@
 	)
 
 /datum/shuttle_destination/syndie/orbit
-	name = "Orbit of Sif"
+	name = "Orbit over Lonestar"
 	my_landmark = "syndie_orbit"
 	preferred_interim_tag = "syndie_transit"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/syndie/outside_SC_1d = 30 SECONDS,
-		/datum/shuttle_destination/syndie/outside_SC_2d = 30 SECONDS,
-		/datum/shuttle_destination/syndie/outside_SC_3d = 30 SECONDS,
-		/datum/shuttle_destination/syndie/sky = 30 SECONDS
+		/datum/shuttle_destination/syndie/outside_LS_1d = 30 SECONDS,
+		/datum/shuttle_destination/syndie/outside_LS_2d = 30 SECONDS,
+		/datum/shuttle_destination/syndie/outside_LS_3d = 30 SECONDS,
+		/datum/shuttle_destination/syndie/carls = 30 SECONDS,
+		/datum/shuttle_destination/syndie/root = 1.5 MINUTES
 	)
 
-/datum/shuttle_destination/syndie/outside_SC_1d
-	name = "NLS Southern Cross - Fore Port of First Deck"
+/datum/shuttle_destination/syndie/outside_LS_1d
+	name = "LSF Neo Vima - Off First Deck"
 	my_landmark = "syndie_firstdeck"
 	preferred_interim_tag = "syndie_transit"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/syndie/outside_SC_2d = 0,
-		/datum/shuttle_destination/syndie/outside_SC_3d = 0,
-		/datum/shuttle_destination/syndie/docked_SC = 0
+		/datum/shuttle_destination/syndie/outside_LS_2d = 0,
+		/datum/shuttle_destination/syndie/outside_LS_3d = 0,
+		/datum/shuttle_destination/syndie/docked_LS = 0
 	)
 
-/datum/shuttle_destination/syndie/outside_SC_2d
-	name = "NLS Southern Cross - Fore Starboard of Second Deck"
+/datum/shuttle_destination/syndie/outside_LS_2d
+	name = "LSF Neo Vima - Off Second Deck"
 	my_landmark = "syndie_seconddeck"
 	preferred_interim_tag = "syndie_transit"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/syndie/outside_SC_1d = 0,
-		/datum/shuttle_destination/syndie/outside_SC_3d = 0,
-		/datum/shuttle_destination/syndie/docked_SC = 0
+		/datum/shuttle_destination/syndie/outside_LS_1d = 0,
+		/datum/shuttle_destination/syndie/outside_LS_3d = 0,
+		/datum/shuttle_destination/syndie/docked_LS = 0
 	)
 
-/datum/shuttle_destination/syndie/outside_SC_3d
-	name = "NLS Southern Cross - Aft Starboard of Third Deck"
+/datum/shuttle_destination/syndie/outside_LS_3d
+	name = "LSF Neo Vima - Off Third Deck"
 	my_landmark = "syndie_thirddeck"
 	preferred_interim_tag = "syndie_transit"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/syndie/outside_SC_1d = 0,
-		/datum/shuttle_destination/syndie/outside_SC_2d = 0,
-		/datum/shuttle_destination/syndie/docked_SC = 0
+		/datum/shuttle_destination/syndie/outside_LS_1d = 0,
+		/datum/shuttle_destination/syndie/outside_LS_2d = 0,
+		/datum/shuttle_destination/syndie/docked_LS = 0
 	)
 
-/datum/shuttle_destination/syndie/docked_SC
+/datum/shuttle_destination/syndie/docked_LS
 	name = "NLS Southern Cross - Arrivals Docking Port"
 	my_landmark = "syndie_arrivals_dock"
 	preferred_interim_tag = "syndie_transit"
@@ -114,10 +115,10 @@
 	// dock_target = "nuke_shuttle_dock_airlock"
 	announcer = "Southern Cross Docking Computer"
 
-/datum/shuttle_destination/syndie/docked_SC/get_arrival_message()
+/datum/shuttle_destination/syndie/docked_LS/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Arrivals Dock."
 
-/datum/shuttle_destination/syndie/docked_SC/get_departure_message()
+/datum/shuttle_destination/syndie/docked_LS/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed the Arrivals Dock."
 
 /datum/shuttle_destination/syndie/sky
@@ -125,11 +126,8 @@
 	my_landmark = "syndie_sky"
 	preferred_interim_tag = "syndie_sky_transit"
 
-	routes_to_make = list(
-		/datum/shuttle_destination/syndie/planet = 15 SECONDS
-	)
 
-/datum/shuttle_destination/syndie/planet
-	name = "Sif Surface"
-	my_landmark = "syndie_planet"
-	preferred_interim_tag = "syndie_sky_transit"
+/datum/shuttle_destination/syndie/carls
+	name = "\improper Carl's Corner"
+	my_landmark = "syndie_carls"
+	preferred_interim_tag = "syndie_transit"

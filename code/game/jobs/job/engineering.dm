@@ -22,11 +22,11 @@
 
 	access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels,
 			            access_teleporter, access_external_airlocks, access_atmospherics, access_emergency_storage, access_eva,
-			            access_heads, access_construction, access_sec_doors,
+			            access_heads, access_pest, access_sec_doors,
 			            access_ce, access_RC_announce, access_keycard_auth, access_tcomsat, access_ai_upload)
 	minimal_access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels,
 			            access_teleporter, access_external_airlocks, access_atmospherics, access_emergency_storage, access_eva,
-			            access_heads, access_construction, access_sec_doors,
+			            access_heads, access_pest, access_sec_doors,
 			            access_ce, access_RC_announce, access_keycard_auth, access_tcomsat, access_ai_upload)
 	minimal_player_age = 7
 
@@ -50,8 +50,8 @@
 	supervisors = "the Chief Engineer"
 	selection_color = "#5B4D20"
 	economic_modifier = 5
-	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_atmospherics)
-	minimal_access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction)
+	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_atmospherics)
+	minimal_access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks)
 	alt_titles = list("Maintenance Technician" = /datum/alt_title/maint_tech,
 						"Engine Technician" = /datum/alt_title/engine_tech,
 						"Electrician" = /datum/alt_title/electrician,
@@ -85,7 +85,7 @@
 						understanding of the pipes, vents, and scrubbers that move gasses around the station, and to be familiar with proper firefighting procedure."
 
 //////////////////////////////////
-//			Atmos Tech
+//			Pest Control
 //////////////////////////////////
 /datum/job/atmos
 	title = "Pest Control"
@@ -98,10 +98,10 @@
 	supervisors = "the Chief Engineer"
 	selection_color = "#5B4D20"
 	economic_modifier = 5
-	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_atmospherics, access_external_airlocks)
-	minimal_access = list(access_eva, access_engine, access_atmospherics, access_maint_tunnels, access_emergency_storage, access_construction, access_external_airlocks)
+	access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pest)
+	minimal_access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pest)
 
-	minimal_player_age = 3
+	minimal_player_age = 1
 
 	outfit_type = /decl/hierarchy/outfit/job/engineering/atmos
 	job_description = "Pest Control is given the task of keeping the many invasive organisms on the Lonestar asteroid in relative check. They can typically be \

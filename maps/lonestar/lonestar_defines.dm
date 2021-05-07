@@ -4,12 +4,12 @@
 #define Z_LEVEL_STATION_TWO				2
 #define Z_LEVEL_STATION_THREE			3
 #define Z_LEVEL_EMPTY_SPACE				4
-#define Z_LEVEL_STATION_PRISON			5
-#define Z_LEVEL_DERELICT_SHIP			6
+#define Z_LEVEL_MINING_PRISON			5
+#define Z_LEVEL_MINING_SALVAGE			6
 #define Z_LEVEL_MISC					7
 #define Z_LEVEL_CENTCOM					8
 #define Z_LEVEL_TRANSIT					9
-#define Z_LEVEL_BELT_FAR				10
+#define Z_LEVEL_MINING_ROIDS			10
 
 /datum/map/lonestar
 	name = "Lonestar Station"
@@ -42,7 +42,7 @@
 	shuttle_called_message = "A  transfer to %dock_name% has been scheduled. The shuttle has been called. Any of y'all leaving should git t'the third floor in approximately %ETA%."
 	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
 	emergency_shuttle_docked_message = "The Emergency Shuttle has docked with the station at the followin' airlocks on the third floor: Dockin' Airlock One, Three, Five and Seven! Y'all have about %ETD% till it leaves the slowpokes behind."
-	emergency_shuttle_leaving_dock = "There she goes! Emergency Shuttle's has left the station. Reckon %ETA% til that puppy docks over at %dock_name%."
+	emergency_shuttle_leaving_dock = "There she goes! Emergency Shuttle's left the station. Reckon %ETA% til that puppy docks over at %dock_name%."
 	emergency_shuttle_called_message = "An Evacuation Order has been called. A shuttle will arrive on the third floor in about %ETA%."
 	emergency_shuttle_recall_message = "Cancel that evac order."
 
@@ -91,32 +91,33 @@
 	unit_test_exempt_areas = list(/area/ninja_dojo, /area/ninja_dojo/firstdeck, /area/ninja_dojo/arrivals_dock)
 	unit_test_exempt_from_atmos = list(/area/lonestar/command/server)
 
-	planet_datums_to_make = list(/datum/planet/prison)
+	planet_datums_to_make = list(/datum/planet/mining)
 
 	map_levels = list(
 			Z_LEVEL_STATION_ONE,
 			Z_LEVEL_STATION_TWO,
 			Z_LEVEL_STATION_THREE,
-			Z_LEVEL_STATION_PRISON,
-			Z_LEVEL_DERELICT_SHIP
+			Z_LEVEL_MINING_PRISON,
+			Z_LEVEL_MINING_SALVAGE,
+			Z_LEVEL_MINING_ROIDS
 		)
 
 /datum/map/lonestar/perform_map_generation()
 	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.
 
-	// Cave submaps are first.
-	seed_submaps(list(Z_LEVEL_DERELICT_SHIP), 75, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
-	seed_submaps(list(Z_LEVEL_DERELICT_SHIP), 75, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
-	// Plains to make them less plain.
-	seed_submaps(list(Z_LEVEL_STATION_PRISON), 100, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Center area is WIP until map editing settles down.
+	// Wrecking Yard submaps are first.
+	seed_submaps(list(Z_LEVEL_MINING_SALVAGE), 100, /area/lonestar/away/yard/wrecking, /datum/map_template/space/derelicts)
+	// Slammer caves to make them more interesting.
+	seed_submaps(list(Z_LEVEL_MINING_PRISON), 75, /area/lonestar/away/slammer/normal, /datum/map_template/space/slammer/normal)
+	seed_submaps(list(Z_LEVEL_MINING_PRISON), 75, /area/lonestar/away/slammer/deep, /datum/map_template/space/slammer/deep)
 	// Wilderness is next.
-	seed_submaps(list(Z_LEVEL_BELT_FAR), 75, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
-	seed_submaps(list(Z_LEVEL_BELT_FAR), 75, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
+	seed_submaps(list(Z_LEVEL_MINING_ROIDS), 75, /area/lonestar/away/roids/close, /datum/map_template/space/roids/close)
+	seed_submaps(list(Z_LEVEL_MINING_ROIDS), 75, /area/lonestar/away/roids/far, /datum/map_template/space/roids/far)
 	// If Space submaps are made, add a line to make them here as well.
 
 	// Now for the tunnels.
-	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_DERELICT_SHIP, world.maxx, world.maxy) // Create the mining Z-level.
-	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_DERELICT_SHIP, 64, 64)         // Create the mining ore distribution map.
+	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_MINING_PRISON, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_MINING_PRISON, 64, 64)   								 // Create the mining ore distribution map.
 	// Todo: Forest generation.
 	return 1
 
@@ -166,23 +167,23 @@
 	flags = MAP_LEVEL_PLAYER
 	transit_chance = 76
 
-/datum/map_z_level/lonestar/station_prison
-	z = Z_LEVEL_STATION_PRISON
+/datum/map_z_level/lonestar/slammer
+	z = Z_LEVEL_MINING_PRISON
 	name = "LSF The Slammer"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
-//	base_turf = /turf/simulated/floor/outdoors/rocks
+	base_turf = /turf/simulated/floor/outdoors/rocks
 
-/datum/map_z_level/lonestar/derelict_ship
-	z = Z_LEVEL_DERELICT_SHIP
-	name = "Mysterious Ship"
+/datum/map_z_level/lonestar/derelicts
+	z = Z_LEVEL_MINING_SALVAGE
+	name = "Carls Wrecking Yard"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
-//	base_turf = /turf/simulated/floor/outdoors/rocks
+	base_turf = /turf/space
 
-/datum/map_z_level/lonestar/belt_far
-	z = Z_LEVEL_BELT_FAR
-	name = "Far Asteroid Belt"
+/datum/map_z_level/lonestar/belt
+	z = Z_LEVEL_MINING_ROIDS
+	name = "LSF Carls Corner II"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
-//	base_turf = /turf/simulated/floor/outdoors/rocks
+	base_turf = /turf/space
 
 /datum/map_z_level/lonestar/misc
 	z = Z_LEVEL_MISC
@@ -199,42 +200,43 @@
 	z = Z_LEVEL_TRANSIT
 	name = "Transit"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT
-/*
-//Teleport to Mine
 
-/obj/effect/step_trigger/teleporter/mine/to_mining/New()
+//Teleport from Slammer to Wrecking Yard
+
+/obj/effect/step_trigger/teleporter/yard/to_yard/New()
 	..()
 	teleport_x = src.x
 	teleport_y = 2
-	teleport_z = Z_LEVEL_ASTEROID_MINE
+	teleport_z = Z_LEVEL_MINING_SALVAGE
 
-/obj/effect/step_trigger/teleporter/mine/from_mining/New()
+/obj/effect/step_trigger/teleporter/yard/from_yard/New()
 	..()
 	teleport_x = src.x
 	teleport_y = world.maxy - 1
-	teleport_z = Z_LEVEL_STATION_PRISON
+	teleport_z = Z_LEVEL_MINING_PRISON
 
-//Teleport to derelict
+//Teleport from Wrecking Yard to Carl's Corner
 
-/obj/effect/step_trigger/teleporter/wild/to_wild/New()
+/obj/effect/step_trigger/teleporter/rim/to_rim/New()
 	..()
 	teleport_x = src.x
 	teleport_y = 2
-	teleport_z = Z_LEVEL_DERELICT_SHIP
+	teleport_z = Z_LEVEL_MINING_ROIDS
 
-/obj/effect/step_trigger/teleporter/wild/from_wild/New()
+/obj/effect/step_trigger/teleporter/rim/from_rim/New()
 	..()
 	teleport_x = src.x
 	teleport_y = world.maxy - 1
-	teleport_z = Z_LEVEL_DERELICT_SHIP
-*/
-/datum/planet/prison
+	teleport_z = Z_LEVEL_MINING_SALVAGE
+
+
+/datum/planet/mining
 	expected_z_levels = list(
-		Z_LEVEL_STATION_PRISON,
-		Z_LEVEL_DERELICT_SHIP,
-		Z_LEVEL_BELT_FAR
+		Z_LEVEL_MINING_PRISON,
+		Z_LEVEL_MINING_SALVAGE,
+		Z_LEVEL_MINING_ROIDS
 	)
-/*
+
 /obj/effect/step_trigger/teleporter/bridge/east_to_west/Initialize()
 	teleport_x = src.x - 4
 	teleport_y = src.y
@@ -271,31 +273,31 @@
 	teleport_z = src.z
 	return ..()
 
-/obj/effect/map_effect/portal/master/side_a/prison_to_asteroid
-	portal_id = "prison_asteroid-normal"
+/obj/effect/map_effect/portal/master/side_a/slammer_to_yard
+	portal_id = "slammer_yard-normal"
 
-/obj/effect/map_effect/portal/master/side_b/asteroid_to_prison
-	portal_id = "prison_asteroid-normal"
+/obj/effect/map_effect/portal/master/side_b/yard_to_slammer
+	portal_id = "slammer_yard-normal"
 
-/obj/effect/map_effect/portal/master/side_a/prison_to_asteroid/hole
-	portal_id = "prison_asteroid-hole"
+/obj/effect/map_effect/portal/master/side_a/slammer_to_yard/cliff
+	portal_id = "slammer_yard-cliff"
 
-/obj/effect/map_effect/portal/master/side_b/asteroid_to_prison/hole
-	portal_id = "prison_asteroid-hole"
+/obj/effect/map_effect/portal/master/side_b/yard_to_slammer/cliff
+	portal_id = "slammer_yard-cliff"
 
 
-/obj/effect/map_effect/portal/master/side_a/asteroid_to_ship
-	portal_id = "asteroid_ship-normal"
+/obj/effect/map_effect/portal/master/side_a/yard_to_rim
+	portal_id = "yard_rim-normal"
 
-/obj/effect/map_effect/portal/master/side_b/ship_to_asteroid
-	portal_id = "asteroid_ship-normal"
+/obj/effect/map_effect/portal/master/side_b/rim_to_yard
+	portal_id = "yard_rim-normal"
 
-/obj/effect/map_effect/portal/master/side_a/asteroid_to_ship/hole
-	portal_id = "asteroid_ship-hole"
+/obj/effect/map_effect/portal/master/side_a/yard_to_rim/cliff
+	portal_id = "yard_rim-cliff"
 
-/obj/effect/map_effect/portal/master/side_b/ship_to_asteroid/hole
-	portal_id = "asteroid_ship-hole"
-*/
+/obj/effect/map_effect/portal/master/side_b/rim_to_yard/cliff
+	portal_id = "yard_rim-cliff"
+
 //Suit Storage Units
 
 /obj/machinery/suit_cycler/pilot

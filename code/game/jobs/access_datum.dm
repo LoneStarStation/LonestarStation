@@ -46,7 +46,7 @@
 	desc = "Morgue"
 	region = ACCESS_REGION_MEDBAY
 
-/var/const/access_tox = 7
+/var/const/access_tox = 7 //unused for lonestar?
 /datum/access/tox
 	id = access_tox
 	desc = "R&D Lab"
@@ -196,10 +196,10 @@
 	desc = "Cargo Bay"
 	region = ACCESS_REGION_SUPPLY
 
-/var/const/access_construction = 32
-/datum/access/construction
-	id = access_construction
-	desc = "Construction Areas"
+/var/const/access_pest = 32
+/datum/access/pest
+	id = access_pest
+	desc = "Pest Control"
 	region = ACCESS_REGION_ENGINEERING
 
 /var/const/access_chemistry = 33
@@ -262,8 +262,17 @@
 	desc = "Station Network"
 	region = ACCESS_REGION_RESEARCH
 
-// /var/const/free_access_id = 43
-// /var/const/free_access_id = 44
+/var/const/access_barman = 43
+/datum/access/barman
+	id = access_barman
+	desc = "Bar Manager"
+	region = ACCESS_REGION_GENERAL
+
+/var/const/access_operations = 44
+/datum/access/operations
+	id = access_operations
+	desc = "Tac-Ops Center"
+	region = ACCESS_REGION_MEDBAY
 
 /var/const/access_surgery = 45
 /datum/access/surgery
@@ -435,7 +444,7 @@ var/const/access_pilot = 67
 	desc = "Central Command Teleporter"
 	access_type = ACCESS_TYPE_CENTCOM
 
-/var/const/access_cent_creed = 108//Creed's office.
+/var/const/access_cent_creed = 108//Creed's office. //Rangers?
 /datum/access/cent_creed
 	id = access_cent_creed
 	desc = "Emergency Response Team Administration"

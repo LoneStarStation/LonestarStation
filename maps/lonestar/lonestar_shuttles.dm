@@ -48,7 +48,6 @@
 	docking_controller = "admin_shuttle_dock_airlock"
 
 //Transport
-//This one is for Rangers for shooting themselves to the station, or for a texas military assault team.
 /obj/machinery/computer/shuttle_control/centcom
 	name = "shuttle control console"
 	req_access = list(access_cent_general)
@@ -71,7 +70,7 @@
 	base_turf = /turf/simulated/floor/plating
 
 /obj/effect/shuttle_landmark/lonestar_station/transport1_station
-	name = "UNDEFINED" //we're going to have to make this a breacher pod
+	name = "UNDEFINED"
 	landmark_tag = "transport1_station"
 	docking_controller = "centcom_shuttle_dock_airlock"
 
@@ -155,7 +154,7 @@
 	base_turf = /turf/space
 
 /obj/effect/shuttle_landmark/lonestar_station/merchant_station
-	name = "SC Dock 1-E"
+	name = "LS Dock 1-C"
 	landmark_tag = "merchant_station"
 	docking_controller = "trade_shuttle_dock_airlock"
 
@@ -175,7 +174,7 @@
 	base_turf = /turf/space
 
 /obj/effect/shuttle_landmark/lonestar_station/arrivals_station
-	name = "arrivals_dock"
+	name = "LS Dock 1-A"
 	landmark_tag = "arrivals_station"
 	docking_controller = "arrivals_dock"
 
