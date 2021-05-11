@@ -197,7 +197,7 @@
 //Stolen from CM, refurbished to be less terrible.
 /obj/item/clothing/shoes/boots/marine
 	name = "combat boots"
-	desc = "Standard issue combat boots for combat scenarios or combat situations. All combat, all the time.  It can hold a Strategical knife."
+	desc = "Standard issue combat boots for combat scenarios or combat situations. All combat, all the time.  It can hold a tactical knife."
 	icon_state = "jackboots"
 	armor = list(melee = 80, bullet = 60, laser = 50,energy = 25, bomb = 50, bio = 10, rad = 0)
 	siemens_coefficient = 0.6

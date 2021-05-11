@@ -11,7 +11,7 @@
 	item_state_slots = list(slot_r_hand_str = "white", slot_l_hand_str = "white")
 
 /obj/item/clothing/under/captain_fly
-	name = "rogue's uniform"
+	name = "steward's uniform"
 	desc = "For the man who doesn't care because he's still free."
 	icon_state = "captain_fly"
 	item_state_slots = list(slot_r_hand_str = "red", slot_l_hand_str = "red")

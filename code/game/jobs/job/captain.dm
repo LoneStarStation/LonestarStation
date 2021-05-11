@@ -79,13 +79,13 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 			            access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_pest, access_morgue,
 			            access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer,
 			            access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station,
-			            access_hop, access_RC_announce, access_keycard_auth, access_gateway)
+			            access_hop, access_RC_announce, access_keycard_auth, access_gateway, access_operations)
 	minimal_access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers,
 			            access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads,
 			            access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_pest, access_morgue,
 			            access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer,
 			            access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station,
-			            access_hop, access_RC_announce, access_keycard_auth, access_gateway)
+			            access_hop, access_RC_announce, access_keycard_auth, access_gateway, access_operations)
 
 // HOP Alt Titles
 /datum/alt_title/cro
@@ -111,9 +111,9 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	economic_modifier = 10
 
 	minimum_character_age = 20
-	ideal_character_age = 50
+	ideal_character_age = 25
 
-//	outfit_type = /decl/hierarchy/outfit/job/itdepartment
+	outfit_type = /decl/hierarchy/outfit/job/itspec
 	job_description = "Have you tried turning it off and back on again?"
 
 	access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers,
@@ -121,13 +121,13 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 			            access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_pest, access_morgue,
 			            access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer,
 			            access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station,
-			            access_hop, access_RC_announce, access_keycard_auth, access_gateway)
+			            access_hop, access_RC_announce, access_keycard_auth, access_gateway, access_operations)
 	minimal_access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers,
 			            access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads,
 			            access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_pest, access_morgue,
 			            access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer,
 			            access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station,
-			            access_hop, access_RC_announce, access_keycard_auth, access_gateway)
+			            access_hop, access_RC_announce, access_keycard_auth, access_gateway, access_operations)
 
 
 //////////////////////////////////
@@ -149,7 +149,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	economic_modifier = 7
 
 	access = list(access_heads, access_keycard_auth)
-	minimal_access = list(access_heads, access_keycard_auth)
+	minimal_access = list(access_maint_tunnels, access_heads, access_keycard_auth)
 
 	outfit_type = /decl/hierarchy/outfit/job/secretary
 	job_description = "A Command Secretary handles paperwork duty for the Heads of Staff, so they can better focus on managing their departments. \

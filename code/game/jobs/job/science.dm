@@ -15,23 +15,21 @@
 	selection_color = "#633D63"
 	req_admin_notify = 1
 	economic_modifier = 15
-	access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
-			            access_tox_storage, access_teleporter, access_sec_doors,
-			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
-			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network)
-	minimal_access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
-			            access_tox_storage, access_teleporter, access_sec_doors,
-			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
-			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network)
+	access = list(access_rd, access_heads, access_tox, access_genetics,
+			            access_tox_storage, access_maint_tunnels, access_research,
+			            access_xenobiology, access_RC_announce, access_network)
+	minimal_access = list(access_rd, access_heads, access_tox, access_genetics,
+			            access_tox_storage, access_research,
+			            access_xenobiology, access_RC_announce, access_network)
 
 	minimum_character_age = 25
 	minimal_player_age = 14
 	ideal_character_age = 50
 
-	outfit_type = /decl/hierarchy/outfit/job/science/rd
+	outfit_type = /decl/hierarchy/outfit/job/science/ranch_head
 	job_description = "The Ranch Overseer manages and maintains the Ranch. These experienced farmers are present to guide their staff as they grow crops \
 						and tend livestock, as well as to inform the crew of any disruptions that might originate from the Ranch. An Overseer should have \
-						a good knowledge of both the needs of crewmembers and the most profitable exports."
+						a good awareness of both the needs of crewmembers and the most profitable exports."
 	alt_titles = list("Ranch Supervisor" = /datum/alt_title/ranch_supervisor)
 
 // Ranch Overseer Alt Titles
@@ -55,20 +53,20 @@
 	selection_color = "#AD6BAD"
 	req_admin_notify = 1
 	economic_modifier = 15
-	access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
-			            access_tox_storage, access_teleporter, access_sec_doors,
-			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
+	access = list(access_rd, access_heads, access_tox, access_morgue, access_maint_tunnels,
+			            access_tox_storage, access_teleporter,
+			            access_research, access_robotics, access_ai_upload, access_tech_storage,
 			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network)
-	minimal_access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
-			            access_tox_storage, access_teleporter, access_sec_doors,
-			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
+	minimal_access = list(access_rd, access_heads, access_tox, access_morgue,
+			            access_tox_storage, access_teleporter,
+			            access_research, access_robotics, access_ai_upload, access_tech_storage,
 			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network)
 
 	minimum_character_age = 25
 	minimal_player_age = 14
 	ideal_character_age = 50
 
-	outfit_type = /decl/hierarchy/outfit/job/science/rd
+	outfit_type = /decl/hierarchy/outfit/job/science/head_mechanic
 	job_description = "The Head Mechanic manages and maintains the Garage. They are in charge of the approval process of their department's production, \
 						and should keep their staff focused on the needs of the station or the relevant current exports. Though they should delegate tasks  \
 						to their staff, the Head Mechanic is expected to know a good deal about mechanical prosthetic, hard suit and vehicle construction."
@@ -114,7 +112,7 @@
 
 	minimal_player_age = 7
 
-	outfit_type = /decl/hierarchy/outfit/job/science/xenobiologist
+	outfit_type = /decl/hierarchy/outfit/job/science/ranch_hand
 	job_description = "A Ranch Hand works to grow and cultivate Lonestar's various GMOs. They should always be wary of the side effects their work has, as well \
 						as well as how to mitigate those effects while they work. A good knowledge of the needs of the crew is also encouraged, as the Ranch is \
 						the main food source for the facility."
@@ -151,7 +149,7 @@
 	minimal_access = list(access_robotics, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
 	minimal_player_age = 7
 
-	outfit_type = /decl/hierarchy/outfit/job/science/roboticist
+	outfit_type = /decl/hierarchy/outfit/job/science/mechanic
 	job_description = "A Mechanic maintains and repairs the station's synthetics, including crew with prosthetic limbs. \
 						They can also assist the station by producing simple robots and even pilotable exosuits."
 

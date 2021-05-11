@@ -14,10 +14,10 @@
 	spawn_positions = 1
 	supervisors = "some questionable people"
 	selection_color = "#696969"
-	access = list(access_hydroponics, access_bar, access_kitchen)
-	minimal_access = list(access_hydroponics)
+	access = list(access_bar, access_barman, access_maint_tunnels)
+	minimal_access = list(access_bar, access_barman)
 
-	outfit_type = /decl/hierarchy/outfit/job/service/bartender
+	outfit_type = /decl/hierarchy/outfit/job/service/barman
 	job_description = "A Bar Manager is in charge of the bar. No further comment."
 
 //////////////////////////////////
@@ -34,7 +34,7 @@
 	spawn_positions = 2
 	supervisors = "the Bar Manager"
 	selection_color = "#515151"
-	access = list(access_hydroponics, access_bar, access_kitchen)
+	access = list(access_bar, access_maint_tunnels)
 	minimal_access = list(access_bar)
 
 	outfit_type = /decl/hierarchy/outfit/job/service/bartender
@@ -69,7 +69,7 @@
 	spawn_positions = 2
 	supervisors = "the Head of Personnel"
 	selection_color = "#515151"
-	access = list(access_hydroponics, access_bar, access_kitchen)
+	access = list(access_bar, access_kitchen, access_maint_tunnels)
 	minimal_access = list(access_kitchen)
 
 	outfit_type = /decl/hierarchy/outfit/job/service/chef
@@ -95,11 +95,11 @@
 	supervisors = "the Head of Personnel"
 	selection_color = "#515151"
 	economic_modifier = 5
-	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_mining, access_mining_station)
-	minimal_access = list(access_mining, access_mining_station, access_mailsorting)
+	access = list(access_maint_tunnels, access_mining, access_mining_station)
+	minimal_access = list(access_mining, access_mining_station)
 
-	outfit_type = /decl/hierarchy/outfit/job/cargo/mining
-	job_description = "An Independant Prospector ventures out of the station to gather valuable resources that they can bring back to the facility."
+	outfit_type = /decl/hierarchy/outfit/job/mining
+	job_description = "An Independent Prospector ventures out of the station to gather valuable resources that they can bring back to the facility."
 	alt_titles = list("Drill Technician" = /datum/alt_title/drill_tech, "Asteroid Miner" = /datum/alt_title/asteroid_miner)
 
 /datum/alt_title/drill_tech
@@ -136,9 +136,8 @@
 /datum/alt_title/custodian
 	title = "Custodian"
 
-//More or less assistants
 //////////////////////////////////
-//			Librarian
+//			Gunsmith
 //////////////////////////////////
 /datum/job/librarian
 	title = "Gunsmith" //gunsmith to be moved to security
@@ -150,11 +149,12 @@
 	spawn_positions = 1
 	supervisors = "the Head of Personnel"
 	selection_color = "#515151"
-	access = list(access_library, access_maint_tunnels)
-	minimal_access = list(access_library)
+	access = list(access_library, access_armory, access_maint_tunnels)
+	minimal_access = list(access_library, access_armory)
 
-	outfit_type = /decl/hierarchy/outfit/job/librarian
-	job_description = "The Gunsmith curates the shooting range in the Gunsmithy, so the crew might enjoy it."
+	outfit_type = /decl/hierarchy/outfit/job/gunsmith
+	job_description = "The Gunsmith curates the shooting range in the Gunsmithy, so the crew might enjoy it. They are also expected to be \
+						able to assemble a host of various fire arms, as well as ammunition for the crew of the facility."
 /*
 	alt_titles = list("Journalist" = /datum/alt_title/journalist, "Writer" = /datum/alt_title/writer)
 
@@ -187,7 +187,7 @@
 	minimal_access = list(access_lawyer, access_sec_doors, access_heads)
 	minimal_player_age = 7
 
-	outfit_type = /decl/hierarchy/outfit/job/internal_affairs_agent
+	outfit_type = /decl/hierarchy/outfit/job/pub_defender
 	job_description = "A Public Defender makes sure that the crew has representation if the Sheriff has accused them of a crime. \
 						They also will sometimes help regular civilians with their various paperwork needs, and should be able to\
 						recognize more common breaches of Lonestar Law in contract form."

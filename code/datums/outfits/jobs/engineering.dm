@@ -1,6 +1,5 @@
 /decl/hierarchy/outfit/job/engineering
 	hierarchy_type = /decl/hierarchy/outfit/job/engineering
-	belt = /obj/item/weapon/storage/belt/utility/full
 	l_ear = /obj/item/device/radio/headset/headset_eng
 	shoes = /obj/item/clothing/shoes/boots/workboots
 	r_pocket = /obj/item/device/t_scanner
@@ -23,12 +22,22 @@
 	name = OUTFIT_JOB_NAME("Engineer")
 	head = /obj/item/clothing/head/hardhat
 	uniform = /obj/item/clothing/under/rank/engineer
+	belt = /obj/item/weapon/storage/belt/utility/full
 	id_type = /obj/item/weapon/card/id/engineering
 	pda_type = /obj/item/device/pda/engineering
 
 /decl/hierarchy/outfit/job/engineering/atmos
 	name = OUTFIT_JOB_NAME("Atmospheric technician")
 	uniform = /obj/item/clothing/under/rank/atmospheric_technician
+	head = /obj/item/clothing/head/hardhat/dblue
 	belt = /obj/item/weapon/storage/belt/utility/atmostech
 	id_type = /obj/item/weapon/card/id/engineering
 	pda_type = /obj/item/device/pda/atmos
+
+/decl/hierarchy/outfit/job/engineering/pest
+	name = OUTFIT_JOB_NAME("Pest Control")
+	uniform = /obj/item/clothing/under/hazard
+	head = /obj/item/clothing/head/hardhat/orange
+	id_type = /obj/item/weapon/card/id/engineering
+	pda_type = /obj/item/device/pda/cargo
+

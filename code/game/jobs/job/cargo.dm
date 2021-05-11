@@ -70,5 +70,5 @@
 	access = list(access_pilot, access_cargo, access_mining, access_mining_station)
 	minimal_access = list(access_pilot, access_cargo, access_mining, access_mining_station)
 
-	outfit_type = /decl/hierarchy/outfit/job/pilot
+	outfit_type = /decl/hierarchy/outfit/job/cargo/pilot
 	job_description = "A Delivery Pilot flies one of the shuttles to make deliveries or ferry salvage teams into the asteroid belt."

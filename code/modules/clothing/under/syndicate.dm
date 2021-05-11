@@ -9,7 +9,7 @@
 	siemens_coefficient = 0.9
 
 /obj/item/clothing/under/syndicate/combat //ERT tactleneck
-	name = "combat turtleneck"
+	name = "commando turtleneck"
 	desc = "It's some non-descript, slightly suspicious looking, civilian clothing."
 	icon_state = "combat"
 	item_state_slots = list(slot_r_hand_str = "black", slot_l_hand_str = "black")

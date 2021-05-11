@@ -1,3 +1,6 @@
+//lonestar civ jobs
+//assistant/tourist
+
 /decl/hierarchy/outfit/job/assistant
 	name = OUTFIT_JOB_NAME("Assistant")
 	id_type = /obj/item/weapon/card/id/assistant
@@ -5,12 +8,18 @@
 /decl/hierarchy/outfit/job/assistant/visitor
 	name = OUTFIT_JOB_NAME("Visitor")
 	id_pda_assignment = "Visitor"
-	uniform = /obj/item/clothing/under/assistantformal
+
+/decl/hierarchy/outfit/job/assistant/cityslick
+	name = OUTFIT_JOB_NAME("City Slicker")
+	id_pda_assignment = "City Slicker"
+	uniform = /obj/item/clothing/under/suit_jacket/really_black
 
 /decl/hierarchy/outfit/job/assistant/resident
 	name = OUTFIT_JOB_NAME("Resident")
 	id_pda_assignment = "Resident"
 	uniform = /obj/item/clothing/under/color/white
+
+//food service
 
 /decl/hierarchy/outfit/job/service
 	l_ear = /obj/item/device/radio/headset/headset_service
@@ -28,10 +37,19 @@
 	for(var/obj/item/clothing/accessory/permit/gun/bar/permit in H.back.contents)
 		permit.set_name(H.real_name)
 
-/decl/hierarchy/outfit/job/service/bartender/barista
-	name = OUTFIT_JOB_NAME("Barista")
-	id_pda_assignment = "Barista"
-	backpack_contents = null
+/decl/hierarchy/outfit/job/service/barman
+	name = OUTFIT_JOB_NAME("Bar Manager")
+	uniform = /obj/item/clothing/under/suit_jacket/navy
+	glasses = /obj/item/clothing/glasses/sunglasses
+	shoes = /obj/item/clothing/shoes/syndigaloshes
+	id_type = /obj/item/weapon/card/id/civilian
+	pda_type = /obj/item/device/pda/bar
+	backpack_contents = list(/obj/item/clothing/accessory/permit/gun/bar = 1)
+
+/decl/hierarchy/outfit/job/service/bartender/post_equip(mob/living/carbon/human/H)
+	..()
+	for(var/obj/item/clothing/accessory/permit/gun/bar/permit in H.back.contents)
+		permit.set_name(H.real_name)
 
 /decl/hierarchy/outfit/job/service/chef
 	name = OUTFIT_JOB_NAME("Chef")
@@ -45,6 +63,45 @@
 	name = OUTFIT_JOB_NAME("Cook")
 	id_pda_assignment = "Cook"
 
+//other
+
+/decl/hierarchy/outfit/job/mining
+	name = OUTFIT_JOB_NAME("Independent Prospector")
+	uniform = /obj/item/clothing/under/rank/miner
+	shoes = /obj/item/clothing/shoes/boots/workboots
+	l_ear = /obj/item/device/radio/headset/headset_mine
+	backpack = /obj/item/weapon/storage/backpack/industrial
+	satchel_one  = /obj/item/weapon/storage/backpack/satchel/eng
+	id_type = /obj/item/weapon/card/id/cargo
+	pda_type = /obj/item/device/pda/shaftminer
+	backpack_contents = list(/obj/item/weapon/storage/bag/ore = 1)
+	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+
+/decl/hierarchy/outfit/job/service/janitor
+	name = OUTFIT_JOB_NAME("Janitor")
+	uniform = /obj/item/clothing/under/rank/janitor
+	shoes = /obj/item/clothing/shoes/galoshes
+	id_type = /obj/item/weapon/card/id/civilian
+	pda_type = /obj/item/device/pda/janitor
+
+/decl/hierarchy/outfit/job/gunsmith
+	name = OUTFIT_JOB_NAME("Gunsmith")
+	uniform = /obj/item/clothing/under/tactical
+	shoes = /obj/item/clothing/shoes/boots/cowboy
+	id_type = /obj/item/weapon/card/id/security
+	pda_type = /obj/item/device/pda/security
+
+/decl/hierarchy/outfit/job/pub_defender
+	name = OUTFIT_JOB_NAME("Public Defender")
+	l_ear = /obj/item/device/radio/headset/lawyer
+	uniform = /obj/item/clothing/under/lawyer/blue
+	shoes = /obj/item/clothing/shoes/brown
+	glasses = /obj/item/clothing/glasses/sunglasses/big
+	id_type = /obj/item/weapon/card/id/civilian
+	pda_type = /obj/item/device/pda/lawyer
+
+// unused follows:
+
 /decl/hierarchy/outfit/job/service/gardener
 	name = OUTFIT_JOB_NAME("Gardener")
 	uniform = /obj/item/clothing/under/rank/hydroponics
@@ -56,37 +113,6 @@
 	messenger_bag = /obj/item/weapon/storage/backpack/messenger/hyd
 	id_type = /obj/item/weapon/card/id/civilian
 	pda_type = /obj/item/device/pda/botanist
-
-/decl/hierarchy/outfit/job/service/janitor
-	name = OUTFIT_JOB_NAME("Janitor")
-	uniform = /obj/item/clothing/under/rank/janitor
-	id_type = /obj/item/weapon/card/id/civilian
-	pda_type = /obj/item/device/pda/janitor
-
-/decl/hierarchy/outfit/job/librarian
-	name = OUTFIT_JOB_NAME("Librarian")
-	uniform = /obj/item/clothing/under/suit_jacket/red
-	l_hand = /obj/item/weapon/barcodescanner
-	id_type = /obj/item/weapon/card/id/civilian
-	pda_type = /obj/item/device/pda/librarian
-
-/decl/hierarchy/outfit/job/internal_affairs_agent
-	name = OUTFIT_JOB_NAME("Internal affairs agent")
-	l_ear = /obj/item/device/radio/headset/ia
-	uniform = /obj/item/clothing/under/rank/internalaffairs
-	suit = /obj/item/clothing/suit/storage/toggle/internalaffairs
-	shoes = /obj/item/clothing/shoes/brown
-	glasses = /obj/item/clothing/glasses/sunglasses/big
-	l_hand = /obj/item/weapon/clipboard
-	id_type = /obj/item/weapon/card/id/civilian
-	pda_type = /obj/item/device/pda/lawyer
-
-/decl/hierarchy/outfit/job/chaplain
-	name = OUTFIT_JOB_NAME("Chaplain")
-	uniform = /obj/item/clothing/under/rank/chaplain
-	l_hand = /obj/item/weapon/storage/bible
-	id_type = /obj/item/weapon/card/id/civilian
-	pda_type = /obj/item/device/pda/chaplain
 
 /decl/hierarchy/outfit/job/explorer
 	name = OUTFIT_JOB_NAME("Explorer")

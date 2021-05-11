@@ -47,7 +47,7 @@
 	supervisors = "the Chief Medical Officer"
 	selection_color = "#013D3B"
 	economic_modifier = 7
-	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_eva)
+	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_eva, access_operations, access_maint_tunnels)
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_virology, access_eva)
 	outfit_type = /decl/hierarchy/outfit/job/medical/doctor
 	job_description = "A Medical Officer is a Jack-of-All-Trades Medical title, covering a variety of skill levels and minor specializations. They are likely \
@@ -98,11 +98,11 @@
 	supervisors = "the Chief Medical Officer"
 	selection_color = "#013D3B"
 	economic_modifier = 5
-	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics)
-	minimal_access = list(access_medical, access_medical_equip, access_chemistry)
+	access = list(access_operations, access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics)
+	minimal_access = list(access_operations, access_medical, access_medical_equip, access_chemistry)
 	minimal_player_age = 3
 
-	outfit_type = /decl/hierarchy/outfit/job/medical/chemist
+	outfit_type = /decl/hierarchy/outfit/job/medical/cadet
 	job_description = "A Medical Cadet is much like an intern. However, in Lonestar it is felt that the best training takes place on the front lines. \
 						To that end, Medical Cadets can often be found trailing groups of Lonestar Commandos as they head toward their missions. "
 
@@ -171,9 +171,9 @@
 	supervisors = "the Chief Medical Officer"
 	selection_color = "#013D3B"
 	economic_modifier = 4
-	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_eva, access_maint_tunnels, access_external_airlocks, access_psychiatrist)
-	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_eva, access_maint_tunnels, access_external_airlocks)
-	outfit_type = /decl/hierarchy/outfit/job/medical/paramedic
+	access = list(access_medical, access_medical_equip, access_morgue, access_eva, access_maint_tunnels, access_external_airlocks, access_operations)
+	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_eva, access_maint_tunnels, access_external_airlocks, access_operations)
+	outfit_type = /decl/hierarchy/outfit/job/medical/commando
 	job_description = "Lonestar Station Defense Troopers are primarily concerned with the recovery of patients who are unable to make it to the Medical Department on their own. \
 						They are also likely be called upon in case of an attack on the facility they are stationed on, or to bolster the ranks of other departments to serve as \
 						needed. Remember, most medical staff are considered your ranking officers."

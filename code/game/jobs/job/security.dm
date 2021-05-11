@@ -26,7 +26,7 @@
 	minimum_character_age = 25
 	minimal_player_age = 10
 
-	outfit_type = /decl/hierarchy/outfit/job/security/hos
+	outfit_type = /decl/hierarchy/outfit/job/security/sheriff
 	job_description = "	The Sheriff is the primary peace keeper of the station, ensuring the population is safe from threats both external and internal. They are \
 						expected to keep the other Department Heads, and the rest of the crew, aware of developing situations that may be a threat. If necessary, \
 						the Sheriff may deputize members of the crew to preform duties of absent Security roles, but only in dire situations."
@@ -64,6 +64,7 @@
 						their prisoners alive and in under watchful eye, as most convict redemption activities involve extra vehicular activity where a crafty \
 						or cunning prisoner could escape."
 
+/*
 //////////////////////////////////
 //			Detective
 //////////////////////////////////
@@ -87,6 +88,7 @@
 						with loads of goods by directly overseeing them as they work in harsh space environments falls under some of their direct duties, as \
 						well as keeping those same working prisoners alive and safe while they work."
 
+*/
 
 //////////////////////////////////
 //		Security Officer
@@ -122,4 +124,4 @@
 /datum/alt_title/forensic_tech
 	title = "Forensic Technician"
 	title_blurb = "A Forensic Technician works more with hard evidence and labwork than a Deputy, but they share the purpose of solving crimes."
-	title_outfit = /decl/hierarchy/outfit/job/security/detective/forensic
+	title_outfit = /decl/hierarchy/outfit/job/security/forensic

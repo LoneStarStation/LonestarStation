@@ -74,8 +74,8 @@
  * Detective
  */
 /obj/item/clothing/under/det
-	name = "detective's suit"
-	desc = "A rumpled white dress shirt paired with well-worn grey slacks."
+	name = "crisp uniform"
+	desc = "A white dress shirt paired with well-worn grey slacks."
 	icon_state = "detective"
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 0.9

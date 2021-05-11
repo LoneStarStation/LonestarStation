@@ -9,10 +9,10 @@
 	spawn_positions = 1
 	supervisors = "the Chief Medical Officer and whatever god(s) you recognize"
 	selection_color = "#013D3B"
-	access = list(access_morgue, access_chapel_office, access_crematorium, access_maint_tunnels)
-	minimal_access = list(access_chapel_office, access_crematorium)
+	access = list(access_medical, access_morgue, access_chapel_office, access_crematorium, access_maint_tunnels, access_operations)
+	minimal_access = list(access_medical, access_chapel_office, access_crematorium)
 
-	outfit_type = /decl/hierarchy/outfit/job/chaplain
+	outfit_type = /decl/hierarchy/outfit/job/medical/chaplain
 	job_description = "The Chaplain ministers to the spiritual needs of the crew. It falls on them to perform mental wellness checks on the crew, and are \
 						expected to not let their personal religious leanings sway their judgements too much. The Chaplain should be respectful if they are\
 						asked to lead a service for a religion they do not belong to, as they are a civil servant to the people of Lonestar."
@@ -22,7 +22,8 @@
 /datum/alt_title/counselor
 	title = "Counselor"
 	title_blurb = "The Counselor attends to the emotional needs of the crew, without a specific medicinal or spiritual focus. It falls on them to \
-					perform mental wellness checks on the crew, as well as lead religious ceremonies."
+					perform mental wellness checks on the crew, as well as lead religious ceremonies in the interest of cultural sensitivity."
+	title_outfit = /decl/hierarchy/outfit/job/medical/psychiatrist
 
 /datum/job/chaplain/equip(var/mob/living/carbon/human/H, var/alt_title, var/ask_questions = TRUE)
 	. = ..()
