@@ -32,6 +32,7 @@
 	title = "City Slicker"
 	title_blurb = "A City Slicker visits Lonestar for a host of reasons. Maybe they're visiting someone, or maybe they have heard about good \
 					savlage opportunities in the local area. A City Slicker has no real authority."
+	title_outfit = /decl/hierarchy/outfit/job/assistant/cityslick
 
 /datum/alt_title/visitor
 	title = "Visitor"

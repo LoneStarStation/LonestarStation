@@ -59,6 +59,13 @@
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 10, rad = 0)
 	rolled_sleeves = 0
 
+/obj/item/clothing/under/rank/medical_officer
+	desc = "It's a dress suit and slacks worn by those with the experience to be a \"Medical Officer\". It provides minor biological protection."
+	name = "medical dress uniform"
+	icon_state = "rdalt"
+	item_state_slots = list(slot_r_hand_str = "director", slot_l_hand_str = "director")
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 10, rad = 0)
+
 /obj/item/clothing/under/rank/geneticist
 	desc = "It's made of a special fiber that gives special protection against biohazards. It has a genetics rank stripe on it."
 	name = "geneticist's jumpsuit"
@@ -103,6 +110,13 @@
 	item_state_slots = list(slot_r_hand_str = "nursesuit", slot_l_hand_str = "nursesuit")
 	permeability_coefficient = 0.50
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 10, rad = 0)
+	rolled_sleeves = 0
+
+/obj/item/clothing/under/rank/office
+	desc = "A white suit to be worn by cubicle jockeys."
+	name = "white shirt"
+	icon_state = "orderly"
+	item_state_slots = list(slot_r_hand_str = "nursesuit", slot_l_hand_str = "nursesuit")
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/rank/medical

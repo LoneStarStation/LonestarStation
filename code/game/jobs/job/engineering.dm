@@ -51,7 +51,7 @@
 	selection_color = "#5B4D20"
 	economic_modifier = 5
 	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_atmospherics)
-	minimal_access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks)
+	minimal_access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_atmospherics)
 	alt_titles = list("Maintenance Technician" = /datum/alt_title/maint_tech,
 						"Engine Technician" = /datum/alt_title/engine_tech,
 						"Electrician" = /datum/alt_title/electrician,
@@ -59,7 +59,7 @@
 
 	minimal_player_age = 3
 
-	outfit_type = /decl/hierarchy/outfit/job/engineering/atmos
+	outfit_type = /decl/hierarchy/outfit/job/engineering/engineer
 	job_description = "An Engineer keeps the station running. They repair damages, keep the atmosphere stable, and ensure that power is being \
 						generated and distributed. On quiet shifts, they may be called upon to make cosmetic alterations to the station."
 
@@ -83,6 +83,7 @@
 	title = "Atmospheric Technician"
 	title_blurb = "An Atmospheric Technician is primarily concerned with keeping the station's atmosphere breathable. They are expected to have a good \
 						understanding of the pipes, vents, and scrubbers that move gasses around the station, and to be familiar with proper firefighting procedure."
+	title_outfit = /decl/hierarchy/outfit/job/engineering/atmos
 
 //////////////////////////////////
 //			Pest Control
@@ -103,6 +104,6 @@
 
 	minimal_player_age = 1
 
-	outfit_type = /decl/hierarchy/outfit/job/engineering/atmos
+	outfit_type = /decl/hierarchy/outfit/job/engineering/pest
 	job_description = "Pest Control is given the task of keeping the many invasive organisms on the Lonestar asteroid in relative check. They can typically be \
 						found in the maintenance ways and caves around the facility. Remember that the Ranch sometimes enjoys exotic fauna to examine."

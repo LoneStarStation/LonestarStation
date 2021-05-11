@@ -4,26 +4,29 @@
 
 /decl/hierarchy/outfit/job/cargo/qm
 	name = OUTFIT_JOB_NAME("Cargo")
-	uniform = /obj/item/clothing/under/rank/cargo
+	uniform = /obj/item/clothing/under/rank/cargo/jeans
 	shoes = /obj/item/clothing/shoes/brown
 	glasses = /obj/item/clothing/glasses/sunglasses
-	l_hand = /obj/item/weapon/clipboard
 	id_type = /obj/item/weapon/card/id/cargo/head
 	pda_type = /obj/item/device/pda/quartermaster
 
 /decl/hierarchy/outfit/job/cargo/cargo_tech
 	name = OUTFIT_JOB_NAME("Cargo technician")
-	uniform = /obj/item/clothing/under/rank/cargotech
+	uniform = /obj/item/clothing/under/rank/cargotech/jeans
 	id_type = /obj/item/weapon/card/id/cargo
 	pda_type = /obj/item/device/pda/cargo
 
-/decl/hierarchy/outfit/job/cargo/mining
-	name = OUTFIT_JOB_NAME("Shaft miner")
-	uniform = /obj/item/clothing/under/rank/miner
-	l_ear = /obj/item/device/radio/headset/headset_mine
-	backpack = /obj/item/weapon/storage/backpack/industrial
-	satchel_one  = /obj/item/weapon/storage/backpack/satchel/eng
+/decl/hierarchy/outfit/job/cargo/pilot
+	name = OUTFIT_JOB_NAME("Delivery Pilot")
+	shoes = /obj/item/clothing/shoes/black
+	uniform = /obj/item/clothing/under/rank/cargotech/jeans
+	suit = /obj/item/clothing/suit/storage/toggle/bomber
+	gloves = /obj/item/clothing/gloves/fingerless
+	glasses = /obj/item/clothing/glasses/fakesunglasses/aviator
+	l_ear = /obj/item/device/radio/headset/pilot/alt
+	id_slot = slot_wear_id
+	pda_slot = slot_belt
+	pda_type = /obj/item/device/pda/cargo // Brown looks more rugged
 	id_type = /obj/item/weapon/card/id/cargo
-	pda_type = /obj/item/device/pda/shaftminer
-	backpack_contents = list(/obj/item/weapon/tool/crowbar = 1, /obj/item/weapon/storage/bag/ore = 1)
-	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+	id_pda_assignment = "Delivery Pilot"
+	flags = OUTFIT_HAS_BACKPACK|OUTFIT_COMPREHENSIVE_SURVIVAL

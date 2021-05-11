@@ -16,7 +16,7 @@
 	var/obj/item/device/encryptionkey/keyslot2 = null
 	var/ks1type = null
 	var/ks2type = null
-	
+
 	drop_sound = 'sound/items/drop/component.ogg'
 	pickup_sound = 'sound/items/pickup/component.ogg'
 
@@ -308,9 +308,9 @@
 /obj/item/device/radio/headset/omni		//Only for the admin intercoms
 	ks2type = /obj/item/device/encryptionkey/omni
 
-/obj/item/device/radio/headset/ia
-	name = "internal affair's headset"
-	desc = "The headset of your worst enemy."
+/obj/item/device/radio/headset/lawyer
+	name = "legal headset"
+	desc = "This headset might belong to a shark. Or not."
 	icon_state = "com_headset"
 	ks2type = /obj/item/device/encryptionkey/heads/hos
 

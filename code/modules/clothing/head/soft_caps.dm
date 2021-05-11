@@ -83,8 +83,8 @@
 	item_state_slots = list(slot_r_hand_str = "secsoft", slot_l_hand_str = "secsoft")
 
 /obj/item/clothing/head/soft/sec/corp
-	name = "corporate security cap"
-	desc = "It's field cap in corporate colors."
+	name = "security cap"
+	desc = "It's field cap in snappy black."
 	icon_state = "corpsoft"
 	item_state_slots = list(slot_r_hand_str = "corpsoft", slot_l_hand_str = "corpsoft")
 
