@@ -53,7 +53,7 @@
 				spawn(10 SECONDS)
 					message_passengers("Arriving at [using_map.station_name] in twenty seconds.")
 					spawn(10 SECONDS)
-						message_passengers("Arriving at [using_map.station_name] in ten seconds.  Please buckle up.")
+						message_passengers("Arriving at [using_map.station_name] in ten seconds.  Buckle up, Buttercup.")
 
 		else // We are at the station.
 			if(!check_for_passengers()) // Don't leave with anyone.

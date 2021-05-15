@@ -46,7 +46,7 @@
 	name = "LS Administration Dock"
 	landmark_tag = "admin_station"
 	docking_controller = "admin_shuttle_dock_airlock"
-
+/*
 //Transport
 /obj/machinery/computer/shuttle_control/centcom
 	name = "shuttle control console"
@@ -73,7 +73,7 @@
 	name = "UNDEFINED"
 	landmark_tag = "transport1_station"
 	docking_controller = "centcom_shuttle_dock_airlock"
-
+*/
 
 //Merc
 
@@ -199,7 +199,7 @@
 	base_turf = /turf/space
 
 /obj/effect/shuttle_landmark/lonestar_station/escape/station
-	name = "Station Escape Dock"
+	name = "LS Dock 2-A"
 	landmark_tag = "escape_station"
 	docking_controller = "escape_dock"
 
