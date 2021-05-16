@@ -75,5 +75,6 @@ var/global/list/religion_choices = list(
 	"Xilar Qall",
 	"Tajr-kii Rarkajar",
 	"Agnosticism",
-	"Deism"
+	"Deism",
+	"Magic Cat Fundamentalism"
 	)

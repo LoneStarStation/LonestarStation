@@ -108,12 +108,12 @@
 	)
 
 /datum/shuttle_destination/syndie/docked_LS
-	name = "NLS Southern Cross - Arrivals Docking Port"
+	name = "LS Dock 3-B"
 	my_landmark = "syndie_arrivals_dock"
 	preferred_interim_tag = "syndie_transit"
 
 	// dock_target = "nuke_shuttle_dock_airlock"
-	announcer = "Southern Cross Docking Computer"
+	announcer = "Lonestar Docking Computer"
 
 /datum/shuttle_destination/syndie/docked_LS/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Arrivals Dock."
@@ -128,6 +128,14 @@
 
 
 /datum/shuttle_destination/syndie/carls
-	name = "\improper Carl's Corner"
+	name = "LSF Carl's Corner II"
 	my_landmark = "syndie_carls"
 	preferred_interim_tag = "syndie_transit"
+	radio_announce = 1
+	announcer = "Truckstop Automated ATC"
+
+/datum/shuttle_destination/syndie/carls_corner/get_arrival_message()
+	return "Attention, [master.my_shuttle.visible_name] has arrived at Carl's Corner."
+
+/datum/shuttle_destination/syndie/carls_corner/get_departure_message()
+	return "Attention, [master.my_shuttle.visible_name] has departed Carl's Corner."
