@@ -1,6 +1,6 @@
-# polaris
+# Lonestar Station
 
-[Forums](https://forum.ss13polaris.com/) - [Wiki](http://wiki.ss13polaris.com/) - [Discord](https://discord.gg/dvUcacC)
+[Discord](https://discord.gg/BENmp6cjma)
 
 Polaris is a fork of the Baystation12 code branch for the game Spacestation13.
 
