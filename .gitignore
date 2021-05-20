@@ -10,6 +10,8 @@ vchat.db*
 *.backup
 *.before
 *.pyc
+*.code-workspace
 data/
 cfg/
+.vscode/
 
