@@ -48,6 +48,7 @@
 	docking_controller = "admin_shuttle_dock_airlock"
 /*
 //Transport
+
 /obj/machinery/computer/shuttle_control/centcom
 	name = "shuttle control console"
 	req_access = list(access_cent_general)
@@ -159,7 +160,7 @@
 	docking_controller = "trade_shuttle_dock_airlock"
 
 // Arrivals Shuttle
-/datum/shuttle/autodock/ferry/arrivals/lonestar
+/datum/shuttle/autodock/ferry/arrivals/lonestar_station
 	name = "Arrivals"
 	location = FERRY_LOCATION_OFFSITE
 	shuttle_area = /area/shuttle/arrival/pre_game

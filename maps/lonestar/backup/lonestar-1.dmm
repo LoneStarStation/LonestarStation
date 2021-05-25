@@ -4625,7 +4625,7 @@
 "bKW" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 5},/turf/simulated/floor/tiled/dark,/area/lonestar/cargobay/quartermaster)
 "bKX" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 8},/turf/simulated/floor/tiled/dark,/area/lonestar/cargobay/quartermaster)
 "bKY" = (/obj/machinery/door/firedoor/border_only,/obj/effect/wingrille_spawn/reinforced/polarized{id = "qm_window"},/turf/simulated/floor/plating,/area/lonestar/cargobay/quartermaster)
-"bKZ" = (/obj/effect/shuttle_landmark/lonestar_station/arrivals_station,/turf/space,/area/shuttle/arrival/station)
+"bKZ" = (/obj/effect/shuttle_landmark/lonestar_station/neo_vima/arrivals_station,/turf/space,/area/shuttle/arrival/station)
 "bLa" = (/obj/effect/floor_decal/borderfloorblack/corner,/obj/effect/floor_decal/corner/brown/bordercorner,/turf/simulated/floor/tiled/dark,/area/lonestar/cargobay/quartermaster)
 "bLb" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 8},/turf/simulated/floor/tiled/dark,/area/lonestar/hallway/primary/floor_two/three)
 "bLc" = (/obj/effect/floor_decal/borderfloorblack{dir = 4},/obj/effect/floor_decal/corner/brown/border{dir = 4},/obj/structure/closet,/obj/item/weapon/storage/backpack/dufflebag,/obj/item/device/measuring_tape,/obj/item/device/geiger,/obj/item/device/radio,/obj/item/weapon/shovel{pixel_x = -5},/obj/item/weapon/pickaxe{pixel_x = 5},/obj/item/weapon/weldingtool/electric,/obj/item/weapon/storage/excavation,/obj/item/weapon/pickaxe/plasmacutter,/obj/machinery/light{dir = 4; icon_state = "tube1"; pixel_x = 0},/turf/simulated/floor/tiled/dark,/area/lonestar/cargobay/quartermaster)
