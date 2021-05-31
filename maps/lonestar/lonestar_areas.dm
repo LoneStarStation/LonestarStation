@@ -3,7 +3,7 @@
 /area/lonestar
 	name = "lonestar"
 	icon_state = "west"
-	requires_power = 0
+//	requires_power = 0
 
 //// Away Areas
 
@@ -507,7 +507,7 @@
 	name = "Pest Holding"
 	icon_state = "pest_control"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
-	requires_power = 0
+
 
 /area/lonestar/pestcontrol/foyer
 	name = "\improper Pest Control Foyer"
@@ -521,10 +521,13 @@
 	name = "\improper Pest Control Armory"
 	icon_state = "pest_control"
 
+/area/lonestar/pestcontrol/library
+	name = "\improper Pest Control Library"
+	icon_state = "pest_control"
+
 /area/lonestar/pestcontrol/break_room
 	name = "\improper Exterminator Break Room"
 	icon_state = "pest_control"
-	sound_env = MEDIUM_SOFTFLOOR
 
 /area/lonestar/pestcontrol/exterminator_restroom
 	name = "\improper Exterminator Restroom"
