@@ -3,6 +3,7 @@
 /area/lonestar
 	name = "lonestar"
 	icon_state = "west"
+//	requires_power = 0
 
 //// Away Areas
 
@@ -506,7 +507,7 @@
 	name = "Pest Holding"
 	icon_state = "pest_control"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
-	requires_power = 0
+
 
 /area/lonestar/pestcontrol/foyer
 	name = "\improper Pest Control Foyer"
@@ -520,10 +521,13 @@
 	name = "\improper Pest Control Armory"
 	icon_state = "pest_control"
 
+/area/lonestar/pestcontrol/library
+	name = "\improper Pest Control Library"
+	icon_state = "pest_control"
+
 /area/lonestar/pestcontrol/break_room
 	name = "\improper Exterminator Break Room"
 	icon_state = "pest_control"
-	sound_env = MEDIUM_SOFTFLOOR
 
 /area/lonestar/pestcontrol/exterminator_restroom
 	name = "\improper Exterminator Restroom"
@@ -2184,10 +2188,14 @@ area/crew_quarters/heads/sc/hop/quarters
 
 
 /area/shuttle/shuttle2/start
+	name = "Centcom Crew Shuttle"
+	icon_state = "shuttlered"
+	base_turf = /turf/space
+
+/area/shuttle/shuttle2/hangar
 	name = "Shuttle Two"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/floor/plating
-	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/shuttle/shuttle2/arrivals_dock
 	name = "\improper docked with Lonestar Station"
@@ -2222,6 +2230,58 @@ area/crew_quarters/heads/sc/hop/quarters
 	base_turf = /turf/simulated/sky
 
 /area/shuttle/shuttle2/sky_transit
+	name = "in flight"
+	icon_state = "shuttlered"
+	base_turf = /turf/simulated/sky/moving
+
+//Shuttle Three
+/area/shuttle/shuttle3
+	name = "\improper Hangar Deck"
+	icon_state = "yellow"
+	requires_power = 0
+	dynamic_lighting = 1
+	flags = RAD_SHIELDED
+
+/area/shuttle/shuttle3/start
+	name = "Shuttle Three"
+	icon_state = "shuttlered"
+	base_turf = /turf/simulated/floor/plating
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
+
+/area/shuttle/shuttle3/arrivals_dock
+	name = "\improper docked with Lonestar Station"
+	icon_state = "shuttle"
+
+/area/shuttle/shuttle3/seconddeck
+	name = "south of second deck"
+	icon_state = "south"
+
+/area/shuttle/shuttle3/roids
+	name = "\improper Carl's Corner"
+	icon_state = "shuttlered"
+	base_turf = /turf/simulated/floor/plating
+
+/area/shuttle/shuttle3/prison
+	name = "The Slammer"
+	icon_state = "shuttlered"
+	base_turf = /turf/simulated/floor/plating
+
+/area/shuttle/shuttle3/transit
+	name = "transit"
+	icon_state = "shuttlered"
+	base_turf = /turf/space/transit/north
+
+/area/shuttle/shuttle3/orbit
+	name = "in orbit of Lonestar Station"
+	icon_state = "shuttlegrn"
+	base_turf = /turf/space
+
+/area/shuttle/shuttle3/sky
+	name = "hovering in the skies"
+	icon_state = "shuttlegrn"
+	base_turf = /turf/simulated/sky
+
+/area/shuttle/shuttle3/sky_transit
 	name = "in flight"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/sky/moving

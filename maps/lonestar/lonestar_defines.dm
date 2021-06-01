@@ -37,11 +37,11 @@
 	starsys_name  = "Sol"
 	use_overmap = TRUE
 
-	shuttle_docked_message = "That there shuttle t'the %dock_name% has docked with the station on the third floor: Dockin' port 1-A! That sucker's gonna leave in about  %ETD%."
+	shuttle_docked_message = "That there shuttle t'the %dock_name% has docked with the station on the third floor: Dockin' port 2-A! That sucker's gonna leave in about  %ETD%."
 	shuttle_leaving_dock = "That there Transfer Shuttle's left the station! Reckon %ETA% til she lands at %dock_name%."
 	shuttle_called_message = "A  transfer to %dock_name% has been scheduled. The shuttle has been called. Any of y'all leaving should git t'the third floor in approximately %ETA%."
 	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
-	emergency_shuttle_docked_message = "The Emergency Shuttle has docked with the station on the third floor: Dockin' port 1-A! Y'all have about %ETD% till it leaves the slowpokes behind."
+	emergency_shuttle_docked_message = "The Emergency Shuttle has docked with the station on the third floor: Dockin' port 2-A! Y'all have about %ETD% till it leaves the slowpokes behind."
 	emergency_shuttle_leaving_dock = "There she goes! Emergency Shuttle's left the station. Reckon %ETA% til that puppy docks over at %dock_name%."
 	emergency_shuttle_called_message = "An Evacuation Order has been called. A shuttle will arrive on the third floor in about %ETA%."
 	emergency_shuttle_recall_message = "Cancel that evac order."
@@ -90,9 +90,9 @@
 
 	unit_test_exempt_areas = list(/area/ninja_dojo, /area/ninja_dojo/firstdeck, /area/ninja_dojo/arrivals_dock)
 	unit_test_exempt_from_atmos = list(/area/lonestar/command/server)
-
+/*
 	planet_datums_to_make = list(/datum/planet/mining)
-
+*/
 	map_levels = list(
 			Z_LEVEL_STATION_ONE,
 			Z_LEVEL_STATION_TWO,
@@ -229,14 +229,14 @@
 	teleport_y = world.maxy - 1
 	teleport_z = Z_LEVEL_MINING_SALVAGE
 
-
+/*
 /datum/planet/mining
 	expected_z_levels = list(
 		Z_LEVEL_MINING_PRISON,
 		Z_LEVEL_MINING_SALVAGE,
 		Z_LEVEL_MINING_ROIDS
 	)
-
+*/
 /obj/effect/step_trigger/teleporter/bridge/east_to_west/Initialize()
 	teleport_x = src.x - 4
 	teleport_y = src.y

@@ -45,13 +45,13 @@
 /obj/machinery/computer/shuttle_control/web/shuttle2
 	name = "shuttle control console"
 	shuttle_tag = "Shuttle 2"
-	req_access = list(access_pilot)
+	req_access = list(access_pilot, access_cent_specops)
 
 /datum/shuttle/autodock/web_shuttle/shuttle2
 	name = "Shuttle 2"
 	warmup_time = 0
 	shuttle_area = /area/shuttle/shuttle2/start
-	current_location = "hangar_2"
+	current_location = "cent_2"
 	docking_controller_tag = "shuttle2_shuttle"
 	web_master_type = /datum/shuttle_web_master/shuttle2
 	autopilot = FALSE
@@ -68,21 +68,20 @@
 	start = /datum/shuttle_destination/shuttle2/root
 
 	path_nodes = list(
-		/datum/shuttle_destination/shuttle2/outside_LS,
 		/datum/shuttle_destination/shuttle2/station_orbit,
-		/datum/shuttle_destination/shuttle2/carls_corner
+		/datum/shuttle_destination/shuttle2/outside_LS,
+		/datum/shuttle_destination/shuttle2/hangar
 	)
 
 /datum/shuttle_autopath/shuttle2/to_home
-	start = /datum/shuttle_destination/shuttle2/carls_corner
+	start = /datum/shuttle_destination/shuttle2/hangar
 
 	path_nodes = list(
-		/datum/shuttle_destination/shuttle2/station_orbit,
 		/datum/shuttle_destination/shuttle2/outside_LS,
+		/datum/shuttle_destination/shuttle2/station_orbit,
 		/datum/shuttle_destination/shuttle2/root
 	)
 
-/*
 //Shuttle 3
 
 /obj/machinery/computer/shuttle_control/web/shuttle3
@@ -105,7 +104,7 @@
 /datum/shuttle_web_master/shuttle3
 	destination_class = /datum/shuttle_destination/shuttle3
 	autopath_class = /datum/shuttle_autopath/shuttle3
-	starting_destination = /datum/shuttle_destination/shuttle2/root
+	starting_destination = /datum/shuttle_destination/shuttle3/root
 
 /datum/shuttle_autopath/shuttle3/to_outpost
 	start = /datum/shuttle_destination/shuttle3/root
@@ -124,7 +123,6 @@
 		/datum/shuttle_destination/shuttle3/outside_LS,
 		/datum/shuttle_destination/shuttle3/root
 	)
-*/
 
 //
 
@@ -147,22 +145,22 @@
 	return "Attention, [master.my_shuttle.visible_name] has departed Hangar Pad One."
 
 /datum/shuttle_destination/shuttle2/root
-	name = "LSF Neo Vima Hangar Pad Two"
-	my_landmark = "hangar_2"
+	name = "Lonestar Transit Satelite"
+	my_landmark = "cent_2"
 	preferred_interim_tag = "shuttle2_transit"
 
 	radio_announce = 1
-	announcer = "Lonestar Docking Computer"
+	announcer = "Transit Docking Computer"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/shuttle2/outside_LS = 0,
+		/datum/shuttle_destination/shuttle2/station_orbit = 60 SECONDS,
 	)
 
 /datum/shuttle_destination/shuttle2/root/get_arrival_message()
-	return "Attention, [master.my_shuttle.visible_name] has arrived to Hangar Pad Two."
+	return "Attention, [master.my_shuttle.visible_name] has arrived at LST, please enjoy your stay."
 
 /datum/shuttle_destination/shuttle2/root/get_departure_message()
-	return "Attention, [master.my_shuttle.visible_name] has departed Hangar Pad Two."
+	return "Attention, [master.my_shuttle.visible_name] has departed LST, thank you for your visit."
 
 /datum/shuttle_destination/shuttle3/root
 	name = "LSF Neo Vima Hangar Pad Three"
@@ -176,10 +174,30 @@
 		/datum/shuttle_destination/shuttle3/outside_LS = 0,
 	)
 
-/datum/shuttle_destination/shuttle3/root/get_arrival_message()
+/datum/shuttle_destination/shuttle2/root/get_arrival_message()
+	return "Attention, [master.my_shuttle.visible_name] has arrived to Hangar Pad Two."
+
+/datum/shuttle_destination/shuttle2/root/get_departure_message()
+	return "Attention, [master.my_shuttle.visible_name] has departed Hangar Pad Two."
+
+//
+
+/datum/shuttle_destination/shuttle2/hangar
+	name = "LSF Neo Vima Hangar Pad Two"
+	my_landmark = "hangar_2"
+	preferred_interim_tag = "shuttle2_transit"
+
+	radio_announce = 1
+	announcer = "Lonestar Docking Computer"
+
+	routes_to_make = list(
+		/datum/shuttle_destination/shuttle2/outside_LS = 0,
+	)
+
+/datum/shuttle_destination/shuttle2/hangar/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to Hangar Pad Three."
 
-/datum/shuttle_destination/shuttle3/root/get_departure_message()
+/datum/shuttle_destination/shuttle2/hangar/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed Hangar Pad Three."
 
 //
