@@ -15,7 +15,7 @@
 "ao" = (/obj/effect/floor_decal/borderfloorblack{dir = 10},/obj/effect/floor_decal/corner/green/border{dir = 10},/obj/machinery/light,/turf/simulated/floor/tiled,/area/lonestar/away/yard/foyer)
 "ap" = (/obj/effect/floor_decal/borderfloorblack,/obj/effect/floor_decal/industrial/danger,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled,/area/lonestar/away/yard/foyer)
 "aq" = (/obj/effect/floor_decal/borderfloorblack{dir = 6},/obj/effect/floor_decal/corner/green/border{dir = 6},/obj/machinery/light,/turf/simulated/floor/tiled,/area/lonestar/away/yard/foyer)
-"ar" = (/obj/effect/map_effect/perma_light/concentrated,/turf/simulated/mineral/floor,/area/lonestar/away/yard/border)
+"ar" = (/obj/effect/map_effect/perma_light/concentrated,/turf/simulated/mineral/floor/vacuum,/area/lonestar/away/yard/border)
 "as" = (/turf/simulated/wall/r_wall,/area/lonestar/away/yard/storage_b)
 "at" = (/obj/effect/floor_decal/borderfloorblack{dir = 9},/turf/simulated/floor/tiled,/area/lonestar/away/yard/storage_a)
 "au" = (/obj/effect/floor_decal/borderfloorblack{dir = 1},/turf/simulated/floor/tiled,/area/lonestar/away/yard/storage_a)
@@ -109,7 +109,7 @@
 "ce" = (/obj/effect/floor_decal/borderfloorblack{dir = 6},/obj/effect/floor_decal/industrial/danger{dir = 6},/turf/simulated/floor/tiled/steel_grid,/area/lonestar/away/yard/airlock)
 "cf" = (/obj/effect/floor_decal/borderfloorblack/corner{dir = 4},/obj/effect/floor_decal/industrial/danger/corner{dir = 4},/turf/simulated/floor/tiled/steel_grid,/area/lonestar/away/yard/airlock)
 "cg" = (/obj/effect/floor_decal/borderfloorblack/corner{dir = 1},/obj/effect/floor_decal/industrial/danger/corner{dir = 8},/turf/simulated/floor/tiled/steel_grid,/area/lonestar/away/yard/airlock)
-"ch" = (/turf/simulated/floor/tiled/steel_grid,/area/lonestar/away/yard/wrecking)
+"ch" = (/turf/simulated/floor/tiled/steel_grid/airless,/area/lonestar/away/yard/wrecking)
 "ci" = (/obj/machinery/door/firedoor/multi_tile{dir = 2},/obj/machinery/door/airlock/multi_tile/glass{dir = 2; name = "Storage Beta"},/turf/simulated/floor/tiled/steel_grid,/area/lonestar/away/yard/foyer)
 "cj" = (/obj/effect/floor_decal/borderfloorblack{dir = 1},/obj/machinery/alarm{frequency = 1441; pixel_y = 22},/turf/simulated/floor/tiled,/area/lonestar/away/yard/storage_b)
 "ck" = (/obj/effect/floor_decal/borderfloorblack{dir = 1},/obj/machinery/firealarm{dir = 2; layer = 3.3; pixel_x = 0; pixel_y = 26},/turf/simulated/floor/tiled,/area/lonestar/away/yard/storage_b)
@@ -122,19 +122,19 @@
 "cr" = (/obj/effect/map_effect/perma_light/concentrated,/turf/simulated/floor/tiled,/area/lonestar/away/yard/corner_access)
 "cs" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/effect/map_effect/perma_light/concentrated,/turf/simulated/floor/tiled,/area/lonestar/away/yard/corner_access)
 "ct" = (/obj/effect/floor_decal/borderfloorblack{dir = 4},/obj/effect/floor_decal/corner/green/border{dir = 4},/obj/effect/map_effect/perma_light/concentrated,/turf/simulated/floor/tiled,/area/lonestar/away/yard/corner_access)
-"cu" = (/obj/effect/map_effect/perma_light/concentrated,/turf/simulated/floor/tiled/steel_grid,/area/lonestar/away/yard/border)
-"cv" = (/obj/effect/map_effect/portal/master/side_b/yard_to_slammer{dir = 1},/turf/simulated/floor/tiled/steel_grid,/area/lonestar/away/yard/wrecking)
-"cw" = (/obj/effect/map_effect/portal/line/side_b{dir = 1},/turf/simulated/floor/tiled/steel_grid,/area/lonestar/away/yard/wrecking)
+"cu" = (/obj/effect/map_effect/portal/master/side_b/yard_to_slammer{dir = 1},/turf/simulated/floor/tiled/steel_grid/airless,/area/lonestar/away/yard/wrecking)
+"cv" = (/obj/effect/map_effect/portal/line/side_b{dir = 1},/turf/simulated/floor/tiled/steel_grid/airless,/area/lonestar/away/yard/wrecking)
+"cw" = (/obj/effect/map_effect/perma_light/concentrated,/turf/simulated/floor/tiled/steel_grid/airless,/area/lonestar/away/yard/border)
 "cx" = (/turf/simulated/mineral/vacuum,/area/lonestar/away/yard/asteroid)
 "cy" = (/obj/effect/floor_decal/borderfloorblack{dir = 9},/obj/effect/floor_decal/corner/green/border{dir = 9},/obj/machinery/alarm{frequency = 1441; pixel_y = 22},/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/simulated/floor/tiled,/area/lonestar/away/yard/foyer)
 "cz" = (/obj/effect/floor_decal/borderfloorblack{dir = 5},/obj/effect/floor_decal/corner/green/border{dir = 5},/obj/structure/cable{d2 = 2; icon_state = "0-2"; pixel_y = 0},/obj/machinery/power/apc{dir = 1; name = "north bump"; pixel_x = 0; pixel_y = 24},/obj/machinery/light{dir = 4; icon_state = "tube1"; pixel_x = 0},/turf/simulated/floor/tiled,/area/lonestar/away/yard/foyer)
-"cA" = (/obj/effect/map_effect/portal/master/side_a/yard_to_rim/cliff,/turf/simulated/mineral/floor,/area/lonestar/away/yard/cliff)
-"cB" = (/obj/effect/map_effect/portal/line/side_a,/turf/simulated/mineral/floor,/area/lonestar/away/yard/cliff)
+"cA" = (/obj/effect/map_effect/portal/master/side_a/yard_to_rim/cliff,/turf/simulated/mineral/floor/vacuum,/area/lonestar/away/yard/cliff)
+"cB" = (/obj/effect/map_effect/portal/line/side_a,/turf/simulated/mineral/floor/vacuum,/area/lonestar/away/yard/cliff)
 "cC" = (/obj/effect/floor_decal/borderfloorblack{dir = 10},/obj/effect/floor_decal/corner/green/border{dir = 10},/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/simulated/floor/tiled,/area/lonestar/away/yard/foyer)
 "cD" = (/obj/effect/floor_decal/borderfloorblack{dir = 6},/obj/effect/floor_decal/corner/green/border{dir = 6},/obj/machinery/firealarm{dir = 1; pixel_x = 0; pixel_y = -24},/obj/machinery/light{dir = 4; icon_state = "tube1"; pixel_x = 0},/turf/simulated/floor/tiled,/area/lonestar/away/yard/foyer)
-"cE" = (/turf/simulated/mineral/floor,/area/lonestar/away/yard/cliff)
+"cE" = (/turf/simulated/mineral/floor/vacuum,/area/lonestar/away/yard/cliff)
 "cF" = (/obj/effect/map_effect/portal/master/side_b/yard_to_slammer/cliff{dir = 1},/turf/unsimulated/mineral,/area/lonestar/away/yard/cliff)
-"cG" = (/obj/effect/map_effect/portal/line/side_b{dir = 1},/turf/simulated/mineral/floor,/area/lonestar/away/yard/cliff)
+"cG" = (/obj/effect/map_effect/portal/line/side_b{dir = 1},/turf/simulated/mineral/floor/vacuum,/area/lonestar/away/yard/cliff)
 "cH" = (/obj/effect/floor_decal/borderfloorblack{dir = 10},/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/simulated/floor/tiled,/area/lonestar/away/yard/storage_a)
 "cI" = (/obj/effect/floor_decal/borderfloorblack{dir = 6},/obj/machinery/light{dir = 4; icon_state = "tube1"; pixel_x = 0},/turf/simulated/floor/tiled,/area/lonestar/away/yard/storage_a)
 "cJ" = (/obj/effect/floor_decal/borderfloorblack{dir = 10},/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/simulated/floor/tiled,/area/lonestar/away/yard/storage_b)
@@ -395,6 +395,6 @@ acafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafaf
 acafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafaaaaaaaaaaaaaaaacxcxcxcxcxcxcxcxcocEcEcEcocxcxcxcxcxcoam
 acafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafchchafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafaaaaaaaaaaaaaaaacxcxcxcxcxcxcocococEcEcocococxcxcxcxcoam
 acafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafcnchchcnafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafaaaaaaaaaaaaaaaacxcxcxcococococococEcEcococococxcxcocoam
-acafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafcncncvcwcncnafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafaaaaaaaaaaaaaaaacocococococococococFcGcocococococococoam
-acacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacaccpcucucpacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacamamamamamamamamamararamamamamamamamamam
+acafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafcncncucvcncnafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafafaaaaaaaaaaaaaaaacocococococococococFcGcocococococococoam
+acacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacaccpcwcwcpacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacacamamamamamamamamamararamamamamamamamamam
 "}
