@@ -17,7 +17,7 @@
 	path = "lonestar_staion"
 
 	lobby_icon = 'icons/misc/title.dmi'
-	lobby_screens = list("mockingjay00") // lets get a rotation of our most famous cowboys if possible
+	lobby_screens = list("mockingjay00") // TODO lets get a rotation of our most famous cowboys if possible
 	//also it would be cool if the 'end game' of the station was to get your character's face plastered up there with the greats
 
 	holomap_smoosh = list(list(
@@ -88,8 +88,8 @@
 	overmap_event_areas = 	6
 	default_skybox = /datum/skybox_settings/lonestar
 
-	unit_test_exempt_areas = list(/area/ninja_dojo, /area/ninja_dojo/firstdeck, /area/ninja_dojo/arrivals_dock)
-	unit_test_exempt_from_atmos = list(/area/lonestar/command/server)
+	unit_test_exempt_areas = list(/area/ninja_dojo, /area/ninja_dojo/firstdeck, /area/ninja_dojo/arrivals_dock, /area/lonestar/asteroid, /area/lonestar/asteroid/cave, /area/lonestar/maintenance/squat/deckone)
+	unit_test_exempt_from_atmos = list(/area/lonestar/command/server, /area/lonestar/command/serverpower, /area/lonestar/airlock/barlock, /area/lonestar/airlock/disposals, /area/lonestar/maintenance/oldmos/exit, /area/lonestar/airlock/coldloop, /area/lonestar/maintenance/arch/backdoor)
 /*
 	planet_datums_to_make = list(/datum/planet/mining)
 */

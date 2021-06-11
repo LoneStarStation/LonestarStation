@@ -59,6 +59,14 @@
 		M.SetStunned(1)
 		step(M,M.dir)
 
+/turf/simulated/floor/outdoors/ice/vacuum
+	name = "ice"
+	icon_state = "ice"
+	desc = "Looks slippery."
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
+
 // Ice that is used for, say, areas floating on water or similar.
 /turf/simulated/floor/outdoors/shelfice
 	name = "ice"

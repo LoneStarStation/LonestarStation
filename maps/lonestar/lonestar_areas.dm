@@ -1165,6 +1165,10 @@
 	name = "\improper Server Room"
 	icon_state = "server"
 
+/area/lonestar/command/serverpower
+	name = "\improper Server Power Room"
+	icon_state = "server"
+
 /area/lonestar/maintenance/command
 	name = "\improper Command Maintenance"
 

@@ -130,6 +130,15 @@
 	icon_state = "steel_grid"
 	initial_flooring = /decl/flooring/tiling/new_tile/steel_grid
 
+/turf/simulated/floor/tiled/steel_grid/airless
+	name = "floor"
+	icon = 'icons/turf/flooring/tiles.dmi'
+	icon_state = "steel_grid"
+	initial_flooring = /decl/flooring/tiling/new_tile/steel_grid
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
+
 /turf/simulated/floor/tiled/steel_ridged
 	name = "floor"
 	icon = 'icons/turf/flooring/tiles.dmi'
