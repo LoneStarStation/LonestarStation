@@ -134,13 +134,14 @@
 /area/lonestar/away/yard/wrecking
 	name = "Lonestar Wrecking Yard"
 	icon_state = "purple"
+	turf_initializer = new /datum/turf_initializer/maintenance()
 
 /area/lonestar/away/yard/asteroid
-	name = "Cliff Pathway"
+	name = "Wrecking Yard Cave"
 	icon_state = "yellow"
 
 /area/lonestar/away/yard/cliff
-	name = "Cliff Pathway"
+	name = "Wrecking Yard Cave"
 	icon_state = "purple"
 
 // So POIs don't get embedded in rock.
@@ -2412,8 +2413,8 @@ area/crew_quarters/heads/sc/hop/quarters
 /area/skipjack_station/carls
 	name = "\improper near Carl's Corner"
 	icon_state = "shuttlered"
-	dynamic_lighting = 0
-	base_turf = /turf/space
+	dynamic_lighting = 1
+	base_turf = /turf/simulated/mineral/floor/ignore_mapgen/vacuum
 
 /area/skipjack_station/orbit
 	name = "in orbit near Lonestar"

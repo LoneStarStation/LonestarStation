@@ -1,0 +1,17 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/turf/simulated/mineral/floor/vacuum,/area/submap/grease_pile2)
+"c" = (/obj/effect/decal/cleanable/blood/oil,/turf/simulated/mineral/floor/vacuum,/area/submap/grease_pile2)
+"d" = (/obj/effect/decal/cleanable/blood/gibs/robot,/turf/simulated/mineral/floor/vacuum,/area/submap/grease_pile2)
+
+(1,1,1) = {"
+aaaaaaaaaa
+abbbbbbcba
+abdcbcbdba
+abbdbbbbba
+acbbbbbbba
+abbccbcbba
+abbbcbbbba
+abbcbcbbca
+acbbbbbbba
+aaaaaaaaaa
+"}

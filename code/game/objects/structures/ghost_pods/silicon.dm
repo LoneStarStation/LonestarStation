@@ -105,3 +105,29 @@
 
 	drone_class = "impaler"
 	drone_type = /mob/living/silicon/robot/drone/swarm/melee
+
+	//
+
+/obj/structure/ghost_pod/automatic/booze_bot
+	name = "drone pod"
+	desc = "This is a pod which appears to contain a drone. You might be able to reactivate it, if you're brave enough."
+	description_info = "This contains a dormant drone, which may activate at any moment. The drone will be another player, once activated. \
+	The laws the drone has will most likely not be the ones you're used to."
+	icon_state = "borg_pod_closed"
+	icon_state_opened = "borg_pod_opened"
+	density = TRUE
+	ghost_query_type = /datum/ghost_query/booze_bot
+	needscharger = TRUE
+
+/obj/structure/ghost_pod/automatic/booze_bot/create_occupant(var/mob/M)
+	density = FALSE
+	var/mob/living/silicon/robot/booze_bot/R = new(get_turf(src))
+	if(M.mind)
+		M.mind.transfer_to(R)
+	// Put this text here before ckey change so that their laws are shown below it, since borg login() shows it.
+	to_chat(M, "<span class='notice'>You are a <b>bartender</b>, activated once again to tend your very own bar.</span>")
+	to_chat(M, "<span class='notice'><b>Be sure to examine your currently loaded lawset closely.</b>")
+	R.ckey = M.ckey
+	visible_message("<span class='warning'>As \the [src] opens, the eyes of the robot flicker as it is activated.</span>")
+	R.Namepick()
+	..()

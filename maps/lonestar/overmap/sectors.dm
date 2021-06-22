@@ -6,8 +6,8 @@
 	start_x  = 10
 	start_y  = 10
 
-/obj/effect/overmap/visitable/lonestar_station/mining_areas/Initialize()
-	/*
+/*
+/obj/effect/overmap/visitable/lonestar_station/mining_areas/Initialize() //?
 	atmosphere = new(CELL_VOLUME)
 	atmosphere.adjust_gas_temp("oxygen", MOLES_O2STANDARD, 273)
 	atmosphere.adjust_gas_temp("nitrogen", MOLES_N2STANDARD, 273)

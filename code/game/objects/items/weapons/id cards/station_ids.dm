@@ -143,7 +143,7 @@
 	rank = "Site Manager"
 
 /obj/item/weapon/card/id/gold/captain/spare
-	name = "\improper Site Manager's spare ID"
+	name = "\improper Baron's spare ID"
 	desc = "The spare ID of the High Lord himself."
 	registered_name = "Site Manager"
 

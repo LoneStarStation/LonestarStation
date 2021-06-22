@@ -209,6 +209,51 @@
 	icon_state = "floor_glass"
 	takes_underlays = 1
 
+//airless shuttle floors for the wrecking yard
+/turf/simulated/shuttle/floor/red/airless
+	icon_state = "floor_red"
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
+
+/turf/simulated/shuttle/floor/yellow/airless
+	icon_state = "floor_yellow"
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
+
+/turf/simulated/shuttle/floor/darkred/airless
+	icon_state = "floor_dred"
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
+
+/turf/simulated/shuttle/floor/purple/airless
+	icon_state = "floor_purple"
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
+
+/turf/simulated/shuttle/floor/white/airless
+	icon_state = "floor_white"
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
+
+/turf/simulated/shuttle/floor/black/airless
+	icon_state = "floor_black"
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
+
+/turf/simulated/shuttle/floor/glass/airless
+	icon_state = "floor_glass"
+	takes_underlays = 1
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
+//end airless for wrecking yard
+
 /turf/simulated/shuttle/floor/alien
 	icon_state = "alienpod1"
 	light_range = 3

@@ -2298,6 +2298,7 @@
 #include "code\modules\mob\living\silicon\robot\robot_modules\station.dm"
 #include "code\modules\mob\living\silicon\robot\robot_modules\swarm.dm"
 #include "code\modules\mob\living\silicon\robot\robot_modules\syndicate.dm"
+#include "code\modules\mob\living\silicon\robot\subtypes\booze_bot.dm"
 #include "code\modules\mob\living\silicon\robot\subtypes\gravekeeper.dm"
 #include "code\modules\mob\living\silicon\robot\subtypes\lost_drone.dm"
 #include "code\modules\mob\living\silicon\robot\subtypes\syndicate.dm"

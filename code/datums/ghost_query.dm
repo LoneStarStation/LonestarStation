@@ -136,6 +136,13 @@
 	check_bans = list("AI", "Cyborg")
 	cutoff_number = 1
 
+/datum/ghost_query/booze_bot
+	role_name = "Booze Bot"
+	question = "A bartending robot is about to reactivate and tend to its bar. Would you like to serve drinks?"
+	be_special_flag = BE_AI
+	check_bans = list("AI", "Cyborg")
+	cutoff_number = 1
+
 /datum/ghost_query/lost_passenger
 	role_name = "Lost Passenger"
 	question = "A person suspended in cryosleep has been discovered by a crewmember \

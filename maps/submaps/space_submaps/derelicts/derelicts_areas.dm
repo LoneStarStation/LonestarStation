@@ -1,3 +1,59 @@
+/area/submap/shuttles
+	name = "do not use"
+	base_turf = /turf/simulated/mineral/floor/ignore_mapgen/vacuum
+
+/area/submap/shuttles/containment1
+	name = "POI - Broken Shuttle"
+	ambience = AMBIENCE_TECH_RUINS
+
+/area/submap/shuttles/containment2
+	name = "POI - Broken Shuttle"
+	ambience = AMBIENCE_TECH_RUINS
+
+/area/submap/shuttles/containment3
+	name = "POI - Broken Shuttle"
+	ambience = AMBIENCE_TECH_RUINS
+
+/area/submap/shuttles/containment4
+	name = "POI - Broken Shuttle"
+	ambience = AMBIENCE_TECH_RUINS
+
+/area/submap/shuttles/containment5
+	name = "POI - Broken Shuttle"
+	ambience = AMBIENCE_TECH_RUINS
+
+/area/submap/grease_pile1
+	name = "POI - Grease Pile"
+	ambience = AMBIENCE_SPACE
+
+/area/submap/grease_pile2
+	name = "POI - Grease Pile"
+	ambience = AMBIENCE_SPACE
+
+/area/submap/grease_pile3
+	name = "POI - Grease Pile"
+	ambience = AMBIENCE_SPACE
+
+/area/submap/grease_pile4
+	name = "POI - Grease Pile"
+	ambience = AMBIENCE_SPACE
+
+/area/submap/grease_pile5
+	name = "POI - Grease Pile"
+	ambience = AMBIENCE_SPACE
+
+/area/submap/shuttles/medical1
+	name = "POI - Broken Shuttle"
+	ambience = AMBIENCE_TECH_RUINS
+
+/area/submap/shuttles/medical2
+	name = "POI - Broken Shuttle"
+	ambience = AMBIENCE_TECH_RUINS
+
+/area/submap/shuttles/quarantine
+	name = "POI - Sealed Shuttle"
+	ambience = AMBIENCE_TECH_RUINS
+
 /*
 /area/submap/cave
 	name = "Cave Submap Area"
