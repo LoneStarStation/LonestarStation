@@ -8,6 +8,11 @@
 #include "containment3.dmm"
 #include "containment4.dmm"
 #include "containment5.dmm"
+#include "dropped_supplies.dmm"
+#include "escape_pods1.dmm"
+#include "escape_pods2.dmm"
+#include "escape_pods3.dmm"
+#include "escape_pods4.dmm"
 #include "grease_pile1.dmm"
 #include "grease_pile2.dmm"
 #include "grease_pile3.dmm"
@@ -16,6 +21,7 @@
 #include "medical1.dmm"
 #include "medical2.dmm"
 #include "quarantine.dmm"
+#include "rodeo_pit.dmm"
 #endif
 
 // The 'derelicts' are the salvage z-level, and has a lot of broken ships and shuttles.
@@ -30,7 +36,7 @@
  * Ship with AI *
  ****************/
 
-///
+///cost = 15
 
 /********************
  * Ships without AI *
@@ -96,6 +102,40 @@
  * Not Ships At All *
  ********************/
 
+/datum/map_template/space/derelicts/dropped_supplies
+	name = "Dropped Supplies"
+	desc = "This used to be someone's life-line out here in the cold of space. Now just Trash."
+	mappath = 'maps/submaps/space_submaps/derelicts/dropped_supplies.dmm'
+	cost = 5
+
+/datum/map_template/space/derelicts/escape_pods1
+	name = "Escape Pods 1"
+	desc = "A group of vacant Emergency pods, maybe somebody left their personal effects behind."
+	mappath = 'maps/submaps/space_submaps/derelicts/escape_pods1.dmm'
+	cost = 5
+	template_group = "Escape Pods"
+
+/datum/map_template/space/derelicts/escape_pods2
+	name = "Escape Pods 2"
+	desc = "A group of vacant Emergency pods, maybe somebody left their personal effects behind."
+	mappath = 'maps/submaps/space_submaps/derelicts/escape_pods2.dmm'
+	cost = 5
+	template_group = "Escape Pods"
+
+/datum/map_template/space/derelicts/escape_pods3
+	name = "Escape Pods 3"
+	desc = "A group of vacant Emergency pods, maybe somebody left their personal effects behind."
+	mappath = 'maps/submaps/space_submaps/derelicts/escape_pods3.dmm'
+	cost = 5
+	template_group = "Escape Pods"
+
+/datum/map_template/space/derelicts/escape_pods4
+	name = "Escape Pods 4"
+	desc = "A group of vacant Emergency pods, maybe somebody left their personal effects behind."
+	mappath = 'maps/submaps/space_submaps/derelicts/escape_pods4.dmm'
+	cost = 5
+	template_group = "Escape Pods"
+
 /datum/map_template/space/derelicts/grease_pile1
 	name = "Grease Pile 1"
 	desc = "A pile of grease."
@@ -124,5 +164,11 @@
 	name = "Grease Pile 5"
 	desc = "A pile of grease."
 	mappath = 'maps/submaps/space_submaps/derelicts/grease_pile5.dmm'
+	cost = 5
+
+/datum/map_template/space/derelicts/rodeo_pit
+	name = "Rodeo Pit"
+	desc = "Looks more like it's supposed to be for a demolition derby..."
+	mappath = 'maps/submaps/space_submaps/derelicts/rodeo_pit.dmm'
 	cost = 5
 

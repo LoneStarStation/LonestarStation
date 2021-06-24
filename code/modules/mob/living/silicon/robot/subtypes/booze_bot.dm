@@ -5,11 +5,12 @@
 	modtype = "Service"
 	lawchannel = "State"
 	braintype = "Cyborg"
+	icon_selected = FALSE
 
 /mob/living/silicon/robot/booze_bot/init()
 	aiCamera = new/obj/item/device/camera/siliconcam/robot_camera(src)
 
-	mmi = new /obj/item/device/mmi/digital/robot(src) // Explicitly a drone.
+	mmi = new /obj/item/device/mmi(src) // Explicitly a drone.
 	module = new /obj/item/weapon/robot_module/robot/booze_bot(src)
 	overlays.Cut()
 	init_id()

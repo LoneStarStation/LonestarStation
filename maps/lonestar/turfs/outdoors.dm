@@ -160,6 +160,11 @@
 	nitrogen = 0
 	temperature = TCMB
 
+/turf/simulated/floor/outdoors/dirt/vacuum
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
+
 // Step trigger to fall down to planet Sif
 /obj/effect/step_trigger/teleporter/planetary_fall/sif/find_planet()
 	planet = planet_sif

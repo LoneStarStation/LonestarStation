@@ -50,7 +50,7 @@
 "aX" = (/obj/effect/decal/cleanable/blood/oil,/turf/simulated/floor/outdoors/rocks/airless,/area/template_noop)
 "aY" = (/obj/effect/decal/cleanable/blood/oil,/obj/structure/lattice,/turf/simulated/floor/outdoors/rocks/airless,/area/template_noop)
 "aZ" = (/obj/item/weapon/material/shard{icon_state = "medium"},/turf/simulated/floor/outdoors/rocks/airless,/area/template_noop)
-"ba" = (/obj/machinery/light{dir = 8; icon_state = "tube1"; pixel_y = 0},/obj/structure/extinguisher_cabinet{pixel_x = -32},/obj/structure/lattice,/obj/structure/flora/tree/sif,/turf/simulated/floor/outdoors/rocks/airless,/area/submap/shuttles/medical1)
+"ba" = (/obj/machinery/light{dir = 8; icon_state = "tube1"; pixel_y = 0},/obj/structure/extinguisher_cabinet{pixel_x = -32},/obj/structure/lattice,/turf/simulated/floor/outdoors/rocks/airless,/area/submap/shuttles/medical1)
 "bb" = (/obj/item/stack/rods,/turf/simulated/floor/outdoors/rocks/airless,/area/template_noop)
 "bc" = (/obj/structure/girder/displaced,/obj/structure/lattice,/turf/simulated/floor/outdoors/rocks/airless,/area/template_noop)
 "bd" = (/obj/effect/decal/cleanable/blood/oil,/obj/effect/decal/cleanable/blood/drip,/obj/structure/lattice,/turf/simulated/floor/outdoors/rocks/airless,/area/template_noop)
@@ -59,7 +59,6 @@
 "bg" = (/obj/random/medical,/turf/simulated/shuttle/floor/white/airless,/area/submap/shuttles/medical1)
 "bh" = (/obj/effect/decal/mecha_wreckage/odysseus,/obj/effect/decal/cleanable/blood/oil,/turf/simulated/mineral/floor/ignore_mapgen,/area/template_noop)
 "bi" = (/obj/item/weapon/material/shard,/obj/item/weapon/beartrap{anchored = 1; deployed = 1; icon_state = "beartrap1"},/obj/random/trash,/turf/simulated/floor/outdoors/rocks/airless,/area/template_noop)
-"bj" = (/obj/structure/flora/tree/sif,/turf/simulated/floor/outdoors/rocks/airless,/area/template_noop)
 "bk" = (/obj/structure/grille/broken,/obj/item/weapon/material/shard,/turf/simulated/floor/outdoors/rocks/airless,/area/template_noop)
 "bl" = (/obj/item/weapon/material/shard,/obj/structure/loot_pile/maint/technical,/obj/structure/lattice,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/shuttles/medical1)
 "bm" = (/obj/structure/bed/chair/office/light{dir = 8},/turf/simulated/shuttle/floor/purple/airless,/area/submap/shuttles/medical1)
@@ -115,7 +114,7 @@ aaaaajajaaaMajaNaEaxahanaFaiaGaHaIaJapaKaLajaaaaaa
 aaaaajaaaaaRaXakaOaPayananaQaiaiaiaiaiaiaiajaaaaaa
 aaaaaaabaaajajaYaSaTahadaUaVaWahajaaaaaaajaaabaaaa
 aaabaaaaaZbbbcaiaiaiaibaadadbdbeaaajbhajajabaaaaaa
-aaaaabaaajbiaYanbfbgahadaeaWbjbkbYbYbZajaaaaabaaaa
+aaaaabaaajbiaYanbfbgahadaeaWajbkbYbYbZajaaaaabaaaa
 aaaaaaajaXblbmanananbnananaibobpbqaiaiaiaiaaaaabaa
 aaaMajbrbsbtbubvananahananaibwbxbybzanbAbBajaaaaaa
 aaaaajaiaibCbmbDanbEaibFanbnananananbGapbHajaaaaaa

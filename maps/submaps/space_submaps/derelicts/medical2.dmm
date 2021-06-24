@@ -47,13 +47,12 @@
 "aU" = (/obj/effect/decal/cleanable/blood/oil,/turf/simulated/floor/outdoors/rocks/airless,/area/template_noop)
 "aV" = (/obj/item/weapon/material/shard{icon_state = "medium"},/turf/simulated/floor/outdoors/rocks/airless,/area/template_noop)
 "aW" = (/obj/structure/girder/displaced,/obj/structure/lattice,/turf/simulated/floor/outdoors/rocks/airless,/area/submap/shuttles/medical2)
-"aX" = (/obj/machinery/light{dir = 8; icon_state = "tube1"; pixel_y = 0},/obj/structure/extinguisher_cabinet{pixel_x = -32},/obj/structure/lattice,/obj/structure/flora/tree/sif,/turf/simulated/floor/outdoors/rocks/airless,/area/submap/shuttles/medical2)
+"aX" = (/obj/machinery/light{dir = 8; icon_state = "tube1"; pixel_y = 0},/obj/structure/extinguisher_cabinet{pixel_x = -32},/obj/structure/lattice,/turf/simulated/floor/outdoors/rocks/airless,/area/submap/shuttles/medical2)
 "aY" = (/obj/effect/decal/cleanable/blood/oil,/obj/effect/decal/cleanable/blood/drip,/obj/structure/lattice,/turf/simulated/floor/outdoors/rocks/airless,/area/submap/shuttles/medical2)
 "aZ" = (/obj/structure/grille/broken,/obj/item/weapon/material/shard{icon_state = "medium"},/turf/simulated/floor/outdoors/rocks/airless,/area/submap/shuttles/medical2)
 "ba" = (/obj/item/stack/rods,/turf/simulated/floor/outdoors/rocks/airless,/area/template_noop)
 "bb" = (/obj/effect/decal/mecha_wreckage/odysseus,/obj/effect/decal/cleanable/blood/oil,/turf/simulated/mineral/floor/ignore_mapgen,/area/template_noop)
 "bc" = (/obj/item/weapon/material/shard,/turf/simulated/shuttle/floor/white/airless,/area/submap/shuttles/medical2)
-"bd" = (/obj/structure/flora/tree/sif,/turf/simulated/floor/outdoors/rocks/airless,/area/submap/shuttles/medical2)
 "be" = (/obj/structure/grille/broken,/obj/item/weapon/material/shard,/turf/simulated/floor/outdoors/rocks/airless,/area/submap/shuttles/medical2)
 "bf" = (/obj/item/weapon/material/shard,/obj/item/weapon/beartrap{anchored = 1; deployed = 1; icon_state = "beartrap1"},/obj/random/trash,/turf/simulated/floor/outdoors/rocks/airless,/area/template_noop)
 "bg" = (/obj/effect/decal/cleanable/blood/drip,/turf/simulated/mineral/floor/ignore_mapgen,/area/template_noop)
@@ -102,7 +101,7 @@ aaaaajajaaaLajaDaEaxahanaFaiataGaHaIapaJaKajaaaaaa
 aaaaajaaaaaMaUaeaNaBayananaOaiaiaiaiaiaiaiajaaaaaa
 aaaaaaabaaajajaPaQaJahadaRaSaTahajaaaaaaajaaabaaaa
 aaabaaaaaVbaaWaiaiaiaiaXadadaYaZaaajbbajajabaaaaaa
-aaaaabaaajbfaPanbcanahadaeaTbdbebgbgbMajaaaaabaaaa
+aaaaabaaajbfaPanbcanahadaeaTadbebgbgbMajaaaaabaaaa
 aaaaaaajaUbhbianananbjananaibkblbmaiaiaiaiaaaaabaa
 aaaLajbnbobpbpbqananahananaiapbrbsbtanapbuajaaaaaa
 aaaaajaiaibvbibwanbxaibyanbjananananbzapbAajaaaaaa

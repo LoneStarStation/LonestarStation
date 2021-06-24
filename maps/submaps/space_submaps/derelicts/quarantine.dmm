@@ -3,13 +3,7 @@
 "ac" = (/turf/simulated/mineral/floor/ignore_mapgen/vacuum,/area/template_noop)
 "ad" = (/obj/effect/decal/cleanable/blood/oil,/turf/simulated/mineral/floor/ignore_mapgen/vacuum,/area/template_noop)
 "ae" = (/obj/item/clothing/head/cone,/turf/simulated/mineral/floor/ignore_mapgen/vacuum,/area/template_noop)
-"af" = (/obj/effect/decal/cleanable/blood/oil,/obj/item/tape/medical{dir = 4; icon_state = "tape_dir_0"},/obj/item/tape/medical{dir = 2; icon_state = "tape_dir_0"},/turf/simulated/mineral/floor/ignore_mapgen/vacuum,/area/template_noop)
-"ag" = (/obj/item/tape/medical{icon_state = "tape_h_0"},/turf/simulated/mineral/floor/ignore_mapgen/vacuum,/area/template_noop)
-"ah" = (/obj/effect/decal/cleanable/blood/oil,/obj/item/tape/medical{icon_state = "tape_h_0"},/turf/simulated/mineral/floor/ignore_mapgen/vacuum,/area/template_noop)
 "ai" = (/turf/simulated/shuttle/wall,/area/submap/shuttles/quarantine)
-"aj" = (/obj/item/tape/medical{icon_state = "tape_v_0"},/turf/simulated/mineral/floor/ignore_mapgen/vacuum,/area/template_noop)
-"ak" = (/obj/structure/inflatable,/turf/simulated/mineral/floor/ignore_mapgen/vacuum,/area/template_noop)
-"al" = (/obj/structure/inflatable/door,/turf/simulated/mineral/floor/ignore_mapgen/vacuum,/area/template_noop)
 "am" = (/turf/simulated/floor/outdoors/rocks/airless,/area/template_noop)
 "an" = (/obj/effect/decal/cleanable/blood/oil,/turf/simulated/floor/outdoors/rocks/airless,/area/template_noop)
 "ao" = (/obj/structure/shuttle/engine/heater{icon_state = "heater"; dir = 4},/turf/simulated/shuttle/plating,/area/submap/shuttles/quarantine)
@@ -104,8 +98,6 @@
 "bZ" = (/obj/structure/loot_pile/maint/technical,/turf/simulated/shuttle/floor{icon_state = "floor_yellow"},/area/submap/shuttles/quarantine)
 "ca" = (/obj/structure/sign/biohazard,/turf/simulated/shuttle/wall/hard_corner,/area/submap/shuttles/quarantine)
 "cb" = (/obj/item/taperoll/medical,/turf/simulated/mineral/floor/ignore_mapgen/vacuum,/area/template_noop)
-"cc" = (/obj/item/tape/medical{dir = 1; icon_state = "tape_dir_0"},/obj/item/tape/medical{dir = 4; icon_state = "tape_dir_0"},/turf/simulated/mineral/floor/ignore_mapgen/vacuum,/area/template_noop)
-"cd" = (/obj/item/tape/medical{icon_state = "tape_h_0"},/obj/effect/decal/cleanable/blood/oil,/turf/simulated/mineral/floor/ignore_mapgen/vacuum,/area/template_noop)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -113,8 +105,8 @@ aaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaabaaaaaaabaaaaaaaaaaaaabaaaaaaaaabaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaabaaacacacacacacadacaaaaaaaa
 aaabaaaaacacacadacacacacacacacaeacacacadacacacacaa
-aaaaaaacafagagagagagagahagagagagagagagagaiaiaiaeaa
-aaacacacajacakalakakacacamanamacadacacacaiaoapacaa
+aaaaaaacadacacacacacacadacacacacacacacacaiaiaiaeaa
+aaacacacacacacacacacacacamanamacadacacacaiaoapacaa
 aaaeacacaiaqarasasataqaiaqaiaiaiaiaiaiaiaiaiaiamaa
 aaacacaiaiauavawaxaiayayazaiaAaBaiaCaDaCaiaoapanaa
 aaamaiaiaiaiaiaEaFaGaHaIaJaKaLaMaiaNaOaPaiaQaiacaa
@@ -124,8 +116,8 @@ aaacaqaRbubvaibwbxbybzbAbBbyaVbCbcbDaIbEbdbFbgadaa
 aaacaiaiaiaiaiaLbGaIbHaIbIbJbKbLaibMaObNaiaibOacaa
 aaacacaiaibPbQbRbSaibTaYbUaibVbWaibXbYbZaiaoapacaa
 acacaeacaiaqarasascaaqaiaqaiaiaiaiaiaiaiaiaiaiabaa
-acadacadajacakakalakacacacaccbacacacacacaiaoapaaaa
-aaacacacccagagagagagagagagagagagagagagcdaiaiaiaaab
+acadacadacacacacacacacacacaccbacacacacacaiaoapaaaa
+aaacacacacacacacacacacacacacacacacacacadaiaiaiaaab
 aaaaacadacacacacacacacacacacadacacacacacacacadaaaa
 aaaaaeacacacacacacacadacacamamamamacacacacacacaaaa
 aaaaaaacacacadadacacacamamamamamamamamaaacacaeaaaa

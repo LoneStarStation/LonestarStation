@@ -92,15 +92,11 @@
 
 /obj/item/weapon/robot_module/robot/booze_bot/New()
 	..()
-	src.modules += new /obj/item/weapon/gripper/service(src)
-	src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
-	src.modules += new /obj/item/weapon/material/minihoe(src)
-	src.modules += new /obj/item/weapon/material/knife/machete/hatchet(src)
-	src.modules += new /obj/item/device/analyzer/plant_analyzer(src)
+	src.modules += new /obj/item/weapon/gripper/omni(src)
+	src.modules += new /obj/item/weapon/pen/robopen(src)
 	src.modules += new /obj/item/weapon/storage/bag/plants(src)
-	src.modules += new /obj/item/weapon/robot_harvester(src)
+	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
 	src.modules += new /obj/item/weapon/material/knife(src)
-	src.modules += new /obj/item/weapon/material/kitchen/rollingpin(src)
 	src.modules += new /obj/item/device/multitool(src) //to freeze trays
 
 	var/obj/item/weapon/rsf/M = new /obj/item/weapon/rsf(src)
@@ -115,6 +111,8 @@
 
 	src.modules += new /obj/item/weapon/tray/robotray(src)
 	src.modules += new /obj/item/weapon/reagent_containers/borghypo/service(src)
+	src.emag = new /obj/item/weapon/handcuffs/cyborg(src)
+	src.emag = new /obj/item/weapon/gun/energy/retro/mounted(src)
 	src.emag = new /obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer(src)
 
 	var/datum/reagents/R = new/datum/reagents(50)
