@@ -126,7 +126,7 @@
 		M.mind.transfer_to(R)
 	// Put this text here before ckey change so that their laws are shown below it, since borg login() shows it.
 	to_chat(M, "<span class='notice'>You are a <b>bartender</b>, activated once again to tend your very own bar.</span>")
-	to_chat(M, "<span class='notice'><b>Be sure to examine your currently loaded lawset closely.</b>")
+	to_chat(M, "<span class='notice'><b>Be sure to examine your currently loaded lawset closely.</b></span>")
 	R.ckey = M.ckey
 	visible_message("<span class='warning'>As \the [src] opens, the eyes of the robot flicker as it is activated.</span>")
 	R.Namepick()
