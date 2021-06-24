@@ -1,49 +1,59 @@
 // This causes PoI maps to get 'checked' and compiled, when undergoing a unit test.
 // This is so Travis can validate PoIs, and ensure future changes don't break PoIs, as PoIs are loaded at runtime and the compiler can't catch errors.
 // When adding a new PoI, please add it to this list.
-/*
-#if MAP_TEST
-#include "deadBeacon.dmm"
-#include "prepper1.dmm"
-#include "quarantineshuttle.dmm"
-#include "Mineshaft1.dmm"
-#include "Scave1.dmm"
-#include "crashed_ufo.dmm"
-#include "crashed_ufo_frigate.dmm"
-#include "crystal1.dmm"
-#include "crystal2.dmm"
-#include "crystal3.dmm"
-#include "lost_explorer.dmm"
-#include "CaveTrench.dmm"
-#include "Cavelake.dmm"
-#include "Rockb1.dmm"
-#include "ritual.dmm"
-#include "temple.dmm"
-#include "CrashedMedShuttle1.dmm"
-#include "digsite.dmm"
-#include "vault1.dmm"
-#include "vault2.dmm"
-#include "vault3.dmm"
-#include "vault4.dmm"
-#include "vault5.dmm"
-#include "IceCave1A.dmm"
-#include "IceCave1B.dmm"
-#include "IceCave1C.dmm"
-#include "SwordCave.dmm"
-#include "SupplyDrop1.dmm"
-#include "BlastMine1.dmm"
-#include "crashedcontainmentshuttle.dmm"
-#include "deadspy.dmm"
-#include "lava_trench.dmm"
-#include "Geyser1.dmm"
-#include "Geyser2.dmm"
-#include "Geyser3.dmm"
-#include "Cliff1.dmm"
-#include "excavation1.dmm"
-#include "spatial_anomaly.dmm"
-#endif
 
-// The 'mountains' is the mining z-level, and has a lot of caves.
+#if MAP_TEST
+#include "asteroidl01.dmm"
+#include "asteroidl02.dmm"
+#include "asteroidl03.dmm"
+#include "asteroidl04.dmm"
+#include "asteroidl05.dmm"
+#include "asteroidl06.dmm"
+#include "asteroidl07.dmm"
+#include "asteroidl08.dmm"
+#include "asteroidl09.dmm"
+#include "asteroidl10.dmm"
+#include "asteroid01.dmm"
+#include "asteroid02.dmm"
+#include "asteroid03.dmm"
+#include "asteroid04.dmm"
+#include "asteroid05.dmm"
+#include "asteroid06.dmm"
+#include "asteroid07.dmm"
+#include "asteroid08.dmm"
+#include "asteroid09.dmm"
+#include "asteroids10.dmm"
+#include "asteroids01.dmm"
+#include "asteroids02.dmm"
+#include "asteroids03.dmm"
+#include "asteroids04.dmm"
+#include "asteroids05.dmm"
+#include "asteroids06.dmm"
+#include "asteroids07.dmm"
+#include "asteroids08.dmm"
+#include "asteroids09.dmm"
+#include "asteroids10.dmm"
+#include "blasteroid.dmm"
+#include "boxing_champ.dmm"
+#include "carpnest1.dmm"
+#include "carpnest2.dmm"
+#include "dumpster.dmm"
+#include "ice_rock1.dmm"
+#include "lonely_shard.dmm"
+#include "lost_wallet.dmm"
+#include "mysterious_ship.dmm"
+#include "rock_base1.dmm"
+#include "space_bar.dmm"
+#include "space_geode1.dmm"
+#include "space_geode2.dmm"
+#include "tech_junk.dmm"
+#include "trash_pile1.dmm"
+#include "trash_pile2.dmm"
+#include "trash_pile3.dmm"
+#include "undropped_supplies.dmm"
+#endif
+/*
+// The 'roids' is the mining z-level, and has a lot of asteroids.
 // POIs here spawn in two different sections, the top half and bottom half of the map.
 // The bottom half should be fairly tame, with perhaps a few enviromental hazards.
 // The top half is when things start getting dangerous, but the loot gets better.
@@ -60,301 +70,332 @@
 // 'Far' templates get used on the top half, and should be more dangerous and rewarding.
 /datum/map_template/space/roids/far
 
-/*
+
 // To be added: Templates for cave exploration when they are made.
 
 /****************
  * Normal Caves *
  ****************/
 
-/datum/map_template/surface/mountains/normal/deadBeacon
-	name = "Abandoned Relay"
-	desc = "An unregistered comms relay, abandoned to the elements."
-	mappath = 'maps/submaps/surface_submaps/mountains/deadBeacon.dmm'
-	cost = 10
-
-/datum/map_template/surface/mountains/normal/prepper1
-	name = "Prepper Bunker"
-	desc = "A little hideaway for someone with more time and money than sense."
-	mappath = 'maps/submaps/surface_submaps/mountains/prepper1.dmm'
-	cost = 10
-
-/datum/map_template/surface/mountains/normal/qshuttle
-	name = "Quarantined Shuttle"
-	desc = "An emergency landing turned viral outbreak turned tragedy."
-	mappath = 'maps/submaps/surface_submaps/mountains/quarantineshuttle.dmm'
-	cost = 20
-
-/datum/map_template/surface/mountains/normal/Mineshaft1
-	name = "Abandoned Mineshaft 1"
-	desc = "An abandoned minning tunnel from a lost money making effort."
-	mappath = 'maps/submaps/surface_submaps/mountains/Mineshaft1.dmm'
-	cost = 5
-
-/datum/map_template/surface/mountains/normal/crystal1
-	name = "Crystal Cave 1"
-	desc = "A small cave with glowing gems and diamonds."
-	mappath = 'maps/submaps/surface_submaps/mountains/crystal1.dmm'
+//asteroids
+/datum/map_template/space/roids/close/asteroid/small1
+	name = "Small Asteroid 1"
+	desc = "A small asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroids01.dmm'
 	cost = 5
 	allow_duplicates = TRUE
 
-/datum/map_template/surface/mountains/normal/crystal2
-	name = "Crystal Cave 2"
-	desc = "A moderate sized cave with glowing gems and diamonds."
-	mappath = 'maps/submaps/surface_submaps/mountains/crystal2.dmm'
-	cost = 10
-	allow_duplicates = TRUE
-
-/datum/map_template/surface/mountains/normal/crystal2
-	name = "Crystal Cave 3"
-	desc = "A large spiral of crystals with diamonds in the center."
-	mappath = 'maps/submaps/surface_submaps/mountains/crystal3.dmm'
-	cost = 15
-
-/datum/map_template/surface/mountains/normal/lost_explorer
-	name = "Lost Explorer"
-	desc = "The remains of an explorer who rotted away ages ago, and their equipment."
-	mappath = 'maps/submaps/surface_submaps/mountains/lost_explorer.dmm'
+/datum/map_template/space/roids/close/asteroid/small2
+	name = "Small Asteroid 2"
+	desc = "A small asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroids02.dmm'
 	cost = 5
 	allow_duplicates = TRUE
 
-/datum/map_template/surface/mountains/normal/Rockb1
-	name = "Rocky Base 1"
-	desc = "Someones underground hidey hole"
-	mappath = 'maps/submaps/surface_submaps/mountains/Rockb1.dmm'
-	cost = 15
-
-/datum/map_template/surface/mountains/normal/corgiritual
-	name = "Dark Ritual"
-	desc = "Who put all these plushies here? What are they doing?"
-	mappath = 'maps/submaps/surface_submaps/mountains/ritual.dmm'
-	cost = 15
-
-/datum/map_template/surface/mountains/normal/abandonedtemple
-	name = "Abandoned Temple"
-	desc = "An ancient temple, long since abandoned. Perhaps alien in origin?"
-	mappath = 'maps/submaps/surface_submaps/mountains/temple.dmm'
-	cost = 20
-
-/datum/map_template/surface/mountains/normal/digsite
-	name = "Dig Site"
-	desc = "A small abandoned dig site."
-	mappath = 'maps/submaps/surface_submaps/mountains/digsite.dmm'
-	cost = 10
-
-/datum/map_template/surface/mountains/normal/vault1
-	name = "Mine Vault 1"
-	desc = "A small vault with potential loot."
-	mappath = 'maps/submaps/surface_submaps/mountains/vault1.dmm'
+/datum/map_template/space/roids/close/asteroid/small3
+	name = "Small Asteroid 3"
+	desc = "A small asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroids03.dmm'
 	cost = 5
 	allow_duplicates = TRUE
-	template_group = "Buried Vaults"
 
-/datum/map_template/surface/mountains/normal/vault2
-	name = "Mine Vault 2"
-	desc = "A small vault with potential loot."
-	mappath = 'maps/submaps/surface_submaps/mountains/vault2.dmm'
+/datum/map_template/space/roids/close/asteroid/small4
+	name = "Small Asteroid 4"
+	desc = "A small asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroids04.dmm'
 	cost = 5
 	allow_duplicates = TRUE
-	template_group = "Buried Vaults"
 
-/datum/map_template/surface/mountains/normal/vault3
-	name = "Mine Vault 3"
-	desc = "A small vault with potential loot. Also a horrible suprise."
-	mappath = 'maps/submaps/surface_submaps/mountains/vault3.dmm'
-	cost = 15
-	template_group = "Buried Vaults"
-
-/datum/map_template/surface/mountains/normal/IceCave1A
-	name = "Ice Cave 1A"
-	desc = "This cave's slippery ice makes it hard to navigate, but determined explorers will be rewarded."
-	mappath = 'maps/submaps/surface_submaps/mountains/IceCave1A.dmm'
-	cost = 10
-
-/datum/map_template/surface/mountains/normal/IceCave1B
-	name = "Ice Cave 1B"
-	desc = "This cave's slippery ice makes it hard to navigate, but determined explorers will be rewarded."
-	mappath = 'maps/submaps/surface_submaps/mountains/IceCave1B.dmm'
-	cost = 10
-
-/datum/map_template/surface/mountains/normal/IceCave1C
-	name = "Ice Cave 1C"
-	desc = "This cave's slippery ice makes it hard to navigate, but determined explorers will be rewarded."
-	mappath = 'maps/submaps/surface_submaps/mountains/IceCave1C.dmm'
-	cost = 10
-
-/datum/map_template/surface/mountains/normal/SwordCave
-	name = "Cursed Sword Cave"
-	desc = "An underground lake. The sword on the lake's island holds a terrible secret."
-	mappath = 'maps/submaps/surface_submaps/mountains/SwordCave.dmm'
-
-/datum/map_template/surface/mountains/normal/supplydrop1
-	name = "Supply Drop 1"
-	desc = "A drop pod that landed deep within the mountains."
-	mappath = 'maps/submaps/surface_submaps/mountains/SupplyDrop1.dmm'
-	cost = 10
-	allow_duplicates = TRUE
-
-/datum/map_template/surface/mountains/normal/crashedcontainmentshuttle
-	name = "Crashed Cargo Shuttle"
-	desc = "A severely damaged military shuttle, its cargo seems to remain intact."
-	mappath = 'maps/submaps/surface_submaps/mountains/crashedcontainmentshuttle.dmm'
-	cost = 30
-
-/datum/map_template/surface/mountains/normal/deadspy
-	name = "Spy Remains"
-	desc = "W+M1 = Salt."
-	mappath = 'maps/submaps/surface_submaps/mountains/deadspy.dmm'
-	cost = 15
-
-/datum/map_template/surface/mountains/normal/geyser1
-	name = "Ore-Rich Geyser"
-	desc = "A subterranean geyser that produces steam. This one has a particularly abundant amount of materials surrounding it."
-	mappath = 'maps/submaps/surface_submaps/mountains/Geyser1.dmm'
+/datum/map_template/space/roids/close/asteroid/small5
+	name = "Small Asteroid 5"
+	desc = "A small asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroids05.dmm'
 	cost = 5
 	allow_duplicates = TRUE
-	template_group = "Underground Geysers"
 
-/datum/map_template/surface/mountains/normal/geyser2
-	name = "Fenced Geyser"
-	desc = "A subterranean geyser that produces steam. This one has a damaged fence surrounding it."
-	mappath = 'maps/submaps/surface_submaps/mountains/Geyser2.dmm'
+/datum/map_template/space/roids/close/asteroid/small6
+	name = "Small Asteroid 5"
+	desc = "A small asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroids06.dmm'
 	cost = 5
-	allow_duplicates = TRUE
-	template_group = "Underground Geysers"
 
-/datum/map_template/surface/mountains/normal/geyser3
-	name = "Magmatic Geyser"
-	desc = "A subterranean geyser that produces incendiary gas. It is recessed into the ground, and filled with magma. It's a relatively dormant volcano."
-	mappath = 'maps/submaps/surface_submaps/mountains/Geyser2.dmm'
-	cost = 10
-	allow_duplicates = TRUE
-	template_group = "Underground Geysers"
-
-/datum/map_template/surface/mountains/normal/cliff1
-	name = "Ore-Topped Cliff"
-	desc = "A raised area of rock created by volcanic forces."
-	mappath = 'maps/submaps/surface_submaps/mountains/Cliff1.dmm'
+/datum/map_template/space/roids/close/asteroid/small7
+	name = "Small Asteroid 5"
+	desc = "A small asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroids07.dmm'
 	cost = 5
-	allow_duplicates = TRUE
-	template_group = "Underground Cliffs"
+
+/datum/map_template/space/roids/close/asteroid/small8
+	name = "Small Asteroid 5"
+	desc = "A small asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroids08.dmm'
+	cost = 5
+
+/datum/map_template/space/roids/close/asteroid/small9
+	name = "Small Asteroid 5"
+	desc = "A small asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroids09.dmm'
+	cost = 5
+
+/datum/map_template/space/roids/close/asteroid/small0
+	name = "Small Asteroid 5"
+	desc = "A small asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroids10.dmm'
+	cost = 5
+
+//other stuff
+/datum/map_template/space/roids/close/dumpster
+	name = "Dumspter"
+	desc = "Some space trash, complete with bottom feeder."
+	mappath = 'maps/submaps/space_submaps/belt/dumpster.dmm'
+	cost = 5
+
+/datum/map_template/space/roids/close/asteroid/ice1
+	name = "Ice Asteroid 1"
+	desc = "A frozen asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/ice_rock1.dmm'
+	cost = 5
+
+/datum/map_template/space/roids/close/lost_wallet
+	name = "Lost Wallet"
+	desc = "Looks like some idiot had to throw his wallet to avoid death in space."
+	mappath = 'maps/submaps/space_submaps/belt/lost_wallet.dmm'
+	cost = 5
+
+/datum/map_template/space/roids/close/tech_junk
+	name = "Tech Junk"
+	desc = "This is junk. In the technical sense."
+	mappath = 'maps/submaps/space_submaps/belt/tech_junk.dmm'
+	cost = 5
+
+/datum/map_template/space/roids/close/asteroid/trash_pile1
+	name = "Trash Pile 1"
+	desc = "A pile of trash, ripe with scavengers."
+	mappath = 'maps/submaps/space_submaps/belt/trash_pile1.dmm'
+	cost = 5
+
+/datum/map_template/space/roids/close/trash_pile2
+	name = "Trah Pile 2"
+	desc = "A pile of trash, ripe with scavengers."
+	mappath = 'maps/submaps/space_submaps/belt/trash_pile2.dmm'
+	cost = 5
+
+/datum/map_template/space/roids/close/asteroid/trash_pile3
+	name = "Trash Pile 3"
+	desc = "A pile of trash, ripe with scavengers."
+	mappath = 'maps/submaps/space_submaps/belt/trash_pile3.dmm'
+	cost = 5
 
 /**************
- * Deep Caves *
+ * Far Space *
  **************/
 
-/datum/map_template/surface/mountains/deep/lost_explorer
-	name = "Lost Explorer, Deep"
-	desc = "The remains of an explorer who rotted away ages ago, and their equipment. Again."
-	mappath = 'maps/submaps/surface_submaps/mountains/lost_explorer.dmm'
-	cost = 5
-	allow_duplicates = TRUE
-
-/datum/map_template/surface/mountains/deep/crashed_ufo
-	name = "Crashed UFO"
-	desc = "A (formerly) flying saucer that is now embedded into the mountain, yet it still seems to be running..."
-	mappath = 'maps/submaps/surface_submaps/mountains/crashed_ufo.dmm'
-	cost = 40
-	discard_prob = 50
-
-/datum/map_template/surface/mountains/deep/crashed_ufo_frigate
-	name = "Crashed UFO Frigate"
-	desc = "A (formerly) flying saucer that is now embedded into the mountain, yet the combat protocols still seem to be running..."
-	mappath = 'maps/submaps/surface_submaps/mountains/crashed_ufo_frigate.dmm'
-	cost = 60
-	discard_prob = 50
-
-/datum/map_template/surface/mountains/deep/Scave1
-	name = "Spider Cave 1"
-	desc = "A minning tunnel home to an aggressive collection of spiders."
-	mappath = 'maps/submaps/surface_submaps/mountains/Scave1.dmm'
-	cost = 20
-
-/datum/map_template/surface/mountains/deep/CaveTrench
-	name = "Cave River"
-	desc = "A strange underground river."
-	mappath = 'maps/submaps/surface_submaps/mountains/CaveTrench.dmm'
-	cost = 20
-
-/datum/map_template/surface/mountains/deep/Cavelake
-	name = "Cave Lake"
-	desc = "A large underground lake."
-	mappath = 'maps/submaps/surface_submaps/mountains/Cavelake.dmm'
-	cost = 20
-
-/datum/map_template/surface/mountains/deep/vault1
-	name = "Mine Vault 1"
-	desc = "A small vault with potential loot."
-	mappath = 'maps/submaps/surface_submaps/mountains/vault1.dmm'
-	cost = 5
-	allow_duplicates = TRUE
-	template_group = "Buried Vaults"
-
-/datum/map_template/surface/mountains/deep/vault2
-	name = "Mine Vault 2"
-	desc = "A small vault with potential loot."
-	mappath = 'maps/submaps/surface_submaps/mountains/vault2.dmm'
-	cost = 5
-	allow_duplicates = TRUE
-	template_group = "Buried Vaults"
-
-/datum/map_template/surface/mountains/deep/vault3
-	name = "Mine Vault 3"
-	desc = "A small vault with potential loot. Also a horrible suprise."
-	mappath = 'maps/submaps/surface_submaps/mountains/vault3.dmm'
+//asteroids
+/datum/map_template/space/roids/far/asteroid/large1
+	name = "Large Asteroid 1"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroidl01.dmm'
 	cost = 15
-	template_group = "Buried Vaults"
 
-/datum/map_template/surface/mountains/deep/vault4
-	name = "Mine Vault 4"
-	desc = "A small xeno vault with potential loot. Also horrible suprises."
-	mappath = 'maps/submaps/surface_submaps/mountains/vault4.dmm'
-	cost = 20
-	template_group = "Buried Vaults"
+/datum/map_template/space/roids/far/asteroid/large2
+	name = "Large Asteroid 2"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroidl02.dmm'
+	cost = 15
 
-/datum/map_template/surface/mountains/deep/vault5
-	name = "Mine Vault 5"
-	desc = "A small xeno vault with potential loot. Also major horrible suprises."
-	mappath = 'maps/submaps/surface_submaps/mountains/vault5.dmm'
-	cost = 25
-	template_group = "Buried Vaults"
+/datum/map_template/space/roids/far/asteroid/large3
+	name = "Large Asteroid 3"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroidl03.dmm'
+	cost = 15
 
-/datum/map_template/surface/mountains/deep/vault6
-	name = "Mine Vault 6"
-	desc = "A small mercenary tower with potential loot."
-	mappath = 'maps/submaps/surface_submaps/mountains/vault6.dmm'
-	cost = 25
-	template_group = "Buried Vaults"
+/datum/map_template/space/roids/far/asteroid/large4
+	name = "Large Asteroid 4"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroidl04.dmm'
+	cost = 15
 
-/datum/map_template/surface/mountains/deep/BlastMine1
-	name = "Blast Mine 1"
-	desc = "An abandoned blast mining site, seems that local wildlife has moved in."
-	mappath = 'maps/submaps/surface_submaps/mountains/BlastMine1.dmm'
-	cost = 20
+/datum/map_template/space/roids/far/asteroid/large5
+	name = "Large Asteroid 5"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroidl05.dmm'
+	cost = 15
 
-/datum/map_template/surface/mountains/deep/lava_trench
-	name = "lava trench"
-	desc = "A long stretch of lava underground, almost river-like, with a small crystal research outpost on the side."
-	mappath = 'maps/submaps/surface_submaps/mountains/lava_trench.dmm'
-	cost = 20
-	fixed_orientation = TRUE
+/datum/map_template/space/roids/far/asteroid/large6
+	name = "Large Asteroid 6"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroidl06.dmm'
+	cost = 15
 
-/datum/map_template/surface/mountains/deep/crashedmedshuttle
-	name = "Crashed Med Shuttle"
-	desc = "A medical response shuttle that went missing some time ago. So this is where they went."
-	mappath = 'maps/submaps/surface_submaps/mountains/CrashedMedShuttle1.dmm'
-	cost = 20
+/datum/map_template/space/roids/far/asteroid/large7
+	name = "Large Asteroid 7"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroidl07.dmm'
+	cost = 15
 
-/datum/map_template/surface/mountains/deep/excavation1
-	name = "Excavation Site"
-	desc = "An abandoned mining site."
-	mappath = 'maps/submaps/surface_submaps/mountains/excavation1.dmm'
-	cost = 20
+/datum/map_template/space/roids/far/asteroid/large8
+	name = "Large Asteroid 8"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroidl08.dmm'
+	cost = 15
 
-/datum/map_template/surface/mountains/deep/spatial_anomaly
-	name = "spatial anomaly"
-	desc = "A strange section of the caves that seems twist and turn in ways that shouldn't be physically possible."
-	mappath = 'maps/submaps/surface_submaps/mountains/spatial_anomaly.dmm'
-	cost = 20
-	fixed_orientation = TRUE
-*/
+/datum/map_template/space/roids/far/asteroid/large9
+	name = "Large Asteroid 9"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroidl09.dmm'
+	cost = 15
+
+/datum/map_template/space/roids/far/adteroid/large0
+	name = "Large Asteroid 10"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroidl10.dmm'
+	cost = 15
+
+/datum/map_template/space/roids/far/asteroid/type1
+	name = "Asteroid 1"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroid01.dmm'
+	cost = 10
+	allow_duplicates = TRUE
+
+/datum/map_template/space/roids/far/asteroid/type2
+	name = "Asteroid 2"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroid02.dmm'
+	cost = 10
+	allow_duplicates = TRUE
+
+/datum/map_template/space/roids/far/asteroid/type3
+	name = "Asteroid 3"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroid03.dmm'
+	cost = 10
+	allow_duplicates = TRUE
+
+/datum/map_template/space/roids/far/asteroid/type4
+	name = "Asteroid 4"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroid04.dmm'
+	cost = 10
+	allow_duplicates = TRUE
+
+/datum/map_template/space/roids/far/asteroid/type5
+	name = "Asteroid 5"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroid05.dmm'
+	cost = 10
+	allow_duplicates = TRUE
+
+/datum/map_template/space/roids/far/asteroid/type6
+	name = "Asteroid 6"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroid06.dmm'
+	cost = 10
+
+/datum/map_template/space/roids/far/adteroid/type7
+	name = "Asteroid 7"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroid07.dmm'
+	cost = 10
+
+/datum/map_template/space/roids/far/asteroid/type8
+	name = "Asteroid 8"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroid08.dmm'
+	cost = 10
+
+/datum/map_template/space/roids/far/asteroid/type9
+	name = "Asteroid 9"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroid09.dmm'
+	cost = 10
+
+/datum/map_template/space/roids/far/asteroid/type0
+	name = "Asteroid 10"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/asteroid10.dmm'
+	cost = 10
+
+//other stuff
+/datum/map_template/space/roids/far/asteroid/blast
+	name = "Asteroid 10"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/blasteroid.dmm'
+	cost = 5
+
+/datum/map_template/space/roids/far/boxing_champ
+	name = "Boxing Champ"
+	desc = "If only he'd heard of Super Turbo Turkey Puncher."
+	mappath = 'maps/submaps/space_submaps/belt/boxing_champ.dmm'
+	cost = 5
+
+/datum/map_template/space/roids/far/carpking
+	name = "Carp King"
+	desc = "An asteroid, ripe with space carp."
+	mappath = 'maps/submaps/space_submaps/belt/carpking.dmm'
+	cost = 5
+	discard_prob = 75
+
+/datum/map_template/space/roids/far/carpnest1
+	name = "Carp Nest 1"
+	desc = "An asteroid, ripe with space carp."
+	mappath = 'maps/submaps/space_submaps/belt/carpnest1.dmm'
+	cost = 5
+
+/datum/map_template/space/roids/far/carpnest2
+	name = "Carp Nest 2"
+	desc = "An asteroid, ripe with space carp."
+	mappath = 'maps/submaps/space_submaps/belt/carpnest2.dmm'
+	cost = 5
+
+/datum/map_template/space/roids/far/hive1
+	name = "Xeno Hive 1"
+	desc = "An asteroid, ripe with xenomorph eggs."
+	mappath = 'maps/submaps/space_submaps/belt/hive1.dmm'
+	cost = 5
+	discard_prob = 25
+
+/datum/map_template/space/roids/far/lonely_shard
+	name = "Soul Stone Shard"
+	desc = "How did this get here... you know what, maybe don't tell me."
+	mappath = 'maps/submaps/space_submaps/belt/lonely_shard.dmm'
+	cost = 5
+	discard_prob = 25
+
+/datum/map_template/space/roids/far/mysterious_ship
+	name = "UFO"
+	desc = "A flying saucer that still seems to be running..."
+	mappath = 'maps/submaps/space_submaps/belt/mysterious_ship.dmm'
+	cost = 10
+	discard_prob = 50
+
+/datum/map_template/space/roids/far/rock_base1
+	name = "Rock Base 1"
+	desc = "Someones asteroid-based hidey hole."
+	mappath = 'maps/submaps/space_submaps/belt/rock_base1.dmm'
+	cost = 10
+
+/datum/map_template/space/roids/far/space_bar
+	name = "Space Bar"
+	desc = "It's free real estate."
+	mappath = 'maps/submaps/space_submaps/belt/space_bar.dmm'
+	cost = 5
+
+/datum/map_template/space/roids/far/asteroid/geode1
+	name = "Space Geode 1"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/space_geode1.dmm'
+	cost = 10
+
+/datum/map_template/space/roids/far/adteroid/geode2
+	name = "Space Geode 2"
+	desc = "A large asteroid, ripe with minerals."
+	mappath = 'maps/submaps/space_submaps/belt/space_geode2.dmm'
+	cost = 10
+
+/datum/map_template/space/roids/far/supplies
+	name = "Undropped Supply Drop"
+	desc = "This box will never make it to the intended destination."
+	mappath = 'maps/submaps/space_submaps/belt/undropped_supplies.dmm'
+	cost = 5
+	allow_duplicates = TRUE

@@ -78,3 +78,45 @@
 	var/obj/item/stack/material/cyborg/wood/W = new (src)
 	W.synths = list(wood)
 	src.modules += W
+
+//booze bot
+/obj/item/weapon/robot_module/robot/booze_bot
+	name = "booze bot module"
+	hide_on_manifest = 1
+	sprites = list(
+					"Standard" = "Service2",
+					"Waitress" = "Service",
+					"Bro" = "Brobot",
+					"Rich" = "maximillion",
+				  	)
+
+/obj/item/weapon/robot_module/robot/booze_bot/New()
+	..()
+	src.modules += new /obj/item/weapon/gripper/omni(src)
+	src.modules += new /obj/item/weapon/pen/robopen(src)
+	src.modules += new /obj/item/weapon/storage/bag/plants(src)
+	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
+	src.modules += new /obj/item/weapon/material/knife(src)
+	src.modules += new /obj/item/device/multitool(src) //to freeze trays
+
+	var/obj/item/weapon/rsf/M = new /obj/item/weapon/rsf(src)
+	M.stored_matter = 30
+	src.modules += M
+
+	src.modules += new /obj/item/weapon/reagent_containers/dropper/industrial(src)
+
+	var/obj/item/weapon/flame/lighter/zippo/L = new /obj/item/weapon/flame/lighter/zippo(src)
+	L.lit = 1
+	src.modules += L
+
+	src.modules += new /obj/item/weapon/tray/robotray(src)
+	src.modules += new /obj/item/weapon/reagent_containers/borghypo/service(src)
+	src.emag = new /obj/item/weapon/handcuffs/cyborg(src)
+	src.emag = new /obj/item/weapon/gun/energy/retro/mounted(src)
+	src.emag = new /obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer(src)
+
+	var/datum/reagents/R = new/datum/reagents(50)
+	src.emag.reagents = R
+	R.my_atom = src.emag
+	R.add_reagent("beer2", 50)
+	src.emag.name = "Mickey Finn's Special Brew"

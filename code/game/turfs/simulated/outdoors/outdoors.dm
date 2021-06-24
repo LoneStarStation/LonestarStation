@@ -58,6 +58,11 @@ var/list/turf_edge_cache = list()
 	icon_state = "rock"
 	edge_blending_priority = 1
 
+/turf/simulated/floor/outdoors/rocks/airless
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
+
 /turf/simulated/floor/outdoors/rocks/caves
 	outdoors = FALSE
 

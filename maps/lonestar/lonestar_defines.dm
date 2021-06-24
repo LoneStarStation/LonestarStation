@@ -106,18 +106,22 @@
 	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.
 
 	// Wrecking Yard submaps are first.
-	seed_submaps(list(Z_LEVEL_MINING_SALVAGE), 100, /area/lonestar/away/yard/wrecking, /datum/map_template/space/derelicts)
+	seed_submaps(list(Z_LEVEL_MINING_SALVAGE), 125, /area/lonestar/away/yard/wrecking, /datum/map_template/space/derelicts)
 	// Slammer caves to make them more interesting.
-	seed_submaps(list(Z_LEVEL_MINING_PRISON), 75, /area/lonestar/away/slammer/normal, /datum/map_template/space/slammer/normal)
+	seed_submaps(list(Z_LEVEL_MINING_PRISON), 100, /area/lonestar/away/slammer/normal, /datum/map_template/space/slammer/normal)
 	seed_submaps(list(Z_LEVEL_MINING_PRISON), 75, /area/lonestar/away/slammer/deep, /datum/map_template/space/slammer/deep)
 	// Wilderness is next.
-	seed_submaps(list(Z_LEVEL_MINING_ROIDS), 75, /area/lonestar/away/roids/close, /datum/map_template/space/roids/close)
-	seed_submaps(list(Z_LEVEL_MINING_ROIDS), 75, /area/lonestar/away/roids/far, /datum/map_template/space/roids/far)
+	seed_submaps(list(Z_LEVEL_MINING_ROIDS), 250, /area/lonestar/away/roids/close, /datum/map_template/space/roids/close)
+	seed_submaps(list(Z_LEVEL_MINING_ROIDS), 250, /area/lonestar/away/roids/far, /datum/map_template/space/roids/far)
 	// If Space submaps are made, add a line to make them here as well.
 
 	// Now for the tunnels.
 	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_MINING_PRISON, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_MINING_PRISON, 64, 64)   								 // Create the mining ore distribution map.
+
+	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_MINING_ROIDS, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_MINING_ROIDS, 64, 64)   								 // Create the mining ore distribution map.
+
 	// Todo: Forest generation.
 	return 1
 

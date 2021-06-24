@@ -1,147 +1,119 @@
-/*
-/area/submap/cave
-	name = "Cave Submap Area"
-	icon_state = "submap"
-	ambience = AMBIENCE_RUINS
+/area/submap/cave/bats1
+	name = "POI - Cave"
+	ambience = AMBIENCE_SPACE
 
-/area/submap/cave/deadBeacon
-	name = "POI - abandoned relay"
-	ambience = AMBIENCE_TECH_RUINS
+/area/submap/cave/bats2
+	name = "POI - Cave"
+	ambience = AMBIENCE_SPACE
 
-/area/submap/cave/prepper1
-	name = "POI - Prepper Bunker"
+/area/submap/cave/bats3
+	name = "POI - Cave"
+	ambience = AMBIENCE_SPACE
+
+/area/submap/cave/bats4
+	name = "POI - Cave"
+	ambience = AMBIENCE_SPACE
+
+/area/submap/cave/bats5
+	name = "POI - Cave"
+	ambience = AMBIENCE_SPACE
+
+/area/submap/cave/bear1
+	name = "POI - Bear Cave"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/cave/qShuttle
-	name = "POI - Quarantined Shuttle"
-	ambience = AMBIENCE_RUINS
-
-/area/submap/cave/AMine1
-	name = "POI - Abandoned Mine"
-
-/area/submap/cave/Scave1
-	name = "POI - Spider Cave 1"
+/area/submap/buried_stash1
+	name = "POI - Buried Stash"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/cave/crashed_ufo
-	name = "POI - Crashed Alien Vessel"
-	requires_power = FALSE
-	ambience = AMBIENCE_OTHERWORLDLY
+/area/submap/buried_stash2
+	name = "POI - Buried Stash"
+	ambience = AMBIENCE_FOREBODING
 
-/area/submap/cave/crashed_ufo_frigate
-	name = "POI - Crashed Alien Frigate"
-	requires_power = FALSE
-	ambience = AMBIENCE_OTHERWORLDLY
+/area/submap/buried_stash3
+	name = "POI - Buried Stash"
+	ambience = AMBIENCE_FOREBODING
 
-/area/submap/cave/crystal1
+/area/submap/cave/cavern1
+	name = "POI - Cave"
+	ambience = AMBIENCE_SPACE
+
+/area/submap/cave/cavern2
+	name = "POI - Cave"
+	ambience = AMBIENCE_SPACE
+
+/area/submap/cliff1
+	name = "POI - Cliff"
+	ambience = AMBIENCE_SPACE
+
+/area/submap/cliff2
+	name = "POI - Cliff"
+	ambience = AMBIENCE_SPACE
+
+/area/submap/cave/crystals1
 	name = "POI - Crystaline Cave"
 	ambience = AMBIENCE_SPACE
 
-/area/submap/cave/crystal2
+/area/submap/cave/crystals2
 	name = "POI - Crystaline Cave"
 	ambience = AMBIENCE_SPACE
 
-/area/submap/cave/crystal3
-	name = "POI - Crystaline Cave"
-	ambience = AMBIENCE_SPACE
-
-/area/submap/cave/lost_explorer
-	name = "POI - Final Resting Place"
-	ambience = AMBIENCE_GHOSTLY
-
-/area/submap/Rockb1
-	name = "POI - RockyBase1"
+/area/submap/hidden_stash1
+	name = "POI - Hidden Stash"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/Cavelake
-	name = "POI - Cavelake"
-	ambience = AMBIENCE_SPACE
-
-/area/submap/CaveTrench
-	name = "POI - Cave River"
+/area/submap/hive2
+	name = "POI - Xenomorph Hive"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/CorgiRitual
-	name = "POI - Dark Ritual"
-	ambience = AMBIENCE_UNHOLY
-
-/area/submap/AbandonedTemple
-	name = "POI - Abandoned Temple"
-	ambience = AMBIENCE_RUINS
-
-/area/submap/CrashedMedShuttle
-	name = "POI - Crashed Med Shuttle"
-	ambience = AMBIENCE_RUINS
-
-/area/submap/cave/digsite
-	name = "POI - Dig Site"
-	ambience = AMBIENCE_OTHERWORLDLY
-
-/area/submap/cave/vault1
-	name = "POI - Mine Vault"
-	ambience = AMBIENCE_FOREBODING
-
-/area/submap/cave/vault2
-	name = "POI - Mine Vault"
-	ambience = AMBIENCE_FOREBODING
-
-/area/submap/cave/vault3
-	name = "POI - Mine Vault"
-	ambience = AMBIENCE_FOREBODING
-
-/area/submap/cave/vault4
-	name = "POI - Mine Vault"
-	ambience = AMBIENCE_FOREBODING
-
-/area/submap/cave/vault5
-	name = "POI - Mine Vault"
-	ambience = AMBIENCE_FOREBODING
-
-/area/submap/cave/IceCave1A
+/area/submap/cave/ice_cave1A
 	name = "POI - Ice Cave 1A"
 	ambience = AMBIENCE_SPACE
 
-/area/submap/cave/IceCave1B
+/area/submap/cave/ice_cave1B
 	name = "POI - Ice Cave 1B"
 	ambience = AMBIENCE_SPACE
 
-/area/submap/cave/IceCave1C
+/area/submap/cave/ice_cave1C
 	name = "POI - Ice Cave 1C"
 	ambience = AMBIENCE_SPACE
 
-/area/submap/cave/swordcave
-	name = "POI - Cursed Sword Cave"
-	ambience = AMBIENCE_UNHOLY
-
-/area/submap/cave/SupplyDrop1
-	name = "POI - Supply Drop 1"
-	ambience = AMBIENCE_TECH_RUINS
-
-/area/submap/cave/BlastMine1
-	name = "POI - Blast Mine 1"
-
-/area/submap/crashedcontainmentshuttle
-	name = "POI - Crashed Containment Shuttle"
-	ambience = AMBIENCE_HIGHSEC
-
-/area/submap/deadspy
-	name = "POI - Dead Spy"
+/area/submap/ice_floe
+	name = "POI - Ice Floe"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/lava_trench
-	name = "POI - Lava Trench"
-	ambience = AMBIENCE_LAVA
+/area/submap/cave/ice_junction
+	name = "POI - Cave"
+	ambience = AMBIENCE_SPACE
 
-/area/submap/lava_trench/outpost
-	name = "POI - Trench Outpost"
-	requires_power = FALSE
-	icon_state = "submap2"
+/area/submap/cave/loose
+	name = "POI - Cave"
+	ambience = AMBIENCE_SPACE
 
-/area/submap/Excavation
-	name = "POI - Excavation Site"
+/area/submap/cave/loot_stash1
+	name = "POI - Cave"
+	ambience = AMBIENCE_SPACE
+
+/area/submap/cave/loot_stash2
+	name = "POI - Cave"
+	ambience = AMBIENCE_SPACE
+
+/area/submap/lost_prisoner
+	name = "POI - Dead Prisoner"
+	ambience = AMBIENCE_GHOSTLY
+
+/area/submap/lost_ripley
+	name = "POI - Cave"
+	ambience = AMBIENCE_SPACE
+
+/area/submap/miner_camp1
+	name = "POI - Mining Outpost"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/spatial_anomaly
-	name = "POI - Spatial Anomaly"
+/area/submap/swimming_hole
+	name = "POI - Swimming Hole"
+	ambience = AMBIENCE_SPACE
+
+/area/submap/traphouse
+	name = "POI - Drugden"
 	ambience = AMBIENCE_FOREBODING
-*/
