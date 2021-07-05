@@ -5,6 +5,7 @@
 	config_tag = "traitorling"
 	required_players = 10
 	required_players_secret = 10
+	votable = 0
 	required_enemies = 5
 	end_on_antag_death = 1
 	require_all_templates = 1

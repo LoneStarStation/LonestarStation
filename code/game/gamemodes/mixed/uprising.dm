@@ -6,6 +6,7 @@
 	required_players = 15
 	required_players_secret = 15
 	required_enemies = 3
+	votable = 0
 	end_on_antag_death = 1
 	antag_tags = list(MODE_REVOLUTIONARY, MODE_LOYALIST, MODE_CULTIST)
 	require_all_templates = 1

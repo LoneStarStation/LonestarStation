@@ -3,7 +3,7 @@
 //////////////////////////////////
 /datum/job/hos
 	title = "Sheriff"
-	flag = HOS
+	flag = SHERIFF
 	departments_managed = list(DEPARTMENT_SECURITY)
 	departments = list(DEPARTMENT_SECURITY, DEPARTMENT_COMMAND)
 	sorting_order = 2
@@ -29,7 +29,8 @@
 	outfit_type = /decl/hierarchy/outfit/job/security/sheriff
 	job_description = "	The Sheriff is the primary peace keeper of the station, ensuring the population is safe from threats both external and internal. They are \
 						expected to keep the other Department Heads, and the rest of the crew, aware of developing situations that may be a threat. If necessary, \
-						the Sheriff may deputize members of the crew to preform duties of absent Security roles, but only in dire situations."
+						the Sheriff may deputize members of the crew to preform duties of absent Security roles, but only in dire situations. The Sheriff's primary \
+						goal is the safety and well being of the crew and their facility."
 	alt_titles = list("Sheriff's Sergeant" = /datum/alt_title/sheriff_serg, "Chief of Security" = /datum/alt_title/sec_chief)
 
 // Head of Security Alt Titles
@@ -64,38 +65,13 @@
 						their prisoners alive and in under watchful eye, as most convict redemption activities involve extra vehicular activity where a crafty \
 						or cunning prisoner could escape."
 
-/*
-//////////////////////////////////
-//			Detective
-//////////////////////////////////
-/datum/job/detective
-	title = "Prison Guard"
-	flag = DETECTIVE
-	departments = list(DEPARTMENT_SECURITY)
-	department_flag = ENGSEC
-	faction = "Station"
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "the Prison Baron, the Warden and Lonestar Law"
-	selection_color = "#601C1C"
-	access = list(access_security, access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels, access_eva, access_external_airlocks)
-	minimal_access = list(access_security, access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels, access_eva, access_external_airlocks)
-	economic_modifier = 5
-	minimal_player_age = 3
-
-	outfit_type = /decl/hierarchy/outfit/job/security/detective
-	job_description = "A Prison Guard works to help the Warden keep prisoners in line and working towards their fiscal freedom. Making sure prisoners return \
-						with loads of goods by directly overseeing them as they work in harsh space environments falls under some of their direct duties, as \
-						well as keeping those same working prisoners alive and safe while they work."
-
-*/
 
 //////////////////////////////////
 //		Security Officer
 //////////////////////////////////
 /datum/job/officer
 	title = "Deputy"
-	flag = OFFICER
+	flag = DEPUTY
 	departments = list(DEPARTMENT_SECURITY)
 	department_flag = ENGSEC
 	faction = "Station"

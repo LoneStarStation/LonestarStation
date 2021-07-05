@@ -6,6 +6,7 @@
 	required_players = 6
 	required_players_secret = 8
 	required_enemies = 3
+	votable = 0
 	end_on_antag_death = 0
 	antag_tags = list(MODE_NINJA, MODE_AUTOTRAITOR)
 	round_autoantag = 1

@@ -10,7 +10,7 @@
 	faction = "Station"
 	total_positions = 0 // Not used for AI, see is_position_available below and modules/mob/living/silicon/ai/latejoin.dm
 	spawn_positions = 1
-	selection_color = "#3F823F"
+	selection_color = "#515151" //"#3F823F"
 	supervisors = "your Laws"
 	req_admin_notify = 1
 	minimal_player_age = 7
@@ -36,7 +36,7 @@
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/straight_jacket(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/cardborg(H), slot_head)
 	return 1
-
+/*
 //////////////////////////////////
 //			Cyborg
 //////////////////////////////////
@@ -81,3 +81,4 @@
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/cardborg(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/cardborg(H), slot_head)
 	return 1
+*/

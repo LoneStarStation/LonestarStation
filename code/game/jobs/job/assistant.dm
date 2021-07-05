@@ -46,3 +46,16 @@
 	title_blurb = "A Resident is an individual who resides at or near , frequently in a different part of the station than what is seen. \
 					They are considered to be part of the crew for most purposes, but have no real authority."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/resident
+
+/*
+	alt_titles = list("Journalist" = /datum/alt_title/journalist, "Writer" = /datum/alt_title/writer)
+
+// Librarian Alt Titles
+/datum/alt_title/journalist
+	title = "Journalist"
+	title_blurb = "The Journalist uses the Library as a base of operations, from which they can report the news and goings-on on the station with their camera."
+
+/datum/alt_title/writer
+	title = "Writer"
+	title_blurb = "The Writer uses the Library as a quiet place to write whatever it is they choose to write."
+*/

@@ -3,7 +3,7 @@
 	title = "Chaplain"
 	flag = CHAPLAIN
 	departments = list(DEPARTMENT_MEDICAL)
-	department_flag = CIVILIAN
+	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1

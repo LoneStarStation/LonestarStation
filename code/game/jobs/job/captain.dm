@@ -6,7 +6,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 
 /datum/job/captain
 	title = "Steward"
-	flag = CAPTAIN
+	flag = BARON
 	departments = list(DEPARTMENT_COMMAND)
 	sorting_order = 3 // Above everyone.
 	departments_managed = list(DEPARTMENT_COMMAND)
@@ -29,7 +29,6 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	job_description = "The Steward stands in for the Baron when he is not present, taking on their tasks for the station. They have access to everything, \
 						but they are expected to delegate jobs to the appropriate crew member if able. The Steward is expected to have a decent understanding \
 						of Lonestar Standard Operating Procedure, and is subject to it. Remember, you are an asset to Lonestar and can be replaced."
-	alt_titles = list("Proxy"= /datum/alt_title/proxy)
 
 /*
 /datum/job/captain/equip(var/mob/living/carbon/human/H)
@@ -43,8 +42,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 
 
 // Captain Alt Titles
-/datum/alt_title/proxy
-	title = "Proxy"
+//nope chuck testa
 
 //////////////////////////////////
 //		Head of Personnel
@@ -69,9 +67,9 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	ideal_character_age = 50
 
 	outfit_type = /decl/hierarchy/outfit/job/hop
-	job_description = "The Faciliyt Manager manages the Service department, the Exploration team, and most other civilians. They also \
-						manage the Supply department, through the Quartermaster. In addition, the Head of Personnel oversees the personal accounts \
-						of the crew, including their money and access. If necessary, the Head of Personnel is first in line to assume Acting Command."
+	job_description = "The Facility Manager manages the Service department and most other civilians. They also manage the Supply department,\
+						through the Quartermaster. In addition, the Facility Manager oversees the personal accounts of the crew, including\
+						their money and access. If necessary, the Head of Personnel is first in line to assume Acting Command."
 	alt_titles = list("Crew Resources Officer" = /datum/alt_title/cro)
 
 	access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers,
@@ -94,13 +92,13 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 //////////////////////////////////
 //		Information Technology Department
 //////////////////////////////////
-/datum/job/itdepartment
-	title = "IT Specialist"
-	flag = ITS
+/datum/job/tech_support
+	title = "Tech Support"
+	flag = TECH_SUPPORT
 	departments = list(DEPARTMENT_COMMAND, DEPARTMENT_CIVILIAN, DEPARTMENT_GARAGE, DEPARTMENT_RANCH)
 	sorting_order = 1 // Above secretary, below captain and HOP
 	departments_managed = list(DEPARTMENT_CIVILIAN, DEPARTMENT_RANCH, DEPARTMENT_GARAGE)
-	department_flag = CIVILIAN
+	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
@@ -113,21 +111,17 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	minimum_character_age = 20
 	ideal_character_age = 25
 
-	outfit_type = /decl/hierarchy/outfit/job/itspec
+	outfit_type = /decl/hierarchy/outfit/job/tech_support
 	job_description = "Have you tried turning it off and back on again?"
 
-	access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers,
-			            access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads,
-			            access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_pest, access_morgue,
-			            access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer,
-			            access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station,
-			            access_hop, access_RC_announce, access_keycard_auth, access_gateway, access_operations)
-	minimal_access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers,
-			            access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads,
-			            access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_pest, access_morgue,
-			            access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer,
-			            access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station,
-			            access_hop, access_RC_announce, access_keycard_auth, access_gateway, access_operations)
+	access = list(access_change_ids, access_ai_upload, access_eva, access_heads,
+			            access_all_personal_lockers, access_maint_tunnels, access_hydroponics, access_lawyer,
+			            access_chapel_office, access_library, access_research,access_hop, access_RC_announce,
+			            access_keycard_auth, access_gateway)
+	minimal_access = list(access_change_ids, access_ai_upload, access_eva, access_heads,
+			            access_all_personal_lockers, access_maint_tunnels, access_hydroponics, access_lawyer,
+			            access_chapel_office, access_library, access_research, access_hop, access_RC_announce,
+			            access_keycard_auth, access_gateway)
 
 
 //////////////////////////////////
@@ -136,7 +130,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 
 /datum/job/secretary
 	title = "Command Secretary"
-	flag = BRIDGE
+	flag = SECRETARY
 	departments = list(DEPARTMENT_COMMAND)
 	department_accounts = list(DEPARTMENT_COMMAND)
 	department_flag = CIVILIAN

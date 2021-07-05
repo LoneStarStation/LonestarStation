@@ -14,4 +14,4 @@
 	required_enemies = 1
 	end_on_antag_death = 0
 	antag_tags = list(MODE_NINJA)
-	votable = 0
+	votable = 1
