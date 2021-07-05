@@ -64,7 +64,7 @@ access_surgery = 45
 ##46
 access_research = 47
 access_mining = 48
-access_mining_office = 49//not in use
+access_mining_office = 49 //not in use
 access_mailsorting = 50
 ##51
 ##52
