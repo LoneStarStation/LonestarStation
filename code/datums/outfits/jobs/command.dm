@@ -1,7 +1,7 @@
 /decl/hierarchy/outfit/job/captain
 	name = OUTFIT_JOB_NAME("Steward")
 	glasses = /obj/item/clothing/glasses/sunglasses
-	uniform = /obj/item/clothing/under/captain_fly
+	uniform = /obj/item/clothing/under/rank/vice
 	head = /obj/item/clothing/head/cowboy_hat
 	l_ear = /obj/item/device/radio/headset/heads/captain
 	shoes = /obj/item/clothing/shoes/boots/cowboy/classic
@@ -38,8 +38,8 @@
 	else
 		uniform = /obj/item/clothing/under/suit_jacket/charcoal
 
-/decl/hierarchy/outfit/job/itspec
-	name = OUTFIT_JOB_NAME("IT Specialist")
+/decl/hierarchy/outfit/job/tech_support
+	name = OUTFIT_JOB_NAME("Tech Support")
 	uniform = /obj/item/clothing/under/rank/office
 	l_ear = /obj/item/device/radio/headset/heads/hop
 	shoes = /obj/item/clothing/shoes/boots/cowboy

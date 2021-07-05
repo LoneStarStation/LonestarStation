@@ -14,6 +14,7 @@
 	required_players = 1
 	required_players_secret = 1
 	required_enemies = 1
+	votable = 0
 	end_on_antag_death = 0
 	antag_tags = list(MODE_TRAITOR)
 	antag_scaling_coeff = 8
@@ -25,4 +26,5 @@
 	round_autoantag = 1
 	required_players_secret = 0
 	required_enemies = 0
+	votable = 0
 	antag_scaling_coeff = 5

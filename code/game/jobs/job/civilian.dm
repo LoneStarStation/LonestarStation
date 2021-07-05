@@ -53,7 +53,8 @@
 
 /datum/alt_title/piano_player
 	title = "Piano Player"
-	title_blurb = "Piano Players are generally entertainment for the bar, but can be handy with a glass or microwave if no one else is around."
+	title_blurb = "Piano Players are generally entertainment for the bar, but can be handy with a glass or microwave if no one else is around. It is \
+					generally considered bad form to kill the piano player in any bar room gunfights"
 
 //////////////////////////////////
 //			   Chef
@@ -90,7 +91,7 @@
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 2
+	total_positions = 4
 	spawn_positions = 2
 	supervisors = "the Head of Personnel"
 	selection_color = "#515151"
@@ -121,7 +122,7 @@
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 2
+	total_positions = 3
 	spawn_positions = 2
 	supervisors = "the Head of Personnel"
 	selection_color = "#515151"
@@ -140,10 +141,10 @@
 //			Gunsmith
 //////////////////////////////////
 /datum/job/librarian
-	title = "Gunsmith" //gunsmith to be moved to security
-	flag = LIBRARIAN
+	title = "Gunsmith"
+	flag = GUNSMITH
 	departments = list(DEPARTMENT_CIVILIAN)
-	department_flag = CIVILIAN
+	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
@@ -155,18 +156,7 @@
 	outfit_type = /decl/hierarchy/outfit/job/gunsmith
 	job_description = "The Gunsmith curates the shooting range in the Gunsmithy, so the crew might enjoy it. They are also expected to be \
 						able to assemble a host of various fire arms, as well as ammunition for the crew of the facility."
-/*
-	alt_titles = list("Journalist" = /datum/alt_title/journalist, "Writer" = /datum/alt_title/writer)
 
-// Librarian Alt Titles
-/datum/alt_title/journalist
-	title = "Journalist"
-	title_blurb = "The Journalist uses the Library as a base of operations, from which they can report the news and goings-on on the station with their camera."
-
-/datum/alt_title/writer
-	title = "Writer"
-	title_blurb = "The Writer uses the Library as a quiet place to write whatever it is they choose to write."
-*/
 //////////////////////////////////
 //		Lawyer
 //////////////////////////////////

@@ -26,13 +26,15 @@
 	head = /obj/item/clothing/head/cowboy_hat
 	id_type = /obj/item/weapon/card/id/science
 
-/decl/hierarchy/outfit/job/science/rodeo_clown
+/decl/hierarchy/outfit/job/science/clown
 	name = OUTFIT_JOB_NAME("Rodeo Clown")
+	mask = /obj/item/clothing/mask/gas/clown_hat
 	uniform = /obj/item/clothing/under/frontier
 	gloves = /obj/item/clothing/gloves/duty
-	shoes = /obj/item/clothing/shoes/boots/cowboy
-	head = /obj/item/clothing/head/cowboy_hat
+	shoes = /obj/item/clothing/shoes/clown_shoes
+	head = /obj/item/clothing/head/cowboy_hat/small
 	id_type = /obj/item/weapon/card/id/science
+	backpack = /obj/item/weapon/storage/backpack/clown
 
 //garage
 

@@ -1,50 +1,47 @@
 
 var/const/ENGSEC			=(1<<0)
 
-var/const/CAPTAIN			=(1<<0)//steward
-var/const/HOS				=(1<<1)//sheriff
-var/const/WARDEN			=(1<<2)//warden
-var/const/DETECTIVE			=(1<<3)//guard
-var/const/OFFICER			=(1<<4)//deputy
-var/const/CHIEF				=(1<<5)//yep
-var/const/ENGINEER			=(1<<6)//yeah
-var/const/ATMOSTECH			=(1<<7)//pestcontrol
-var/const/ITS				=(1<<8)//IT Specialist
-var/const/AI				=(1<<9)//remove?
-var/const/CYBORG			=(1<<10)//sure
+var/const/BARON				=(1<<0)
+var/const/SHERIFF			=(1<<1)
+var/const/WARDEN			=(1<<2)
+var/const/DEPUTY			=(1<<3)
+var/const/CHIEF				=(1<<4)
+var/const/ENGINEER			=(1<<5)
+var/const/PEST				=(1<<6)
+var/const/GUNSMITH			=(1<<7)
+var/const/AI				=(1<<8)//IGNORE ME
 
 
 var/const/MEDSCI			=(1<<1)
 
-var/const/RANCH_HEAD		=(1<<0)//garage
-var/const/GARAGE_HEAD		=(1<<1)//greasemonky
-var/const/CHEMIST			=(1<<2)//lol
-var/const/CMO				=(1<<3)//LT. docs
-var/const/DOCTOR			=(1<<4)//SGT. docs
-var/const/GENETICIST		=(1<<5)//
-var/const/VIROLOGIST		=(1<<6)//ranch spec
-var/const/PSYCHIATRIST		=(1<<7)//chaplain
-var/const/ROBOTICIST		=(1<<8)//mechanic
-var/const/XENOBIOLOGIST		=(1<<9)//ranch hand
-var/const/PARAMEDIC			=(1<<10)//lonestar trooper
+var/const/RANCH_HEAD		=(1<<0)
+var/const/GARAGE_HEAD		=(1<<1)
+var/const/CMO				=(1<<2)
+var/const/DOCTOR			=(1<<3)
+var/const/TECH_SUPPORT		=(1<<4)
+var/const/RANCH_HAND		=(1<<5)
+var/const/MECHANIC			=(1<<6)
+var/const/CHAPLAIN			=(1<<7)
+var/const/CADET				=(1<<8)
+var/const/COMMANDO			=(1<<9)
+var/const/CLOWN				=(1<<10)//"roh-day-oh"
+var/const/CYBORG			=(1<<11)//sure
 
 
 var/const/CIVILIAN			=(1<<2)
 
 var/const/HOP				=(1<<0)
 var/const/BAR_MANAGER		=(1<<1)
-var/const/BARTENDER			=(1<<2)
+var/const/QUARTERMASTER		=(1<<2)
 var/const/CHEF				=(1<<3)
 var/const/JANITOR			=(1<<4)
-var/const/LIBRARIAN			=(1<<5)//gunsmith?
-var/const/QUARTERMASTER		=(1<<6)
-var/const/CARGOTECH			=(1<<7)
+var/const/BARTENDER			=(1<<5)
+var/const/CARGOTECH			=(1<<6)
+var/const/PILOT				=(1<<7)
 var/const/MINER				=(1<<8)
-var/const/LAWYER			=(1<<9)//seems like an rp role
-var/const/CHAPLAIN			=(1<<10)//merge with psych
+var/const/LAWYER			=(1<<9)
+var/const/SECRETARY			=(1<<10)
 var/const/ASSISTANT			=(1<<11)
-var/const/BRIDGE			=(1<<12)
-var/const/PILOT 			=(1<<13)
 
 /proc/guest_jobbans(var/job)
 	return ( (job in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SYNTHETIC)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY)) )

@@ -16,6 +16,8 @@ var/global/list/seen_religions = list()
 var/global/list/citizenship_choices = list(
 	"Earth",
 	"Mars",
+	"Lonestar",
+	"Pollux",
 	"Sif",
 	"Binma",
 	"Moghes",
@@ -35,6 +37,7 @@ var/global/list/home_system_choices = list(
 
 var/global/list/faction_choices = list(
 	"Sol Central",
+	"Lonestar Station",
 	"Vey Med",
 	"Einstein Engines",
 	"Free Trade Union",

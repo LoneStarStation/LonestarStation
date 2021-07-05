@@ -32,8 +32,8 @@
 
 	outfit_type = /decl/hierarchy/outfit/job/engineering/chief_engineer
 	job_description = "The Chief Engineer manages the Engineering Department, ensuring that the Engineers work on what needs to be done, handling distribution \
-						of manpower as much as they handle hands-on operations and repairs. They are also expected to keep the rest of the station informed of \
-						any structural threats to the station that may be hazardous to health or disruptive to work."
+						of manpower as much as they handle hands-on operations, repairs, and pest management. They are also expected to keep the rest of the \
+						station informed of any structural threats to the station that may be hazardous to health or disruptive to work."
 
 //////////////////////////////////
 //			Engineer
@@ -71,7 +71,7 @@
 
 /datum/alt_title/engine_tech
 	title = "Engine Technician"
-	title_blurb = "An Engine Technician tends to the engine, most commonly a Supermatter crystal. They are expected to be able to keep it stable, and \
+	title_blurb = "An Engine Technician tends to the engine, most commonly a R-UST Mk 8. They are expected to be able to keep it stable, and \
 					possibly even run it beyond normal tolerances."
 
 /datum/alt_title/electrician
@@ -82,7 +82,7 @@
 /datum/alt_title/atmos
 	title = "Atmospheric Technician"
 	title_blurb = "An Atmospheric Technician is primarily concerned with keeping the station's atmosphere breathable. They are expected to have a good \
-						understanding of the pipes, vents, and scrubbers that move gasses around the station, and to be familiar with proper firefighting procedure."
+					understanding of the pipes, vents, and scrubbers that move gasses around the station, and to be familiar with proper firefighting procedure."
 	title_outfit = /decl/hierarchy/outfit/job/engineering/atmos
 
 //////////////////////////////////
@@ -90,7 +90,7 @@
 //////////////////////////////////
 /datum/job/atmos
 	title = "Pest Control"
-	flag = ATMOSTECH
+	flag = PEST
 	departments = list(DEPARTMENT_ENGINEERING)
 	department_flag = ENGSEC
 	faction = "Station"

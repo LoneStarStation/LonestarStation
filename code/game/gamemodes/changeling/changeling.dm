@@ -14,6 +14,7 @@
 	required_players = 2
 	required_players_secret = 3
 	required_enemies = 1
+	votable = 0
 	end_on_antag_death = 0
 	antag_scaling_coeff = 10
 	antag_tags = list(MODE_CHANGELING)
